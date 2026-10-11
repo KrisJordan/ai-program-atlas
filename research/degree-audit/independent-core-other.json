@@ -1,0 +1,1632 @@
+{
+  "programs": [
+    {
+      "program_id": "miami-data-science-ai-bs",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "63ecf6377dac595729b655c3f51868f8381dc5d370edf49d2c149979ea197b70",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "The Curriculum table fixes 13 identities: eight CSC courses, four mathematics courses and WRS 105. MTH 309/230, ethics, second writing and advanced-writing rows remain choices.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-bs/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": []
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Independent table enumeration gives 44 distinct options. Techniques require six credits; Applications nine. The discrete-math, ethics, writing and advanced-writing alternatives remain separate. CSC 115 has a before-CSC120 condition; projects/internships require DS&AI approval; PSY 292 has listed MTH exclusions.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-bs/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All thirteen fixed-course descriptions were independently reread. Programming and algorithms are foundations; calculus/linear algebra/probability are mathematics; three explicit AI-method courses are AI/ML; writing is human context. CSC113 retains mixed data-analysis/programming content.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-bs/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://bulletin.miami.edu/courses-az/csc/",
+              "locator": "Complete fixed CSC blocks"
+            },
+            {
+              "url": "https://bulletin.miami.edu/courses-az/mth/",
+              "locator": "Complete fixed subject-course blocks, alongside WRS and applicable business chapters"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "miami-data-science-ai-bs-csc-113",
+          "miami-data-science-ai-bs-csc-120",
+          "miami-data-science-ai-bs-csc-220",
+          "miami-data-science-ai-bs-csc-315",
+          "miami-data-science-ai-bs-csc-317",
+          "miami-data-science-ai-bs-csc-345",
+          "miami-data-science-ai-bs-csc-545",
+          "miami-data-science-ai-bs-csc-546",
+          "miami-data-science-ai-bs-mth-161",
+          "miami-data-science-ai-bs-mth-162",
+          "miami-data-science-ai-bs-mth-210",
+          "miami-data-science-ai-bs-mth-224",
+          "miami-data-science-ai-bs-wrs-105"
+        ],
+        "options": [
+          "miami-data-science-ai-bs-apy-313",
+          "miami-data-science-ai-bs-cim-563",
+          "miami-data-science-ai-bs-csc-115",
+          "miami-data-science-ai-bs-csc-210",
+          "miami-data-science-ai-bs-csc-322",
+          "miami-data-science-ai-bs-csc-329",
+          "miami-data-science-ai-bs-csc-405",
+          "miami-data-science-ai-bs-csc-410",
+          "miami-data-science-ai-bs-csc-411",
+          "miami-data-science-ai-bs-csc-412",
+          "miami-data-science-ai-bs-csc-423",
+          "miami-data-science-ai-bs-csc-431",
+          "miami-data-science-ai-bs-csc-506",
+          "miami-data-science-ai-bs-csc-542",
+          "miami-data-science-ai-bs-csc-543",
+          "miami-data-science-ai-bs-csc-548",
+          "miami-data-science-ai-bs-csc-549",
+          "miami-data-science-ai-bs-csc-550",
+          "miami-data-science-ai-bs-ece-553",
+          "miami-data-science-ai-bs-ece-574",
+          "miami-data-science-ai-bs-eng-106",
+          "miami-data-science-ai-bs-eps-351",
+          "miami-data-science-ai-bs-eps-401",
+          "miami-data-science-ai-bs-eps-402",
+          "miami-data-science-ai-bs-geg-305",
+          "miami-data-science-ai-bs-geg-310",
+          "miami-data-science-ai-bs-geg-405",
+          "miami-data-science-ai-bs-geg-410",
+          "miami-data-science-ai-bs-jmm-331",
+          "miami-data-science-ai-bs-jmm-429",
+          "miami-data-science-ai-bs-mth-230",
+          "miami-data-science-ai-bs-mth-309",
+          "miami-data-science-ai-bs-mth-524",
+          "miami-data-science-ai-bs-mth-525",
+          "miami-data-science-ai-bs-mth-542",
+          "miami-data-science-ai-bs-phi-115",
+          "miami-data-science-ai-bs-phi-239",
+          "miami-data-science-ai-bs-phi-330",
+          "miami-data-science-ai-bs-psy-110",
+          "miami-data-science-ai-bs-psy-290",
+          "miami-data-science-ai-bs-psy-292",
+          "miami-data-science-ai-bs-wrs-106",
+          "miami-data-science-ai-bs-wrs-107",
+          "miami-data-science-ai-bs-wrs-233"
+        ],
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 13,
+          "categories": {
+            "foundations": 4,
+            "mathematics": 4,
+            "ai_ml": 3,
+            "systems": 0,
+            "human_context": 1,
+            "applications": 0,
+            "electives": 0,
+            "other": 1
+          }
+        },
+        "options": {
+          "count": 44,
+          "categories": null
+        },
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "/tmp/miami-ds-bs.html",
+          "sha256": "7252e3b70b1a90385f58e7dbaa53843837c88fff4d74b036580e19f192b22981"
+        }
+      ],
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "university-of-miami-data-science-and-artificial-intelligence-ba-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "7eb0e3cdd7dd0353bfe35edc5495d8008617f3c192d80f4f42c2a369844eb535",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "The Curriculum table fixes seven identities: CSC 113/120/220, DSC 344/345, MTH 161 and WRS 105. Linear algebra, Python, ethics and writing alternatives remain conditional.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-ba/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": []
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Independent table enumeration gives 39 distinct options. The combined elective menu requires six credits, with EPS351/PSY292 printed as alternatives; it is not split into BS technique/application quotas. The non-STEM minor/second major and language/science requirements remain separate.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-ba/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All seven fixed descriptions were reread. DSC344/345 explicitly teach learning, neural networks and AI methods; CSC120/220 teach software foundations; CSC113 remains mixed rather than automatically AI.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/arts-sciences/computer-science/data-science-and-ai-ba/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://bulletin.miami.edu/courses-az/csc/",
+              "locator": "Complete fixed CSC blocks"
+            },
+            {
+              "url": "https://bulletin.miami.edu/courses-az/mth/",
+              "locator": "Complete fixed subject-course blocks, alongside WRS and applicable business chapters"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-113",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-120",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-220",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-dsc-344",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-dsc-345",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-mth-161",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-wrs-105"
+        ],
+        "options": [
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-cim-563",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-115",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-210",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-315",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-322",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-329",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-345",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-405",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-410",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-411",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-412",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-423",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-431",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-542",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-543",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-545",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-546",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-548",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-549",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-csc-550",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-dsc-110",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-eng-106",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-eps-351",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-eps-401",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-eps-402",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-geg-305",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-geg-310",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-geg-405",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-geg-410",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-jmm-331",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-mll-410",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-mth-210",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-phi-115",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-phi-239",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-psy-110",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-psy-292",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-wrs-106",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-wrs-107",
+          "university-of-miami-data-science-and-artificial-intelligence-ba-degree-wrs-233"
+        ],
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 7,
+          "categories": {
+            "foundations": 2,
+            "mathematics": 1,
+            "ai_ml": 2,
+            "systems": 0,
+            "human_context": 1,
+            "applications": 0,
+            "electives": 0,
+            "other": 1
+          }
+        },
+        "options": {
+          "count": 39,
+          "categories": null
+        },
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "/tmp/miami-ds.html",
+          "sha256": "e35e2bb455edb4a93aacc7a197175cf4c5f6a2992fc2d62c329ca5ca20dd496b"
+        }
+      ],
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "miami-ai-technologies-business-bsba",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "bf7c407e882dc51b8c54185dd3673cf72776385f4facb051615ad8545b89bbb8",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "The standalone BSBA Curriculum fixes 21 distinct identities. Accelerated accounting, career, marketing and AI-method alternatives stay optional; BTE 320 is counted once in the business core.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bsba/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": []
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Independent table enumeration gives 33 distinct options. Quantitative choice is one approved course; major choice is two courses/six credits. BTE413/MAS548 is an either/or requirement, not two fixed AI courses. C-minus major grades, 2.5 major GPA, no double counting and AI-topic/project limitations remain scoped.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bsba/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All twenty-one fixed descriptions were reread. BTE320 teaches programming foundations, BTE403 cloud infrastructure, BTE371/416 AI methods, and quantitative courses mathematics. Domain business practice stays applications; UMX100 is unspecified orientation; BTE210 and MGT100 remain mixed.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bsba/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://bulletin.miami.edu/courses-az/csc/",
+              "locator": "Complete fixed CSC blocks"
+            },
+            {
+              "url": "https://bulletin.miami.edu/courses-az/bte/",
+              "locator": "Complete fixed subject-course blocks, alongside WRS and applicable business chapters"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "miami-ai-technologies-business-bsba-bsl-212",
+          "miami-ai-technologies-business-bsba-bte-210",
+          "miami-ai-technologies-business-bsba-bte-320",
+          "miami-ai-technologies-business-bsba-bte-371",
+          "miami-ai-technologies-business-bsba-bte-403",
+          "miami-ai-technologies-business-bsba-bte-416",
+          "miami-ai-technologies-business-bsba-bus-150",
+          "miami-ai-technologies-business-bsba-bus-300",
+          "miami-ai-technologies-business-bsba-eco-211",
+          "miami-ai-technologies-business-bsba-eco-212",
+          "miami-ai-technologies-business-bsba-fin-302",
+          "miami-ai-technologies-business-bsba-mas-311",
+          "miami-ai-technologies-business-bsba-mas-312",
+          "miami-ai-technologies-business-bsba-mgt-100",
+          "miami-ai-technologies-business-bsba-mgt-303",
+          "miami-ai-technologies-business-bsba-mgt-304",
+          "miami-ai-technologies-business-bsba-mgt-401",
+          "miami-ai-technologies-business-bsba-mth-161",
+          "miami-ai-technologies-business-bsba-mth-162",
+          "miami-ai-technologies-business-bsba-umx-100",
+          "miami-ai-technologies-business-bsba-wrs-105"
+        ],
+        "options": [
+          "miami-ai-technologies-business-bsba-acc-211",
+          "miami-ai-technologies-business-bsba-acc-212",
+          "miami-ai-technologies-business-bsba-acc-221",
+          "miami-ai-technologies-business-bsba-acc-222",
+          "miami-ai-technologies-business-bsba-bsl-444",
+          "miami-ai-technologies-business-bsba-bte-271",
+          "miami-ai-technologies-business-bsba-bte-324",
+          "miami-ai-technologies-business-bsba-bte-401",
+          "miami-ai-technologies-business-bsba-bte-413",
+          "miami-ai-technologies-business-bsba-bte-423",
+          "miami-ai-technologies-business-bsba-bte-440",
+          "miami-ai-technologies-business-bsba-bte-471",
+          "miami-ai-technologies-business-bsba-bte-497",
+          "miami-ai-technologies-business-bsba-bte-499",
+          "miami-ai-technologies-business-bsba-bus-211",
+          "miami-ai-technologies-business-bsba-bus-428",
+          "miami-ai-technologies-business-bsba-eco-395",
+          "miami-ai-technologies-business-bsba-eco-430",
+          "miami-ai-technologies-business-bsba-eco-510",
+          "miami-ai-technologies-business-bsba-eng-106",
+          "miami-ai-technologies-business-bsba-fin-460",
+          "miami-ai-technologies-business-bsba-mas-342",
+          "miami-ai-technologies-business-bsba-mas-442",
+          "miami-ai-technologies-business-bsba-mas-547",
+          "miami-ai-technologies-business-bsba-mas-548",
+          "miami-ai-technologies-business-bsba-mgt-199",
+          "miami-ai-technologies-business-bsba-mgt-445",
+          "miami-ai-technologies-business-bsba-mgt-446",
+          "miami-ai-technologies-business-bsba-mkt-201",
+          "miami-ai-technologies-business-bsba-mkt-301",
+          "miami-ai-technologies-business-bsba-mkt-369",
+          "miami-ai-technologies-business-bsba-mkt-371",
+          "miami-ai-technologies-business-bsba-wrs-106"
+        ],
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 21,
+          "categories": {
+            "foundations": 1,
+            "mathematics": 4,
+            "ai_ml": 2,
+            "systems": 1,
+            "human_context": 4,
+            "applications": 6,
+            "electives": 0,
+            "other": 3
+          }
+        },
+        "options": {
+          "count": 33,
+          "categories": null
+        },
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "/tmp/miami-business-bsba.html",
+          "sha256": "d238768f6e0ed024489777168b828e978d61b3fd48e46f8072c1587aded4c570"
+        }
+      ],
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "university-of-miami-artificial-intelligence-technologies-for-business-other-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "02c5cc6432ac63128655eee16b36cde3c8cb1112fc7c06a31d87d2ea50252cec",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "The standalone BBA Curriculum fixes 22 distinct identities. Its ACC 211/212 and BTE 271 are fixed, while quantitative skills, career and marketing alternatives stay conditional.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bba/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": []
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "Independent table enumeration gives 21 distinct options. Major choice is two courses/six credits. Repeated MAS110/MTH161 rows describe the same quantitative route rather than additional identities. Degree footnotes retain progression deadlines, writing-remediation options, topic approval, C-minus grades and 2.5 major GPA.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bba/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All twenty-two fixed descriptions were reread. Accounting, finance and operational business practice stay applications; MAS201/202 are mathematics, BTE320 foundations and BTE403 systems. BTE271 retains mixed generative-AI/business framing; orientation remains unclassified.",
+          "evidence": [
+            {
+              "url": "https://bulletin.miami.edu/undergraduate-academic-programs/business/business-technology/ai-tech-for-business-bba/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://bulletin.miami.edu/courses-az/csc/",
+              "locator": "Complete fixed CSC blocks"
+            },
+            {
+              "url": "https://bulletin.miami.edu/courses-az/bte/",
+              "locator": "Complete fixed subject-course blocks, alongside WRS and applicable business chapters"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-acc-211",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-acc-212",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bsl-212",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-210",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-271",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-320",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-371",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-403",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-416",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-150",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-300",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eco-211",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eco-212",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-fin-302",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mas-201",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mas-202",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-100",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-303",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-304",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-401",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-umx-100",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-wrs-105"
+        ],
+        "options": [
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bsl-444",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-401",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-413",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-440",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-471",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-497",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bte-499",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-211",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-bus-428",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eco-395",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-eng-106",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-fin-460",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mas-110",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mas-548",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mgt-199",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mkt-201",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mkt-301",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mkt-369",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mkt-371",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-mth-161",
+          "university-of-miami-artificial-intelligence-technologies-for-business-other-degree-wrs-106"
+        ],
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 22,
+          "categories": {
+            "foundations": 1,
+            "mathematics": 2,
+            "ai_ml": 2,
+            "systems": 1,
+            "human_context": 4,
+            "applications": 8,
+            "electives": 0,
+            "other": 4
+          }
+        },
+        "options": {
+          "count": 21,
+          "categories": null
+        },
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "/tmp/miami-business.html",
+          "sha256": "fe85984ecb88331096490590413a5f617939ebf185a5b9c7b36c8481af327380"
+        }
+      ],
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "2cc62a063cd1cc72ad0ab0d166e03b607678eb6d25aff629903b690489b61db2",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "The current table fixes six identities: CSAI101, MATH141, PHIL211, INST204, CMSC351 and CSAI216. Courses required only inside one of five specializations are options in the whole-program chart.",
+          "evidence": [
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": [
+            "The AI Algorithms specialization prints a 12-credit total despite four three-credit required courses plus two electives and the stated 18-credit specialization rule."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "All five specialization tables and core alternatives were reread, enumerating 79 option identities. General selects five electives; generative AI and society routes select two; accessibility selects three. Topic-specific CMSC498 and PHIL/GEOG/IMDM labels are preserved as versions rather than collapsed by code.",
+          "evidence": [
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
+            "The AI Algorithms specialization prints a 12-credit total despite four three-credit required courses plus two electives and the stated 18-credit specialization rule."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "The available four substantive fixed descriptions support CMSC351 foundations, MATH141 mathematics and PHIL211/INST204 human context. CSAI101 and CSAI216 lack actual exact descriptions and remain unclassified; titles do not certify their subjects.",
+          "evidence": [
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/phil/",
+              "locator": "PHIL211 complete description"
+            },
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/inst/",
+              "locator": "INST204 complete description"
+            },
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/math/",
+              "locator": "MATH141 / MATH115 complete descriptions"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass.",
+            "Exact missing course bodies remain unknown rather than classified from requirement titles."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "umd-cmsc351",
+          "umd-csai101",
+          "umd-csai216",
+          "umd-inst204",
+          "umd-math141",
+          "umd-phil211"
+        ],
+        "options": [
+          "umd-amst320",
+          "umd-cmsc131",
+          "umd-cmsc132",
+          "umd-cmsc141",
+          "umd-cmsc142",
+          "umd-cmsc250",
+          "umd-cmsc320",
+          "umd-cmsc401",
+          "umd-cmsc421",
+          "umd-cmsc422",
+          "umd-cmsc425",
+          "umd-cmsc426",
+          "umd-cmsc427",
+          "umd-cmsc434",
+          "umd-cmsc436",
+          "umd-cmsc454",
+          "umd-cmsc470",
+          "umd-cmsc471",
+          "umd-cmsc472",
+          "umd-cmsc474",
+          "umd-cmsc477",
+          "umd-cmsc498-cmsc498e",
+          "umd-cmsc498-cmsc498y",
+          "umd-csai102",
+          "umd-csai103",
+          "umd-csai104",
+          "umd-csai220",
+          "umd-csai221",
+          "umd-csai370",
+          "umd-csai424",
+          "umd-csai427",
+          "umd-csai431",
+          "umd-csai432",
+          "umd-csai433",
+          "umd-csai435",
+          "umd-csai460",
+          "umd-csai461",
+          "umd-csai473",
+          "umd-csai491",
+          "umd-data250",
+          "umd-data320",
+          "umd-enee290",
+          "umd-geog398-geog398e",
+          "umd-imdm498-imdm498e",
+          "umd-inst326",
+          "umd-inst362",
+          "umd-inst366",
+          "umd-inst401",
+          "umd-inst402",
+          "umd-inst414",
+          "umd-inst436",
+          "umd-inst461",
+          "umd-ling200",
+          "umd-ling240",
+          "umd-ling311",
+          "umd-ling320",
+          "umd-ling321",
+          "umd-ling322",
+          "umd-ling410",
+          "umd-ling444",
+          "umd-math140",
+          "umd-math240",
+          "umd-math243",
+          "umd-math340",
+          "umd-math341",
+          "umd-math461",
+          "umd-plcy201",
+          "umd-plcy215",
+          "umd-plcy240",
+          "umd-psyc431",
+          "umd-socy100",
+          "umd-socy216",
+          "umd-socy455",
+          "umd-socy456",
+          "umd-socy462",
+          "umd-stat400",
+          "umd-stat426",
+          "umd-wgss105",
+          "umd-wgss115"
+        ],
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 6,
+          "categories": {
+            "foundations": 1,
+            "mathematics": 1,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 2,
+            "applications": 0,
+            "electives": 0,
+            "other": 2
+          }
+        },
+        "options": {
+          "count": 79,
+          "categories": null
+        },
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "/tmp/atlas-university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree.html",
+          "sha256": "0125746c9de8e45c6595d296b42195ddce35952a8ca2488fe46b8038b73e688f"
+        }
+      ],
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "university-of-maryland-college-park-human-centered-ai-ba-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "0fe6ff3554e8fffdf32fd9c47e24054d71c8f4fdd0fd8d4473f60b00c28ebbfa",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "The nine mandatory major-core courses plus the explicitly stated ARHU MATH115 requirement form ten fixed identities. HCAI490 is a seminar-or-internship alternative; GVPT170 is conditional on the law specialization.",
+          "evidence": [
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": []
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "All seven specialization menus, branch qualifiers and the capstone-or-internship rule were reread, enumerating 59 option identities. Language/cognition requires at least two LING and two PHIL courses; law requires GVPT170 plus six other courses. Approved-content topic restrictions remain. Specialization choices are not universal fixed courses.",
+          "evidence": [
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "The available fixed descriptions support WGSS115/INST204/PHIL211 human context and MATH115 mathematics. Six HCAI core codes lack exact course bodies and remain unclassified, including coding/AI-sounding titles.",
+          "evidence": [
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/phil/",
+              "locator": "PHIL211 complete description"
+            },
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/inst/",
+              "locator": "INST204 complete description"
+            },
+            {
+              "url": "https://academiccatalog.umd.edu/undergraduate/approved-courses/math/",
+              "locator": "MATH141 / MATH115 complete descriptions"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass.",
+            "Exact missing course bodies remain unknown rather than classified from requirement titles."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "umd-hcai100",
+          "umd-hcai120",
+          "umd-hcai121",
+          "umd-hcai200",
+          "umd-hcai300",
+          "umd-hcai301",
+          "umd-inst204",
+          "umd-math115",
+          "umd-phil211",
+          "umd-wgss115"
+        ],
+        "options": [
+          "umd-amst260",
+          "umd-arch418j",
+          "umd-artt255",
+          "umd-artt370",
+          "umd-comm330",
+          "umd-comm371",
+          "umd-comm373",
+          "umd-comm449a",
+          "umd-engl318",
+          "umd-engl467",
+          "umd-gvpt170",
+          "umd-gvpt331",
+          "umd-gvpt431",
+          "umd-gvpt432",
+          "umd-hcai410",
+          "umd-hcai490",
+          "umd-hist206",
+          "umd-hist338f",
+          "umd-hist407",
+          "umd-hist454",
+          "umd-hist455",
+          "umd-imdm150",
+          "umd-inst366",
+          "umd-inst430",
+          "umd-inst431",
+          "umd-inst432",
+          "umd-inst433",
+          "umd-inst436",
+          "umd-inst480",
+          "umd-jour389w",
+          "umd-jour458a",
+          "umd-ling311",
+          "umd-ling312",
+          "umd-ling440",
+          "umd-ling449",
+          "umd-phil202",
+          "umd-phil341",
+          "umd-phil344",
+          "umd-phil347",
+          "umd-phil360",
+          "umd-phil362",
+          "umd-phil366",
+          "umd-phil370",
+          "umd-phil408",
+          "umd-phil438",
+          "umd-phil438-phil438l",
+          "umd-phil440",
+          "umd-phil445",
+          "umd-phil470",
+          "umd-phil478",
+          "umd-phil488",
+          "umd-phpe308",
+          "umd-plcy100",
+          "umd-plcy313",
+          "umd-thet116",
+          "umd-thet385",
+          "umd-thet475",
+          "umd-wgss200",
+          "umd-wgss280"
+        ],
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 10,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 1,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 3,
+            "applications": 0,
+            "electives": 0,
+            "other": 6
+          }
+        },
+        "options": {
+          "count": 59,
+          "categories": null
+        },
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": ".cache/http/aab30fcf0d2b1714f51b8b7ad52e8e17441f054400bc2cdcb32cef2d2da0cf98.body",
+          "sha256": "18c08c667b2a69b732e92dde824ee2952104207c2fe130879c469626b9b65c65"
+        }
+      ],
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "stevens-institute-of-technology-artificial-intelligence-bs-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "a238f2e2e7a9c8d9afeca74a887e7e8f278526149568c2dd7ffecdffc6803606",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "unverified",
+          "summary": "No complete hydrated Academic Plan capture was located for this independent pass. Available saved plan HTML has unresolved labels and a provisional 58-credit total, so it cannot independently establish the 24 fixed identities reported by the primary reviewer.",
+          "evidence": [
+            {
+              "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": [
+            "Only incomplete plan HTML and primary-review transcriptions were available; the primary 125-credit browser observation is not replaced with 58."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "The saved rendered requirement text verifies six complete science routes, including the nested CH117/BIO182 lab alternative; two approved math/science electives, six technical electives, four general electives and three of five SUCCESS courses. The 27 directly named option identities in these rules are recorded as a subset only.",
+          "evidence": [
+            {
+              "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
+            "Only incomplete plan HTML and primary-review transcriptions were available; the primary 125-credit browser observation is not replaced with 58."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "Twenty current fixed-course description captures were independently read, supporting programming/algorithms/design as foundations, mathematics as mathematics, explicit learning methods as AI and bounded mixed/unknown outcomes. Their existence does not establish fixed-plan membership.",
+          "evidence": [
+            {
+              "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://stevens.catalog.prod.coursedog.com/courses/056460e31383014015da07255234c549/course-information-aoYks",
+              "locator": "CS423 Senior Design I: software for clients; saved ordinary rendered Course Information capture"
+            }
+          ],
+          "limitations": [
+            "No complete fixed-role category total is independently certified in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": null,
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": null,
+        "options": null,
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "/tmp/atlas-stevens-reviewed-labels.html",
+          "sha256": "b29060e35eeb704100fdea3ec340689ae5a3eaf7820b6c5de27cd5ab2ec131ff"
+        },
+        {
+          "path": "/tmp/stevens-fixed-course-captures.json",
+          "sha256": "7286caf17e6a9110ee3f7cb9367b4a9ad3ad133e18c724a7b0483c0093e27b5c"
+        }
+      ],
+      "reviewed_option_subset": [
+        "stevens-bia-665",
+        "stevens-bio-181",
+        "stevens-bio-182",
+        "stevens-ce-240",
+        "stevens-ch-115",
+        "stevens-ch-116",
+        "stevens-ch-117",
+        "stevens-cs-532",
+        "stevens-cs-544",
+        "stevens-cs-545",
+        "stevens-cs-558-cpe-558",
+        "stevens-cs-560",
+        "stevens-cs-582",
+        "stevens-cs-584",
+        "stevens-cs-589",
+        "stevens-en-250",
+        "stevens-ma-661",
+        "stevens-me-598",
+        "stevens-nano-200",
+        "stevens-pep-111",
+        "stevens-pep-112",
+        "stevens-pep-221",
+        "stevens-prv-201",
+        "stevens-prv-202",
+        "stevens-prv-203",
+        "stevens-prv-204",
+        "stevens-prv-205"
+      ],
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "lehigh-university-artificial-intelligence-machine-learning-and-data-science-bs-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "4aca07b789ec9b2b76a129eff176ac9b9d0b032b170087ceca12abe12a95379d",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "Twenty fixed identities follow the degree table after applying the authoritative engineering-college writing alternatives. PHY 011 and PHY 012 are separate fixed identities; WRT 001/003 and WRT 002/005 remain options.",
+          "evidence": [
+            {
+              "url": "https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": [
+            "Degree table says 130–131 total and eleven free-elective credits; highlight/sample plan says 130 and ten free-elective credits."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "The degree and college tables enumerate 28 options: three linear-algebra courses, nine depth courses, twelve additional electives and four writing alternatives. Depth requires at least twelve credits and additional AI/ML/DS electives at least twenty-one; eligible CSE100+ remains an open predicate.",
+          "evidence": [
+            {
+              "url": "https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
+            "Degree table says 130–131 total and eleven free-elective credits; highlight/sample plan says 130 and ten free-elective credits."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All twenty fixed descriptions were reread. CSE027 is software foundations despite its AI title; CSE211 is distributed data systems; CSE140 mathematical structures and CSE252 ethics. Data science and the project pair retain mixed classifications; engineering/natural science practice stays applications.",
+          "evidence": [
+            {
+              "url": "https://engineering.lehigh.edu/cse/academics/undergraduate/bs-ai-ml-ds",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://catalog.lehigh.edu/coursesprogramsandcurricula/courses/cse/",
+              "locator": "Eleven fixed CSE blocks"
+            },
+            {
+              "url": "https://catalog.lehigh.edu/coursesprogramsandcurricula/engineeringandappliedscience/",
+              "locator": "ECO001 and writing alternatives"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "lehigh-chm-030",
+          "lehigh-cse-012",
+          "lehigh-cse-027",
+          "lehigh-cse-127",
+          "lehigh-cse-140",
+          "lehigh-cse-160",
+          "lehigh-cse-211",
+          "lehigh-cse-252",
+          "lehigh-cse-282",
+          "lehigh-cse-283",
+          "lehigh-cse-327",
+          "lehigh-cse-330",
+          "lehigh-eco-001",
+          "lehigh-engr-005",
+          "lehigh-engr-010",
+          "lehigh-math-021",
+          "lehigh-math-022",
+          "lehigh-math-231",
+          "lehigh-phy-011",
+          "lehigh-phy-012"
+        ],
+        "options": [
+          "lehigh-comm-165",
+          "lehigh-comm-351",
+          "lehigh-cse-323",
+          "lehigh-cse-325",
+          "lehigh-cse-326",
+          "lehigh-cse-335",
+          "lehigh-cse-337",
+          "lehigh-cse-347",
+          "lehigh-cse-348",
+          "lehigh-cse-349",
+          "lehigh-ece-303",
+          "lehigh-ise-230",
+          "lehigh-ise-240",
+          "lehigh-ise-309",
+          "lehigh-jour-025",
+          "lehigh-math-023",
+          "lehigh-math-205",
+          "lehigh-math-241",
+          "lehigh-math-242",
+          "lehigh-math-310",
+          "lehigh-math-312",
+          "lehigh-math-338",
+          "lehigh-math-339",
+          "lehigh-tlt-351",
+          "lehigh-wrt-001",
+          "lehigh-wrt-002",
+          "lehigh-wrt-003",
+          "lehigh-wrt-005"
+        ],
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 20,
+          "categories": {
+            "foundations": 3,
+            "mathematics": 4,
+            "ai_ml": 3,
+            "systems": 1,
+            "human_context": 1,
+            "applications": 5,
+            "electives": 0,
+            "other": 3
+          }
+        },
+        "options": {
+          "count": 28,
+          "categories": null
+        },
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "var/degree-independent/lehigh-degree.html",
+          "sha256": "5fb5dbeb4a71b799fae0f38edd988d64867251b3e4b3c5c1739b1c9a47df089d"
+        }
+      ],
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "new-jersey-institute-of-technology-business-with-ai-bs-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "cbfe5c8f3798270f426d974b3a1e55e237e67ba89387c5024f2f9eb98680580e",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "The official eight-semester plan names 32 fixed course identities, including zero-credit FYS SEM. Nine uncoded GER/free-elective slots are obligations, not invented fixed course identities.",
+          "evidence": [
+            {
+              "url": "https://catalog.njit.edu/undergraduate/management/management/business-with-ai-bs/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": []
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "The degree plan identifies two natural-science slots, three history/humanities slots, one senior seminar and three free electives. This pass checks those obligations but does not re-enumerate the 348 mapped GER option identities or certify their cross-listings.",
+          "evidence": [
+            {
+              "url": "https://catalog.njit.edu/undergraduate/management/management/business-with-ai-bs/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All available fixed-course bodies were reread. Mathematical modeling/statistics stay mathematics, database/security systems stay systems and explicit ML stays AI. MGMT422 was independently flagged: business visualization practice and communication are coequal, warranting other/mixed with applications and human-context candidates.",
+          "evidence": [
+            {
+              "url": "https://catalog.njit.edu/undergraduate/management/management/business-with-ai-bs/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://catalog.njit.edu/undergraduate/management/management/",
+              "locator": "Fixed management blocks, especially MGMT422 visualization/storytelling"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "njit-acct-115",
+          "njit-ds-100",
+          "njit-ds-110",
+          "njit-econ-266",
+          "njit-engl-101",
+          "njit-engl-102",
+          "njit-fin-315",
+          "njit-fin-320",
+          "njit-fin-410",
+          "njit-fys-sem",
+          "njit-hrm-301",
+          "njit-is-392",
+          "njit-is-465",
+          "njit-math-135",
+          "njit-mgmt-116",
+          "njit-mgmt-190",
+          "njit-mgmt-216",
+          "njit-mgmt-232",
+          "njit-mgmt-290",
+          "njit-mgmt-316",
+          "njit-mgmt-322",
+          "njit-mgmt-399",
+          "njit-mgmt-416",
+          "njit-mgmt-422",
+          "njit-mgmt-432",
+          "njit-mgmt-435",
+          "njit-mis-245",
+          "njit-mis-385",
+          "njit-mrkt-330",
+          "njit-om-375",
+          "njit-phil-310",
+          "njit-phil-335"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 32,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 4,
+            "ai_ml": 4,
+            "systems": 2,
+            "human_context": 5,
+            "applications": 8,
+            "electives": 0,
+            "other": 9
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": ".cache/http/f7826953e261d3dff6dcf617dbba23eb3a9691ce31f5412a0edb43f1fbf1d4da.body",
+          "sha256": "a21f8e82df6e0cab1d31aa22367290582ff0614d51cf76b55f6a63e88be57826"
+        }
+      ],
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "drexel-ai-ml-bs",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "9a25564b9ba133fc8c625220362bb5c5fc75e2fe647377eb639bf76a08db2cf6",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "verified",
+          "summary": "The main Degree Requirements table fixes eleven identities. Introductory programming, machine learning, project sequences, calculus, linear algebra, probability, writing and university seminar alternatives remain conditional.",
+          "evidence": [
+            {
+              "url": "https://catalog.drexel.edu/undergraduate/computer-information-sciences/artificialintellicenceandmachinelearningbs/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": []
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "The main table enumerates 72 represented option identities. Eight electives are required; sequence members count separately only when unused elsewhere. Only one of the two HPC sequences may be selected. First-year and senior projects are complete six- and nine-credit bundles; calculus choices remain complete sequences.",
+          "evidence": [
+            {
+              "url": "https://catalog.drexel.edu/undergraduate/computer-information-sciences/artificialintellicenceandmachinelearningbs/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
+            "ECEC455 lacks a linked/title-bearing course row; CS270/ECE232/ENGR232 and the unused-MATH substitution range remain prose alternatives rather than added records in the independently compared 72-option set."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All eleven fixed descriptions were reread. Five programming/data-structure/software-design courses are foundations, two explicit AI-method courses AI/ML, three social/ethical/civic courses human context, and COOP101 professional preparation applications.",
+          "evidence": [
+            {
+              "url": "https://catalog.drexel.edu/undergraduate/computer-information-sciences/artificialintellicenceandmachinelearningbs/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://catalog.drexel.edu/search/?P=SE%20310",
+              "locator": "Complete SE310 description"
+            },
+            {
+              "url": "https://catalog.drexel.edu/search/?P=INFO%20212",
+              "locator": "Complete INFO212 description"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "drexel-civc-101",
+          "drexel-coop-101",
+          "drexel-cs-180",
+          "drexel-cs-260",
+          "drexel-cs-265",
+          "drexel-cs-380",
+          "drexel-info-212",
+          "drexel-info-215",
+          "drexel-phil-311",
+          "drexel-se-201",
+          "drexel-se-310"
+        ],
+        "options": [
+          "drexel-ci-101",
+          "drexel-ci-102",
+          "drexel-ci-103",
+          "drexel-ci-120",
+          "drexel-ci-491",
+          "drexel-ci-492",
+          "drexel-ci-493",
+          "drexel-com-230",
+          "drexel-com-310",
+          "drexel-cs-171",
+          "drexel-cs-172",
+          "drexel-cs-281",
+          "drexel-cs-283",
+          "drexel-cs-383",
+          "drexel-cs-385",
+          "drexel-cs-387",
+          "drexel-cs-417",
+          "drexel-cs-435",
+          "drexel-cs-455",
+          "drexel-cs-476",
+          "drexel-cs-481",
+          "drexel-cs-482",
+          "drexel-cs-486",
+          "drexel-dsci-351",
+          "drexel-dsci-471",
+          "drexel-ece-105",
+          "drexel-ece-200",
+          "drexel-ece-231",
+          "drexel-ece-310",
+          "drexel-ece-350",
+          "drexel-ece-361",
+          "drexel-ece-413",
+          "drexel-ece-417",
+          "drexel-ece-434",
+          "drexel-ece-491",
+          "drexel-ece-492",
+          "drexel-ece-493",
+          "drexel-ecec-414",
+          "drexel-ecec-486",
+          "drexel-ecec-487",
+          "drexel-eces-441",
+          "drexel-eces-450",
+          "drexel-engl-101",
+          "drexel-engl-102",
+          "drexel-engl-103",
+          "drexel-engl-111",
+          "drexel-engl-112",
+          "drexel-engl-113",
+          "drexel-engr-111",
+          "drexel-engr-113",
+          "drexel-engr-131",
+          "drexel-engr-132",
+          "drexel-engr-231",
+          "drexel-info-210",
+          "drexel-info-213",
+          "drexel-info-300",
+          "drexel-info-310",
+          "drexel-info-323",
+          "drexel-info-332",
+          "drexel-info-371",
+          "drexel-info-432",
+          "drexel-info-440",
+          "drexel-math-105",
+          "drexel-math-116",
+          "drexel-math-117",
+          "drexel-math-121",
+          "drexel-math-122",
+          "drexel-math-200",
+          "drexel-math-201",
+          "drexel-math-221",
+          "drexel-math-311",
+          "drexel-univ-ci101"
+        ],
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 11,
+          "categories": {
+            "foundations": 5,
+            "mathematics": 0,
+            "ai_ml": 2,
+            "systems": 0,
+            "human_context": 3,
+            "applications": 1,
+            "electives": 0,
+            "other": 0
+          }
+        },
+        "options": {
+          "count": 72,
+          "categories": null
+        },
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "var/drexel-main.html",
+          "sha256": "0c2b930d3701bf977c8c9535e03cf04399bbca262c9b7ccc24d999eb14036706"
+        }
+      ],
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "uc-merced-ai-bs",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "1a626496f1c9bc9b119f6e8d846b4d2891e02deafd9d6a04dc4b6abcf412052d",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "unverified",
+          "summary": "The readable degree identity/context does not establish an authoritative named curriculum. Catalog access is already held at HTTP 403; an empty seed inventory cannot certify zero requirements.",
+          "evidence": [
+            {
+              "url": "https://www.ucmerced.edu/majors-and-minors/artificial-intelligence-bs",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": [
+            "Current catalog https://catalog.ucmerced.edu/ is already blocked at HTTP 403; no denied route was retried."
+          ]
+        },
+        "choice_rules": {
+          "status": "unverified",
+          "summary": "No readable authoritative choice rules were available in the saved source captures. Program aims and career examples cannot establish electives or prerequisite requirements.",
+          "evidence": [
+            {
+              "url": "https://www.ucmerced.edu/majors-and-minors/artificial-intelligence-bs",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
+            "Current catalog https://catalog.ucmerced.edu/ is already blocked at HTTP 403; no denied route was retried."
+          ]
+        },
+        "classification": {
+          "status": "unverified",
+          "summary": "No authoritative course descriptions were available for an independently established curriculum; zero represented courses is not a verified category distribution.",
+          "evidence": [
+            {
+              "url": "https://www.ucmerced.edu/majors-and-minors/artificial-intelligence-bs",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            }
+          ],
+          "limitations": [
+            "No accessible authoritative curriculum/course descriptions; catalog denial remains."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": null,
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": null,
+        "options": null,
+        "unresolved": null
+      },
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "university-of-south-florida-artificial-intelligence-bs-degree",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "d0b5cb0fa72554ddff12a15676e6eedec859dac6de873aaaef8c1104eefb4379",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "unverified",
+          "summary": "The current record attributes 24 fixed identities to the September 2026 brochure, but the saved brochure text located in this pass is empty and no readable PDF capture was found. Those course-role counts are not independently certified.",
+          "evidence": [
+            {
+              "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": [
+            "The definitive catalog returned HTTP 202 rather than a readable curriculum in the primary fetch; no challenge or access workaround was attempted."
+          ]
+        },
+        "choice_rules": {
+          "status": "unverified",
+          "summary": "The existing brochure-derived alternatives cannot be independently re-enumerated from an empty text capture. Catalog and pool uncertainty remains; no choice count is inferred from the seed.",
+          "evidence": [
+            {
+              "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
+            "The definitive catalog returned HTTP 202 rather than a readable curriculum in the primary fetch; no challenge or access workaround was attempted."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "The actual PSY2012 inventory description teaches scientific study of behavior and mental processes. It was independently flagged for applications rather than human context; the broader fixed-course category total is left unchecked here.",
+          "evidence": [
+            {
+              "url": "https://www.usf.edu/ai-cybersecurity-computing/documents/brochures/bellini-ug-bsai.pdf",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://cloud.usf.edu/academic-programs/details/prefix/PSY/code/2012",
+              "locator": "PSY2012 official Course Details description"
+            }
+          ],
+          "limitations": [
+            "No complete fixed-role category total is independently certified in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": null,
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": null,
+        "options": null,
+        "unresolved": null
+      },
+      "full_degree_verified": false
+    },
+    {
+      "program_id": "william-mary-applied-ai-ba",
+      "reviewed_at": "2026-10-11",
+      "reviewer": "independent-core-other",
+      "reviewed_content_hash": "e9ee129a34f1088b027047fce7a80ca6fa7010f8638f935a4024776a70fcf865",
+      "dimensions": {
+        "fixed_requirements": {
+          "status": "partial",
+          "summary": "The department FAQ explicitly calls DATA 201, DATA 202 and DATA 305 core requirements normally taken at W&M. This verifies the three represented identities, not a complete 30-credit major or its uncoded capstone.",
+          "evidence": [
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
+            }
+          ],
+          "limitations": [
+            "The illustrative pathway uses AAI 301 where the FAQ names DATA 305; it is not treated as a rename or complete approved-option list."
+          ]
+        },
+        "choice_rules": {
+          "status": "partial",
+          "summary": "The department supports conditional substitutions and independent study by committee approval, plus study-abroad preapproval. The linked pathway is explicitly an example and cannot establish a closed elective pool.",
+          "evidence": [
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+            }
+          ],
+          "limitations": [
+            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
+            "The illustrative pathway uses AAI 301 where the FAQ names DATA 305; it is not treated as a rename or complete approved-option list."
+          ]
+        },
+        "classification": {
+          "status": "partial",
+          "summary": "All three Fall 2026 registration descriptions were reread. DATA201 explicitly teaches AI modeling approaches, DATA305 RAG/prompt pipelines/agentic workflows, and DATA202 ethical/social interpretation. Their subject distribution is two AI/ML and one human context.",
+          "evidence": [
+            {
+              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
+              "locator": "Current actual course descriptions; fixed-category total where independently checked"
+            },
+            {
+              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12601",
+              "locator": "DATA 201 Fall 2026 Catalog Description and Registration Restrictions"
+            },
+            {
+              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12361",
+              "locator": "DATA 202 Fall 2026 Catalog Description and Registration Restrictions"
+            },
+            {
+              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=13505",
+              "locator": "DATA 305 Fall 2026 Catalog Description and Registration Restrictions"
+            }
+          ],
+          "limitations": [
+            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass."
+          ]
+        }
+      },
+      "expected_course_ids": {
+        "required": [
+          "wm-applied-ai-data-201",
+          "wm-applied-ai-data-202",
+          "wm-applied-ai-data-305"
+        ],
+        "options": null,
+        "unresolved": null
+      },
+      "expected_profile": {
+        "required": {
+          "count": 3,
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 2,
+            "systems": 0,
+            "human_context": 1,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "source_captures": [
+        {
+          "path": "/tmp/atlas-wm-major.html",
+          "sha256": "fc11f67ed4e8874360c32b62f7cf2532315b60c301fd17992002537ed666557c"
+        }
+      ],
+      "full_degree_verified": false
+    }
+  ],
+  "audit_date": "2026-10-11",
+  "scope": "Independent bounded fixed-core and named-choice review; null roles/categories are unchecked, not zero."
+}
