@@ -197,3 +197,14 @@ Guarded notes retain the source's expected programming or finance-concept famili
 This batch reviewed 38 distinct source descriptions and added **38 description fields across 1 variants**, bringing the total to **1179 of1,593 course observations**. The exact remaining inventory now contains **414 accessible unreviewed observations across 373 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
 
 Validation: **144 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All3 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
+
+## Marketing management and organizational methods — 2026-10-11
+
+Read24 Marketing,13 Management, one Organizational Behavior and two Strategy descriptions. The summaries prioritize consumer-data programming, quantitative inference, experimentation, marketing analytics, data/AI value creation, social-network analysis, workforce analytics and named concentration options. Marketing practicum work, field-study formats and partner-company projects retain their actual setting. The management consulting course is described as a simulation, not guaranteed external employment or consulting placement.
+
+The catalogs' terse special-topics entries receive correspondingly limited summaries; no topic, case or outcome is invented. Broad preparation expectations and recommended work experience remain separate notes, and existing prerequisite fields and concentration choices are unchanged.
+
+
+This batch reviewed 40 distinct source descriptions and added **41 description fields across 2 variants**, bringing the total to **1220 of1,593 course observations**. The exact remaining inventory now contains **373 accessible unreviewed observations across 333 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **144 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All5 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.

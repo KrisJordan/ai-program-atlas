@@ -55,3 +55,7 @@ Environmental science and engineering methods description review (2026-10-11): 1
 ## Accounting finance and information analysis descriptions — 2026-10-11
 
 Accounting finance and information analysis description review (2026-10-11): 38 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged. Live subject parsers require the reviewed evidence phrase in the scoped course description; unsupported summaries return null. No seed replay or freshness certification.
+
+## Marketing management and organizational methods descriptions — 2026-10-11
+
+Marketing management and organizational methods description review (2026-10-11): 40 existing course observations gain original concise summaries of their official 2026–2027 descriptions. Offering variability, course activities and permission conditions retain their stated scope. Requirement choices, credits, preparation fields and public resource links remain unchanged. Live subject parsers require the reviewed evidence phrase in the scoped course description; unsupported summaries return null. No seed replay or freshness certification.
