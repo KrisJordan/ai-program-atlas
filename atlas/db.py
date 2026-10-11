@@ -194,7 +194,7 @@ def validate_program(program, family=None):
             raise ValueError("first_offered requires an HTTP(S) evidence URL")
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", program["id"]):
         raise ValueError("Program ID must be a safe slug")
-    if not re.search(r"artificial intelligence|\bAI\b", program["title"], re.I):
+    if not re.search(r"artificial intelligence|\b(?:AI|GenAI|GeoAI)\b", program["title"], re.I):
         raise ValueError("Official title must explicitly contain AI or Artificial Intelligence")
     source_ids = {s["id"] for s in program["sources"]}
     if len(source_ids) != len(program["sources"]):

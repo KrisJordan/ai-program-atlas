@@ -43,6 +43,21 @@ def program():
     }
 
 
+@pytest.mark.parametrize("title", ["GenAI", "GeoAI and Geographic Analysis"])
+def test_explicit_ai_compound_titles_qualify(title):
+    record = program()
+    record["title"] = title
+    db.validate_program(record)
+
+
+@pytest.mark.parametrize("title", ["Sustainability", "Brain Science", "Retail Analytics", "Collaborative Intelligence"])
+def test_unrelated_letters_or_ai_course_content_do_not_qualify(title):
+    record = program()
+    record["title"] = title
+    with pytest.raises(ValueError, match="Official title"):
+        db.validate_program(record)
+
+
 def test_nonempty_courses_ingest_atomically_and_idempotently(conn):
     record = program()
     record["courses"] = [
