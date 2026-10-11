@@ -264,3 +264,22 @@ def test_visible_theater_exact_code_and_formal_none_are_preserved():
     assert len(rows)==1 and rows[0]['code']=='21T.248'
     assert rows[0]['credits']==12 and rows[0]['prerequisites']=='None'
     assert rows[0]['public_site']is None and rows[0]['syllabus']is None
+
+
+def test_archaeology_and_steam_descriptions_stay_with_exact_source_versions():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['id']:c for c in p['courses']}
+    approved=by['mit-ai-hass-archaeology-and-archaeological-science-3-987']
+    held=by['mit-ai-hass-ancient-and-medieval-studies-3-987']
+    assert approved['description'] and approved['category_review']['status']=='mixed'
+    assert held['description'] is None
+    assert approved['credits'] is None and approved['prerequisites'] is None
+    assert approved['public_site'].endswith('/3-987-human-origins-and-evolution-spring-2006/')
+    assert approved['syllabus'] is None  # The metadata observer reads this homepage only.
+    target=by['mit-ai-hass-cmsw-education-cms-s61-5e6c537a']
+    assert target['category']=='applications' and 'educational' in target['description'].lower()
+    assert 'spring-2024' in target['syllabus']
+    for cid in ['mit-ai-hass-cmsw-education-cms-s61-23d0f187',
+                'mit-ai-hass-cmsw-education-cms-s61-a0a026fc',
+                'mit-ai-hass-cmsw-pool-cms-cms-s61']:
+        assert by[cid]['description'] != target['description']
