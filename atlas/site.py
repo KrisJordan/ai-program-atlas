@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 import shutil
 
+from atlas.requirement_context import related_option_groups
 from atlas.course_references import reference_matcher, referenced_courses
 from atlas.curriculum_profile import requirement_profile
 from atlas.awards import major_award_buckets
@@ -615,6 +616,7 @@ def requirement_tree(p):
         children_by_id.setdefault(r.get('parent_id'), []).append(r)
     rendered = set()
     course_branches = {}
+    related_groups = related_option_groups(requirements)
 
     def has_courses(r, seen=frozenset()):
         rid = r.get('id')
@@ -664,6 +666,19 @@ def requirement_tree(p):
         main.sort(key=lambda r: (general_education(r), r.get('kind') == 'note'))
         return ''.join(render(r, seen, depth) for r in main) + bundle('General education requirements', general, seen, depth, 'general-' + parent) + bundle('Optional concentrations & fields', options, seen, depth, 'optional-' + parent) + bundle('Requirement notes', notes, seen, depth, 'notes-' + parent) + bundle('Other requirements', other, seen, depth, 'other-' + parent)
 
+    def related_markup(r):
+        groups = related_groups.get(r['id'], [])
+        if not groups:
+            return ''
+        panels = []
+        for group in groups:
+            rows = []
+            for child in children_by_id.get(group['id'], []):
+                links = [f'<a href="#course-{esc(cid)}">{esc(course_title(course_map[cid]))}</a>' for cid in child.get('course_ids', []) if cid in course_map]
+                rows.append('<li>' + ' + '.join(links) + '</li>')
+            panels.append('<details class="related-course-group" data-related-requirement="' + esc(group['id']) + '"><summary><h4>' + esc(re.sub(r'\s+designation overlay$', '', group.get('title') or 'Course grouping')) + '</h4><span>' + str(len(rows)) + ' option routes</span></summary><p>' + esc(group.get('summary') or 'Group rule has not been extracted; consult the recorded context.') + '</p><ul>' + ''.join(rows) + '</ul><a class="related-group-context" href="#requirement-' + esc(group['id']) + '">Full recorded context →</a></details>')
+        return '<section class="related-course-groups" data-related-pool="' + esc(r['id']) + '"><h4>Area / course groupings</h4><p>These same-source groups share complete option routes with this pool. Membership can overlap; this reading view adds no required slots. Follow each recorded group rule.</p>' + ''.join(panels) + '</section>'
+
     def render(r, seen, depth=0):
         rid = r.get("id")
         if rid in seen or rid in rendered:
@@ -674,6 +689,10 @@ def requirement_tree(p):
         courses = "".join(f'<li><a href="#course-{esc(c["id"])}">{esc(c.get("code") or "Code unknown")} · {esc(c.get("name") or "Course name not verified")}</a></li>' for c in requirement_courses)
         child_nodes = children_by_id.get(rid, [])
         children = render_level(child_nodes, seen, depth + 1, parent=rid)
+        related = related_markup(r)
+        child_markup = '<ul>' + children + '</ul>' if children else ''
+        if related and child_markup:
+            child_markup = '<details class="requirement-option-pool"><summary>All published option routes (' + str(len(child_nodes)) + ')</summary>' + child_markup + '</details>'
         selection = []
         if r.get("count") is not None:
             noun = 'alternative' if r.get('kind') == 'alternative' else 'selection' if child_nodes else 'course'
@@ -709,7 +728,7 @@ def requirement_tree(p):
             preview = '<span class="requirement-preview"><span class="requirement-preview-label">' + preview_label + '</span><span class="requirement-preview-list" role="list">' + ''.join('<span class="requirement-preview-item" role="listitem">' + esc(title) + '</span>' for title in shown) + '</span>' + ('<span class="requirement-preview-more">+' + str(len(preview_titles) - len(shown)) + ' more · expand for the full list</span>' if len(preview_titles) > len(shown) else '') + '</span>'
         rule = esc(operator + (' · ' + ' · '.join(selection) if selection else ''))
         opened = depth < 2 and has_courses(r) and not optional(r) and not general_education(r) and (r.get('kind') != 'note' or depth > 0)
-        return f'''<li class="requirement" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if opened else ""}><summary><h3 class="requirement-title">{esc(r.get('title'))}</h3><span class="requirement-rule">{rule}</span>{preview}</summary><div class="requirement-body">{'<div class="requirement-tags">' + provenance_badges + '</div>' if provenance_badges else ''}<p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{course_list}{'<ul>' + children + '</ul>' if children else ''}{evidence}</div></details></li>'''
+        return f'''<li class="requirement" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if opened else ""}><summary><h3 class="requirement-title">{esc(r.get('title'))}</h3><span class="requirement-rule">{rule}</span>{preview}</summary><div class="requirement-body">{'<div class="requirement-tags">' + provenance_badges + '</div>' if provenance_badges else ''}<p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{related}{course_list}{child_markup}{evidence}</div></details></li>'''
 
     roots = [r for r in requirements if not r.get("parent_id") or r.get("parent_id") not in ids]
     if not requirements:
