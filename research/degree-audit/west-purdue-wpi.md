@@ -185,3 +185,11 @@ explicitly allowed; other narrowed major restrictions remain exact policy questi
 Science approval lists remain department-referred; currentprogrambody has two opaque
 references. Three exactcode descriptions plus broader accessiblecatalogreview remain,
 so whole-degree status isin_progress.
+
+CurrentWRIT109ESfull description closes its accessible content gap: professional
+writing establisheshuman_context,4units, explicit prerequisite andEnglish109Icredit
+restriction. No automatic renumbering merge with107EP. The currentcatalogsearch
+`CMPSC189`returnsA/Bonly and no exactC/Drecords; these two represented worksheet
+codes remain unknown rather than replaced. Eighty-four of86coursecodes now have
+bounded content dispositions. Optionhuman_context27→28andother7→6; all role and
+identity counts remain20/61/2. GE/current-version/approval-policywork remainsactive.

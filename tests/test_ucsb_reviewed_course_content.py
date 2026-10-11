@@ -98,10 +98,10 @@ def test_writing_series_guard_and_no_automatic_identity_or_prerequisite_role(mon
     d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text());c={x['code']:x for x in d['courses']}
     assert c['WRIT 2']['credits']==5 and c['WRIT 2E']['credits']==4
     assert c['WRIT 105CD']['category_review']['status']=='mixed'
-    assert c['WRIT 109ES']['description'] is None
+    assert 'professional environmental writing' in c['WRIT 109ES']['description']
     assert 'formerly' in c['WRIT 107EP']['prerequisites']
     assert 'does not independently restate' in c['WRIT 50E']['prerequisites']
-    assert requirement_profile(d)['options']['categories']['human_context']==27
+    assert requirement_profile(d)['options']['categories']['human_context']==28
 
 
 def test_writing_actual_cache_matches_all25_read_blocks():
@@ -144,7 +144,7 @@ def test_english_offering_guards_do_not_infer_current_version_or_gold_prerequisi
     assert len(courses['ENGL 197']['category_review']['source_ids'])==3
     assert courses['ENGL 146AI']['code']!='ENGL 155AI'
     assert 'Winter2021' in courses['ENGL 146AI']['description']
-    assert requirement_profile(d)['options']['categories']['human_context']==27
+    assert requirement_profile(d)['options']['categories']['human_context']==28
 
 
 def test_english_all_five_actual_dated_offerings_are_guarded():
@@ -183,8 +183,8 @@ def test_current_crosslisting_uses_reciprocal_evidence_and_retains_raw_codes():
     profile=requirement_profile(d)
     assert profile['options']['count']==61
     assert profile['options']['source_record_count']==63
-    assert profile['options']['categories']['human_context']==27
-    assert profile['options']['categories']['other']==7
+    assert profile['options']['categories']['human_context']==28
+    assert profile['options']['categories']['other']==6
     from atlas.adapters import ucsb_catalog_course_content as current
     for code, entry in current.SPEC.items():
         key='clit155' if code=='C LIT 155' else code.lower().replace(' ','')

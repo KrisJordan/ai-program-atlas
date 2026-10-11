@@ -136,3 +136,19 @@ contains189A/Bbut not189C/D; do not substitute those identities without evidence
 Remaining exact-code description follow-ups:189C,189Dandlegacy109ES. Current versions
 for datedEnglish records, other undated metadata, college GE pools and applicable
 approval policies remain accessible work.
+
+### Final named-code follow-up (2026-10-11)
+
+The current catalog's exact WRIT109ESrecord was read in full: professional
+communication about environmental topics,4units, WRIT2/2E/2LKandupper-division
+standing, and no credit afterEnglish109I. It remains separate from107EP: the
+Writing Program's "formerly109ES" label does not independently prove identical
+current-version course identity. Both published code records remain in the source
+pool, with the version relationship explicit.
+
+The ordinary current course-search query `CMPSC189` returns only189Aand189B, both
+Senior Computer Systems Project; the fullCSdirectory likewise has those codes.
+No189C/Ddescription or explicit renumbering was observed. Combined with the current
+degree's two opaque references, this is a precise unresolved identity/source issue,
+not permission to substituteA/Bor claim C/Dneverexisted. Current descriptions now
+cover84of86represented codes, with their historical/generic limitations retained.

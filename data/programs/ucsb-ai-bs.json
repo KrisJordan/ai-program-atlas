@@ -845,6 +845,16 @@
       "catalog_year": "2026\u201327",
       "locator": "Full rendered preparation, required upper division, elective and science tree",
       "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-writ109es-catalog-2026",
+      "url": "https://catalog.ucsb.edu/courses/WRIT%20109ES/general-aoYks",
+      "title": "WRIT109ES \u2014 2026\u201327 General Catalog",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": "2026\u201327",
+      "locator": "Description, units, prerequisites and advisory credit restriction",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -2893,25 +2903,25 @@
     {
       "id": "ucsb-writ-109es",
       "code": "WRIT 109ES",
-      "name": null,
-      "description": null,
-      "prerequisites": null,
-      "credits": null,
+      "name": "Writing for Environmental Studies",
+      "description": "Analyzes and practices professional environmental writing, emphasizing audience, research, document design, collaboration and editing for topics such as water management and sustainability.",
+      "prerequisites": "Writing 2 or 2E or 2LK; upper-division standing. Not open for credit after English 109I.",
+      "credits": 4,
       "credit_unit": "quarter_hours",
-      "category": "other",
-      "source_id": "ucsb-ai-bs-college-requirements",
-      "url": "https://engineering.ucsb.edu/undergraduate/academic-advising/undergraduate-requirements",
+      "category": "human_context",
+      "source_id": "ucsb-ai-bs-writ109es-catalog-2026",
+      "url": "https://catalog.ucsb.edu/courses/WRIT%20109ES/general-aoYks",
       "public_site": null,
       "syllabus": null,
       "category_review": {
-        "status": "unclassified",
+        "status": "reviewed",
         "taxonomy_version": "1",
         "reviewed_at": "2026-10-11",
         "source_ids": [
-          "ucsb-ai-bs-college-requirements"
+          "ucsb-ai-bs-writ109es-catalog-2026"
         ],
-        "locator": "WRIT 109ES eligibility-list observation",
-        "rationale": "The recorded source observation supplies a course identifier but no course title or description. Requirement or pool membership does not establish subject. This is an evidence-insufficiency check, not a review of course content.",
+        "locator": "Full current catalog description",
+        "rationale": "Professional writing, audience analysis and rhetorical document design are the substance; the environmental domain does not turn the course into environmental science.",
         "candidate_categories": []
       }
     },
@@ -4497,7 +4507,8 @@
     "The alternate official images-path2026\u201327GEAR file has a different whole-file hash, but reviewed PDFpages13/14/16/17 have identical whitespace-normalized text to the docs-path file. AIpages16\u201317 also visually inspected. CMPSC41five/four-unit conflict, unspecified scienceListsA/B, and genericcapstone gap remain. No source precedence inferred.",
     "English exact-code review: ENGL146AI Winter2021 and146DS Winter2023 full department descriptions arehistorical; current applicability unverified. ENGL197 threeFall2026 topics areliterary/cultural analysis, with variabletopic scope retained. Allfive pages direct prerequisite checks toGOLD and state no units. Fall2025 ENGL155AIisdistinct andnot substituted. BlockedTranscriptions archive wasnotretried.",
     "Current 2026\u201327 catalog rendered through ordinary public navigation: C LIT155 and GER155 each have4quarter units and reciprocal same-course statements. Both code records remain; their elective identity counts once. No prerequisite is published in these records, so prerequisite metadata remains unknown. The same-course statement names ENGL155AI, not the separately represented historical ENGL146AI.",
-    "2026\u201327 current catalog review adds13previously unread exact course descriptions and refreshes CMPSC184/153A/181. Current41states4units, but GEAR5conflict remains unresolved. CMPSC181/ECE181explicitly permits AI upper-division students; CMPSC42, ECE139, CMPSC/ECE153A and ECE180still publish narrower major eligibility despite AI degree use. Do not invent an AI exception. ME107is3units with ME17or instructor consent; PSTAT120Ais recommended only. Required vision has reciprocal identity proof and counts once as fixed."
+    "2026\u201327 current catalog review adds13previously unread exact course descriptions and refreshes CMPSC184/153A/181. Current41states4units, but GEAR5conflict remains unresolved. CMPSC181/ECE181explicitly permits AI upper-division students; CMPSC42, ECE139, CMPSC/ECE153A and ECE180still publish narrower major eligibility despite AI degree use. Do not invent an AI exception. ME107is3units with ME17or instructor consent; PSTAT120Ais recommended only. Required vision has reciprocal identity proof and counts once as fixed.",
+    "Current catalog WRIT109ES remains an independently published four-unit record. Its department describes107EPas formerly109ES, but the current109ESrecord only excludesEnglish109Icredit. No cross-version/renumbering identity merge or automatic withdrawal of the older GEARpool code is inferred."
   ],
   "curriculum_audit": {
     "scope": "degree",
