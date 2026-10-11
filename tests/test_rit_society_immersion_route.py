@@ -32,7 +32,7 @@ def test_manual_routes_and_subjects_are_conditionally_scoped():
     from atlas.curriculum_profile import requirement_profile
     d=json.loads((ROOT/'data/programs'/f'{PID}.json').read_text());validate_program(d)
     c={x['code']:x for x in d['courses']}
-    assert len(c)==134 and sum(bool(x['description']) for x in c.values())==131
+    assert len(c)==298 and sum(bool(x['description']) for x in c.values())==295
     assert all(c[code]['credits']==3 and c[code]['prerequisites'] is None for code in CODES)
     assert c['STSO-350']['category']=='human_context' # robotics title is insufficient for AI methods
     assert c['STSO-425']['category']=='human_context' # quantified nature is historical analysis, not math methods
@@ -44,7 +44,7 @@ def test_manual_routes_and_subjects_are_conditionally_scoped():
     branch=req[local['parent_id']]
     assert req[branch['parent_id']]['kind']=='alternative'
     p=requirement_profile(d)
-    assert [p[k]['count'] for k in ('required','options','unresolved')]==[23,98,13]
+    assert [p[k]['count'] for k in ('required','options','unresolved')]==[23,262,13]
     l=json.loads((ROOT/'research/degree-audit/buffalo-delaware-rit.json').read_text());r=next(r for r in l['programs'] if r['program_id']==PID)
     assert PID+'-stso-320' in r['expected_course_ids']['options']
     assert PID+'-stso-320' not in r['expected_course_ids']['required']

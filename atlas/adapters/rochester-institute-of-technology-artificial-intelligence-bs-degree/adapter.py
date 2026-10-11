@@ -53,3 +53,9 @@ register_physics_immersion(SOURCES, SOURCE_PARSERS)
 
 from atlas.adapters.rit_chemistry_course_reviews import register as register_chemistry_immersion
 register_chemistry_immersion(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.rit_language_course_reviews import register as register_language
+register_language(SOURCES, SOURCE_PARSERS)
+
+from atlas.adapters.rit_anthropology_sociology_course_reviews import register as register_anthropology_sociology
+register_anthropology_sociology(SOURCES, SOURCE_PARSERS)

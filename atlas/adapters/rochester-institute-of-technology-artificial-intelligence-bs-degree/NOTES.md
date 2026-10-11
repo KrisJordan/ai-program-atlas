@@ -2,7 +2,7 @@
 
 Reviewed 2026-10-11. The primary degree audit is **in progress**, not complete or
 wholly inaccessible. The current reviewed graph has 23 fixed course identities,
-70 options and six unresolved/context identities (three advising-only and three preparation-only). The 2026–2027 public
+262 options and 13 unresolved/context identities (three advising-only and ten preparation-only). The 2026–2027 public
 study curriculum states 122 semester hours, six core alternative pairs and two AI
 electives across four options (five course codes, including a robotics pair).
 Two zero-credit co-op placements reuse one course identity. Uncoded GE,
@@ -11,7 +11,7 @@ requirements are represented without fabricated course membership.
 
 All 40 current public course popups were read. Their credits and 28 prerequisite
 or expectation statements are mapped; absent prerequisite fields stay unknown.
-The Mathematics, AI in Society and Applied Statistics branches supply 56 additional actual-description records. Every represented course has a source-specific taxonomy review, including three
+The 18 represented immersion branches supply 255 additional actual-description records. Every represented course has a source-specific taxonomy review, including three
 advising-only identities for which current descriptions are unavailable. Exact
 profile sets and role corrections are in the RIT row of
 `research/degree-audit/buffalo-delaware-rit.json`.
@@ -49,8 +49,8 @@ current section syllabus or a program outcome. See the separate source review
   retried. The linked science list explicitly dates to March 2013 and is not used
   as a current pool.
 - Public immersion curricula do render in an ordinary browser. The directory
-  has 77 immersion links; all local route rules are now reviewed. Three branches
-  have represented course records; the full named queue still has 714 unread
+  has 77 immersion links; all local route rules are now reviewed. Eighteen branches
+  have represented course records; the full named queue still has 439 unread
   identifiers. No blanket catalog-access claim or full GE closure is justified.
 - The current AI sequence annotates MATH190 as Immersion3 and separately lists
   another Immersion3 slot. The advising chart instead shows three separate
@@ -106,8 +106,7 @@ DHSS101 and VISL234 combine interpretation with substantial digital/art practice
 and remain mixed. No separate prerequisite statements were present, so null
 remains unknown. The route's required STSO320 is conditional for the AI degree,
 under the same optional-immersion parent; it is not an extra fixed AI core.
-This branch contributes fourteen of the current degree’s 134 identities and 131
-descriptions. The separate
+This branch contributes fourteen identities and reviewed descriptions. The separate
 standalone immersion record was not edited. Source-specific observations reuse
 its actual local-table parser but do not transfer its aims or completeness to
 the host degree. See `research/degree-audit/rit-society-immersion-route.md`.
@@ -118,7 +117,7 @@ the host degree. See `research/degree-audit/rit-society-immersion-route.md`.
 All 77 published immersion overviews, current curriculum tables and footnotes
 are now read across coordinated contributions. The exact queue has 1,324
 within-route named references / 787 literal identifiers, including preparation,
-historical substitution and combined-subject notation. There are 105 identifiers with integrated actual descriptions, six separately reviewed contributions, three historical-only references, and 673 unread identifiers. Global Experience is an open approval-based nine-credit
+historical substitution and combined-subject notation. Current queue counts are recorded below. Global Experience is an open approval-based nine-credit
 route; no finite course pool is invented. Current SIS/GE/WI access boundaries
 remain distinct from the accessible public immersion pages.
 
@@ -129,8 +128,7 @@ preparation is already AI-fixed and is not counted again. STAT-205/257 credit
 exclusion, exact individual prerequisites/equivalents and engineering audience
 conditions remain visible. Ten new courses are mathematics; STAT-330 is applied
 data-visualization practice based on its actual description. STAT-325's two WI
-attributes do not imply guaranteed term availability. The mapped graph is now
-23 fixed / 98 options / 13 contextual identities; the whole-degree audit remains
+attributes do not imply guaranteed term availability. At this earlier statistics checkpoint, the mapped graph had 23 fixed / 70 options / 6 contextual identities; the whole-degree audit remains
 in progress. Research rule evidence is not a completed course-content audit.
 
 
@@ -139,3 +137,12 @@ in progress. Research rule evidence is not a completed course-content audit.
 Forty-one complete public course cards were read across biology, physics and chemistry. Thirty-five records now support four additional local branches: Cellular and Molecular Biology, Physics, Astronomy and Chemistry. The graph has 134 identities: 23 fixed, 98 options and 13 preparation/context records; 131 have actual descriptions. Seven newly represented preparation identities stay outside elective and fixed degree counts. Chemistry preparation preserves the whole four-course lecture/lab sequence OR CHMG-131, rather than five independent alternatives.
 
 Individual one-, three- and four-credit cards retain their published amounts. The Cellular Biology and Physics nominal table subtotals do not impose a fabricated exact credit cap on four-credit options. PHYS-315 explicitly permits declared physics-immersion students; additional physics-major-only prerequisites remain conditional. Concurrent chemistry laboratories remain enrollment conditions without recursive expansion into universal AI core. Six additional reviewed cards for Ecology, Quantum and Climate remain contributions outside the mapped branch graph. Full degree status stays in progress because accessible named-course content remains unread and exact GE/WI and source-version boundaries remain.
+
+
+## Language and anthropology/sociology integration — 2026-10-11
+
+The current graph contains 298 course identities: 23 fixed, 262 options and 13 context/preparation records; 295 actual descriptions are reviewed. Eight language routes and Archaeology, Cultural Anthropology and Sociology bring represented branches to 18. All 77 route rules are reviewed. Of 787 named identifiers, 269 have integrated descriptions, 76 are completed separate contributions awaiting graph integration, three are historical references and 439 remain unread. These are literal source identifiers, not certified alias-deduplicated offerings or the open Global Experience universe.
+
+Language routes preserve the whole three-consecutive-language OR two-consecutive-language-plus-culture selection, placement, exact native-speaker/home-major exclusions, and regional-topic/global-campus conditions. Sixteen beginning-language cards carry four credits, despite nominal nine-hour totals; no exact credit cap is invented. Chinese displayed 9+3 groups remain a substitution. Spanish HIST-130/135 retain both printed group memberships with applicability to consecutive-language progression unresolved. MLSP-301 retains conflicting formal and prose prerequisites; MLSP-310 retains its Corequisites label.
+
+The 107 actual language-route descriptions are human context under the explicit communication/culture taxonomy. Anthropology/sociology adds 46 human-context, two mathematics, two applications, six mixed and one source-inspected unclassified topic course. Similar ANTH/SOCI/INGS descriptions do not establish cross-list identity. Cultural Anthropology preserves the first ANTH-102 OR104 OR105 elective entry, and global-campus/topic restrictions remain local conditions. No course becomes universal AI core. Manual audits and classifications remain separate from rerunnable actual-content observers.

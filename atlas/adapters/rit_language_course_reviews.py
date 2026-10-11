@@ -57,3 +57,11 @@ def parse(html, *, url):
         raise ValueError('Missing or duplicate rendered language cards')
     return {'id':PID,'courses':courses,'requirements':[],
             'observed_immersion_tables':observed['observed_tables']}
+
+
+def register(sources, parsers):
+    from functools import partial
+    for url in SOURCES:
+        if url not in sources:
+            sources.append(url)
+        parsers[url] = partial(parse, url=url)

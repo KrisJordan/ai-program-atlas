@@ -27,7 +27,7 @@ def test_science_preparation_is_context_and_local_core_is_optional():
     assert 'CHMO-235' in c['CHMO-231']['prerequisites']
     assert 'CHEM-531' not in c and 'PHYS-251' not in c and 'BIOL-575' not in c
     p=requirement_profile(d)
-    assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,98,13]
+    assert [p[k]['count'] for k in ['required','options','unresolved']]==[23,262,13]
     assert d['curriculum_status']=='partial'
 
 

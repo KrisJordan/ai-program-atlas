@@ -12,14 +12,13 @@ The full named worklist has **1,324 distinct-within-route references / 787 disti
 printed identifiers**. These include preparation, historical substitution codes,
 combined-subject notation and conditional topic/campus entries; they are not 787
 proven distinct AI-eligible offerings. `research/rit-immersion-course-review-queue.json`
-records every identifier's route/group provenance. Of these identifiers, 105 have
-actual reviewed descriptions in the degree seed, six are separately reviewed
-science contributions awaiting route integration, three are historical-only
-references, and **673 need actual course content**. The root owns 107 pending
-language identifiers; disjoint helpers own anthropology/sociology, gender/STS,
-and psychology/criminology/leadership batches. No unread description is labeled
-source-inspected unclassified. These counts precede incorporation of the new
-57-card anthropology/sociology contribution.
+records every identifier's route/group provenance. Of these identifiers, 269 have
+actual reviewed descriptions in the degree seed, 76 are separate reviewed
+contributions awaiting graph integration, three are historical-only references,
+and **439 need actual course content**. Completed contributions include the
+language, anthropology/sociology, gender/STS and applied-science cards. Disjoint
+helpers now own remaining history/economics and psychology/criminology/leadership
+batches. No unread description is labeled source-inspected unclassified.
 
 
 Global Experience uses an approval-based nine-credit rule without a finite code
@@ -40,7 +39,7 @@ minors and are not imported into immersion rules.
 
 The directory defines the observed published route set. It does not close the
 university's open choice rule, certify all future approved routes, or make the
-seven represented branches a complete degree inventory. Each branch contribution
+18 represented branches a complete degree inventory. Each branch contribution
 must preserve required, elective-choice and preparation roles, published amounts,
 local exclusions and approval conditions. Arbitrary free electives and recursive
 prerequisite universes are outside this queue.
