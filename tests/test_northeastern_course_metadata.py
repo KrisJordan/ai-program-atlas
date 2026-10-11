@@ -343,3 +343,13 @@ def test_remaining_metadata_queue_matches_concrete_records_without_absence_claim
     assert queue['counts']['course_observations']==len(courses)
     for field in ['description','prerequisites','credits','public_site','syllabus']:
         assert queue['counts'][field]==sum(c[field] is not None for c in courses)
+
+
+def test_graduate_only_project_is_not_imposed_on_undergraduate_degree():
+    prose='Graduate students are required to complete a mandatory class project.'
+    html=page(f'<div class="courseblock"><p class="courseblocktitle">CIVE 5363. Climate course. (4 Hours)</p><p class="cb_desc">Includes policy issues and risk-informed trade-offs. {prose}</p></div>',heading='Civil and Environmental Engineering (CIVE)')
+    args=dict(program_id='test-program',subject='CIVE',heading='Civil and Environmental Engineering (CIVE)',codes=['CIVE 5363'],url='https://catalog.northeastern.edu/course-descriptions/cive/')
+    result=parse_subject(html,**args)
+    assert result['courses'][0]['prerequisites'] is None and result['requirements']==[]
+    assert any('not imposed on this undergraduate degree' in n for n in result['notes'])
+    assert not any('mandatory class-project' in n for n in parse_subject(html.replace(prose,''),**args)['notes'])

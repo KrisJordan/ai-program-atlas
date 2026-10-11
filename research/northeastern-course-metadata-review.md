@@ -175,3 +175,14 @@ The Biology research capstone description retains its concurrent mentored-resear
 This batch reviewed 40 distinct source descriptions and added **46 description fields across 9 variants**, bringing the total to **1066 of1,593 course observations**. The exact remaining inventory now contains **527 accessible unreviewed observations across 474 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
 
 Validation: **141 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All12 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
+
+## Environmental science and engineering methods — 2026-10-11
+
+Read the remaining20 Civil/Environmental Engineering,38 Earth/Environmental Sciences, two General Engineering, two Engineering Co-op and one Industrial Engineering descriptions. Original summaries cover GIS and remote sensing, environmental measurement/modeling, climate adaptation, hydrology, ecological management and named professional/project options. Similar CIVE/ENVR titles retain separate course identities; no cross-list equivalence is inferred. Study-abroad formats and varying approved topics remain explicit.
+
+Three guarded CIVE notes preserve conditions without changing preparation fields: GIS/R/Python knowledge is preferred for CIVE5280; CIVE5363's mandatory project explicitly applies to graduate students and is not imposed on the undergraduate degree; CIVE5368 states one semester of undergraduate chemistry without specifying a finite course list. The five variable-credit records retain null scalar amounts and their published options.
+
+
+This batch reviewed 63 distinct source descriptions and added **75 description fields across 7 variants**, bringing the total to **1141 of1,593 course observations**. The exact remaining inventory now contains **452 accessible unreviewed observations across 411 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **142 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All10 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
