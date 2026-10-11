@@ -37,3 +37,12 @@ def parse(html):
         add(key,label,parent=root,kind='choose_credits',credits=int(match[1]),category=category,summary='Published webpage unit allocation; approved lists and detailed rules require further review.')
     add('capstone','Capstone experience',parent=root,kind='note',summary='The webpage describes an integrative AI project but does not identify its course requirement or units.')
     return dict(id=PROGRAM_ID,title='Artificial Intelligence',award_level='BS',program_kind='degree',catalog_year=None,curriculum_status='partial',courses=list(records.values()),requirements=nodes,notes=['Only explicit curriculum tables/core areas were parsed; illustrative four-year schedules were excluded. Webpage and 2026–27 worksheet conflict on CMPSC 41 units and upper-division totals. Science approved lists and capstone details remain unresolved.'])
+
+from atlas.adapters import ucsb_policies as policies
+SOURCES += (policies.REQUIREMENTS_URL, policies.GRADING_URL, policies.ELWR_URL, policies.GEAR_URL)
+SOURCE_PARSERS = {
+    SOURCES[0]: parse,
+    policies.REQUIREMENTS_URL: policies.parse_requirements,
+    policies.GRADING_URL: policies.parse_grading,
+    policies.ELWR_URL: policies.parse_elwr,
+}
