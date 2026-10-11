@@ -35,7 +35,7 @@ Remaining concrete boundaries:
 - AI-specific McCormick P/N permission remains unavailable: the current public page points to a January 2018 table with no AI entry. The CS rule is not silently assigned to AI.
 - Operational transfer guidance describes a 21-unit major while the current AI catalog uses 22; the four-transfer-unit cap agrees, and the current AI total is preserved.
 
-Metadata and launch dates remain separately unverified. Whole host-degree curricula are outside the audit.
+Course metadata and classification are independently reviewed below; launch dates remain unverified. Whole host-degree curricula are outside the audit.
 
 ## Refresh
 
@@ -43,3 +43,19 @@ Source-specific HTML parsers observe the local catalog and policy evidence. They
 
 
 2026-10-11 second-major relationship review: reread the official program catalog and retained its exact additional-major/second-major/co-major terminology and mandatory companion-major eligibility in `major_relationship`. The award remains unchanged. This manual evidence-backed relationship is separate from scraper observations; optional double-major compatibility is not equivalent. See `research/second-majors.md`.
+
+
+## Independent additional-major correctness review, 2026-10-11
+
+Both governing route catalogs were read separately, along with the local companion-major/host-policy clauses and actual course-directory blocks. Complete permitted cached HTML captures, exact locators/hashes, the dated 2018 P/N PDF and 2025–2026 WCAS overlap PDF are recorded in `research/additional-major-review-northwestern.json`; raw sources remain ignored. No whole home-degree certification is made.
+
+- The direct fixed set is COMP_SCI 208, 211, 212, 348 and 349. Introductory slots and related sequences remain alternatives. Every OR route now explicitly selects one route; an AND bundle still requires all its courses.
+- Four open advanced electives (McCormick) and six open technical electives (both routes) are true choice obligations. The former note-only pool nodes hid mapped options. Their mapped pools are now choices, while the additional open eligibility rule remains visible and is not treated as a finite pool.
+- Every mapped course has an individual description-based or explicitly title-limited/mixed/unclassified subject disposition. COMP_SCI 211 is foundations; COMP_SCI 212 is mathematics. Robot hardware/control plus introductory AI and biological/computational vision remain mixed `other`; generic special-topic blocks do not establish topic-specific contents. Examination credit COMP_SCI 1CA is not an invented scheduled course.
+- MECH_ENG 301 explicitly cross-lists COMP_SCI 301: retain both source code records, count one reviewed identity. No other slash, OR choice, credit exclusion, identical description or substitution is assumed to be a cross-list.
+- Actual credits stay in published units. Course registration restrictions and exclusions stay as metadata/qualification notes; prerequisites are not promoted to additional fixed major courses.
+- The McCormick BSE second-major policy requires at least 11 uniquely applied units in each of the BSE and primary major. The previously missing primary-major constraint is now explicit.
+
+The eligibility dimension remains partial. MATH 230-2 is listed for McCormick advanced electives despite excluding McCormick students; MATH 228-1 is listed in the non-McCormick related menu despite being restricted to McCormick students. Preserve these alternatives and flag permission/substitution questions, rather than deleting a catalog requirement or inventing permission. The previously documented AI-specific P/N, 21-versus-22-unit transfer wording, and non-McCormick home-school eligibility/applicability conflicts also remain exact blockers.
+
+Focused tests compare the literal manual role sets/category totals with the profile, assert open selection counts and nested calculus bundles, validate actual source observations where captures exist, and reject changed descriptions or identity/title changes without emitting manual reviewer audits.

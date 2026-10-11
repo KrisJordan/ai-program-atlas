@@ -52,8 +52,8 @@ def test_northwestern_route_scoping_and_open_electives(route):
  html=nw_fixture(route);r=nw.parse(html,route)
  assert r['award_level']=='other' and r['program_kind']=='additional_major'
  assert next(x for x in r['requirements'] if x['title']=='Five distinct breadth domains')['count']==5
- assert next(x for x in r['requirements'] if x['title']=='Technical electives: displayed additional pool')['kind']=='note'
- assert next(x for x in r['requirements'] if x['title']=='Six technical electives with open eligibility')['count']==6
+ assert next(x for x in r['requirements'] if x['title']=='Technical electives: displayed additional pool')['kind']=='choose_courses'
+ assert next(x for x in r['requirements'] if x['title']=='Technical electives: displayed additional pool')['count']==6
  with pytest.raises(ValueError):nw.parse(html.replace('one course in five of the six categories','changed selection'),route)
  with pytest.raises(ValueError):nw.parse(html.replace('<h1>','<h2>').replace('</h1>','</h2>'),route)
  assert any(c['code']=='COMP_SCI 999-0' for c in nw.parse(html.replace('COMP_SCI 110-0','COMP_SCI 999-0'),route)['courses'])

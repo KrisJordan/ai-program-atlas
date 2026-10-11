@@ -12,3 +12,6 @@ SOURCE_PARSERS.update({sources.POLICIES[key][0]:(lambda html,key=key:sources.par
 SOURCE_PARSERS[sources.DUPLICATES] = lambda html: sources.parse_existing_policy(html, 'non-mccormick', "duplicates")
 SOURCE_PARSERS[sources.TRANSFER_AFTER] = lambda html: sources.parse_existing_policy(html, 'non-mccormick', "transfer-after")
 PDF_TEXT_PARSERS = {sources.PN_PDF:lambda text:sources.parse_pdf_text(text, 'non-mccormick', "pn-table"), sources.OVERLAP_PDF:lambda text:sources.parse_pdf_text(text, 'non-mccormick', "overlap-table")}
+
+from atlas.adapters import northwestern_second_major_metadata as metadata
+SOURCES = metadata.register(PROGRAM_ID, SOURCES, SOURCE_PARSERS)
