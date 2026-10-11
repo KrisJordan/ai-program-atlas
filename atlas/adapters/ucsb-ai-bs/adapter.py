@@ -76,3 +76,6 @@ SOURCES += (math_content.URL,)
 SOURCE_PARSERS[math_content.URL] = math_content.parse
 from atlas.adapters import ucsb_writing_content as writing_content
 writing_content.attach(globals())
+
+# Alternate official PDF compared offline; raw binary refresh is not HTML parsing.
+SOURCES += ('https://engineering.ucsb.edu/sites/default/files/images/26-27_GEAR.pdf',)

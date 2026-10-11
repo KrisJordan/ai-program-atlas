@@ -7386,6 +7386,13 @@
           "locator": "All25represented full descriptions and applicable series/unit/eligibility text",
           "checked_at": "2026-10-11",
           "access_status": "HTTP200; actual full page read."
+        },
+        {
+          "url": "https://engineering.ucsb.edu/sites/default/files/images/26-27_GEAR.pdf",
+          "catalog_year": "2026-2027",
+          "locator": "PDFpages13/14/16/17 text comparison;16/17visual inspection. DifferentfileSHA256; applicable reviewedpage text identical.",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP200 PDF under ordinary robots/HTTP checks; compared actual full applicable pages."
         }
       ],
       "checks": {
@@ -7396,7 +7403,7 @@
         "credits_and_units": "Quarter hours. CMPSC41 remains null because requirement page5 vs sample plan/web4. Earlier worksheet81upper subtotal differs from currentGEAR72; source-specific values not silently reconciled. Department supplies33fixed4-quarter-unit records and variable192 (1–5) /196 (2–4) units. The latter remain null and do not replace the separate combined4-unit major elective cap. CMPSC184 metadata is historicalFall2017. Mathematics description page supplies no unit values; existing degree-source amounts are retained, not attributed to that page. Writing1/2explicit5,1E/2E/50/50Eexplicit4; upper105/107/109series4quarterunits. Follow-up source comparison: WRIT1 lower-page5 conflicts with separate guide4, so curated WRIT1 credits remain null; parser observations retain each source value.",
         "classification": "35 exact-code departmental pages read:31 reviewed single-category,1mixed HCI,3unclassified (historical184 without substantive content; generic192/196 projects). Other51records retain their existing precise-title/unknown or writing-source evidence limits. No degree-role-driven classification. Five fixed calculus/linear-algebra/differential-equations records now have full departmental content review rather than title-only evidence. Twenty-five Writing Program blocks read (including2ELWRcontexts already reviewed):24human context,1mixed writing/coding. Writing105AI concerns rhetoric/communication with generativeAI, not model-building methods.",
         "family_composition": "No family inheritance/bindings; independently scoped standalone degree. Shared policy helpers do not imply shared credential.",
-        "degree_wide_requirements": "Public progression, residence, transfer andgrading policies mapped, but finite AI-specific requirements/source conflicts block full certification."
+        "degree_wide_requirements": "Public progression, residence, transfer andgrading policies mapped, but finite AI-specific requirements/source conflicts block full certification. Alternate official images-pathGEAR compared: pages13/14/16/17 unchanged after whitespace normalization; AIpages16/17visually confirm existing requirements and conflicts. This accessible branch is closed, not a pending source."
       },
       "expected_profile": {
         "required": {

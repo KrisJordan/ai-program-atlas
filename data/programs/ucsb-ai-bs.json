@@ -595,6 +595,16 @@
       "catalog_year": null,
       "locator": "Named course blocks and shared series unit/eligibility paragraphs",
       "confidence": "high"
+    },
+    {
+      "id": "ucsb-ai-bs-gear-2026-images-comparison",
+      "url": "https://engineering.ucsb.edu/sites/default/files/images/26-27_GEAR.pdf",
+      "title": "2026–27 GEAR alternate official images-path publication",
+      "fetched_at": "2026-10-11T05:55:23.977271+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "PDFpages13,14,16,17 compared with reviewed docs-path file; AIpages16–17 visually inspected; whole-file SHA256 693a71da8261577ccfec6b02ebfaa9dd1a69d133b63f9b5c04ca4066754299e5",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -3162,7 +3172,7 @@
       "category": "ai_ml",
       "source_id": "ucsb-ai-bs-gear-2026",
       "source_text": null,
-      "summary": "Current GEAR page 16 reprints the nine-course, 36-unit pool plus CMPSC 190 AA–ZZ topics. CMPSC/ECE 153A and C LIT/GER 155 are cross-listings, each one choice, not two independent courses.",
+      "summary": "Current GEAR page 16 reprints the nine-course, 36-unit pool plus CMPSC 190 AA–ZZ topics. CMPSC/ECE153A andC LIT/GER155 are printed as slash-coded rows, each one choice. The department separately confirms153A same-course identity; slash notation alone does not certify the155 identity group.",
       "course_ids": [
         "ucsb-cmpsc-110",
         "ucsb-cmpsc-111",
@@ -4208,7 +4218,8 @@
     "Thirty-five exact-code public CS department pages independently reviewed. Thirty-four are undated; CMPSC184 is explicitly Fall2017 and has no substantive description. Published CS/CE-major restrictions are not assumed waived for AI majors. CMPSC192 (1–5) and196 (2–4) units remain variable/null, with degree-level combined4-unit elective cap retained. CMPSC153A/ECE153A andCMPSC181/ECE181 explicit same-course statements are observed; identity deduplication awaits the paired ECE evidence review.",
     "Five fixed mathematics descriptions and prerequisites independently read on the undated department page. That page states no units; existing degree-source four-quarter-unit amounts retained. Course preparation creates no additional degree obligations.",
     "Writing Program:25represented full course descriptions reviewed, including2previously reviewed ELWR contexts. WRIT1/2 are5units,1E/2E/50/50E4; upper105/107/109series4. Upper-series Writing2/2E/2LK and90-unit eligibility preserved. WRIT107EP explicitly formerly109ES, but109ES has no separate current block; no renumbering/duplicate-credit assumption. Writing105AI is communication/human context,105CD mixed coding/composition.",
-    "WRIT1 unit conflict: individual Writing1 guide says4; lower-division overview says5. Neither undated page establishes precedence; curated credits remain null. Both source-specific parsers retain their observed value."
+    "WRIT1 unit conflict: individual Writing1 guide says4; lower-division overview says5. Neither undated page establishes precedence; curated credits remain null. Both source-specific parsers retain their observed value.",
+    "The alternate official images-path2026–27GEAR file has a different whole-file hash, but reviewed PDFpages13/14/16/17 have identical whitespace-normalized text to the docs-path file. AIpages16–17 also visually inspected. CMPSC41five/four-unit conflict, unspecified scienceListsA/B, and genericcapstone gap remain. No source precedence inferred."
   ],
   "curriculum_audit": {
     "scope": "degree",

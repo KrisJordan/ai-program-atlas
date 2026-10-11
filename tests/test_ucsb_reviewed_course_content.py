@@ -117,3 +117,13 @@ def test_writing_actual_cache_matches_all25_read_blocks():
         assert all(x[k]==c[x['code']][k]for k in x if k not in excluded)
         if x['code']=='WRIT 1':
             assert x['credits']==5 and c[x['code']]['credits'] is None
+
+
+def test_alternate_gear_comparison_does_not_claim_pdf_html_refresh_or_resolve_conflict():
+    adapter=importlib.import_module('atlas.adapters.ucsb-ai-bs.adapter')
+    url='https://engineering.ucsb.edu/sites/default/files/images/26-27_GEAR.pdf'
+    assert url in adapter.SOURCES and url not in adapter.SOURCE_PARSERS
+    d=json.loads(Path('data/programs/ucsb-ai-bs.json').read_text())
+    assert any(s['url']==url and 'visually' in s['locator']for s in d['sources'])
+    assert next(c for c in d['courses']if c['code']=='CMPSC 41')['credits'] is None
+    assert any('190 AA–ZZ' in r.get('summary','')for r in d['requirements'])
