@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==416
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==418
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -423,11 +423,11 @@ def test_remaining_field_title_snapshot_keeps_performance_and_science_unknown():
 
 def test_final_named_lists_keep_technical_and_variable_subjects_unknown():
     for code in ['24.S00','11.074','11.154','9.00','CMS.603','MAS.110']:
-        o=entry(code)['observations'][-1]
+        o=next(o for o in entry(code)['observations'] if o['evidence_basis']=='official_title_only')
         assert o['status']=='unclassified' and o['category']=='other'
         assert o['description_digest'] is None
     for code in ['24.C40J/6.C40J','24.901','11.148','11.013[J]']:
-        o=entry(code)['observations'][-1]
+        o=next(o for o in entry(code)['observations'] if o['evidence_basis']=='official_title_only')
         assert o['category']=='human_context'
     for code in ['STS.021J/WGS160J','STS.022J21A.407J/21G.057J/WGS.275J','17035J/21H.181J']:
         r=entry(code)
@@ -1478,3 +1478,29 @@ def test_sts_department_actual_description_replay_and_metadata_only_rejection():
         path=Path('/tmp/mit-hass-subjects/urban-dept-'+key+'.html')
         if path.exists():
             with pytest.raises(ValueError):review.observe_sts_department_detail(path.read_text())
+
+
+def test_urban_project_descriptions_do_not_infer_technical_curriculum_from_title():
+    report=MANIFEST['urban_project_evidence_review'];assert len(report['upgraded_record_ids'])==2
+    big=entry('11.154')['observations'][-1]
+    assert big['evidence_basis']=='official_description' and big['catalog_year']=='Fall 2021'
+    assert big['status']=='unclassified' and big['category']=='other'
+    assert big['prerequisites'] is None and big['credits'] is None
+    assert any('No inference of Python' in n for n in big['restrictions'])
+    indigenous=entry('11.171')['observations'][-1]
+    assert indigenous['catalog_year'] is None and indigenous['category']=='human_context'
+    assert indigenous['credits'] is None
+
+
+def test_urban_project_source_replay_pins_exact_course_and_scope():
+    for cid in MANIFEST['urban_project_evidence_review']['upgraded_record_ids']:
+        row=MANIFEST['courses'][cid];e=row['observations'][-1];key=e['source_id'].removeprefix('mit-ai-hass-review-urban-project-')
+        path=Path('/tmp/mit-hass-subjects/urban-dept-'+key+'.html')
+        if not path.exists():pytest.skip('Optional public Urban Studies project captures')
+        o=review.observe_urban_project_course(path.read_text())[0]
+        course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+        assert review.matched_review(course,o,e['source_url'],MANIFEST)==e
+        for wrong in [{**o,'term':'Fall 2026'},{**o,'description':o['description']+' Programming instruction.'},{**o,'code':'11.999'}]:
+            assert review.matched_review(course,wrong,e['source_url'],MANIFEST) is None
+        if key=='indigenous':
+            with pytest.raises(ValueError):review.observe_urban_project_course(path.read_text().replace('11.171/11.172','11.999'))

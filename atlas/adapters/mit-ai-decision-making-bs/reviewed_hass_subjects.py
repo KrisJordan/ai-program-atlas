@@ -710,3 +710,29 @@ def observe_sts_department_detail(html):
         raise ValueError('STS dated actual description missing; schedule or eligibility only')
     return [dict(code=match[1], name=match[2], term=term[0], units=units[1],
                  prerequisites=None, description=description, source_text=clean(body))]
+
+
+def observe_urban_project_course(html):
+    """Read explicitly identified course/project evidence, not generic project titles."""
+    soup = BeautifulSoup(html, 'html.parser')
+    project = soup.select_one('.field--name-field-project-summary')
+    if project is not None:
+        paragraphs = [clean(p) for p in project.find_all('p')]
+        matched = [p for p in paragraphs if p.startswith('The 11.171/11.172 Indigenous Environmental Planning MIT course')]
+        if len(matched) != 1:
+            raise ValueError('DUSP explicit course identity missing')
+        return [dict(code='11.171/11.172', name='Indigenous Environmental Planning', term=None,
+                     description=matched[0], units=None, prerequisites=None,
+                     source_context=' '.join(paragraphs[:3]))]
+    title = soup.select_one('.title h1 .typed')
+    subtitle = soup.select_one('.subtitle h2')
+    about = soup.select_one('.modal-content')
+    match = re.fullmatch(r'Course (11\.154/11\.454) \| (Fall \d{4})', clean(subtitle))
+    if title is None or title.get('data-typed-items') != 'Big Data, Visualization, and Society' or match is None or about is None or clean(about.find('h2')) != 'About':
+        raise ValueError('Urban course showcase identity, term or About description missing')
+    description = ' '.join(clean(p) for p in about.find_all('p'))
+    if not description.startswith('Each year, the class works') or 'Students used data collected' not in description:
+        raise ValueError('Urban dated course/project description changed')
+    return [dict(code=match[1], name=title['data-typed-items'], term=match[2],
+                 description=description, units=None, prerequisites=None,
+                 topic=clean(soup.select_one('.title h2')))]
