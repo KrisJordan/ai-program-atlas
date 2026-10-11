@@ -1,4 +1,12 @@
-# CSRankings research context — import held
+# CSRankings research context — educational permission confirmed
+
+## Permission and current integration
+
+On October 11, 2026, project owner Kris Jordan confirmed: “We have permission to use csrankings data for this educational project.” The integration relies on that project-specific confirmation. No licensor document or broader redistribution right has been supplied or is claimed. Preserve upstream attribution, license notices, source snapshot and methodology. Numerical integration is now authorized for this educational Atlas and is being implemented and independently checked; the historical hold below no longer describes the current permission state.
+
+The project configuration remains 2016–2025 inclusive, United States, with individually reported `ai`, `vision`, `mlmining`, `nlp`, `inforet` fields and an explicitly defined aggregate. Compute the full eligible U.S. population before joining the Atlas roster. Keep absent, ineligible, no-output and unresolved matches distinct; none means zero educational quality.
+
+## Historical pre-permission research (2026-10-10)
 
 Verified 2026-10-10 against the [official FAQ](https://csrankings.org/faq) and pinned [September 28, 2026 source snapshot](https://github.com/emeryberger/CSrankings/commit/5e8a27d68310c728a182b8bb3b6437c39bce0cad). No source dataset or implementation is included in this repository. Public numeric import is held pending permission or qualified reuse review; this is a project limitation, not a claim that every factual citation is prohibited.
 

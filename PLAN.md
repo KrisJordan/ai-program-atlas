@@ -8,6 +8,8 @@ The user prioritizes better evidence for remaining National University core inve
 
 Additional-major review covers CMU AI, both Northwestern AI second majors, Villanova Analytics & AI co-major, and Marquette Applied AI in Business. Verify fixed identities, choices, course classifications and credential eligibility within each additional-major scope. These reviews do not certify whole host degrees. The coordinator owns shared persistence and integration; six GPT-6.1 Sol medium agents own separate source investigations. The user caps all future thread work at GPT-6.1 Sol with medium reasoning or lower.
 
+The owner also confirmed permission to use CSRankings data for this educational project on October 11, 2026. A reproducible, independently checked five-field and aggregate integration is now authorized alongside these curriculum reviews. Preserve attribution and source notices, compute the full eligible U.S. population before roster matching, and distinguish missingness from publication scores and teaching quality. The earlier permission hold is historical.
+
 Liberal arts roster expansion and Furman follow-up, minors, and concentrations are deprioritized. Existing records remain published with their evidence and missingness. National University cohort verification remains the relevant roster priority, but this bounded pass focuses on the named core inventories and five additional majors. Results and publication gates will be recorded below after independent acceptance.
 
 ## Immediate priority: degree correctness audit
