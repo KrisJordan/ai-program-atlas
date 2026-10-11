@@ -21,7 +21,7 @@ def test_case_review_preserves_approval_conflict_and_core_restrictions():
  d=json.loads((ROOT/'data/programs'/f'{PID}.json').read_text());validate_program(d)
  assert d['curriculum_status']=='partial' and d['status']=='unknown'
  assert d['first_offered'] is None
- assert len(d['courses'])==25 and len(d['requirements'])==10
+ assert len(d['courses'])==25 and len(d['requirements'])==11
  assert 'In Approval' in ' '.join(d['notes'])
  assert all('300-level CSDS' in c['prerequisites'] for c in d['courses'][:2])
  assert any('semester' in s['locator'] for s in d['sources'])
