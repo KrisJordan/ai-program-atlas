@@ -18,7 +18,7 @@ def dimension_site(tmp_path, site_data):
     # Presentation fixture, not a substitute for Rice's primary source audit.
     rice = site_data['programs'][0]
     rice.update(title='Rice AI review fixture', institution={**rice['institution'], 'name': 'Rice University'})
-    evidence = {'url': 'https://ga.rice.edu/programs-study/departments-programs/engineering-computing/computer-science/artificial-intelligence-bsai/', 'locator': 'Required courses: COMP 140, COMP 182 and COMP 215'}
+    evidence = {'url': 'https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/', 'locator': 'Required courses: COMP 140, COMP 182 and COMP 215'}
     rice['degree_audit'] = {
         'status': 'blocked', 'second_pass_status': 'partial',
         'core_review': {'reviewed_at': '2026-10-11', 'reviewer': 'Independent source reviewer', 'dimensions': {
@@ -28,7 +28,7 @@ def dimension_site(tmp_path, site_data):
         }},
     }
     other = site_data['programs'][1]
-    other.update(program_kind='degree', award_level='BA', degree_audit={'status': 'in_progress'})
+    other.update(program_kind='degree', award_level='BA', degree_audit={'status': 'in_progress', 'core_review': {'reviewed_at': '2026-10-11', 'reviewer': 'Independent source reviewer', 'dimensions': {'fixed_requirements': {'status': 'unverified', 'summary': 'Inspected sources do not establish a fixed set.', 'evidence': [evidence], 'limitations': ['The represented source scope remains incomplete.']}}}})
     site_data['meta']['degree_audit'] = dict(scope_programs=2, audited=0, blocked=1, in_progress=1, pending=0, second_pass_verified=0, audit_date='2026-10-11', programs=[rice['degree_audit'], other['degree_audit']])
     build(site_data, tmp_path/'ai-program-atlas')
     server = ThreadingHTTPServer(('127.0.0.1', 0), partial(SimpleHTTPRequestHandler, directory=str(tmp_path)))
@@ -63,7 +63,7 @@ def test_blocked_degree_preserves_verified_core_and_keyboard_evidence(browser, d
         page.keyboard.press('Enter')
         expect(fixed.locator('details')).to_have_attribute('open', '')
         expect(fixed).to_contain_text('residency wording remains unresolved')
-        expect(fixed.get_by_role('link')).to_have_attribute('href', 'https://ga.rice.edu/programs-study/departments-programs/engineering-computing/computer-science/artificial-intelligence-bsai/')
+        expect(fixed.get_by_role('link')).to_have_attribute('href', 'https://ga.rice.edu/programs-study/departments-programs/engineering/artificial-intelligence/artificial-intelligence-bs/')
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         page.locator('label[for="profile-options"]').click()
         expect(page.locator('#profile-options')).to_be_checked()
@@ -72,7 +72,7 @@ def test_blocked_degree_preserves_verified_core_and_keyboard_evidence(browser, d
         expect(panel.get_by_role('heading', name='Whole-degree correctness audit: Blocked')).to_be_visible()
         expect(fixed.locator('.review-dimension-status')).to_have_text('Verified within stated scope')
         page.goto(dimension_site+'programs/test-ai-1/')
-        expect(page.locator('.review-dimension-status')).to_have_text(['Not independently reviewed']*3)
+        expect(page.locator('.review-dimension-status')).to_have_text(['Not verified from available evidence', 'Not independently reviewed', 'Not independently reviewed'])
         for route in ['coverage/', 'methodology/']:
             page.goto(dimension_site+route)
             expect(page.locator('.degree-audit-summary')).to_contain_text('These counts describe whole-degree reviews')

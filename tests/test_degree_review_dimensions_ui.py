@@ -16,3 +16,9 @@ def test_dimension_prose_is_escaped_and_evidence_urls_are_safe():
     assert 'href="javascript:' not in html
     assert '&lt;b&gt;source&lt;/b&gt;' in html
     assert '&lt;script&gt;bad()&lt;/script&gt;' in html
+
+
+def test_explicit_unverified_review_is_distinct_from_missing_dimensions():
+    page = BeautifulSoup(degree_audit_program({'program_kind': 'degree', 'degree_audit': {'status': 'blocked', 'core_review': {'dimensions': {'fixed_requirements': {'status': 'unverified', 'summary': 'Sources inspected; a fixed set could not be established.', 'evidence': [], 'limitations': []}}}}}), 'html.parser')
+    assert [x.get_text() for x in page.select('.review-dimension-status')] == ['Not verified from available evidence', 'Not independently reviewed', 'Not independently reviewed']
+    assert 'Sources inspected; a fixed set could not be established.' in page.get_text()
