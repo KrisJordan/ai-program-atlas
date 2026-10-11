@@ -188,3 +188,7 @@ SOURCES += ("https://www.cla.purdue.edu/academic/philosophy/students/undergradua
 from atlas.adapters.west_degree_subjects import observe as observe_subjects
 parse = observe_subjects(parse, PROGRAM_ID)
 SOURCE_PARSERS = {url: observe_subjects(parser, PROGRAM_ID) for url, parser in SOURCE_PARSERS.items()}
+
+# Dated departmental outlines observe content without claiming current catalog access.
+from atlas.adapters import purdue_canonical_course_reviews
+purdue_canonical_course_reviews.attach(globals())
