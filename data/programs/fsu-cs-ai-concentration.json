@@ -17,7 +17,7 @@
   "catalog_year": null,
   "verification_status": "confirmed",
   "last_verified": "2026-10-11",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
@@ -28,6 +28,11 @@
       "kind": "overview",
       "url": "https://www.cs.fsu.edu/academics/undergraduate-programs/",
       "label": "Undergraduate Programs"
+    },
+    {
+      "kind": "study",
+      "url": "https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf",
+      "label": "Computer Science Concentration in AI — Flowchart"
     }
   ],
   "sources": [
@@ -50,14 +55,344 @@
       "catalog_year": null,
       "locator": "BS Computer Science Major: AI concentration link",
       "confidence": "high"
+    },
+    {
+      "id": "fsu-cs-ai-concentration-flowchart",
+      "url": "https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf",
+      "title": "Computer Science Concentration in AI — Flowchart",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Page 1; 15-credit minimum, course prerequisite blocks and prerequisite diagram",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "courses": [
+    {
+      "id": "fsu-cs-ai-concentration-cap-4601",
+      "code": "CAP 4601",
+      "name": "Intro to Artificial Intelligence",
+      "description": null,
+      "prerequisites": "COP 4530",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "fsu-cs-ai-concentration-flowchart",
+      "url": "https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "fsu-cs-ai-concentration-cap-4613",
+      "code": "CAP 4613",
+      "name": "Deep and Reinforcement Learning Fundamentals",
+      "description": null,
+      "prerequisites": "COP 3330",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "ai_ml",
+      "source_id": "fsu-cs-ai-concentration-flowchart",
+      "url": "https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "fsu-cs-ai-concentration-idc-4290",
+      "code": "IDC 4290",
+      "name": "Projects in Data Science",
+      "description": null,
+      "prerequisites": "COP 4530 & STA 4442",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-flowchart",
+      "url": "https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "fsu-cs-ai-concentration-cop-4870",
+      "code": "COP 4870",
+      "name": "Full-Stack Development in C#",
+      "description": null,
+      "prerequisites": "COP 3330",
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-flowchart",
+      "url": "https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "fsu-cs-ai-concentration-cop-4045",
+      "code": "COP 4045",
+      "name": "Adv. Python",
+      "description": null,
+      "prerequisites": "COP 3330",
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-flowchart",
+      "url": "https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "fsu-cs-ai-concentration-cop-4521",
+      "code": "COP 4521",
+      "name": "Secure and Parallel Computing",
+      "description": null,
+      "prerequisites": "COP 4530",
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-flowchart",
+      "url": "https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "fsu-cs-ai-concentration-cop-4710",
+      "code": "COP 4710",
+      "name": "Databases",
+      "description": null,
+      "prerequisites": "COP 3330 & MAD 2104",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-flowchart",
+      "url": "https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "fsu-cs-ai-concentration-cop-4064",
+      "code": "COP 4064",
+      "name": "Non-Traditional Databases",
+      "description": null,
+      "prerequisites": "COP 3330 & MAD 2104",
+      "credits": 3.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-flowchart",
+      "url": "https://www.cs.fsu.edu/wp-content/uploads/2026/09/AI_Concentration_Flowchart.pdf",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "fsu-cs-ai-concentration-local",
+      "parent_id": null,
+      "title": "Concentration coursework",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "Complete the two named core courses and each of the three choices below.",
+      "course_ids": []
+    },
+    {
+      "id": "fsu-cs-ai-concentration-core",
+      "parent_id": "fsu-cs-ai-concentration-local",
+      "title": "AI core",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "Complete both core courses.",
+      "course_ids": [
+        "fsu-cs-ai-concentration-cap-4601",
+        "fsu-cs-ai-concentration-cap-4613"
+      ]
+    },
+    {
+      "id": "fsu-cs-ai-concentration-project",
+      "parent_id": "fsu-cs-ai-concentration-local",
+      "title": "Project choice",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "Choose one option. Unresolved publisher placeholders remain explicit and are not silently removed from the choice.",
+      "course_ids": []
+    },
+    {
+      "id": "fsu-cs-ai-concentration-project-0-placeholder",
+      "parent_id": "fsu-cs-ai-concentration-project",
+      "title": "Unresolved course placeholder",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "The source lists CAP 4XXX — LLM Agent Systems; a final catalog course identity is unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "fsu-cs-ai-concentration-project-known-0",
+      "parent_id": "fsu-cs-ai-concentration-project",
+      "title": "Named course option",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "One eligible named option.",
+      "course_ids": [
+        "fsu-cs-ai-concentration-idc-4290"
+      ]
+    },
+    {
+      "id": "fsu-cs-ai-concentration-computing",
+      "parent_id": "fsu-cs-ai-concentration-local",
+      "title": "Computing choice",
+      "kind": "alternative",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "Choose one option. Unresolved publisher placeholders remain explicit and are not silently removed from the choice.",
+      "course_ids": []
+    },
+    {
+      "id": "fsu-cs-ai-concentration-computing-2-placeholder",
+      "parent_id": "fsu-cs-ai-concentration-computing",
+      "title": "Unresolved course placeholder",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "The source lists COP 4XXX — Computer Systems Engineering; a final catalog course identity is unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "fsu-cs-ai-concentration-computing-known-0",
+      "parent_id": "fsu-cs-ai-concentration-computing",
+      "title": "Named course option",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "One eligible named option.",
+      "course_ids": [
+        "fsu-cs-ai-concentration-cop-4870"
+      ]
+    },
+    {
+      "id": "fsu-cs-ai-concentration-computing-known-1",
+      "parent_id": "fsu-cs-ai-concentration-computing",
+      "title": "Named course option",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "One eligible named option.",
+      "course_ids": [
+        "fsu-cs-ai-concentration-cop-4045"
+      ]
+    },
+    {
+      "id": "fsu-cs-ai-concentration-computing-known-2",
+      "parent_id": "fsu-cs-ai-concentration-computing",
+      "title": "Named course option",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "One eligible named option.",
+      "course_ids": [
+        "fsu-cs-ai-concentration-cop-4521"
+      ]
+    },
+    {
+      "id": "fsu-cs-ai-concentration-database",
+      "parent_id": "fsu-cs-ai-concentration-local",
+      "title": "Database choice",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-identity",
+      "source_text": null,
+      "summary": "Choose one of the listed courses.",
+      "course_ids": [
+        "fsu-cs-ai-concentration-cop-4710",
+        "fsu-cs-ai-concentration-cop-4064"
+      ]
+    },
+    {
+      "id": "fsu-cs-ai-concentration-credit-minimum",
+      "parent_id": null,
+      "title": "Published concentration minimum",
+      "kind": "note",
+      "count": null,
+      "credits": 15.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "fsu-cs-ai-concentration-flowchart",
+      "source_text": null,
+      "summary": "The linked flowchart states 15 credits. Normalized credit unit remains unverified.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Identity verified from an official source; curriculum mapping is pending.",
-    "The source lists required and alternative courses but uses CAP 4XXX and COP 4XXX placeholders. Exact course identities, eligibility, completion policies and full local inventory remain unmapped. The “New” label is not first-offered evidence.",
-    "First offered, program learning outcomes and course metadata have not been verified."
-  ]
+    "Local curriculum evidence mapped; inventory remains partial pending the scoped audit gaps below.",
+    "CAP 4XXX and COP 4XXX are unresolved publisher placeholders; neither is a verified catalog course identity.",
+    "Applicable concentration grades, overlap, transfer/residence and any declaration policies remain unverified.",
+    "No first-offered date is inferred; program learning outcomes remain unverified.",
+    "The linked PDF retains the same unresolved placeholders as the HTML. Course prerequisite statements and five published credit amounts are sourced to the PDF; its normalized credit unit is unverified. The prerequisite diagram is contextual, not a second set of concentration requirements."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "fsu-cs-ai-concentration-identity",
+      "fsu-cs-ai-concentration-context",
+      "fsu-cs-ai-concentration-flowchart"
+    ],
+    "sections": [
+      "Official local curriculum and host-degree relationship",
+      "Two core courses and three nested choices, retaining placeholders",
+      "Linked flowchart minimum and explicit prerequisites"
+    ],
+    "unresolved_requirements": [
+      "CAP 4XXX and COP 4XXX are unresolved publisher placeholders; neither is a verified catalog course identity.",
+      "Applicable concentration grades, overlap, transfer/residence and any declaration policies remain unverified."
+    ],
+    "metadata_gaps": [
+      "Course descriptions, public course sites, example syllabi and source-stated program outcomes are unverified.",
+      "Course prerequisites and credit units remain unknown except where explicitly sourced."
+    ]
+  }
 }

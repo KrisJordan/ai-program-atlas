@@ -17,7 +17,7 @@
   "catalog_year": null,
   "verification_status": "confirmed",
   "last_verified": "2026-10-11",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
@@ -39,10 +39,56 @@
   ],
   "outcomes": [],
   "courses": [],
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "rpi-cognitive-science-ai-minor-minimum",
+      "parent_id": null,
+      "title": "Published minor minimum",
+      "kind": "note",
+      "count": null,
+      "credits": 16.0,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rpi-cognitive-science-ai-minor-identity",
+      "source_text": null,
+      "summary": "Complete at least 16 published credits. The normalized unit and full catalog inventory remain unverified.",
+      "course_ids": []
+    },
+    {
+      "id": "rpi-cognitive-science-ai-minor-topic-boundary",
+      "parent_id": null,
+      "title": "Illustrative course topics",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "rpi-cognitive-science-ai-minor-identity",
+      "source_text": null,
+      "summary": "The department supplies example topics rather than an exhaustive required-course pool; the catalog requirements remain inaccessible.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Identity verified from an official source; curriculum mapping is pending.",
-    "The overview states a 16-credit minimum but supplies example course topics, not a complete coded requirement inventory. Credit-unit normalization, catalog requirements and completion policies remain unverified. A linked catalog request failed in the browser reader; no inaccessible content was reconstructed.",
-    "First offered, program learning outcomes and course metadata have not been verified."
-  ]
+    "Local curriculum evidence mapped; inventory remains partial pending the scoped audit gaps below.",
+    "The detailed course inventory and applicable minor completion policies remain unavailable: catalog access returned HTTP 403.",
+    "No first-offered date is inferred; program learning outcomes remain unverified."
+  ],
+  "curriculum_audit": {
+    "scope": "minor",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "rpi-cognitive-science-ai-minor-identity"
+    ],
+    "sections": [
+      "Published minor credit minimum and illustrative-topic boundary"
+    ],
+    "unresolved_requirements": [
+      "The detailed course inventory and applicable minor completion policies remain unavailable: catalog access returned HTTP 403."
+    ],
+    "metadata_gaps": [
+      "Course descriptions, public course sites, example syllabi and source-stated program outcomes are unverified.",
+      "Course prerequisites and credit units remain unknown except where explicitly sourced."
+    ]
+  }
 }

@@ -11,7 +11,7 @@ Reviewed 2026-10-11. Ten previously partially inspected institutions received a 
 - **southern-methodist-university — Artificial Intelligence and Machine Learning Specialization (concentration)**: [official evidence](https://www.smu.edu/lyle/undergraduate/bs-computer-science). The official undergraduate FAQ names an AI and machine learning specialization within the BS in Computer Science. The FAQ states nine credit hours from the selected track. The complete specialization course pool and local policies remain unmapped. The linked current BS catalog could not be reliably read after an initial overview response. BA track requirements are not inherited by this record.
 - **university-of-illinois-chicago — AI (concentration)**: [official evidence](https://engineering.uic.edu/news-stories/uic-engineering-launches-ai-curriculum-initiatives/). An official April 1, 2026 announcement introduces a formal AI concentration for incoming computer science students, with a planned Fall 2026 availability. The announcement says four of six technical electives will be in AI. The inspected current BS Computer Science catalog does not identify the concentration or its approved pool. Implementation and full requirements remain unverified, so status remains announced even though the planned term has begun. Early AI Integration and Progressive AI Integration are curriculum initiatives, not additional credential records.
 
-All six seeds have pending curriculum inventories. These are identity discoveries, not complete requirement audits. UIC remains announced: a planned Fall 2026 start is not confirmation of actual first offering. No course sequences, illustrative pathways or certificates were promoted as additional programs.
+At the initial identity checkpoint all six seeds had pending curriculum inventories. These are identity discoveries, not complete requirement audits. UIC remains announced: a planned Fall 2026 start is not confirmation of actual first offering. No course sequences, illustrative pathways or certificates were promoted as additional programs.
 
 ## Other inspected institutions
 
@@ -50,3 +50,11 @@ Sources: [Computer Science and Software Engineering Undergraduate Programs](http
 Source adapters use current fetched official identity pages with explicit heading and credential context. Synthetic tests check incorrect host degrees, navigation-only matches, gates, unrelated AI initiatives and absent titles; optional cache replay checks actual captured pages. No parser emits an audit, verification timestamp or copied curriculum.
 
 Validation completed: 41 focused tests passed, including all six cached official-page replays. Fresh isolated ingestion, export and static site build succeeded with 132 programs and 194 loaded institutions. The maintained database and publication files were not edited by this pass.
+
+## Curriculum follow-up, 2026-10-11
+
+Five inventories now have mapped partial scope: FSU (8 named courses, 12 rules), UMass (13 courses, 11 rules), RPI (2 overview rules), and SMU BA/BS (2 courses and 5 rules each). UIC remains announced/pending because a current finite concentration inventory has not been verified.
+
+FSU’s linked flowchart was fetched after a robots check and reviewed visually. It verifies 15 published credits, eight prerequisite statements and five explicit course credit amounts; two placeholder course codes remain unresolved. PDF credit units are not inferred. UMass core, alternatives, upper-level elective subset, host-major grading and transfer-entry rules are mapped; qualified substitution/overlap conditions remain unclear. RPI catalog access returned 403; its published minimum is recorded without treating example topics as a course pool.
+
+SMU’s current catalog initially exposes numeric course IDs in HTTP HTML. Normal Chrome rendering and the visible course-detail links resolved both required courses independently for the BA and BS. The linked records now support names, brief descriptions, prerequisites and three semester credits each. Additional local policy applicability is still under review; the open advisor-approved elective is already represented as a rule.

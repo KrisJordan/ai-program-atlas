@@ -17,12 +17,22 @@
   "catalog_year": null,
   "verification_status": "confirmed",
   "last_verified": "2026-10-11",
-  "curriculum_status": "pending",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
       "url": "https://www.smu.edu/lyle/undergraduate/bs-computer-science",
       "label": "Computer science"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://catalog.smu.edu/programs/CS-BS/requirements-krhha",
+      "label": "CS-BS — Requirements"
+    },
+    {
+      "kind": "catalog",
+      "url": "https://catalog.smu.edu/policies/credithourpolicy",
+      "label": "SMU Credit Hour Policy"
     }
   ],
   "sources": [
@@ -35,14 +45,180 @@
       "catalog_year": null,
       "locator": "Program H1 and local eligibility/credential text; SMU uses the degree-specific FAQ paragraph; UIC uses the formal concentration announcement paragraph.",
       "confidence": "high"
+    },
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-requirements",
+      "url": "https://catalog.smu.edu/programs/CS-BS/requirements-krhha",
+      "title": "CS-BS — Requirements",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Local AI/ML track/specialization block and host-degree technical-elective separation",
+      "confidence": "high"
+    },
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-credit-policy",
+      "url": "https://catalog.smu.edu/policies/credithourpolicy",
+      "title": "SMU Credit Hour Policy",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Scope and Semester Credit Hour at SMU",
+      "confidence": "high"
+    },
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-course-0046401",
+      "url": "https://catalog.smu.edu/courses/0046401/overview-aoYks",
+      "title": "CS 5320 — Artificial Intelligence",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Rendered course identity, description/prerequisites and fixed Min/Max Credits",
+      "confidence": "high"
+    },
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-course-0268171",
+      "url": "https://catalog.smu.edu/courses/0268171/overview-aoYks",
+      "title": "CS 5324 — Machine Learning in Python",
+      "fetched_at": "2026-10-11",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Rendered course identity, description/prerequisites and fixed Min/Max Credits",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
-  "courses": [],
-  "requirements": [],
+  "courses": [
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-cs-5320",
+      "code": "CS 5320",
+      "name": "Artificial Intelligence",
+      "description": "Introduces basic principles of problem-solving, planning, and reasoning under uncertainty used in artificial intelligence.",
+      "prerequisites": "C- or better in CS 3353, CS 4340, and MATH 3304.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "smu-cs-bs-ai-ml-specialization-course-0046401",
+      "url": "https://catalog.smu.edu/courses/0046401/overview-aoYks",
+      "public_site": null,
+      "syllabus": null
+    },
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-cs-5324",
+      "code": "CS 5324",
+      "name": "Machine Learning in Python",
+      "description": "Introduces the processes of learning from data.",
+      "prerequisites": "C- or better in CS 2341 and MATH 3304.",
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "ai_ml",
+      "source_id": "smu-cs-bs-ai-ml-specialization-course-0268171",
+      "url": "https://catalog.smu.edu/courses/0268171/overview-aoYks",
+      "public_site": null,
+      "syllabus": null
+    }
+  ],
+  "requirements": [
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-total",
+      "parent_id": null,
+      "title": "Local track minimum",
+      "kind": "note",
+      "count": null,
+      "credits": 9.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "smu-cs-bs-ai-ml-specialization-requirements",
+      "source_text": null,
+      "summary": "Complete 9 credit hours for this BS track/specialization. Semester unit is independently verified by SMU credit-hour policy.",
+      "course_ids": []
+    },
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-required-courses",
+      "parent_id": null,
+      "title": "Required AI/ML courses",
+      "kind": "all",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "smu-cs-bs-ai-ml-specialization-requirements",
+      "source_text": null,
+      "summary": "Complete both courses. Publisher IDs are matched to course identities independently verified in the rendered program page and linked course records.",
+      "course_ids": [
+        "smu-cs-bs-ai-ml-specialization-cs-5320",
+        "smu-cs-bs-ai-ml-specialization-cs-5324"
+      ]
+    },
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-approved-elective",
+      "parent_id": null,
+      "title": "Advisor-approved track elective",
+      "kind": "note",
+      "count": null,
+      "credits": 3.0,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "smu-cs-bs-ai-ml-specialization-requirements",
+      "source_text": null,
+      "summary": "Complete 3 credit hours of track electives approved by the advisor. The source states an approval criterion rather than a finite elective pool.",
+      "course_ids": []
+    },
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-overlap",
+      "parent_id": null,
+      "title": "Host-degree technical elective separation",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "smu-cs-bs-ai-ml-specialization-requirements",
+      "source_text": null,
+      "summary": "Track courses cannot also satisfy the separate host-degree technical electives.",
+      "course_ids": []
+    },
+    {
+      "id": "smu-cs-bs-ai-ml-specialization-credit-unit",
+      "parent_id": null,
+      "title": "Credit-unit definition",
+      "kind": "note",
+      "count": null,
+      "credits": null,
+      "credit_unit": "unknown",
+      "category": "other",
+      "source_id": "smu-cs-bs-ai-ml-specialization-credit-policy",
+      "source_text": null,
+      "summary": "SMU defines its program credit hours as semester credit hours.",
+      "course_ids": []
+    }
+  ],
   "notes": [
-    "Identity verified from an official source; curriculum mapping is pending.",
-    "The FAQ states nine credit hours from the selected track. The complete specialization course pool and local policies remain unmapped. The linked current BS catalog could not be reliably read after an initial overview response. BA track requirements are not inherited by this record.",
-    "First offered, program learning outcomes and course metadata have not been verified."
-  ]
+    "Local curriculum mapped: CS 5320, CS 5324 and three advisor-approved track credits; the full local policy review remains in progress.",
+    "Both BA and BS rendered requirement sections were independently inspected in Chrome. Their numeric server-rendered entries 0046401 and 0268171 resolve through visible course buttons and View details links to the registered course records. No hidden API was used.",
+    "The advisor-approved elective is an open approval rule, not an unavailable finite list. The separate host-degree technical electives cannot double count track courses.",
+    "Course prerequisite grades and three semester-credit hours per required course are verified; additional local declaration, completion-grade, residency and transfer applicability remain under review.",
+    "No first-offered date is inferred; concentration-specific program outcomes remain unverified."
+  ],
+  "curriculum_audit": {
+    "scope": "concentration",
+    "reviewed_at": "2026-10-11",
+    "source_ids": [
+      "smu-cs-bs-ai-ml-specialization-identity",
+      "smu-cs-bs-ai-ml-specialization-requirements",
+      "smu-cs-bs-ai-ml-specialization-credit-policy",
+      "smu-cs-bs-ai-ml-specialization-course-0046401",
+      "smu-cs-bs-ai-ml-specialization-course-0268171"
+    ],
+    "sections": [
+      "Local nine-credit scope, two verified required courses and advisor-approved elective",
+      "Host-degree technical elective non-overlap and official semester-credit definition"
+    ],
+    "unresolved_requirements": [
+      "Any additional specialization-specific declaration, grade, residency and transfer policies remain unverified."
+    ],
+    "metadata_gaps": [
+      "Public course sites, example syllabi and concentration-specific learning outcomes remain unverified."
+    ]
+  }
 }

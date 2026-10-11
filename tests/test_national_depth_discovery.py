@@ -39,10 +39,15 @@ def test_scoped_identity_and_contract(key):
     pid = CONFIG[key][0]
     seed = json.loads((ROOT / 'data/programs' / f'{pid}.json').read_text())
     db.validate_program(seed)
-    observed = load(key).parse(fixture(key))
+    observed = parse_identity(fixture(key), key)
     assert observed == {k: seed[k] for k in ('id', 'title', 'award_level', 'program_kind')}
-    assert seed['curriculum_status'] == 'pending'
-    assert not seed['courses'] and not seed['requirements']
+    assert seed['curriculum_status'] in ('pending', 'partial')
+    if seed['curriculum_status'] == 'partial':
+        assert seed['curriculum_audit']['unresolved_requirements']
+        with pytest.raises(ValueError):
+            load(key).parse(fixture(key))
+    else:
+        assert not seed['courses'] and not seed['requirements']
     assert seed['first_offered'] is None
     assert set(load(key).SOURCES) <= {s['url'] for s in seed['sources']}
     assert not {'last_verified', 'curriculum_audit', 'curriculum_status', 'first_offered'} & observed.keys()
@@ -88,7 +93,9 @@ def test_optional_actual_cache_replay(key):
     raw = ROOT / '.cache/http' / (hashlib.sha256(mod.SOURCES[0].encode()).hexdigest() + '.body')
     if not raw.exists():
         pytest.skip('Optional ignored official source capture unavailable')
-    assert mod.parse(raw.read_text()) == mod.parse(fixture(key))
+    observed = mod.parse(raw.read_text())
+    assert all(observed[k] == parse_identity(fixture(key), key)[k] for k in ('id', 'title', 'award_level', 'program_kind'))
+    assert not {'last_verified', 'curriculum_audit', 'first_offered'} & observed.keys()
 
 
 def test_coverage_is_bounded_and_announcement_is_not_launch():
