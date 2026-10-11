@@ -27,3 +27,7 @@ Five inventories still lack current requirements. Independent public evidence ha
 - Furman’s listed AI major detail page remains password protected. A separate analytics catalog lead does not establish AI BS requirements; no different credential’s curriculum was imported.
 
 Michigan is no longer pending: its current handbook/course-table inventory is partial, with home-college policies and enrollment/topic details still under review. Counts and requirement-node details in earlier sections above are historical snapshots. No program launch date was inferred from the age of a search hit or these access observations.
+
+### Additional confirmed program — 2026-10-11
+
+The separate Michigan Engineering Artificial Intelligence minor is now confirmed by an independently public Engineering news report, updated April9,2026. Its detailed curriculum is pending: the department entry and indexed committee proposal were unavailable, and no current requirements were inferred from the news. This adds a sixth pending inventory, rather than changing the five original unresolved records. It is not the UMSI Human-Centered AI minor. See its dedicated adapter notes.
