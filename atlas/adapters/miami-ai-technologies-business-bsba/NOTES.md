@@ -51,3 +51,7 @@ Four plans leave overall logic blank (AT_0077, AT_0094, PS_0079, PS_0082); PS_00
 See [full review](../../../research/miami-cognate-pool-review.md) and [plan/group/row facts](../../../research/miami-thematic-cognate-pools.json). Raw HTML remains ignored. Isolated four-program ingest/check/build passed; focused source-change, completeness-accounting and preservation tests are documented in the review. No maintained DB edit.
 
 Validation: 83 focused Miami tests passed, including every actual HTML plan replay and full public PDF replay; isolated four-program ingest/check/build passed. Five optional PyMuPDF deprecation warnings only.
+
+## Exact award label review — 2026-10-11
+
+The reviewed award option preserves **B.S.B.A.**, mapped to **other**. Catalog page h1: B.S.B.A. in Artificial Intelligence Technologies for Business. Distinct from the separate B.B.A. curriculum; no BS/BSE/BA equivalence inferred. Existing program ID, award_level, title and requirement graph are unchanged. This optional mapping is reviewed metadata. Scrapers queue observations without replacing curated JSON; a parse result that omits award_options does not erase it. No parser or shared Northeastern helper change is needed.

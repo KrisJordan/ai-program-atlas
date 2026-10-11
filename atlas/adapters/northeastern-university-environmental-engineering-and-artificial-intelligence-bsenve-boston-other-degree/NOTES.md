@@ -55,3 +55,7 @@ Environmental science and engineering methods description review (2026-10-11): 2
 ## Finite description inventory closure — 2026-10-11
 
 Finite course-description review complete (2026-10-11): all 68 currently listed course observations have source-backed original summaries. This closes the listed-course description queue only. Other offering-specific public sites/syllabi remain unreviewed, null preparation fields do not mean no restriction, and degree completeness remains partial pending the documented applicability boundaries.
+
+## Exact award label review — 2026-10-11
+
+The reviewed award option preserves **BSEnvE**, mapped to **other**. Catalog #site-title h1: Environmental Engineering and Artificial Intelligence, BSEnvE (Boston). The exact discipline-specific award is retained; not equated with generic BSE. Existing program ID, award_level, title and requirement graph are unchanged. This optional mapping is reviewed metadata. Scrapers queue observations without replacing curated JSON; a parse result that omits award_options does not erase it. No parser or shared Northeastern helper change is needed.

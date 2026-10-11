@@ -21,3 +21,7 @@ The linked CMNS declaration page gives college-wide timing but does not place th
 Official MATH, CMSC and INST course listings provide metadata for **34 existing course observations**, including **eight concise descriptions and 34 prerequisite/restriction statements**. The new CMSC141/142 and INST436 entries are absent from those current listings; their missing metadata remains unknown. Generic CMSC498 metadata is deliberately not copied into the two topic-specific curriculum options. Published prerequisites, department permissions and other-program restrictions are preserved; a curriculum listing alone is not evidence of an enrollment waiver. Public sites and syllabi remain unverified.
 
 All new sources used the normal robots-aware public fetcher. The record stays **partial** at these concrete requirement/source boundaries, separate from course-metadata missingness.
+
+## Exact award label review — 2026-10-11
+
+The reviewed award option preserves **BSAI**, mapped to **BS**. Overview, second paragraph: Bachelor of Science in Artificial Intelligence: Computational Structures for AI Systems (BSAI). The explicit full-name expansion supports BS normalization; this is not inference from the abbreviation or hosting school. Existing program ID, award_level, title and requirement graph are unchanged. This optional mapping is reviewed metadata. Scrapers queue observations without replacing curated JSON; a parse result that omits award_options does not erase it. No parser or shared Northeastern helper change is needed.
