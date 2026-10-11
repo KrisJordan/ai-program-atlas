@@ -280,3 +280,10 @@ Preceding source clean Mac suite: 4,357 passed/463 optional skips/all 79 browser
 ## Requirements reading / 033d999
 
 Published source 033d999ad6f6fc288a740ff3bcb5b6644845019d; [CI and Pages](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38179073987) succeeded. Clean Mac: 4,366 passed / 463 optional skips; Linux CI: 3,802 passed / 1,027 optional skips; all 83 required browser cases pass. Every one of 20,000 requirement IDs remains in 168 pages. Reruns, database integrity, current-fact agreement and 176-file deterministic export pass. Six live files match; desktop/mobile disclosures, all-of titles, deep-note reload, prerequisite links and rankings above Sources pass. Published data.json is unchanged. Research limits remain recorded in PLAN.md.
+
+
+## Universal context hierarchy, density and AI literacy / b196cb9
+
+Published b196cb9966e5289fc8d58f02cefc7a78fbed9862; [CI and Pages](https://github.com/KrisJordan/ai-program-atlas/actions/runs/38181189274) succeeded. Clean Mac: 4,376 passed / 463 optional skips; full Linux CI: 3,812 / 1,027 optional skips; all 87 mandatory browser cases pass. Restore course-bearing note headings, separate explicit general education after program courses at root and nested levels, respect major-scope exclusion wording, and compact requirement/outcome text. Every one of 20,000 requirement IDs remains present across 168 pages.
+
+UNC DATA117 is reviewed Applications with official catalog evidence/rationale; its parser proposals are identity/description guarded and cannot overwrite curated reviews. Updated taxonomy guidance distinguishes technical AI methods, practical literacy/tool use, ethics-primary study and mixed/unknown content. Four legacy leads await actual source review. SQLite integrity/FKs, fresh/current-fact agreement, repeat ingest0 and 176 deterministic files pass; DB92,250,112 bytes/schema017. Nine deployed files match the build. Live desktop/mobile MIT/UNC/UCSD, keyboard/deep-fragment/reload, comparison, provenance and compact layout checks pass without errors/overflow. Research/audit coverage limits remain unchanged.
