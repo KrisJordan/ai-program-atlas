@@ -180,3 +180,26 @@ def parse_degree_policy(html: str) -> dict:
 
 
 SOURCE_PARSERS = {DEGREE_URL: parse_degree_policy}
+
+
+# Bounded metadata review: observations do not certify a curriculum audit.
+from functools import partial as _metadata_partial
+from atlas.adapters.small_complete_metadata_batch2 import CONFIG as _metadata_config, parse_metadata as _parse_metadata
+
+SOURCE_PARSERS = globals().get("SOURCE_PARSERS", {})
+for _key in ['georgia-csci-3360', 'georgia-csci-4360-6360', 'georgia-csci-phil-4550-6550', 'georgia-csci-4170-6170', 'georgia-csci-4380-6380', 'georgia-csci-arti-4530-6530', 'georgia-csci-4560-6560', 'georgia-csci-arti-4600-6600', 'georgia-csci-4850-6850', 'georgia-csci-4860-6860', 'georgia-csci-4900-6900']:
+    _cfg = _metadata_config[_key]
+    if _cfg["url"] not in SOURCES:
+        SOURCES = list(SOURCES) + [_cfg["url"]]
+    SOURCE_PARSERS[_cfg["url"]] = _metadata_partial(_parse_metadata, key=_key)
+
+from atlas.adapters.small_complete_metadata_batch2 import parse_aim as _parse_aim
+
+_previous_identity_parser = SOURCE_PARSERS.get('https://cs.uga.edu/news/stories/2025/area-emphasis-artificial-intelligence-ai-provides-preparation-similar-emerging-ai')
+def _parse_identity_with_aim(html):
+    observed = _previous_identity_parser(html) if _previous_identity_parser else {"id": PROGRAM_ID}
+    observed.update(_parse_aim(html, 'georgia'))
+    return observed
+if 'https://cs.uga.edu/news/stories/2025/area-emphasis-artificial-intelligence-ai-provides-preparation-similar-emerging-ai' not in SOURCES:
+    SOURCES = list(SOURCES) + ['https://cs.uga.edu/news/stories/2025/area-emphasis-artificial-intelligence-ai-provides-preparation-similar-emerging-ai']
+SOURCE_PARSERS['https://cs.uga.edu/news/stories/2025/area-emphasis-artificial-intelligence-ai-provides-preparation-similar-emerging-ai'] = _parse_identity_with_aim

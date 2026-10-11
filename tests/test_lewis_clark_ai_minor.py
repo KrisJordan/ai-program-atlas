@@ -40,5 +40,5 @@ def test_reviewed_seed_integrity():
     p=json.loads((ROOT/'data/programs/lewis-clark-ai-minor.json').read_text());validate_program(p)
     assert p['curriculum_status']=='complete' and p['curriculum_audit']['scope']=='minor'
     assert p['curriculum_audit']['unresolved_requirements']==[] and p['first_offered'] is None
-    assert len(p['courses'])==15 and sum(c['credits'] is not None for c in p['courses'])==5
+    assert len(p['courses'])==15 and sum(c['credits'] is not None for c in p['courses'])==15
     assert all(c['public_site'] is None and c['syllabus'] is None for c in p['courses'])

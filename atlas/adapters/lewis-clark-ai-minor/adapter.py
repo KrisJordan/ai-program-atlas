@@ -126,3 +126,15 @@ def parse_grading_policy(html):
     return guarded_notes(html,[
       ('grading','Credit/no-credit and repeated courses',('Consent of the instructor is required for the CR/NC option','CR/NC grades are not used for calculating','course credits only once'),'CR/NC election in regularly graded courses requires instructor consent and timely filing; it is excluded from GPA. Repeating a nonrepeatable course does not earn credit twice; both grades enter GPA.'),
     ],'lewis-clark-grading-policy')
+
+
+# Bounded metadata review: observations do not certify a curriculum audit.
+from functools import partial as _metadata_partial
+from atlas.adapters.small_complete_metadata_batch2 import CONFIG as _metadata_config, parse_metadata as _parse_metadata
+
+SOURCE_PARSERS = globals().get("SOURCE_PARSERS", {})
+for _key in ['lc-econ', 'lc-math', 'lc-psy', 'lc-phil', 'lc-rhms']:
+    _cfg = _metadata_config[_key]
+    if _cfg["url"] not in SOURCES:
+        SOURCES = list(SOURCES) + [_cfg["url"]]
+    SOURCE_PARSERS[_cfg["url"]] = _metadata_partial(_parse_metadata, key=_key)

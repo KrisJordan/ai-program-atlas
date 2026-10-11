@@ -170,3 +170,15 @@ def parse_advising(html: str) -> dict:
 
 
 SOURCE_PARSERS = {POLICY_URL: parse_advising}
+
+
+# Bounded metadata review: observations do not certify a curriculum audit.
+from functools import partial as _metadata_partial
+from atlas.adapters.small_complete_metadata_batch2 import CONFIG as _metadata_config, parse_metadata as _parse_metadata
+
+SOURCE_PARSERS = globals().get("SOURCE_PARSERS", {})
+for _key in ['rochester-fall', 'rochester-spring']:
+    _cfg = _metadata_config[_key]
+    if _cfg["url"] not in SOURCES:
+        SOURCES = list(SOURCES) + [_cfg["url"]]
+    SOURCE_PARSERS[_cfg["url"]] = _metadata_partial(_parse_metadata, key=_key)

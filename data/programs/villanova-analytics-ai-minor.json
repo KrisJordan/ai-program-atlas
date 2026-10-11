@@ -16,7 +16,7 @@
   "overview": "Business AI minor with a reviewed local course inventory and published policy constraints.",
   "catalog_year": "2026-2027",
   "verification_status": "confirmed",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "complete",
   "links": [
     {
@@ -75,9 +75,97 @@
       "catalog_year": "2026-2027",
       "locator": "Course description, credits and Prerequisites",
       "confidence": "high"
+    },
+    {
+      "id": "villanova-eco-3137-metadata",
+      "url": "https://live-villanova-catalog.cleancatalog.io/economics/eco-3137",
+      "title": "Official course descriptions: ECO 3137",
+      "fetched_at": "2026-10-11T01:51:22+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course description and labeled prerequisite/credit fields",
+      "confidence": "high"
+    },
+    {
+      "id": "villanova-fin-2360-metadata",
+      "url": "https://live-villanova-catalog.cleancatalog.io/finance/fin-2360",
+      "title": "Official course descriptions: FIN 2360",
+      "fetched_at": "2026-10-11T01:51:24+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course description and labeled prerequisite/credit fields",
+      "confidence": "high"
+    },
+    {
+      "id": "villanova-mgt-3180-metadata",
+      "url": "https://live-villanova-catalog.cleancatalog.io/analytics-artificial-intelligence/mgt-3180",
+      "title": "Official course descriptions: MGT 3180",
+      "fetched_at": "2026-10-11T01:51:25+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course description and labeled prerequisite/credit fields",
+      "confidence": "high"
+    },
+    {
+      "id": "villanova-mgt-3600-metadata",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management/mgt-3600",
+      "title": "Official course descriptions: MGT 3600",
+      "fetched_at": "2026-10-11T01:51:27+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course description and labeled prerequisite/credit fields",
+      "confidence": "high"
+    },
+    {
+      "id": "villanova-mis-2030-metadata",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-2030",
+      "title": "Official course descriptions: MIS 2030",
+      "fetched_at": "2026-10-11T01:51:29+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course description and labeled prerequisite/credit fields",
+      "confidence": "high"
+    },
+    {
+      "id": "villanova-mis-3050-metadata",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3050",
+      "title": "Official course descriptions: MIS 3050",
+      "fetched_at": "2026-10-11T01:51:30+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course description and labeled prerequisite/credit fields",
+      "confidence": "high"
+    },
+    {
+      "id": "villanova-mis-3060-metadata",
+      "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3060",
+      "title": "Official course descriptions: MIS 3060",
+      "fetched_at": "2026-10-11T01:51:32+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course description and labeled prerequisite/credit fields",
+      "confidence": "high"
+    },
+    {
+      "id": "villanova-mkt-2240-metadata",
+      "url": "https://live-villanova-catalog.cleancatalog.io/marketing/mkt-2240",
+      "title": "Official course descriptions: MKT 2240",
+      "fetched_at": "2026-10-11T01:51:33+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Course description and labeled prerequisite/credit fields",
+      "confidence": "high"
     }
   ],
-  "outcomes": [],
+  "outcomes": [
+    {
+      "text": "Develop business intelligence, decision modeling, data-mining and AI skills for business decisions.",
+      "kind": "source_stated",
+      "statement_type": "program_aim",
+      "source_id": "villanova-analytics-ai-minor-identity",
+      "locator": "About: skills and coursework overview"
+    }
+  ],
   "courses": [
     {
       "id": "villanova-mgt-3170",
@@ -111,12 +199,12 @@
       "id": "villanova-eco-3137",
       "code": "ECO 3137",
       "name": "Intro to Econometrics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Uses statistical estimation, regression and forecasting to investigate economic relationships.",
+      "prerequisites": "(ECO 1001 or SBI 2005) and ECO 1002 and (STAT 1235 or STAT 1313 or STAT 1430 or STAT 4310 or VSB 2005)",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_id": "villanova-eco-3137-metadata",
       "url": "https://live-villanova-catalog.cleancatalog.io/economics/eco-3137",
       "public_site": null,
       "syllabus": null
@@ -125,12 +213,12 @@
       "id": "villanova-fin-2360",
       "code": "FIN 2360",
       "name": "Applied Financial Statistics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Applies statistical and econometric methods to financial risk, returns and other finance problems.",
+      "prerequisites": "ECO 3137",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_id": "villanova-fin-2360-metadata",
       "url": "https://live-villanova-catalog.cleancatalog.io/finance/fin-2360",
       "public_site": null,
       "syllabus": null
@@ -140,11 +228,11 @@
       "code": "MGT 3180",
       "name": "Advance Data Mining & AI",
       "description": null,
-      "prerequisites": null,
+      "prerequisites": "MGT 3170 :Y; Junior or senior standing.",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_id": "villanova-mgt-3180-metadata",
       "url": "https://live-villanova-catalog.cleancatalog.io/analytics-artificial-intelligence/mgt-3180",
       "public_site": null,
       "syllabus": null
@@ -153,12 +241,12 @@
       "id": "villanova-mgt-3600",
       "code": "MGT 3600",
       "name": "Sports Analytics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Applies R and statistical analysis to sports performance, scouting and organizational decisions.",
+      "prerequisites": "VSB 2008 and (VSB 2020 or SBI 3040)",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_id": "villanova-mgt-3600-metadata",
       "url": "https://live-villanova-catalog.cleancatalog.io/management/mgt-3600",
       "public_site": null,
       "syllabus": null
@@ -167,12 +255,12 @@
       "id": "villanova-mis-2030",
       "code": "MIS 2030",
       "name": "Database Management",
-      "description": null,
-      "prerequisites": null,
+      "description": "Studies relational database design, SQL, distributed databases and client-server systems.",
+      "prerequisites": "VSB 2006 and (VSB 2020 :Y or SBI 3040) and (VSB 2009 :Y or SBI 3020)",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_id": "villanova-mis-2030-metadata",
       "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-2030",
       "public_site": null,
       "syllabus": null
@@ -181,12 +269,12 @@
       "id": "villanova-mis-3050",
       "code": "MIS 3050",
       "name": "CRM and Data Analytics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Uses data warehouses, business intelligence and data mining to support organizational decisions.",
+      "prerequisites": "VSB 2006 and (VSB 2020 or SBI 3040) and (VSB 2009 or SBI 3020)",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_id": "villanova-mis-3050-metadata",
       "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3050",
       "public_site": null,
       "syllabus": null
@@ -195,12 +283,12 @@
       "id": "villanova-mis-3060",
       "code": "MIS 3060",
       "name": "Business Intelligence with AI",
-      "description": null,
-      "prerequisites": null,
+      "description": "Builds business-intelligence workflows with generative AI and modern data tools.",
+      "prerequisites": "VSB 2006 and (VSB 2020 or SBI 3040) and (VSB 2009 or SBI 3020)",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_id": "villanova-mis-3060-metadata",
       "url": "https://live-villanova-catalog.cleancatalog.io/management-information-systems/mis-3060",
       "public_site": null,
       "syllabus": null
@@ -209,12 +297,12 @@
       "id": "villanova-mkt-2240",
       "code": "MKT 2240",
       "name": "Marketing Analytics",
-      "description": null,
-      "prerequisites": null,
+      "description": "Applies analytical software and quantitative methods to marketing decisions.",
+      "prerequisites": "(VSB 2020 or SBI 3040) and VSB 2008",
       "credits": 3.0,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "villanova-analytics-ai-minor-identity",
+      "source_id": "villanova-mkt-2240-metadata",
       "url": "https://live-villanova-catalog.cleancatalog.io/marketing/mkt-2240",
       "public_site": null,
       "syllabus": null
@@ -427,26 +515,41 @@
     "Official degree directory specifies this title for Class of 2029 and beyond, versus Business Analytics through Class of 2028. The class designation is not a launch date.",
     "Local program inventory only; does not certify the host BBA degree. Credits are source amounts; credit-unit normalization is unverified. Pool subtotals are not required totals.",
     "Required-course descriptions are original summaries of separate course catalog entries; prerequisites preserve source notation (:Y is not interpreted). Their sources are registered separately while course source_id remains the program catalog.",
-    "Conditional graduate substitutes are not ordinary unrestricted electives. Unknown elective metadata and public syllabi remain null."
+    "Conditional graduate substitutes are not ordinary unrestricted electives. Remaining unverified elective metadata and public syllabi remain null as detailed in the audit.",
+    "Eight undergraduate elective catalog records were reviewed. MGT 3180 has an AI title but its description discusses generic management, motivation, leadership and culture; its description remains unknown rather than supplying inferred AI content. Its published junior/senior restriction and prerequisite are retained. MKT 2240 says \"Maximum of 5 VSB minors\" without explaining the scope; this is not translated into a limit on how many minors a student can declare. The three conditional graduate MSA options still require the existing approvals; their individual course metadata remains unverified. These descriptive gaps do not change the explicit local choice and approval rules. Published credits remain unnormalized."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "villanova-analytics-ai-minor-identity",
       "villanova-mgt-3170-catalog",
-      "villanova-mgt-4170-catalog"
+      "villanova-mgt-4170-catalog",
+      "villanova-eco-3137-metadata",
+      "villanova-fin-2360-metadata",
+      "villanova-mgt-3180-metadata",
+      "villanova-mgt-3600-metadata",
+      "villanova-mis-2030-metadata",
+      "villanova-mis-3050-metadata",
+      "villanova-mis-3060-metadata",
+      "villanova-mkt-2240-metadata"
     ],
     "sections": [
       "Local course total and required courses",
       "Elective options and alternatives",
       "Unique-course/overlap policies",
-      "Conditional course replacements and graduate permissions"
+      "Conditional course replacements and graduate permissions",
+      "Bounded 2026-10-11 course metadata and outcome/date review"
     ],
     "unresolved_requirements": [],
     "metadata_gaps": [
-      "Only required-course descriptions/prerequisites reviewed; elective metadata and public course sites/syllabi remain unverified.",
-      "Credit unit normalization remains unknown."
+      "description unverified: MGT 3180, MSA 8105, MSA 8110, MSA 8240",
+      "prerequisites unverified: MSA 8105, MSA 8110, MSA 8240",
+      "credits unverified: MSA 8105, MSA 8110, MSA 8240",
+      "public_site unverified: MGT 3170, MGT 4170, ECO 3137, FIN 2360, MGT 3180, MGT 3600, MIS 2030, MIS 3050, MIS 3060, MKT 2240, MSA 8105, MSA 8110, MSA 8240",
+      "syllabus unverified: MGT 3170, MGT 4170, ECO 3137, FIN 2360, MGT 3180, MGT 3600, MIS 2030, MIS 3050, MIS 3060, MKT 2240, MSA 8105, MSA 8110, MSA 8240",
+      "Credit units unnormalized: MGT 3170, MGT 4170, ECO 3137, FIN 2360, MGT 3180, MGT 3600, MIS 2030, MIS 3050, MIS 3060, MKT 2240, MSA 8105, MSA 8110, MSA 8240",
+      "First-offered date unverified."
     ]
   }
 }

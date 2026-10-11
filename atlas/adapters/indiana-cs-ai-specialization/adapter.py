@@ -72,3 +72,15 @@ def parse_course_metadata(html):
     return dict(id=PROGRAM_ID,courses=result)
 
 SOURCE_PARSERS={SOURCES[0]:parse,SOURCES[1]:parse_specialization_policies,SOURCES[2]:parse_major_policies,SOURCES[3]:parse_course_metadata}
+
+
+# Bounded metadata review: observations do not certify a curriculum audit.
+from functools import partial as _metadata_partial
+from atlas.adapters.small_complete_metadata_batch2 import CONFIG as _metadata_config, parse_metadata as _parse_metadata
+
+SOURCE_PARSERS = globals().get("SOURCE_PARSERS", {})
+for _key in ['indiana-cs-ai-specialization-source-4']:
+    _cfg = _metadata_config[_key]
+    if _cfg["url"] not in SOURCES:
+        SOURCES = list(SOURCES) + [_cfg["url"]]
+    SOURCE_PARSERS[_cfg["url"]] = _metadata_partial(_parse_metadata, key=_key)

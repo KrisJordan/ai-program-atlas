@@ -99,7 +99,7 @@ def test_reviewed_batch_status_and_evidence():
     from atlas.db import validate_program
 
     for slug, status in [
-        (MSU, "complete"),
+        (MSU, "partial"),
         (TULANE, "complete"),
         ("stanford-ai-track", "complete"),
     ]:

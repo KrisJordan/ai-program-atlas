@@ -13,11 +13,11 @@
   "hosting_unit": "Department of Computer Science and Engineering, College of Engineering",
   "status": "active",
   "first_offered": null,
-  "overview": "A 22-credit AI minor for eligible MSU bachelor students, with programming foundations, algorithms, AI and a choice of advanced topics.",
+  "overview": "A 22-credit AI minor for eligible MSU bachelor students, with programming foundations, algorithms, AI and a choice of advanced topics. Current course enrollment restrictions have not been reconciled with minor eligibility; the requirement inventory is therefore partial.",
   "catalog_year": null,
   "verification_status": "partial",
-  "last_verified": "2026-10-10",
-  "curriculum_status": "complete",
+  "last_verified": "2026-10-11",
+  "curriculum_status": "partial",
   "links": [
     {
       "kind": "overview",
@@ -45,6 +45,96 @@
       "source_date": null,
       "catalog_year": null,
       "confidence": "high"
+    },
+    {
+      "id": "msu-231-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=356067",
+      "title": "Official course descriptions: CSE 231",
+      "fetched_at": "2026-10-11T01:59:59+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "SS14 - Open",
+      "confidence": "high"
+    },
+    {
+      "id": "msu-232-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=367946",
+      "title": "Official course descriptions: CSE 232",
+      "fetched_at": "2026-10-11T02:00:02+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "FS22 - Open",
+      "confidence": "high"
+    },
+    {
+      "id": "msu-260-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=370916",
+      "title": "Official course descriptions: CSE 260",
+      "fetched_at": "2026-10-11T02:00:04+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "FS25 - Open",
+      "confidence": "high"
+    },
+    {
+      "id": "msu-300-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=371919",
+      "title": "Official course descriptions: CSE 300",
+      "fetched_at": "2026-10-11T02:00:07+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "FS26 - Open",
+      "confidence": "high"
+    },
+    {
+      "id": "msu-331-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=371907",
+      "title": "Official course descriptions: CSE 331",
+      "fetched_at": "2026-10-11T02:00:09+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "FS26 - Open",
+      "confidence": "high"
+    },
+    {
+      "id": "msu-402-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=370817",
+      "title": "Official course descriptions: CSE 402",
+      "fetched_at": "2026-10-11T02:00:11+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "FS25 - Open",
+      "confidence": "high"
+    },
+    {
+      "id": "msu-404-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=370818",
+      "title": "Official course descriptions: CSE 404",
+      "fetched_at": "2026-10-11T02:00:13+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "FS25 - Open",
+      "confidence": "high"
+    },
+    {
+      "id": "msu-440-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=371934",
+      "title": "Official course descriptions: CSE 440",
+      "fetched_at": "2026-10-11T02:00:15+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "FS26 - Open",
+      "confidence": "high"
+    },
+    {
+      "id": "msu-course-search-rendered-review",
+      "url": "https://reg.msu.edu/Courses/Search.aspx",
+      "title": "MSU Course Descriptions — normal browser search",
+      "fetched_at": null,
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Reviewed 2026-10-11: Fall Semester 2026; CSE subject results, CSE 345/434/446; MTH 483. Rendered UI observation, not the bare HTTP search form.",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -52,7 +142,8 @@
       "kind": "source_stated",
       "text": "Develop an interdisciplinary AI foundation for industry, government or further graduate study.",
       "source_id": "michigan-state-university-artificial-intelligence-minor-minor-official",
-      "locator": "Minor introductory description"
+      "locator": "Minor introductory description",
+      "statement_type": "program_aim"
     }
   ],
   "courses": [
@@ -60,13 +151,13 @@
       "id": "msu-cse-231",
       "code": "CSE 231",
       "name": "Introduction to Programming I",
-      "description": null,
-      "prerequisites": null,
+      "description": "Introduces Python programming and program design, testing and problem solving.",
+      "prerequisites": "(LB 118 or concurrently) or (MTH 124 or concurrently) or (MTH 132 or concurrently) or (MTH 152H or concurrently)",
       "credits": 4,
       "credit_unit": "unknown",
       "category": "foundations",
-      "source_id": "michigan-state-university-artificial-intelligence-minor-minor-official",
-      "url": "https://reg.msu.edu/ACADEMICPROGRAMS/ProgramDetail.aspx?PType=MNUN&Program=AINTL_MNUN",
+      "source_id": "msu-231-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=356067",
       "public_site": null,
       "syllabus": null
     },
@@ -74,13 +165,13 @@
       "id": "msu-cse-232",
       "code": "CSE 232",
       "name": "Introduction to Programming II",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops C++ programming, abstraction and fundamental data structures.",
+      "prerequisites": "(CSE 231 or CMSE 202) and (LB 118 or MTH 124 or MTH 132 or MTH 152H)",
       "credits": 4,
       "credit_unit": "unknown",
       "category": "foundations",
-      "source_id": "michigan-state-university-artificial-intelligence-minor-minor-official",
-      "url": "https://reg.msu.edu/ACADEMICPROGRAMS/ProgramDetail.aspx?PType=MNUN&Program=AINTL_MNUN",
+      "source_id": "msu-232-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=367946",
       "public_site": null,
       "syllabus": null
     },
@@ -88,13 +179,13 @@
       "id": "msu-cse-260",
       "code": "CSE 260",
       "name": "Discrete Structures in Computer Science",
-      "description": null,
-      "prerequisites": null,
+      "description": "Studies logic, proofs, counting, relations and discrete structures used in computing.",
+      "prerequisites": "MTH 124 or MTH 132 or MTH 152H or LB 118",
       "credits": 4,
       "credit_unit": "unknown",
       "category": "foundations",
-      "source_id": "michigan-state-university-artificial-intelligence-minor-minor-official",
-      "url": "https://reg.msu.edu/ACADEMICPROGRAMS/ProgramDetail.aspx?PType=MNUN&Program=AINTL_MNUN",
+      "source_id": "msu-260-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=370916",
       "public_site": null,
       "syllabus": null
     },
@@ -102,13 +193,13 @@
       "id": "msu-cse-300",
       "code": "CSE 300",
       "name": "Social, Ethical, and Professional Issues in Computing",
-      "description": null,
-      "prerequisites": null,
+      "description": "Examines professional judgment, legal and ethical responsibilities and the social effects of computing.",
+      "prerequisites": "CSE 232. Enrollment restrictions: Open to students in the Computational Data Science Major or in the Computer Science Major or in the Computer Science Minor or in the Lyman Briggs Computer Science Coordinate Major.",
       "credits": 1,
       "credit_unit": "unknown",
       "category": "human_context",
-      "source_id": "michigan-state-university-artificial-intelligence-minor-minor-official",
-      "url": "https://reg.msu.edu/ACADEMICPROGRAMS/ProgramDetail.aspx?PType=MNUN&Program=AINTL_MNUN",
+      "source_id": "msu-300-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=371919",
       "public_site": null,
       "syllabus": null
     },
@@ -116,13 +207,13 @@
       "id": "msu-cse-331",
       "code": "CSE 331",
       "name": "Algorithms and Data Structures",
-      "description": null,
-      "prerequisites": null,
+      "description": "Designs, analyzes and applies fundamental algorithms and data structures.",
+      "prerequisites": "(CSE 232) and (CSE 260 or CMSE 202). Enrollment restrictions: Open to students in the Department of Computer Science and Engineering or in the Computer Engineering Major or in the Lyman Briggs Computer Science Coordinate Major or in the Lyman Briggs Data Science Coordinate Major or in the Data Science Major and open to juniors or seniors in the College of Engineering.",
       "credits": 3,
       "credit_unit": "unknown",
       "category": "foundations",
-      "source_id": "michigan-state-university-artificial-intelligence-minor-minor-official",
-      "url": "https://reg.msu.edu/ACADEMICPROGRAMS/ProgramDetail.aspx?PType=MNUN&Program=AINTL_MNUN",
+      "source_id": "msu-331-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=371907",
       "public_site": null,
       "syllabus": null
     },
@@ -144,13 +235,13 @@
       "id": "msu-cse-402",
       "code": "CSE 402",
       "name": "Biometrics and Pattern Recognition",
-      "description": null,
-      "prerequisites": null,
+      "description": "Studies feature extraction and matching for face, fingerprint and iris recognition.",
+      "prerequisites": "(CSE 331) and (STT 351 or STT 380 or STT 430 or STT 441) and (MTH 314 or MTH 317H) and (MTH 234 or MTH 254H or LB 220). Enrollment restrictions: Open to juniors or seniors in the College of Engineering or in the Lyman Briggs Computer Science Coordinate Major or in the Lyman Briggs Computer Science Major or in the Computer Science Minor or in the Lyman Briggs Data Science Coordinate Major or in the Data Science Major.",
       "credits": 3,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "michigan-state-university-artificial-intelligence-minor-minor-official",
-      "url": "https://reg.msu.edu/ACADEMICPROGRAMS/ProgramDetail.aspx?PType=MNUN&Program=AINTL_MNUN",
+      "source_id": "msu-402-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=370817",
       "public_site": null,
       "syllabus": null
     },
@@ -158,13 +249,13 @@
       "id": "msu-cse-404",
       "code": "CSE 404",
       "name": "Introduction to Machine Learning",
-      "description": null,
-      "prerequisites": null,
+      "description": "Develops machine-learning models and implements learning algorithms.",
+      "prerequisites": "(CSE 331) and (STT 351 or STT 380 or STT 430 or STT 441) and (MTH 314 or MTH 317H). Enrollment restrictions: Open to juniors or seniors in the College of Engineering or in the Lyman Briggs Computer Science Coordinate Major or in the Lyman Briggs Computer Science Major or in the Computer Science Minor or in the Data Science Major or in the Lyman Briggs Data Science Coordinate Major.",
       "credits": 3,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "michigan-state-university-artificial-intelligence-minor-minor-official",
-      "url": "https://reg.msu.edu/ACADEMICPROGRAMS/ProgramDetail.aspx?PType=MNUN&Program=AINTL_MNUN",
+      "source_id": "msu-404-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=370818",
       "public_site": null,
       "syllabus": null
     },
@@ -186,13 +277,13 @@
       "id": "msu-cse-440",
       "code": "CSE 440",
       "name": "Artificial Intelligence",
-      "description": null,
-      "prerequisites": null,
+      "description": "Studies advanced methods and algorithms for artificial intelligence.",
+      "prerequisites": "(CSE 331) and (MTH 314 or ECE 280 or MTH 317H). Enrollment restrictions: Open to juniors or seniors in the College of Engineering or in the Lyman Briggs Computer Science Coordinate Major or in the Computer Science Minor or in the Lyman Briggs Data Science Coordinate Major or in the Data Science Major.",
       "credits": 3,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "michigan-state-university-artificial-intelligence-minor-minor-official",
-      "url": "https://reg.msu.edu/ACADEMICPROGRAMS/ProgramDetail.aspx?PType=MNUN&Program=AINTL_MNUN",
+      "source_id": "msu-440-metadata",
+      "url": "https://reg.msu.edu/Courses/Search.aspx?CourseID=371934",
       "public_site": null,
       "syllabus": null
     },
@@ -354,18 +445,28 @@
     }
   ],
   "notes": [
-    "The complete designation applies to this minor requirement inventory and its local/general minor policies, not the parent bachelor degree or all course metadata.",
+    "The local minor curriculum and general minor policies are mapped, but the inventory is partial because current course enrollment restrictions conflict with the published minor audience.",
     "CSE 231 and CSE 260 are both required minor courses and entrance conditions; their credits appear once. Each requires at least 3.0 for acceptance. Calculus I is implied preparation; no extra course code or credit is invented.",
-    "Catalog credit values are preserved with credit_unit unknown until institutional credit-system normalization is verified. Course descriptions/prerequisites and public resources remain unverified.",
+    "Catalog credit values are preserved with credit_unit unknown until institutional credit-system normalization is verified. Eight course descriptions and prerequisite/restriction observations are now reviewed; remaining course metadata and public resources remain unverified.",
     "Local overlap is allowed only with degree-department and college approval; no unstated unique-credit minimum is invented. The university says any such minimum must be explicit in the catalog.",
-    "Catalog edition, calendar and launch date remain unverified. Institution-wide program coverage is not claimed."
+    "Catalog edition, calendar and launch date remain unverified. Institution-wide program coverage is not claimed.",
+    "Current open-ended course versions were read through the public course search and eight observed View all versions links. Historical versions in those pages are not treated as current. The minor excludes CS/CE/Computational Data Science/Data Science majors and the CS minor, yet required CSE 300 lists only Computational Data Science, Computer Science, Computer Science Minor and Lyman Briggs Computer Science Coordinate students. CSE 345 similarly omits the AI minor from its listed eligible programs; several electives restrict enrollment as well. No AI-minor exception was found in the reviewed sources, so eligibility remains unresolved and inventory is partial. Course 300 and 345 titles differ between minor table and course search; requirement-table titles remain unchanged. Published Credits remain unnormalized. CSE 345/434/446 and MTH 483 were visible in normal browser search, but their metadata is not automated in this bounded batch; their existing unknown fields remain null."
   ],
   "curriculum_audit": {
     "scope": "minor",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "michigan-state-university-artificial-intelligence-minor-minor-official",
-      "michigan-state-university-artificial-intelligence-minor-minor-undergraduate-policy"
+      "michigan-state-university-artificial-intelligence-minor-minor-undergraduate-policy",
+      "msu-231-metadata",
+      "msu-232-metadata",
+      "msu-260-metadata",
+      "msu-300-metadata",
+      "msu-331-metadata",
+      "msu-402-metadata",
+      "msu-404-metadata",
+      "msu-440-metadata",
+      "msu-course-search-rendered-review"
     ],
     "sections": [
       "22-credit minimum",
@@ -375,14 +476,20 @@
       "Major/minor eligibility exclusions",
       "Approval-based bachelor-degree overlap",
       "Implied Calculus I preparation",
-      "University Selecting a Minor policy"
+      "University Selecting a Minor policy",
+      "Bounded 2026-10-11 course metadata and outcome/date review",
+      "Current course enrollment restrictions compared with minor eligibility exclusions"
     ],
-    "unresolved_requirements": [],
+    "unresolved_requirements": [
+      "Required CSE 300 and CSE 345 enrollment restrictions omit the AI minor and largely specify programs that the minor excludes; no applicable exception or access route is established. Several elective enrollment restrictions also remain unresolved."
+    ],
     "metadata_gaps": [
-      "Credit unit/calendar normalization unverified",
-      "Course descriptions and prerequisites unverified",
-      "Public course sites and syllabi unverified",
-      "Catalog edition and launch date unverified"
+      "description unverified: CSE 345, CSE 434, CSE 446, MTH 483",
+      "prerequisites unverified: CSE 345, CSE 434, CSE 446, MTH 483",
+      "public_site unverified: CSE 231, CSE 232, CSE 260, CSE 300, CSE 331, CSE 345, CSE 402, CSE 404, CSE 434, CSE 440, CSE 446, MTH 483",
+      "syllabus unverified: CSE 231, CSE 232, CSE 260, CSE 300, CSE 331, CSE 345, CSE 402, CSE 404, CSE 434, CSE 440, CSE 446, MTH 483",
+      "Credit units unnormalized: CSE 231, CSE 232, CSE 260, CSE 300, CSE 331, CSE 345, CSE 402, CSE 404, CSE 434, CSE 440, CSE 446, MTH 483",
+      "First-offered date unverified."
     ]
   }
 }

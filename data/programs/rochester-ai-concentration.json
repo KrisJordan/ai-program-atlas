@@ -16,7 +16,7 @@
   "overview": "An optional AI concentration within the Computer Science BS: five advanced four-credit courses, with at least three from the approved AI area.",
   "catalog_year": null,
   "verification_status": "partial",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "complete",
   "links": [
     {
@@ -60,6 +60,26 @@
       "source_date": null,
       "catalog_year": null,
       "confidence": "high"
+    },
+    {
+      "id": "rochester-fall-metadata",
+      "url": "https://www.cs.rochester.edu/courses/fall.php",
+      "title": "Official course descriptions: CSC 239, CSC 240, CSC 245, CSC 246, CSC 277, CSC 290",
+      "fetched_at": "2026-10-11T01:55:22+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Fall 2026",
+      "confidence": "high"
+    },
+    {
+      "id": "rochester-spring-metadata",
+      "url": "https://www.cs.rochester.edu/courses/spring.php",
+      "title": "Official course descriptions: CSC 247, CSC 249",
+      "fetched_at": "2026-10-11T01:55:32+00:00",
+      "source_date": null,
+      "catalog_year": null,
+      "locator": "Spring 2026",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -68,13 +88,13 @@
       "id": "rochester-csc-239",
       "code": "CSC 239",
       "name": "Theoretical Machine Learning",
-      "description": null,
+      "description": "Examines approximation, optimization and generalization in classical learning and deep neural networks.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "rochester-ai-concentration-official",
-      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "source_id": "rochester-fall-metadata",
+      "url": "https://www.cs.rochester.edu/courses/fall.php",
       "public_site": null,
       "syllabus": null
     },
@@ -82,13 +102,13 @@
       "id": "rochester-csc-240",
       "code": "CSC 240",
       "name": "Data Mining",
-      "description": null,
+      "description": "Covers data preparation, pattern discovery, classification, clustering and advanced data-mining applications.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "rochester-ai-concentration-official",
-      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "source_id": "rochester-fall-metadata",
+      "url": "https://www.cs.rochester.edu/courses/fall.php",
       "public_site": null,
       "syllabus": null
     },
@@ -110,13 +130,13 @@
       "id": "rochester-csc-245",
       "code": "CSC 245",
       "name": "Deep Learning",
-      "description": null,
+      "description": "Connects deep-learning theory with practical image and language applications.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "rochester-ai-concentration-official",
-      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "source_id": "rochester-fall-metadata",
+      "url": "https://www.cs.rochester.edu/courses/fall.php",
       "public_site": null,
       "syllabus": null
     },
@@ -124,13 +144,13 @@
       "id": "rochester-csc-246",
       "code": "CSC 246",
       "name": "Machine Learning",
-      "description": null,
+      "description": "Studies mathematical foundations and algorithms for classification, regression and decision making through programming projects.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "rochester-ai-concentration-official",
-      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "source_id": "rochester-fall-metadata",
+      "url": "https://www.cs.rochester.edu/courses/fall.php",
       "public_site": null,
       "syllabus": null
     },
@@ -138,13 +158,13 @@
       "id": "rochester-csc-247",
       "code": "CSC 247",
       "name": "Natural Language Processing",
-      "description": null,
+      "description": "Surveys statistical and neural language processing, foundation models and language-understanding applications.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "rochester-ai-concentration-official",
-      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "source_id": "rochester-spring-metadata",
+      "url": "https://www.cs.rochester.edu/courses/spring.php",
       "public_site": null,
       "syllabus": null
     },
@@ -152,13 +172,13 @@
       "id": "rochester-csc-249",
       "code": "CSC 249",
       "name": "Machine Vision",
-      "description": null,
+      "description": "Introduces image formation and processing, object recognition and geometric and statistical vision models.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "rochester-ai-concentration-official",
-      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "source_id": "rochester-spring-metadata",
+      "url": "https://www.cs.rochester.edu/courses/spring.php",
       "public_site": null,
       "syllabus": null
     },
@@ -180,13 +200,13 @@
       "id": "rochester-csc-277",
       "code": "CSC 277",
       "name": "End-to-End Deep Learning",
-      "description": null,
+      "description": "Studies deployment, data management, fairness, monitoring and operational management of deep-learning systems.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "rochester-ai-concentration-official",
-      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "source_id": "rochester-fall-metadata",
+      "url": "https://www.cs.rochester.edu/courses/fall.php",
       "public_site": null,
       "syllabus": null
     },
@@ -194,13 +214,13 @@
       "id": "rochester-csc-290",
       "code": "CSC 290",
       "name": "Machine Learning Systems for Efficient AI",
-      "description": null,
+      "description": "Studies programming, compilation, parallelization and hardware for efficient large-scale AI systems.",
       "prerequisites": null,
       "credits": null,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "rochester-ai-concentration-official",
-      "url": "https://www.cs.rochester.edu/undergraduate/bs-requirements.html#artificial-intelligence",
+      "source_id": "rochester-fall-metadata",
+      "url": "https://www.cs.rochester.edu/courses/fall.php",
       "public_site": null,
       "syllabus": null
     }
@@ -335,15 +355,18 @@
     "The general advanced-course rule is open: course number 200 or higher, four credits, excluding core/additional math courses listed by the parent degree. It is not an unavailable finite elective list.",
     "Five courses, each four credits, is a requirement constraint. Individual catalog credits were not independently verified, so each course record keeps credits null rather than asserting catalog metadata.",
     "Transfer limit is two outside core/major electives, with the published education-abroad exception; departmental approval remains necessary. Changes to the official course plan go through the CS undergraduate coordinator.",
-    "Course descriptions/prerequisites, unit/calendar normalization, catalog edition, launch date and public course resources remain unverified. Primary source was read from permitted cache fetched 2026-10-10T21:59:27+00:00; advising source was fetched in this review."
+    "Eight descriptions are now reviewed. Formal prerequisites, unit/calendar normalization, catalog edition, launch date and public course resources remain unverified. Primary source was read from permitted cache fetched 2026-10-10T21:59:27+00:00; advising source was fetched in this review.",
+    "Reviewed Fall 2026 and Spring 2026 department schedules provide descriptions for eight named AI options. CSC 244 and CSC 266 are not represented in these two schedules; this is not evidence of discontinuation or exclusion. Course credit amounts, formal prerequisites and term-specific public course sites/syllabi remain unverified. The concentration requirement of four-credit courses is not assigned as metadata to individual course records."
   ],
   "curriculum_audit": {
     "scope": "concentration",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "rochester-ai-concentration-identity",
       "rochester-ai-concentration-official",
-      "rochester-ai-concentration-advising"
+      "rochester-ai-concentration-advising",
+      "rochester-fall-metadata",
+      "rochester-spring-metadata"
     ],
     "sections": [
       "Five advanced four-credit courses numbered 200+",
@@ -352,13 +375,18 @@
       "Exclusion of parent core/math courses",
       "Optional CS BS relationship",
       "Two-course outside-institution limit and education-abroad exception",
-      "Department transfer approval and course-plan changes"
+      "Department transfer approval and course-plan changes",
+      "Bounded 2026-10-11 course metadata and outcome/date review"
     ],
     "unresolved_requirements": [],
     "metadata_gaps": [
-      "Unverified course metadata remains null as described in notes",
-      "Catalog edition and credit/calendar normalization unverified",
-      "Public course sites and syllabi unverified"
+      "description unverified: CSC 244, CSC 266",
+      "prerequisites unverified: CSC 239, CSC 240, CSC 244, CSC 245, CSC 246, CSC 247, CSC 249, CSC 266, CSC 277, CSC 290",
+      "credits unverified: CSC 239, CSC 240, CSC 244, CSC 245, CSC 246, CSC 247, CSC 249, CSC 266, CSC 277, CSC 290",
+      "public_site unverified: CSC 239, CSC 240, CSC 244, CSC 245, CSC 246, CSC 247, CSC 249, CSC 266, CSC 277, CSC 290",
+      "syllabus unverified: CSC 239, CSC 240, CSC 244, CSC 245, CSC 246, CSC 247, CSC 249, CSC 266, CSC 277, CSC 290",
+      "Credit units unnormalized: CSC 239, CSC 240, CSC 244, CSC 245, CSC 246, CSC 247, CSC 249, CSC 266, CSC 277, CSC 290",
+      "First-offered date unverified."
     ]
   }
 }

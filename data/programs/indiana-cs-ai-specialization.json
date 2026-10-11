@@ -2,12 +2,12 @@
   "id": "indiana-cs-ai-specialization",
   "institution": {
     "id": "indiana-university-bloomington",
-    "name": "Indiana University\u2013Bloomington",
+    "name": "Indiana University–Bloomington",
     "aliases": [],
     "calendar": "unknown",
     "website": "https://bloomington.iu.edu/"
   },
-  "title": "Computer Science \u2014 Artificial Intelligence specialization",
+  "title": "Computer Science — Artificial Intelligence specialization",
   "award_level": "concentration",
   "program_kind": "concentration",
   "hosting_unit": "Luddy School of Informatics, Computing, and Engineering",
@@ -16,7 +16,7 @@
   "overview": "A five-course specialization within the Computer Science BS: two introductory AI/data/mining options, two additional options without reuse, and one algorithms/theory/verification course. Honors equivalents and specialization-specific policies are mapped.",
   "catalog_year": "2026-2027",
   "verification_status": "partial",
-  "last_verified": "2026-10-10",
+  "last_verified": "2026-10-11",
   "curriculum_status": "complete",
   "links": [
     {
@@ -27,7 +27,7 @@
     {
       "kind": "catalog",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/degree-programs/bs-computer-science/artificial-intelligence.shtml",
-      "label": "2026\u20132027 AI specialization requirements"
+      "label": "2026–2027 AI specialization requirements"
     }
   ],
   "sources": [
@@ -44,7 +44,7 @@
     {
       "id": "indiana-cs-ai-specialization-current-bulletin",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/degree-programs/bs-computer-science/luddy-degree-major-req.shtml",
-      "title": "Luddy Degree and Major Requirements, 2026\u201327",
+      "title": "Luddy Degree and Major Requirements, 2026–27",
       "locator": "BS in Computer Science; Specialization Area Courses; specialization navigation",
       "fetched_at": "2026-10-10",
       "source_date": null,
@@ -80,6 +80,16 @@
       "source_date": null,
       "catalog_year": "2026-2027",
       "confidence": "high"
+    },
+    {
+      "id": "indiana-cs-ai-specialization-source-4-metadata",
+      "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
+      "title": "Official course descriptions: CSCI-B 351, CSCI-B 365, CSCI-B 455, CSCI-B 355, CSCI-B 363, CSCI-B 456, CSCI-B 457, CSCI-B 401, CSCI-B 403, CSCI-B 405, CSCI-P 415",
+      "fetched_at": "2026-10-10T22:55:56+00:00",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Course description and labeled prerequisite/credit fields",
+      "confidence": "high"
     }
   ],
   "outcomes": [],
@@ -88,12 +98,12 @@
       "id": "iu-ai-csci-b-351",
       "code": "CSCI-B 351",
       "name": "Introduction to Artificial Intelligence",
-      "description": null,
+      "description": "Introduces AI representations and methods including search, logic, neural networks and learning.",
       "prerequisites": "CSCI-C 200 or C 211.",
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -102,12 +112,12 @@
       "id": "iu-ai-csci-b-365",
       "code": "CSCI-B 365",
       "name": "Introduction to Data Analysis and Mining",
-      "description": null,
+      "description": "Covers data preparation, clustering and prediction to discover patterns in data.",
       "prerequisites": null,
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -116,12 +126,12 @@
       "id": "iu-ai-csci-b-455",
       "code": "CSCI-B 455",
       "name": "Principles of Machine Learning",
-      "description": null,
+      "description": "Develops mathematical and computational machine-learning methods through derivation and implementation.",
       "prerequisites": "MATH-M 211 and (CSCI-C 200 or C 211).",
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -130,12 +140,12 @@
       "id": "iu-ai-csci-b-355",
       "code": "CSCI-B 355",
       "name": "Autonomous Robotics",
-      "description": null,
+      "description": "Combines mechanics, electronics, programming and cognitive science to build and control robots.",
       "prerequisites": null,
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -144,12 +154,12 @@
       "id": "iu-ai-csci-b-363",
       "code": "CSCI-B 363",
       "name": "Bioinformatics Algorithms",
-      "description": null,
+      "description": "Applies algorithms and computing to biological problems.",
       "prerequisites": null,
-      "credits": 4.0,
+      "credits": 4,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -158,12 +168,12 @@
       "id": "iu-ai-csci-b-456",
       "code": "CSCI-B 456",
       "name": "Image Processing",
-      "description": null,
+      "description": "Studies image representation, processing operations and analysis.",
       "prerequisites": "CSCI-C 212 and MATH-M 212.",
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -172,12 +182,12 @@
       "id": "iu-ai-csci-b-457",
       "code": "CSCI-B 457",
       "name": "Introduction to Computer Vision",
-      "description": null,
+      "description": "Studies recognition, scene understanding and motion using computer-vision methods.",
       "prerequisites": "CSCI-A 310 or B 351 or C 343.",
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "ai_ml",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -228,12 +238,12 @@
       "id": "iu-ai-csci-b-401",
       "code": "CSCI-B 401",
       "name": "Fundamentals of Computing Theory",
-      "description": null,
+      "description": "Studies formal languages, computational limits and verification.",
       "prerequisites": "CSCI-C 212 and C 241.",
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "foundations",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -242,12 +252,12 @@
       "id": "iu-ai-csci-b-403",
       "code": "CSCI-B 403",
       "name": "Introduction to Algorithm Design and Analysis",
-      "description": null,
+      "description": "Analyzes and designs algorithms for searching, sorting and other computational problems.",
       "prerequisites": "CSCI-C 241, (A 310 or C 343) and MATH-M 212.",
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "foundations",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -256,12 +266,12 @@
       "id": "iu-ai-csci-b-405",
       "code": "CSCI-B 405",
       "name": "Applied Algorithms",
-      "description": null,
+      "description": "Develops algorithmic approaches to mathematical and practical problems.",
       "prerequisites": "Prerequisite: CSCI-C 343 or CSCI-H 343 (Data Structures).",
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "foundations",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -270,12 +280,12 @@
       "id": "iu-ai-csci-p-415",
       "code": "CSCI-P 415",
       "name": "Introduction to Verification",
-      "description": null,
+      "description": "Uses automated reasoning, model checking and theorem proving to verify software and hardware.",
       "prerequisites": "CSCI-C 311.",
-      "credits": 3.0,
+      "credits": 3,
       "credit_unit": "unknown",
       "category": "foundations",
-      "source_id": "indiana-cs-ai-specialization-cs-courses",
+      "source_id": "indiana-cs-ai-specialization-source-4-metadata",
       "url": "https://bulletins.iu.edu/iub/sice/2026-2027/undergraduate/courses/computer-science.shtml",
       "public_site": null,
       "syllabus": null
@@ -639,17 +649,19 @@
     }
   ],
   "notes": [
-    "The 2026\u20132027 specialization index and AI-specific catalog page resolve the earlier sidebar mismatch: the current main-content list explicitly includes Artificial Intelligence.",
+    "The 2026–2027 specialization index and AI-specific catalog page resolve the earlier sidebar mismatch: the current main-content list explicitly includes Artificial Intelligence.",
     "The specialization is five course selections, not a separate degree. Mathematical-science and natural-science overlap restrictions are retained; host CS degree requirements remain outside this concentration audit scope.",
-    "CSCI-B 490 is restricted to Generative AI and Applications; its general course listing permits 1\u20134 credits, so no fixed topic credit is inferred. Course descriptions and math/statistics course metadata remain unextracted."
+    "CSCI-B 490 is restricted to Generative AI and Applications; its general course listing permits 1–4 credits, so no fixed topic credit is inferred. Eleven fixed-credit CS descriptions are now reviewed; the topic-specific description and math/statistics metadata remain unverified.",
+    "Eleven fixed-credit computer-science descriptions were reviewed in the 2026–2027 Bulletin. Recommended programming preparation in B 355, B 363 and B 365 is not recorded as a mandatory prerequisite. The general B 490 listing offers variable 1–4 credits and cannot establish the credit amount or description of the approved Generative AI and Applications topic. The two mathematics/statistics options retain unverified metadata. Published cr. amounts remain unnormalized. No specialization-specific learning-outcome or first-offered statement was found in the reviewed pages."
   ],
   "curriculum_audit": {
     "scope": "concentration",
-    "reviewed_at": "2026-10-10",
+    "reviewed_at": "2026-10-11",
     "source_ids": [
       "indiana-cs-ai-specialization-requirements",
       "indiana-cs-ai-specialization-specialization-policies",
-      "indiana-cs-ai-specialization-current-bulletin"
+      "indiana-cs-ai-specialization-current-bulletin",
+      "indiana-cs-ai-specialization-source-4-metadata"
     ],
     "sections": [
       "Two introductory selections",
@@ -657,14 +669,18 @@
       "One algorithms/theory/verification selection",
       "Approved topic restriction",
       "C-minus minimum, honors equivalence and SAMS declaration",
-      "Advisor timing and overlap restrictions with host mathematics/natural science"
+      "Advisor timing and overlap restrictions with host mathematics/natural science",
+      "Bounded 2026-10-11 course metadata and outcome/date review"
     ],
     "unresolved_requirements": [],
     "metadata_gaps": [
-      "Descriptions are unextracted; math/statistics course credits and prerequisites remain unknown.",
-      "CSCI-B 490 topic credits are not fixed by the general 1\u20134 credit listing.",
-      "Credit-unit normalization and the academic calendar remain unknown.",
-      "No specialization-specific learning-outcome statements were found on the reviewed requirement pages."
+      "description unverified: CSCI-B 490, MATH-M 365, STAT-S 350",
+      "prerequisites unverified: CSCI-B 365, CSCI-B 355, CSCI-B 363, CSCI-B 490, MATH-M 365, STAT-S 350",
+      "credits unverified: CSCI-B 490, MATH-M 365, STAT-S 350",
+      "public_site unverified: CSCI-B 351, CSCI-B 365, CSCI-B 455, CSCI-B 355, CSCI-B 363, CSCI-B 456, CSCI-B 457, CSCI-B 490, MATH-M 365, STAT-S 350, CSCI-B 401, CSCI-B 403, CSCI-B 405, CSCI-P 415",
+      "syllabus unverified: CSCI-B 351, CSCI-B 365, CSCI-B 455, CSCI-B 355, CSCI-B 363, CSCI-B 456, CSCI-B 457, CSCI-B 490, MATH-M 365, STAT-S 350, CSCI-B 401, CSCI-B 403, CSCI-B 405, CSCI-P 415",
+      "Credit units unnormalized: CSCI-B 351, CSCI-B 365, CSCI-B 455, CSCI-B 355, CSCI-B 363, CSCI-B 456, CSCI-B 457, CSCI-B 490, MATH-M 365, STAT-S 350, CSCI-B 401, CSCI-B 403, CSCI-B 405, CSCI-P 415",
+      "First-offered date unverified."
     ]
   }
 }
