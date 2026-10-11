@@ -234,3 +234,7 @@ SOURCE_PARSERS.update(audio_topic_context.SOURCE_PARSERS)
 common_ground_context = import_module('atlas.adapters.mit-ai-decision-making-bs.common_ground_context')
 SOURCES.extend(common_ground_context.SOURCE_PARSERS)
 SOURCE_PARSERS.update(common_ground_context.SOURCE_PARSERS)
+
+architecture_ocw = import_module('atlas.adapters.mit-ai-decision-making-bs.architecture_ocw')
+SOURCES.extend(architecture_ocw.SOURCE_PARSERS)
+SOURCE_PARSERS.update(architecture_ocw.SOURCE_PARSERS)

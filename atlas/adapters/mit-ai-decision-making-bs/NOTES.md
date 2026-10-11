@@ -433,3 +433,8 @@ Contribution 95e34a3 supplies 42 actual-description upgrades from 22 public OCW 
 ### History course descriptions — 2026-10-11
 
 Contribution caaf581 supplies 16 actual-description upgrades from 13 public OCW courses. The 21H.101 and 21H.132 homepages supply actual course descriptions; separately observed syllabus preparation is only a cited note, not silently synthesized into the homepage observation. The 21H.245J changed-title hold remains unintegrated. All dated contexts and original IDs remain; no current offering or identity equivalence is inferred. HASS now has 264 description-supported occurrences, 578 limited title judgments and three code-only unknowns. Accessible research remains in progress.
+
+
+### Architecture historical syllabus follow-up — 2026-10-11
+
+Ordinary Chrome's public Architecture search displayed 115 OCW offerings. Three exact code/title matches were inspected through the normal robots-aware Fetcher: 4.601 Introduction to Art History (Fall 2018), 4.602 Modern Art and Mass Culture (Spring 2012), and 4.619 Historiography of Islamic Architecture (Fall 2014). These supply six source-occurrence descriptions. The first two explicitly have no prerequisites; the third is labeled graduate and requires instructor permission. Unknown units remain unknown. Older renamed 4.302, 4.322, 4.605, 4.609 and 4.614 offerings were not substituted into current listed titles. This bounded directory is not an exhaustive statement about all available course descriptions. HASS now has 270 description-supported occurrences, 572 limited title judgments and three code-only unknowns. Requirement roles and identity groups are unchanged; the primary audit remains in progress.
