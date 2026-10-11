@@ -544,3 +544,29 @@ def observe_ocw_language_syllabus(html):
             observation['units'] = explicit.group(1) + ' units'
             observation['prerequisites'] = explicit.group(0)
     return [observation]
+
+
+def observe_music_semester_capture(payload):
+    """Read a public selected-term DOM transcript, never a cached-fact substitute.
+
+    The schedule keeps one URL while its visible semester changes. An ordinary
+    HTTP HTML response is not this dated browser observation and must fail.
+    """
+    try:
+        capture = json.loads(payload)
+    except (ValueError, TypeError) as exc:
+        raise ValueError('Music selected-term browser capture required; default HTTP page does not identify this snapshot') from exc
+    if not isinstance(capture, dict) or capture.get('capture_kind') != 'public_music_semester_dom' or not re.fullmatch(r'(Fall|Spring) \d{4}', capture.get('semester', '')):
+        raise ValueError('Music visible semester identity missing')
+    rows=[]
+    for course in capture.get('courses', []):
+        paragraphs=course.get('paragraphs', [])
+        if not re.fullmatch(r'21M\.[0-9]{3}J?', course.get('code','')) or not course.get('name') or len(paragraphs)<2:
+            raise ValueError('Music visible code/title/description missing')
+        units=re.fullmatch(r'(\d+-\d+-\d+) units\. HASS-A', clean(paragraphs[0]))
+        if units is None or not all(isinstance(p,str) and clean(p) for p in paragraphs):
+            raise ValueError('Music visible unit line or paragraph structure changed')
+        rows.append(dict(code=course['code'],name=clean(course['name']),term=capture['semester'],description=clean(' '.join(paragraphs[1:])),units=units[1],source_unit_line=clean(paragraphs[0]),prerequisites=None,locator='Visible semester selection / expanded '+course['code']+' course panel'))
+    if not rows:
+        raise ValueError('Music visible course panels missing')
+    return rows

@@ -215,7 +215,7 @@ def test_cmsw_2025_visible_capture_replays_exact_dated_observations(term):
 
 
 def test_official_language_title_reviews_do_not_invent_description_or_identity():
-    assert MANIFEST['evidence_counts']['description_reviewed_records']==374
+    assert MANIFEST['evidence_counts']['description_reviewed_records']==379
     assert MANIFEST['evidence_counts']['title_only_reviewed_records']>=45
     for code in ['21G.715','21G.111','21H.186']:
         o=next(o for o in entry(code)['observations'] if o.get('evidence_basis')=='official_title_only')
@@ -1192,7 +1192,7 @@ def test_music_actual_practice_remains_mixed_and_different_versions_unmatched():
     supernatural=entry('21M.013J [21L.013J]')['observations'][-1]
     assert supernatural['category']=='human_context'
     assert 'no prerequisites' in supernatural['prerequisites']
-    assert entry('21M.220')['observations'][-1]['evidence_basis']=='official_title_only'
+    assert not any(o.get('source_id') in report['source_ids'] for o in entry('21M.220')['observations'])
     assert entry('21M.223J')['observations'][-1]['evidence_basis']=='official_code_only'
 
 
@@ -1213,3 +1213,49 @@ def test_music_actual_observations_replay_with_changed_content_withdrawal():
             assert review.matched_review(c,{**o,'description':'A changed course focusing solely on computational music.'},source['url'],MANIFEST) is None
             seen+=1
     assert seen==4
+
+
+def test_theater_url_slug_does_not_override_actual_course_banner_identity():
+    report=MANIFEST['ocw_theater_review']
+    assert report['directory_results_observed']==19
+    assert report['source_ids']==report['upgraded_record_ids']==[]
+    assert len(report['withheld_description_reads'])==2
+    assert all(x['observed_code']=='21T.424' and x['listed_code']=='21M.846' for x in report['withheld_description_reads'])
+    assert entry('21M.846')['observations'][-1]['evidence_basis']=='official_title_only'
+    path=Path('/tmp/mit-hass-subjects/ocw-21m-846-topics-in-performance-studies-comedy-across-media-spring-2018-syllabus.html')
+    if path.exists():
+        o=review.observe_ocw_syllabus(path.read_text())[0]
+        assert o['code']=='21T.424' and 'creation of our own comedic artworks' in o['description']
+
+
+def test_music_selected_semester_capture_requires_actual_visible_dated_content():
+    raw=json.dumps({'capture_kind':'public_music_semester_dom','semester':'Spring 2026','courses':[{'code':'21M.226','name':'Jazz','paragraphs':['3-0-9 units. HASS-A','Historical interpretation and social context.']}]})
+    o=review.observe_music_semester_capture(raw)[0]
+    assert o['term']=='Spring 2026' and o['units']=='3-0-9'
+    assert o['prerequisites'] is None
+    for wrong in ['<html>Default Fall2026 HTTP response</html>',raw.replace('Spring 2026','Unknown'),raw.replace('3-0-9 units. HASS-A','Hours uncertain')]:
+        with pytest.raises(ValueError):review.observe_music_semester_capture(wrong)
+    report=MANIFEST['music_visible_semester_review']
+    assert len(report['semesters_inspected'])==5 and len(report['upgraded_record_ids'])==5
+    medieval=entry('21M.220')['observations'][-1]
+    assert medieval['observed_name']=='Medieval and Renaissance Music' and medieval['catalog_year']=='Fall 2024'
+    assert medieval['prerequisites'] is None and medieval['credits']==12
+    assert medieval['unit_rule_source_url']=='https://catalog.mit.edu/subjects/'
+    assert entry('21M.223J')['observations'][-1]['evidence_basis']=='official_code_only'
+
+
+def test_music_visible_snapshots_replay_and_require_matching_semester():
+    seen=0
+    for key in ['spring-2026','fall-2024']:
+        path=Path('/tmp/mit-hass-subjects/music-'+key+'-visible.json')
+        if not path.exists():pytest.skip('Optional public Music visible DOM transcript')
+        for o in review.observe_music_semester_capture(path.read_text()):
+            for cid,row in MANIFEST['courses'].items():
+                evidence=next((e for e in row['observations'] if e['observed_code']==o['code'] and e['source_id']=='mit-ai-hass-review-music-visible-'+key),None)
+                if not evidence:continue
+                course=dict(id=cid,code=row['listed_code'],name=row['listed_name'],source_id=row['listed_source_id'])
+                assert review.matched_review(course,o,evidence['source_url'],MANIFEST)==evidence
+                assert review.matched_review(course,{**o,'term':'Fall 2026'},evidence['source_url'],MANIFEST) is None
+                assert review.matched_review(course,{**o,'units':'3-0-6'},evidence['source_url'],MANIFEST) is None
+                seen+=1
+    assert seen==5
