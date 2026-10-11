@@ -559,6 +559,412 @@
         "Remaining elective descriptions and university policies have not received this independent second pass."
       ],
       "result": "Fixed identity/category aggregate and catalog conflicts independently verified; full-degree second pass remains partial."
+    },
+    {
+      "program_id": "penn-state-ai-engineering-bs",
+      "institution_id": "pennsylvania-state-university-university-park",
+      "reviewed_commit": "c75af14",
+      "primary_audit": "research/degree-audit/national-degree-batch.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "Prescribed identity sets and fixed-course description subjects; named choice menus and current source conflicts. Underlying cross-list identity and complete policies remain unresolved.",
+      "sources": [
+        {
+          "url": "https://bulletins.psu.edu/undergraduate/colleges/engineering/artificial-intelligence-engineering-bs/",
+          "catalog_year": "2026-2027",
+          "locator": "Program heading, award/host and requirements",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/42-00-acquisition-of-credit/",
+          "catalog_year": null,
+          "locator": "Explicit semester-hour definition; transfer-credit unit and grade scope",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/",
+          "catalog_year": "2026\u20132027",
+          "locator": "A-I 100 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/aie/",
+          "catalog_year": "2026\u20132027",
+          "locator": "AIE 489W and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cmpsc/",
+          "catalog_year": "2026\u20132027",
+          "locator": "CMPSC 360 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ee/",
+          "catalog_year": "2026\u20132027",
+          "locator": "EE 456 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/engl/",
+          "catalog_year": "2026\u20132027",
+          "locator": "ENGL 202C and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
+          "catalog_year": "2026\u20132027",
+          "locator": "MATH 140 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/phys/",
+          "catalog_year": "2026\u20132027",
+          "locator": "PHYS 211 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/stat/",
+          "catalog_year": "2026\u20132027",
+          "locator": "STAT 401 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
+          "catalog_year": "2026\u20132027",
+          "locator": "DS 120 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/82-00-and-83-00-degree-requirements/",
+          "catalog_year": null,
+          "locator": "83-80 displayed residence/time rules and June 23, 2026 pending-implementation notice",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "psu-a-i-100",
+          "psu-a-i-305",
+          "psu-a-i-341w",
+          "psu-a-i-370",
+          "psu-a-i-375",
+          "psu-a-i-410",
+          "psu-aie-355",
+          "psu-aie-489w",
+          "psu-cmpsc-360",
+          "psu-ee-456",
+          "psu-engl-202c",
+          "psu-math-140",
+          "psu-math-141",
+          "psu-math-225",
+          "psu-phys-211",
+          "psu-phys-212",
+          "psu-stat-401"
+        ],
+        "options": [
+          "psu-cas-100a",
+          "psu-cas-100b",
+          "psu-cas-138t",
+          "psu-cmpsc-121",
+          "psu-cmpsc-122",
+          "psu-cmpsc-131",
+          "psu-cmpsc-132",
+          "psu-cmpsc-445",
+          "psu-cmpsc-448",
+          "psu-ds-120",
+          "psu-engl-137h",
+          "psu-engl-15",
+          "psu-engl-30h"
+        ],
+        "unresolved": []
+      },
+      "expected_profile": {
+        "required": {
+          "count": 17,
+          "categories": {
+            "ai_ml": 4,
+            "applications": 2,
+            "foundations": 1,
+            "human_context": 2,
+            "mathematics": 6,
+            "other": 1,
+            "systems": 1
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "observed_named_code_counts": {
+        "required": 17,
+        "options": 13
+      },
+      "findings": [
+        "The explicit Prescribed Courses table, not the suggested plan, establishes the fixed set. Engineering has five initial plus twelve C-minimum rows; IST has nine C-minimum rows.",
+        "Actual descriptions distinguish algorithm foundations (A-I 305), infrastructure (A-I 410), mathematical optimization (AIE 355), responsible-AI social/ethical analysis (A-I 341W) and domain physics.",
+        "A-I 370 expressly requires CMPSC 132, STAT 200 or DS 200, and concurrent DS 305/CMPSC 465/CMPSC 462 plus STAT 401. These enrollment conditions are not silently added to fixed degree obligations."
+      ],
+      "remaining": [
+        "A-I 370 enrollment conditions do not match all routes supplied by the degree table.",
+        "Senate policy 83-80 has a pending-implementation revision notice; applicable cohort remains unresolved.",
+        "Independent whole-degree elective taxonomy and policy certification is unfinished.",
+        "Department-approved 27-hour technical and 3-hour nontechnical lists remain unavailable in inspected degree sources."
+      ],
+      "result": "Fixed sets and source-specific categories verified; full-degree second pass partial."
+    },
+    {
+      "program_id": "penn-state-ai-methods-applications-ist-bs",
+      "institution_id": "pennsylvania-state-university-university-park",
+      "reviewed_commit": "c75af14",
+      "primary_audit": "research/degree-audit/national-degree-batch.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "Prescribed identity sets and fixed-course description subjects; named choice menus and current source conflicts. Underlying cross-list identity and complete policies remain unresolved.",
+      "sources": [
+        {
+          "url": "https://bulletins.psu.edu/undergraduate/colleges/information-sciences-technology/artificial-intelligence-methods-applications-bs/",
+          "catalog_year": "2026-2027",
+          "locator": "Program heading, award/host and requirements",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/42-00-acquisition-of-credit/",
+          "catalog_year": null,
+          "locator": "Explicit semester-hour definition; transfer-credit unit and grade scope",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/a-i/",
+          "catalog_year": "2026\u20132027",
+          "locator": "A-I 100 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/cmpsc/",
+          "catalog_year": "2026\u20132027",
+          "locator": "CMPSC 131 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/math/",
+          "catalog_year": "2026\u20132027",
+          "locator": "MATH 140 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/stat/",
+          "catalog_year": "2026\u20132027",
+          "locator": "STAT 401 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ds/",
+          "catalog_year": "2026\u20132027",
+          "locator": "DS 200 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ee/",
+          "catalog_year": "2026\u20132027",
+          "locator": "EE 456 and other degree-listed course blocks",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        },
+        {
+          "url": "https://senate.psu.edu/students/policies-and-rules-for-undergraduate-students/82-00-and-83-00-degree-requirements/",
+          "catalog_year": null,
+          "locator": "83-80 displayed residence/time rules and June 23, 2026 pending-implementation notice",
+          "checked_at": "2026-10-11",
+          "access_status": "HTTP 200; independent robots-aware fetch; fixed-course descriptions and stated table/policy clauses reread"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "psu-a-i-100",
+          "psu-a-i-341w",
+          "psu-a-i-370",
+          "psu-a-i-375",
+          "psu-cmpsc-131",
+          "psu-cmpsc-132",
+          "psu-math-140",
+          "psu-math-225",
+          "psu-stat-401"
+        ],
+        "options": null,
+        "unresolved": []
+      },
+      "expected_profile": {
+        "required": {
+          "count": 9,
+          "categories": {
+            "ai_ml": 3,
+            "foundations": 2,
+            "human_context": 1,
+            "mathematics": 3
+          }
+        },
+        "options": null,
+        "unresolved": null
+      },
+      "observed_named_code_counts": {
+        "required": 9,
+        "options": 160
+      },
+      "findings": [
+        "The explicit Prescribed Courses table, not the suggested plan, establishes the fixed set. Engineering has five initial plus twelve C-minimum rows; IST has nine C-minimum rows.",
+        "Actual descriptions distinguish algorithm foundations (A-I 305), infrastructure (A-I 410), mathematical optimization (AIE 355), responsible-AI social/ethical analysis (A-I 341W) and domain physics.",
+        "A-I 370 expressly requires CMPSC 132, STAT 200 or DS 200, and concurrent DS 305/CMPSC 465/CMPSC 462 plus STAT 401. These enrollment conditions are not silently added to fixed degree obligations.",
+        "160 is the existing named code-observation union, not 160 distinct underlying offerings. The technical and ETI lists explicitly slash-pair six identities; their alias handling requires correction. Commonwealth Business Fundamentals is not the University Park route. Open CYBER/ROTC predicates do not create invented course IDs."
+      ],
+      "remaining": [
+        "A-I 370 enrollment conditions do not match all routes supplied by the degree table.",
+        "Senate policy 83-80 has a pending-implementation revision notice; applicable cohort remains unresolved.",
+        "Independent whole-degree elective taxonomy and policy certification is unfinished.",
+        "Six published cross-list pairs need explicit identity representation; reported to primary owner and coordinator.",
+        "Mixed capstone/research route applicability differs between table and plan."
+      ],
+      "result": "Fixed sets and source-specific categories verified; full-degree second pass partial.",
+      "source_stated_crosslist_pairs": [
+        [
+          "CMPSC 442",
+          "DS 442"
+        ],
+        [
+          "DS 410",
+          "CMPSC 410"
+        ],
+        [
+          "MATH 318",
+          "STAT 318"
+        ],
+        [
+          "MATH 414",
+          "STAT 414"
+        ],
+        [
+          "IST 301",
+          "ETI 301"
+        ],
+        [
+          "IST 302",
+          "ETI 302"
+        ]
+      ]
+    },
+    {
+      "program_id": "rochester-institute-of-technology-artificial-intelligence-bs-degree",
+      "institution_id": "rochester-institute-of-technology",
+      "reviewed_commit": "e1ff15a",
+      "primary_audit": "research/degree-audit/buffalo-delaware-rit.json",
+      "second_pass_status": "partial",
+      "full_degree_verified": false,
+      "verified_scope": "Public four-year rendered sequence, all 40 listed code identities, known-zero rows, removed unsupported context memberships and eight selected live course cards; not all 40 descriptions or university policies.",
+      "sources": [
+        {
+          "url": "https://www.rit.edu/study/artificial-intelligence-bs#curriculum",
+          "catalog_year": "2026-2027",
+          "locator": "Four expanded years; AI elective menu; YOPS-10, IDAI-499/360/485/490, ISTE-476, EEEE-485 and CSCI-431 public course popups",
+          "checked_at": "2026-10-11",
+          "access_status": "Independently read ordinary public Chrome UI"
+        },
+        {
+          "url": "https://www.rit.edu/computing/sites/rit.edu.computing/files/docs/IST-Information/AI%202026_0.pdf",
+          "catalog_year": "2026-2027",
+          "locator": "Page 2 elective list: CSCI-632, LING-582, LING-584",
+          "checked_at": "2026-10-11",
+          "access_status": "Independently reread existing public PDF text capture /tmp/rit-ai-flow.txt; no new PDF fetch"
+        }
+      ],
+      "expected_course_ids": {
+        "required": [
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-331",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-335",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csec-521",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-350",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-101",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-110",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-202",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-360",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-444",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-485",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-490",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-idai-499",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-262",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-476",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-181",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-182",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-241",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-251",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-101",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-psyc-223",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-261",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-uwrt-150",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-yops-10"
+        ],
+        "options": [
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-142",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-comm-201",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-141",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-142",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-431",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-634",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-eeee-485",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-123",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-gcis-124",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-iste-230",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-351",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-581",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-190",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-math-200",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-publ-550",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-344",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-swen-566"
+        ],
+        "unresolved": [
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-csci-632",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-582",
+          "rochester-institute-of-technology-artificial-intelligence-bs-degree-ling-584"
+        ]
+      },
+      "expected_profile": null,
+      "observed_profile_counts": {
+        "required": 23,
+        "options": 17,
+        "unresolved": 3
+      },
+      "findings": [
+        "The sequence has 23 unique fixed code identities, six two-course alternative pairs and five AI elective code identities (one listed entry is EEEE 485 or CSCI 634). Two placements of IDAI 499 are one code identity, not one placement.",
+        "Visible YOPS 10 and IDAI 499 course cards both state 0 credits; the uncoded preparation seminar row also states 0. Zero is known evidence, not missingness.",
+        "Uncoded general-education, immersion, open-elective and policy rows do not list the AI elective courses; removing twelve unsupported memberships is source-consistent.",
+        "IDAI 360 describes optimization mathematics, IDAI 485 computing infrastructure and IDAI 490 software development/evolution rather than a guaranteed AI-methods project. Their different subjects are supported by actual descriptions despite AI in their titles."
+      ],
+      "remaining": [
+        "ISTE 476 enrollment list omits AI BS.",
+        "EEEE 485 requires EEEE 346 or equivalent; no automatic substitution is inferred.",
+        "CSCI 431 credit exclusion self-references CSCI 431 and CSCI 631.",
+        "Advising PDF/current menu differences, immersion overlap ambiguity and complete GE/WI policy scope remain unresolved; university-policy sources not independently reread in this bounded pass.",
+        "Remaining 32 course descriptions have not received this independent second pass."
+      ],
+      "result": "Mapped identity partition, zero-credit facts and selected subject/conflict checks verified; full-degree second pass remains partial."
     }
   ],
   "cross_program_screen": [

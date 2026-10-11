@@ -152,3 +152,44 @@ def test_rice_manual_fixed_subjects_preserve_infrastructure_and_domain_distincti
         assert requirement_profile(only_course(p,courses[code]['id']))['required']['count']==0
     timing=[r for r in p['requirements'] if 'same academic year' in (r.get('summary') or '')]
     assert len(timing)==1 and timing[0]['kind']=='note' and not timing[0]['course_ids']
+
+
+def test_penn_state_fixed_subjects_and_degree_specific_programming_roles():
+    for pid,count in [('penn-state-ai-engineering-bs',17),('penn-state-ai-methods-applications-ist-bs',9)]:
+        p=load(pid);r=requirement_profile(p)
+        assert r['required']['count']==count
+        courses={c['code']:c for c in p['courses']}
+        for code,category in {'A-I 341W':'human_context','A-I 370':'ai_ml','MATH 225':'mathematics','STAT 401':'mathematics'}.items():
+            assert courses[code]['category']==category
+            assert courses[code]['category_review']['status']=='reviewed'
+        programming=requirement_profile(only_course(p,courses['CMPSC 132']['id']))
+        assert programming['required' if count==9 else 'options']['count']==1
+        # Actual enrollment metadata must survive without manufacturing extra fixed courses.
+        assert 'DS 305' in courses['A-I 370']['prerequisites']
+        assert 'CMPSC 465' in courses['A-I 370']['prerequisites']
+    p=load('penn-state-ai-engineering-bs');courses={c['code']:c for c in p['courses']}
+    assert courses['A-I 305']['category']=='foundations'
+    assert courses['A-I 410']['category']=='systems'
+    assert courses['AIE 355']['category']=='mathematics'
+    assert courses['PHYS 211']['category']=='applications'
+
+
+def test_rit_actual_zero_credits_and_context_do_not_create_elective_memberships():
+    p=load('rochester-institute-of-technology-artificial-intelligence-bs-degree')
+    courses={c['code']:c for c in p['courses']};r=requirement_profile(p)
+    assert [r[k]['count'] for k in ['required','options','unresolved']]==[23,17,3]
+    for code in ['YOPS-10','IDAI-499']:
+        assert courses[code]['credits']==0
+        assert courses[code]['credit_unit']=='semester_hours'
+        assert requirement_profile(only_course(p,courses[code]['id']))['required']['count']==1
+        rows=[g for g in p['requirements'] if courses[code]['id'] in g['course_ids']]
+        assert any(g['credits']==0 for g in rows)
+    prep=[g for g in p['requirements'] if 'Co-op preparation' in g['title'] or 'Co-Op Preparation' in g['title']]
+    assert prep and all(g['credits']==0 and not g['course_ids'] for g in prep)
+    for code,subject in {'IDAI-360':'mathematics','IDAI-485':'systems','IDAI-490':'foundations'}.items():
+        assert courses[code]['category']==subject
+    for code in ['CSCI-431','SWEN-566','PUBL-550']:
+        cid=courses[code]['id']
+        for g in p['requirements']:
+            if any(term in g['title'].lower() for term in ['global perspective','immersion','wellness','open elective']):
+                assert cid not in g['course_ids']
