@@ -185,3 +185,10 @@ A bounded approved-network ACT retry again stopped before content: `Transport fa
 Contributionbdd9e2b supplies actualSpring2025descriptions for21L006,21L007 and the exactAI-and-consciousness21L707topic. The latter studies literary/philosophical questions about AI, consciousness and humanity; it is human context rather than AI-method implementation. Twelve units and twoLiterature-subjects-or-permission are attached to that exact observed topic. The separateWar-and-Peace offering remains distinct.
 
 HASS now has163description-supported occurrences,679limited-title dispositions and three code-only unknowns. Fixed/currentrole sets are unchanged; metadata/identity and policy scope remain inprogress.
+
+
+## Explicit HASS joint-subject identities — 2026-10-11
+
+The actual public CMS panels explicitly say same subject as:Spring2026CMS524→STS024;Fall2026CMS406→21A505,STS065. They do not say meets with. Original represented CMS/education/STS/computing lists give matching joint labels and exact titles. This is direct identity evidence beyond a slash or similar title, though reciprocal independent departmental descriptions were not available. Two reviewedgroups map six source occurrences to two joint subjects. No title-held, historical, merely equivalent or graduate meets-with pair is merged.
+
+The original1189source rows remain. With the two priorEECSgroups, currentmappedidentities now total1182:3fixed+275options+904contextual. Fourcontextual duplicates were removed(twohumancontext,twoother/mixed); prescribed selection counts and fixedprofile2foundations+1math do not change. The independent expected-ID sets and category sums reflect that exact bounded change. This is not exhaustive cross-list resolution or degree completion.

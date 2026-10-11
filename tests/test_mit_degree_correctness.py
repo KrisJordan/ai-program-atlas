@@ -43,7 +43,7 @@ def test_independent_versioned_role_sets_include_required_discrete_math():
  expected=ledger['expected_versioned_course_ids']
  assert set(expected['required'])=={'mit-ai-v2025-6-1200','mit-ai-v2025-6-1010','mit-ai-v2025-6-1210'}
  ids={c['id']for c in p['courses']if c['id'].startswith('mit-ai-v2025-')}
- partial=dict(courses=[c for c in p['courses']if c['id']in ids],requirements=[r for r in p['requirements']if r['source_id']=='mit-ai-decision-making-bs-versioned'],course_identity_groups=p['course_identity_groups'])
+ partial=dict(courses=[c for c in p['courses']if c['id']in ids],requirements=[r for r in p['requirements']if r['source_id']=='mit-ai-decision-making-bs-versioned'],course_identity_groups=[g for g in p['course_identity_groups']if set(g['course_ids'])<=ids])
  profile=requirement_profile(partial)
  assert profile['required']['count']==3 and profile['options']['count']==255 and profile['unresolved']['count']==0
  assert set(expected['required']).isdisjoint(expected['options'])
@@ -54,11 +54,25 @@ def test_full_current_graph_matches_independent_source_role_enumeration():
  p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
  a=json.loads(Path('research/degree-audit/mit.json').read_text())['programs'][0]
  expected=a['expected_course_ids'];profile=requirement_profile(p)
- assert len(expected['required'])==3 and len(expected['options'])==275 and len(expected['unresolved'])==908
- assert len(set().union(*(set(x)for x in expected.values())))==1186
+ assert len(expected['required'])==3 and len(expected['options'])==275 and len(expected['unresolved'])==904
+ assert len(set().union(*(set(x)for x in expected.values())))==1182
  assert set(c['id']for c in p['courses']if c['id'].startswith('mit-ai-gir-'))<=set(expected['options'])
  assert all(cid.startswith('mit-ai-hass-')or not cid.startswith(('mit-ai-v2025-','mit-ai-gir-'))for cid in expected['unresolved'])
  for key in expected:
   assert profile[key]['count']==a['expected_profile'][key]['count']
   assert {k:v for k,v in profile[key]['categories'].items()if v}==a['expected_profile'][key]['categories']
  assert a['status']=='in_progress'
+
+
+def test_hass_identity_groups_require_actual_same_subject_clause():
+ observer=importlib.import_module('atlas.adapters.mit-ai-decision-making-bs.reviewed_hass_subjects')
+ p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+ pairs=[('cmsw-visible.html','CMS.406[J]','21A.505[J], STS.065[J]','mit-ai-hass-cms406-anthropology-sound-fall2026'),('cmsw-spring2026-visible.html','CMS.524[J]','STS.024[J]','mit-ai-hass-cms524-sts024-spring2026')]
+ for file,code,clause,gid in pairs:
+  path=Path('/tmp/mit-hass-subjects')/file
+  if not path.exists():pytest.skip('Optional public visible source capture absent')
+  actual=next(o for o in observer.observe_cmsw(path.read_text())if o['code']==code)
+  assert actual['same_subject_as']==clause and actual['meets_with'] is None
+  group=next(g for g in p['course_identity_groups']if g['id']==gid)
+  assert group['relation']=='crosslisted'and len(group['course_ids'])==3
+  assert group['canonical_course_id']in group['course_ids']

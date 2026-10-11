@@ -137,7 +137,9 @@ def test_explicit_cms_alias_content_keeps_sts_source_identity_and_mixed_scope():
     assert all(c['category_review']['status'] == 'mixed' for c in rows)
     assert all(c['source_id'] != 'mit-ai-hass-review-cmsw-spring2026' for c in rows)
     merged = {cid for g in p.get('course_identity_groups', []) for cid in g['course_ids']}
-    assert not merged.intersection(c['id'] for c in rows)
+    assert set(c['id'] for c in rows)<=merged
+    group=next(g for g in p['course_identity_groups']if g['id']=='mit-ai-hass-cms524-sts024-spring2026')
+    assert 'mit-ai-hass-review-cmsw-spring2026' in group['source_ids']
 
 
 def test_economics_limited_title_review_preserves_printed_prerequisites_and_rules():
