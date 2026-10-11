@@ -26,7 +26,7 @@ def test_source_change_drops_stale_editorial_claims(monkeypatch):
  with pytest.raises(ValueError,match='identity changed'):parse(html.replace('Synthetic inquiry','New inquiry'))
 
 
-@pytest.mark.parametrize('award,n',[('BA',336),('BS',335)])
+@pytest.mark.parametrize('award,n',[('BA',404),('BS',403)])
 def test_reviewed_uger_semantics_and_reciprocal_identity(award,n):
  pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
  p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
@@ -146,6 +146,26 @@ def test_health_conditions_known_zero_and_unspecified_research(award):
  assert cs['NURS 343']['category']=='human_context'
  assert cs['NURS 293']['category_review']['status']=='mixed'
  for dep,count in [('ntrn',17),('nurs',13),('pscl',7)]:
+  path=Path('/tmp/case-uger-audit',dep+'.html')
+  if path.exists():
+   obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
+   assert len(obs['courses'])==count
+   assert not any('Changed description' in n for n in obs['notes'])
+
+
+@pytest.mark.parametrize('award',['BA','BS'])
+def test_social_science_subjects_and_conditional_capstone(award):
+ pid=f'case-western-reserve-university-artificial-intelligence-{award.lower()}-degree'
+ p=json.loads(Path('data/programs',pid+'.json').read_text());cs={c['code']:c for c in p['courses']}
+ assert cs['SOCI 307']['category']=='mathematics'
+ assert 'credit for only one' in cs['SOCI 307']['prerequisites']
+ assert cs['SOCI 313']['category']=='applications'
+ assert cs['SOCI 267']['category_review']['status']=='mixed'
+ assert cs['POSC 221']['category']=='human_context'
+ assert 'junior or senior year' in cs['POSC 396']['prerequisites']
+ assert 'faculty project advisor' in cs['POSC 396']['prerequisites']
+ assert cs['POSC 201']['prerequisites'] is None
+ for dep,count in [('posc',36),('soci',32)]:
   path=Path('/tmp/case-uger-audit',dep+'.html')
   if path.exists():
    obs=m.parse_descriptions(path.read_text(),pid=pid,award=award,department=dep)
