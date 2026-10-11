@@ -11,6 +11,9 @@ def classify(course, annotation):
     if reviewed is None:
         return None
     digest = hashlib.sha256(annotation.encode()).hexdigest() if annotation else None
-    course['category'] = reviewed['category'] if course['name'] == reviewed['name'] and digest == reviewed['annotation_digest'] else 'other'
+    matches = course['name'] == reviewed['name'] and digest == reviewed['annotation_digest']
+    course['category'] = reviewed['category'] if matches else 'other'
+    if matches and reviewed.get('conditional_notes'):
+        course['notes'] = list(reviewed['conditional_notes'])
     # A parser observation is not a new review, including when content matches.
     return digest

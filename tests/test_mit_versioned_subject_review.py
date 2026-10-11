@@ -39,3 +39,29 @@ def test_network_math_and_robotics_mixture_use_descriptions():
     assert by['6.4300']['category']=='ai_ml'and by['6.4300']['credits']is None
     assert by['6.4100']['category_review']['status']=='unclassified'
     assert 'recommended' in by['6.2300']['notes'][-1]and'6.3000'not in by['6.2300']['prerequisites']
+
+
+def test_learning_modules_preserve_credit_conditions_and_unknown_special_topics():
+    p=json.loads(Path('data/programs/mit-ai-decision-making-bs.json').read_text())
+    by={c['code']:c for c in p['courses']if c['id'].startswith('mit-ai-v2025-')}
+    assert len(by)==261 and all(c.get('category_review')for c in by.values())
+    assert by['6.C01']['category']=='ai_ml'
+    assert any('same semester'in n for n in by['6.C01']['notes'])
+    assert any('Credit requires'in n for n in by['6.C011']['notes'])
+    assert by['6.S057@2027FA']['category_review']['status']=='unclassified'
+    assert by['6.S057@2027FA']['credits']is None
+    assert by['6.C57']['category']=='mathematics'
+    assert by['6.7200']['category_review']['status']=='unclassified'  # historical code is not silently replaced
+    assert by['6.5930']['category']=='systems'  # deep-learning workload, hardware focus
+    assert by['6.7960']['category']=='ai_ml'
+
+
+def test_conditional_notes_require_exact_observed_annotation(monkeypatch):
+    annotation='Example exact annotation with a linked module credit condition.'
+    monkeypatch.setattr(m,'SUBJECTS',{'6.C01':dict(name='Example',category='ai_ml',annotation_digest=hashlib.sha256(annotation.encode()).hexdigest(),conditional_notes=['Module completion required.'])})
+    c=dict(code='6.C01',name='Example')
+    m.classify(c,annotation)
+    assert c['notes']==['Module completion required.']and'category_review'not in c
+    changed=dict(code='6.C01',name='Example')
+    m.classify(changed,annotation+' Changed.')
+    assert changed['category']=='other'and'notes'not in changed
