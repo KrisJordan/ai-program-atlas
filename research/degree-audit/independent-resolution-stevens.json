@@ -29,16 +29,16 @@
         },
         "choice_rules": {
           "status": "partial",
-          "summary": "The saved rendered requirement text verifies six complete science routes, including the nested CH117/BIO182 lab alternative; two approved math/science electives, six technical electives, four general electives and three of five SUCCESS courses. The 27 directly named option identities in these rules are recorded as a subset only.",
+          "summary": "The actual saved requirements HTML supports six science-sequence rows, two approved math/science electives, six technical electives, four general electives and three SUCCESS selections. Named links remain generic course placeholders in this source; the prior 27-name transcription and specific nested CH117/BIO182 identities are not independently source-certified by this capture.",
           "evidence": [
             {
               "url": "https://stevens.catalog.prod.coursedog.com/programs/qT6Ld1CzBAhQsVKYFNVv/requirements-and-concentrations-n90Np",
-              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
+              "locator": "Actual saved requirements HTML: science-table row topology, explicit numeric elective/SUCCESS rules; unhydrated named-course links"
             }
           ],
           "limitations": [
-            "This independent pass does not certify university-wide policies, general-education inventories, individual waivers, or total degree completion.",
-            "Only incomplete plan HTML and primary-review transcriptions were available; the primary 125-credit browser observation is not replaced with 58."
+            "The reviewed-labels file is an explicitly reconstructed primary browser transcription, not an actual hydrated source capture. Its 27 named options and specific cross-code branch memberships remain primary observations, not independent certification.",
+            "The catalog host challenge is respected; exact current named options and fully hydrated fixed plan require authorized readable source evidence. No whole-degree or policy applicability certification results."
           ]
         },
         "classification": {
@@ -76,7 +76,8 @@
       "source_captures": [
         {
           "path": "/tmp/atlas-stevens-reviewed-labels.html",
-          "sha256": "b29060e35eeb704100fdea3ec340689ae5a3eaf7820b6c5de27cd5ab2ec131ff"
+          "sha256": "b29060e35eeb704100fdea3ec340689ae5a3eaf7820b6c5de27cd5ab2ec131ff",
+          "evidence_kind": "primary_reconstruction_not_actual_source"
         },
         {
           "path": "/tmp/stevens-fixed-course-captures.json",
@@ -101,38 +102,18 @@
         {
           "path": "/tmp/atlas-national-degree-audit/stevens-cs508.html",
           "sha256": "9147a44c03b3df83f4db3cb10291519365514724e5422dcc7534fc7df9eaf904"
+        },
+        {
+          "path": "/tmp/stevens-degree-requirements.html",
+          "sha256": "15d575b7733c2c1b486332832073eb65f6c8661d23c9793549bf1e98cd8e3430",
+          "evidence_kind": "actual_saved_unhydrated_source"
         }
-      ],
-      "reviewed_option_subset": [
-        "stevens-bia-665",
-        "stevens-bio-181",
-        "stevens-bio-182",
-        "stevens-ce-240",
-        "stevens-ch-115",
-        "stevens-ch-116",
-        "stevens-ch-117",
-        "stevens-cs-532",
-        "stevens-cs-544",
-        "stevens-cs-545",
-        "stevens-cs-558-cpe-558",
-        "stevens-cs-560",
-        "stevens-cs-582",
-        "stevens-cs-584",
-        "stevens-cs-589",
-        "stevens-en-250",
-        "stevens-ma-661",
-        "stevens-me-598",
-        "stevens-nano-200",
-        "stevens-pep-111",
-        "stevens-pep-112",
-        "stevens-pep-221",
-        "stevens-prv-201",
-        "stevens-prv-202",
-        "stevens-prv-203",
-        "stevens-prv-204",
-        "stevens-prv-205"
       ],
       "full_degree_verified": false
     }
-  ]
+  ],
+  "independent_acceptance": {
+    "reviewer": "resolve_usf_wm / gpt-6.1-sol medium",
+    "finding": "24 actual description classifications accepted; reconstructed named choices removed from independent certification; actual numeric choice rules retained."
+  }
 }
