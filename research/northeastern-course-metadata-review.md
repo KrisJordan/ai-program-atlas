@@ -228,3 +228,12 @@ Reviewed official PHTH, HSCI, HLTH, PT, BIOC, BNSC, ECON and PHIL catalog descri
 This batch reviewed 59 distinct source descriptions and added **74 description fields across 9 variants**, bringing the total to **1351 of1,593 course observations**. The exact remaining inventory now contains **242 accessible unreviewed observations across 221 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
 
 Validation: **147 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All19 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
+
+## Communication journalism and design options — 2026-10-11
+
+Reviewed the official COMM, JRNL, ARTF, ARTG, MSCR and PREL descriptions, emphasizing research methods, reporting, visualization, interaction and the named major alternatives. Faculty-selected communication topics and design topic courses remain nonspecific; no listed example is promoted to a required topic. Studio work, fieldwork and course research projects are described as course activities rather than program outcomes. Existing journalism registration restrictions and visualization permission routes remain separate source-backed notes.
+
+
+This batch reviewed 59 distinct source descriptions and added **63 description fields across 5 variants**, bringing the total to **1414 of1,593 course observations**. The exact remaining inventory now contains **179 accessible unreviewed observations across 162 codes**. All source timestamps remain the actual catalog fetch times. All requirement graphs, credit amounts, preparation fields and public-resource links remain unchanged.
+
+Validation: **147 Northeastern-focused tests passed**; all23 temporary ingest/repeat/export/build/integrity checks passed. All11 affected source registrations succeeded twice with zero repeat candidates/source changes. The queue integrity test verifies its counts and exact code/program membership against the concrete records.
