@@ -493,127 +493,7 @@
               "additionalProperties": true
             },
             "expected_profile": {
-              "type": "object",
-              "properties": {
-                "options": {
-                  "type": "object",
-                  "properties": {
-                    "categories": {
-                      "type": "object",
-                      "properties": {
-                        "ai_ml": {
-                          "type": "integer"
-                        },
-                        "applications": {
-                          "type": "integer"
-                        },
-                        "electives": {
-                          "type": "integer"
-                        },
-                        "foundations": {
-                          "type": "integer"
-                        },
-                        "human_context": {
-                          "type": "integer"
-                        },
-                        "mathematics": {
-                          "type": "integer"
-                        },
-                        "other": {
-                          "type": "integer"
-                        },
-                        "systems": {
-                          "type": "integer"
-                        }
-                      },
-                      "additionalProperties": true
-                    },
-                    "count": {
-                      "type": "integer"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "required": {
-                  "type": "object",
-                  "properties": {
-                    "categories": {
-                      "type": "object",
-                      "properties": {
-                        "ai_ml": {
-                          "type": "integer"
-                        },
-                        "applications": {
-                          "type": "integer"
-                        },
-                        "electives": {
-                          "type": "integer"
-                        },
-                        "foundations": {
-                          "type": "integer"
-                        },
-                        "human_context": {
-                          "type": "integer"
-                        },
-                        "mathematics": {
-                          "type": "integer"
-                        },
-                        "other": {
-                          "type": "integer"
-                        },
-                        "systems": {
-                          "type": "integer"
-                        }
-                      },
-                      "additionalProperties": true
-                    },
-                    "count": {
-                      "type": "integer"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "unresolved": {
-                  "type": "object",
-                  "properties": {
-                    "categories": {
-                      "type": "object",
-                      "properties": {
-                        "ai_ml": {
-                          "type": "integer"
-                        },
-                        "applications": {
-                          "type": "integer"
-                        },
-                        "electives": {
-                          "type": "integer"
-                        },
-                        "foundations": {
-                          "type": "integer"
-                        },
-                        "human_context": {
-                          "type": "integer"
-                        },
-                        "mathematics": {
-                          "type": "integer"
-                        },
-                        "other": {
-                          "type": "integer"
-                        },
-                        "systems": {
-                          "type": "integer"
-                        }
-                      },
-                      "additionalProperties": true
-                    },
-                    "count": {
-                      "type": "integer"
-                    }
-                  },
-                  "additionalProperties": true
-                }
-              },
-              "additionalProperties": true
+              "$ref": "#/$defs/AuditExpectedProfile"
             },
             "independent_review": {
               "type": "object",
@@ -1239,130 +1119,7 @@
                   "additionalProperties": true
                 },
                 "expected_profile": {
-                  "type": "object",
-                  "properties": {
-                    "options": {
-                      "type": [
-                        "null",
-                        "object"
-                      ],
-                      "properties": {
-                        "categories": {
-                          "type": [
-                            "null",
-                            "object"
-                          ],
-                          "properties": {
-                            "ai_ml": {
-                              "type": "integer"
-                            },
-                            "applications": {
-                              "type": "integer"
-                            },
-                            "foundations": {
-                              "type": "integer"
-                            },
-                            "human_context": {
-                              "type": "integer"
-                            },
-                            "mathematics": {
-                              "type": "integer"
-                            },
-                            "other": {
-                              "type": "integer"
-                            }
-                          },
-                          "additionalProperties": true
-                        },
-                        "count": {
-                          "type": "integer"
-                        }
-                      },
-                      "additionalProperties": true
-                    },
-                    "required": {
-                      "type": [
-                        "null",
-                        "object"
-                      ],
-                      "properties": {
-                        "categories": {
-                          "type": [
-                            "null",
-                            "object"
-                          ],
-                          "properties": {
-                            "ai_ml": {
-                              "type": "integer"
-                            },
-                            "applications": {
-                              "type": "integer"
-                            },
-                            "electives": {
-                              "type": "integer"
-                            },
-                            "foundations": {
-                              "type": "integer"
-                            },
-                            "human_context": {
-                              "type": "integer"
-                            },
-                            "mathematics": {
-                              "type": "integer"
-                            },
-                            "other": {
-                              "type": "integer"
-                            },
-                            "systems": {
-                              "type": "integer"
-                            }
-                          },
-                          "additionalProperties": true
-                        },
-                        "count": {
-                          "type": "integer"
-                        }
-                      },
-                      "additionalProperties": true
-                    },
-                    "unresolved": {
-                      "type": [
-                        "null",
-                        "object"
-                      ],
-                      "properties": {
-                        "categories": {
-                          "type": [
-                            "null",
-                            "object"
-                          ],
-                          "properties": {
-                            "ai_ml": {
-                              "type": "integer"
-                            },
-                            "foundations": {
-                              "type": "integer"
-                            },
-                            "human_context": {
-                              "type": "integer"
-                            },
-                            "mathematics": {
-                              "type": "integer"
-                            },
-                            "other": {
-                              "type": "integer"
-                            }
-                          },
-                          "additionalProperties": true
-                        },
-                        "count": {
-                          "type": "integer"
-                        }
-                      },
-                      "additionalProperties": true
-                    }
-                  },
-                  "additionalProperties": true
+                  "$ref": "#/$defs/AuditExpectedProfile"
                 },
                 "expected_profile_scope": {
                   "type": "string"
@@ -2484,128 +2241,7 @@
               "additionalProperties": true
             },
             "expected_profile": {
-              "type": [
-                "null",
-                "object"
-              ],
-              "properties": {
-                "choice_count": {
-                  "type": "integer"
-                },
-                "choices": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "context": {
-                        "type": "string"
-                      },
-                      "count": {
-                        "type": [
-                          "integer",
-                          "null"
-                        ]
-                      },
-                      "credit_unit": {
-                        "type": "string"
-                      },
-                      "credits": {
-                        "type": [
-                          "number",
-                          "null"
-                        ],
-                        "minimum": 0
-                      },
-                      "id": {
-                        "type": "string"
-                      },
-                      "kind": {
-                        "type": "string"
-                      },
-                      "origin": {
-                        "type": [
-                          "string",
-                          "null"
-                        ]
-                      },
-                      "parent_id": {
-                        "type": [
-                          "null",
-                          "string"
-                        ]
-                      },
-                      "source_id": {
-                        "type": "string"
-                      },
-                      "summary": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      }
-                    },
-                    "additionalProperties": true
-                  }
-                },
-                "course_ids": {
-                  "type": "object",
-                  "properties": {
-                    "options": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "required": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "unresolved": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "identity": {
-                  "type": "object",
-                  "properties": {
-                    "crosslisted_aliases": {
-                      "type": "integer"
-                    },
-                    "mapped_identities": {
-                      "type": "integer"
-                    },
-                    "reviewed_groups": {
-                      "type": "integer"
-                    },
-                    "source_records": {
-                      "type": "integer"
-                    }
-                  },
-                  "additionalProperties": true
-                },
-                "options": {
-                  "$ref": "#/$defs/CourseSetProfile"
-                },
-                "overlap_count": {
-                  "type": "integer"
-                },
-                "required": {
-                  "$ref": "#/$defs/CourseSetProfile"
-                },
-                "unresolved": {
-                  "$ref": "#/$defs/CourseSetProfile"
-                },
-                "unresolved_group_count": {
-                  "type": "integer"
-                }
-              },
-              "additionalProperties": true
+              "$ref": "#/$defs/AuditExpectedProfile"
             },
             "expected_source_groups": {
               "type": "object",
@@ -3876,127 +3512,7 @@
                     "additionalProperties": true
                   },
                   "expected_profile": {
-                    "type": "object",
-                    "properties": {
-                      "options": {
-                        "type": "object",
-                        "properties": {
-                          "categories": {
-                            "type": "object",
-                            "properties": {
-                              "ai_ml": {
-                                "type": "integer"
-                              },
-                              "applications": {
-                                "type": "integer"
-                              },
-                              "electives": {
-                                "type": "integer"
-                              },
-                              "foundations": {
-                                "type": "integer"
-                              },
-                              "human_context": {
-                                "type": "integer"
-                              },
-                              "mathematics": {
-                                "type": "integer"
-                              },
-                              "other": {
-                                "type": "integer"
-                              },
-                              "systems": {
-                                "type": "integer"
-                              }
-                            },
-                            "additionalProperties": true
-                          },
-                          "count": {
-                            "type": "integer"
-                          }
-                        },
-                        "additionalProperties": true
-                      },
-                      "required": {
-                        "type": "object",
-                        "properties": {
-                          "categories": {
-                            "type": "object",
-                            "properties": {
-                              "ai_ml": {
-                                "type": "integer"
-                              },
-                              "applications": {
-                                "type": "integer"
-                              },
-                              "electives": {
-                                "type": "integer"
-                              },
-                              "foundations": {
-                                "type": "integer"
-                              },
-                              "human_context": {
-                                "type": "integer"
-                              },
-                              "mathematics": {
-                                "type": "integer"
-                              },
-                              "other": {
-                                "type": "integer"
-                              },
-                              "systems": {
-                                "type": "integer"
-                              }
-                            },
-                            "additionalProperties": true
-                          },
-                          "count": {
-                            "type": "integer"
-                          }
-                        },
-                        "additionalProperties": true
-                      },
-                      "unresolved": {
-                        "type": "object",
-                        "properties": {
-                          "categories": {
-                            "type": "object",
-                            "properties": {
-                              "ai_ml": {
-                                "type": "integer"
-                              },
-                              "applications": {
-                                "type": "integer"
-                              },
-                              "electives": {
-                                "type": "integer"
-                              },
-                              "foundations": {
-                                "type": "integer"
-                              },
-                              "human_context": {
-                                "type": "integer"
-                              },
-                              "mathematics": {
-                                "type": "integer"
-                              },
-                              "other": {
-                                "type": "integer"
-                              },
-                              "systems": {
-                                "type": "integer"
-                              }
-                            },
-                            "additionalProperties": true
-                          },
-                          "count": {
-                            "type": "integer"
-                          }
-                        },
-                        "additionalProperties": true
-                      }
-                    },
-                    "additionalProperties": true
+                    "$ref": "#/$defs/AuditExpectedProfile"
                   },
                   "independent_review": {
                     "type": "object",
@@ -4758,130 +4274,7 @@
                         "additionalProperties": true
                       },
                       "expected_profile": {
-                        "type": "object",
-                        "properties": {
-                          "options": {
-                            "type": [
-                              "null",
-                              "object"
-                            ],
-                            "properties": {
-                              "categories": {
-                                "type": [
-                                  "null",
-                                  "object"
-                                ],
-                                "properties": {
-                                  "ai_ml": {
-                                    "type": "integer"
-                                  },
-                                  "applications": {
-                                    "type": "integer"
-                                  },
-                                  "foundations": {
-                                    "type": "integer"
-                                  },
-                                  "human_context": {
-                                    "type": "integer"
-                                  },
-                                  "mathematics": {
-                                    "type": "integer"
-                                  },
-                                  "other": {
-                                    "type": "integer"
-                                  }
-                                },
-                                "additionalProperties": true
-                              },
-                              "count": {
-                                "type": "integer"
-                              }
-                            },
-                            "additionalProperties": true
-                          },
-                          "required": {
-                            "type": [
-                              "null",
-                              "object"
-                            ],
-                            "properties": {
-                              "categories": {
-                                "type": [
-                                  "null",
-                                  "object"
-                                ],
-                                "properties": {
-                                  "ai_ml": {
-                                    "type": "integer"
-                                  },
-                                  "applications": {
-                                    "type": "integer"
-                                  },
-                                  "electives": {
-                                    "type": "integer"
-                                  },
-                                  "foundations": {
-                                    "type": "integer"
-                                  },
-                                  "human_context": {
-                                    "type": "integer"
-                                  },
-                                  "mathematics": {
-                                    "type": "integer"
-                                  },
-                                  "other": {
-                                    "type": "integer"
-                                  },
-                                  "systems": {
-                                    "type": "integer"
-                                  }
-                                },
-                                "additionalProperties": true
-                              },
-                              "count": {
-                                "type": "integer"
-                              }
-                            },
-                            "additionalProperties": true
-                          },
-                          "unresolved": {
-                            "type": [
-                              "null",
-                              "object"
-                            ],
-                            "properties": {
-                              "categories": {
-                                "type": [
-                                  "null",
-                                  "object"
-                                ],
-                                "properties": {
-                                  "ai_ml": {
-                                    "type": "integer"
-                                  },
-                                  "foundations": {
-                                    "type": "integer"
-                                  },
-                                  "human_context": {
-                                    "type": "integer"
-                                  },
-                                  "mathematics": {
-                                    "type": "integer"
-                                  },
-                                  "other": {
-                                    "type": "integer"
-                                  }
-                                },
-                                "additionalProperties": true
-                              },
-                              "count": {
-                                "type": "integer"
-                              }
-                            },
-                            "additionalProperties": true
-                          }
-                        },
-                        "additionalProperties": true
+                        "$ref": "#/$defs/AuditExpectedProfile"
                       },
                       "expected_profile_scope": {
                         "type": "string"
@@ -6003,128 +5396,7 @@
                     "additionalProperties": true
                   },
                   "expected_profile": {
-                    "type": [
-                      "null",
-                      "object"
-                    ],
-                    "properties": {
-                      "choice_count": {
-                        "type": "integer"
-                      },
-                      "choices": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "context": {
-                              "type": "string"
-                            },
-                            "count": {
-                              "type": [
-                                "integer",
-                                "null"
-                              ]
-                            },
-                            "credit_unit": {
-                              "type": "string"
-                            },
-                            "credits": {
-                              "type": [
-                                "number",
-                                "null"
-                              ],
-                              "minimum": 0
-                            },
-                            "id": {
-                              "type": "string"
-                            },
-                            "kind": {
-                              "type": "string"
-                            },
-                            "origin": {
-                              "type": [
-                                "string",
-                                "null"
-                              ]
-                            },
-                            "parent_id": {
-                              "type": [
-                                "null",
-                                "string"
-                              ]
-                            },
-                            "source_id": {
-                              "type": "string"
-                            },
-                            "summary": {
-                              "type": "string"
-                            },
-                            "title": {
-                              "type": "string"
-                            }
-                          },
-                          "additionalProperties": true
-                        }
-                      },
-                      "course_ids": {
-                        "type": "object",
-                        "properties": {
-                          "options": {
-                            "type": "array",
-                            "items": {
-                              "type": "string"
-                            }
-                          },
-                          "required": {
-                            "type": "array",
-                            "items": {
-                              "type": "string"
-                            }
-                          },
-                          "unresolved": {
-                            "type": "array",
-                            "items": {
-                              "type": "string"
-                            }
-                          }
-                        },
-                        "additionalProperties": true
-                      },
-                      "identity": {
-                        "type": "object",
-                        "properties": {
-                          "crosslisted_aliases": {
-                            "type": "integer"
-                          },
-                          "mapped_identities": {
-                            "type": "integer"
-                          },
-                          "reviewed_groups": {
-                            "type": "integer"
-                          },
-                          "source_records": {
-                            "type": "integer"
-                          }
-                        },
-                        "additionalProperties": true
-                      },
-                      "options": {
-                        "$ref": "#/$defs/CourseSetProfile"
-                      },
-                      "overlap_count": {
-                        "type": "integer"
-                      },
-                      "required": {
-                        "$ref": "#/$defs/CourseSetProfile"
-                      },
-                      "unresolved": {
-                        "$ref": "#/$defs/CourseSetProfile"
-                      },
-                      "unresolved_group_count": {
-                        "type": "integer"
-                      }
-                    },
-                    "additionalProperties": true
+                    "$ref": "#/$defs/AuditExpectedProfile"
                   },
                   "expected_source_groups": {
                     "type": "object",
@@ -7388,6 +6660,198 @@
         }
       },
       "additionalProperties": true
+    },
+    "AuditExpectedProfile": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "choice_count": {
+          "type": "integer"
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "context": {
+                "type": "string"
+              },
+              "count": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "credit_unit": {
+                "type": "string"
+              },
+              "credits": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "id": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "origin": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "parent_id": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "source_id": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "course_ids": {
+          "type": "object",
+          "properties": {
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "unresolved": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": true
+        },
+        "identity": {
+          "type": "object",
+          "properties": {
+            "crosslisted_aliases": {
+              "type": "integer"
+            },
+            "mapped_identities": {
+              "type": "integer"
+            },
+            "reviewed_groups": {
+              "type": "integer"
+            },
+            "source_records": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": true
+        },
+        "options": {
+          "$ref": "#/$defs/AuditExpectedCourseSet"
+        },
+        "overlap_count": {
+          "type": "integer"
+        },
+        "required": {
+          "$ref": "#/$defs/AuditExpectedCourseSet"
+        },
+        "unresolved": {
+          "$ref": "#/$defs/AuditExpectedCourseSet"
+        },
+        "unresolved_group_count": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": true,
+      "description": "Bounded audit expectations; unreviewed category totals may be null even when represented course counts are known."
+    },
+    "AuditExpectedCourseSet": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "categories": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "ai_ml": {
+              "type": "integer"
+            },
+            "applications": {
+              "type": "integer"
+            },
+            "electives": {
+              "type": "integer"
+            },
+            "foundations": {
+              "type": "integer"
+            },
+            "human_context": {
+              "type": "integer"
+            },
+            "mathematics": {
+              "type": "integer"
+            },
+            "other": {
+              "type": "integer"
+            },
+            "systems": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": true
+        },
+        "classification": {
+          "type": "object",
+          "properties": {
+            "mixed": {
+              "type": "integer"
+            },
+            "reviewed": {
+              "type": "integer"
+            },
+            "unclassified": {
+              "type": "integer"
+            },
+            "unreviewed": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": true
+        },
+        "count": {
+          "type": "integer"
+        },
+        "source_record_count": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": true,
+      "description": "Reviewer expectations, not computed metrics. Null category totals mean unchecked; never zero."
     }
   }
 }

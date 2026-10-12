@@ -9,7 +9,7 @@ from pathlib import Path
 
 from .curriculum_profile import requirement_profile
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 SLUG = r'[a-z0-9]+(?:-[a-z0-9]+)*'
 
 

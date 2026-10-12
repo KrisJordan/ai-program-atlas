@@ -142,3 +142,17 @@ def test_all_path_ids_are_safe_and_unique(public_data, collection):
     data[collection].append(data[collection][0])
     with pytest.raises(ValueError):
         responses(data, '/')
+
+
+def test_unchecked_audit_categories_remain_null(public_data):
+    contract = openapi(public_data, '/')
+    data = deepcopy(public_data)
+    audit = data['meta']['degree_audit']['programs'][0]
+    for role in ('required', 'options', 'unresolved'):
+        audit['expected_profile'][role]['categories'] = None
+    validator(contract, {'$ref': '#/components/schemas/Dataset'}).validate(data)
+    # Audit expectations and always-derived profile counts have different contracts.
+    profile = requirement_profile(public_data['programs'][0], include_course_ids=True)
+    profile['options']['categories'] = None
+    with pytest.raises(ValidationError):
+        validator(contract, {'$ref': '#/components/schemas/Profile'}).validate(profile)
