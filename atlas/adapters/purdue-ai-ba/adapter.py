@@ -1,4 +1,4 @@
-"""Purdue BA admissions identity parser; does not claim catalog coverage."""
+"""Purdue BA source observations, with a separately guarded current catalog parser."""
 
 import re
 from urllib.parse import urljoin
@@ -195,3 +195,9 @@ SOURCE_PARSERS = {url: observe_subjects(parser, PROGRAM_ID) for url, parser in S
 # Dated departmental outlines observe content without claiming current catalog access.
 from atlas.adapters import purdue_canonical_course_reviews
 purdue_canonical_course_reviews.attach(globals())
+
+# Current edition-specific catalog observations supersede the older department
+# overview during manual candidate review, never by automatic replacement.
+from atlas.adapters import purdue_ba_catalog
+SOURCES += (purdue_ba_catalog.URL,)
+SOURCE_PARSERS[purdue_ba_catalog.URL] = purdue_ba_catalog.parse

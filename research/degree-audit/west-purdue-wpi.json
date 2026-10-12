@@ -2116,84 +2116,49 @@
       "status": "blocked",
       "sources": [
         {
-          "url": "https://admissions.purdue.edu/majors/artificial-intelligence/",
-          "catalog_year": null,
-          "locator": "h1; Program Summary; Quick Facts; Possible Careers",
-          "checked_at": "2026-10-11",
-          "access_status": "Official source reread or specific existing conflict evidence retained; cached fetch date preserved in program source. No fresh network claim."
+          "url": "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726",
+          "catalog_year": "2026–2027",
+          "locator": "Areas A–E; expanded descriptions/outcomes for all 46 major identities; CLA/university policies; Program Learning Outcomes",
+          "checked_at": "2026-10-12",
+          "access_status": "Read in explicitly authorized laptop Chrome; permitted Save Page captures. Web fetch returned 403; no bypass."
         },
         {
           "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
           "catalog_year": null,
-          "locator": "Plan of Study; five listed required CS courses and subject credit totals",
-          "checked_at": "2026-10-11",
-          "access_status": "Official source reread or specific existing conflict evidence retained; cached fetch date preserved in program source. No fresh network claim."
-        },
-        {
-          "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs10100.html",
-          "catalog_year": null,
-          "locator": "Course Description or Detailed Syllabus; course heading; prerequisite when stated",
-          "checked_at": "2026-10-11",
-          "access_status": "Official source reread or specific existing conflict evidence retained; cached fetch date preserved in program source. No fresh network claim."
-        },
-        {
-          "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs180.html",
-          "catalog_year": null,
-          "locator": "Course Description or Detailed Syllabus; course heading; prerequisite when stated",
-          "checked_at": "2026-10-11",
-          "access_status": "Official source reread or specific existing conflict evidence retained; cached fetch date preserved in program source. No fresh network claim."
-        },
-        {
-          "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical/cs182.html",
-          "catalog_year": null,
-          "locator": "Course Description or Detailed Syllabus; course heading; prerequisite when stated",
-          "checked_at": "2026-10-11",
-          "access_status": "Official source reread or specific existing conflict evidence retained; cached fetch date preserved in program source. No fresh network claim."
-        },
-        {
-          "url": "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726",
-          "catalog_year": null,
-          "locator": "Current BA plan returned403; no retry/bypass. Eight philosophy identities/choice logic and current CLA/university degree rules remain inaccessible.",
-          "checked_at": "2026-10-11",
-          "access_status": "Existing access barrier/conflict reviewed from source notes; no denied-route retry."
-        },
-        {
-          "url": "https://www.cs.purdue.edu/academic-programs/courses/canonical_syllabi.html",
-          "catalog_year": null,
-          "locator": "Actual directory and course link/version evidence",
-          "checked_at": "2026-10-11",
-          "access_status": "read: public department directory; no denied detail endpoint retried"
-        },
-        {
-          "url": "https://www.cs.purdue.edu/academic-programs/courses/index.html",
-          "catalog_year": "2026-2027",
-          "locator": "Actual directory and course link/version evidence",
-          "checked_at": "2026-10-11",
-          "access_status": "read: public department directory; no denied detail endpoint retried"
+          "locator": "Department of Philosophy heading; BA introduction and older Plan of Study; modified October 15, 2025",
+          "checked_at": "2026-10-12",
+          "access_status": "Read in authorized laptop Chrome; overview conflicts with current linked catalog."
         }
       ],
       "checks": {
-        "degree_identity": "Official admissions identifies Artificial Intelligence(Liberal Arts), Bachelor of Arts, West Lafayette. Distinct from the technical BS.",
-        "required_and_choices": "Department explicitly requires five named CS courses,15CS hours and eight specialized philosophy courses/24hours. No philosophy identities are invented. Five fixed records is only the mapped subset.",
-        "elective_pools": "Current philosophy requirement/choice inventory is unavailable. Term offerings do not establish major requirements. The old CLA core PDF is a2019proposal, not current degree policy.",
-        "prerequisites": "CS101/180/182 canonical sources read; CS182 prerequisiteCS180 is already in fixed set. The June2025 descriptions are not current offering evidence. Only CS18200 among the inspected outlines explicitly states a prerequisite, CS18000; absent fields stay unknown. Dated outline preparation is not silently certified for Fall2026.",
-        "credits_and_units": "Group totals24+15 are not divided to invent per-course credits. All five course values remain null.",
-        "classification": "Programming and AI-basics precise titles support limited classification. CS101 broad survey and CS182 math/computation outline are mixedother, with actual canonical-source rationale. Eleven distinct full canonical outlines were read across the two Purdue records. These supply dated content dispositions, not current catalog verification. CS34800 is systems from its database-focused outline; CS48300 retains foundations with the directory proposed-status caveat. The other inspected subject categories remain supported.",
-        "family_composition": "No family inheritance/bindings; independently scoped standalone degree. Shared policy helpers do not imply shared credential.",
-        "degree_wide_requirements": "Full philosophy curriculum, current CLA core and university rules not verified; scope remains partial."
+        "degree_identity": "2026–2027 catalog identifies Artificial Intelligence, BA at West Lafayette with 120 required credits. Department page explicitly offers the BA through Philosophy within CLA. BS remains separate.",
+        "required_and_choices": "Areas A and E supply six fixed PHIL identities, Area B five fixed CS identities. Four MA listings form three routes: 16010 AND 16020, OR 16100, OR 16500. Area C requires three 3-credit subject pools; Area D requires 3 credits from 18 choices. Sample-plan examples are excluded.",
+        "elective_pools": "All 35 major option identities mapped: 4 calculus, 13 Area C, 18 Area D. CLA social/university approved pools not yet extracted; no absence claim. General electives have a stated 0–34-credit range, not a fixed extra load.",
+        "prerequisites": "Current course/program prerequisite directions lead to authenticated myPurdue; all current prerequisites remain null. Credit exclusions, recommended preparation and sample-plan scheduling guidance are preserved as qualified course notes, not additional obligations.",
+        "credits_and_units": "120 semester hours degree total; major 51–53. Area A16, B20–22 (five CS courses16 plus calculus4/5/6), C9, D3, E3. PHIL415 course range1–3 remains separate from required research3. MA161 catalog5 with possible school-specific graduation4 remains qualified; no BA waiver inferred.",
+        "classification": "All 46 complete expanded catalog descriptions and available outcomes manually reviewed. Fixed: foundations2, mathematics1, AI1, human context6, mixed1. Options: mathematics5, human context26, applications3, mixed1. CS182 current outcome is discrete mathematical reasoning; PHIL323 and PHIL350 have coequal subject aims and remain mixed.",
+        "family_composition": "No family inheritance. No concentration/track defined in this reviewed BA plan; Areas A–E are curricular requirements. No BS or ECE facts borrowed.",
+        "degree_wide_requirements": "Mapped published CLA diversity/language/foundational rules, overlap and conditional exemptions,2.0 major/graduation GPA,P/NP exclusion,civics podcast/test and two-semester/32-hour residence. Whole degree partial due linked approved menus and advisor-specific language eligibility."
       },
       "expected_profile": {
         "required": {
-          "count": 5,
+          "count": 11,
           "categories": {
-            "other": 2,
             "foundations": 2,
-            "ai_ml": 1
+            "mathematics": 1,
+            "ai_ml": 1,
+            "human_context": 6,
+            "other": 1
           }
         },
         "options": {
-          "count": 0,
-          "categories": {}
+          "count": 35,
+          "categories": {
+            "mathematics": 5,
+            "human_context": 26,
+            "applications": 3,
+            "other": 1
+          }
         },
         "unresolved": {
           "count": 0,
@@ -2202,43 +2167,92 @@
       },
       "expected_course_ids": {
         "required": [
-          "purdue-cs-10100",
+          "purdue-phil-25601",
+          "purdue-phil-30000",
+          "purdue-phil-31400",
+          "purdue-phil-32300",
+          "purdue-phil-41400",
+          "purdue-phil-41500",
           "purdue-cs-17600",
           "purdue-cs-18000",
           "purdue-cs-18200",
-          "purdue-cs-24300"
+          "purdue-cs-24300",
+          "purdue-cs-36100"
         ],
-        "options": [],
+        "options": [
+          "purdue-ma-16010",
+          "purdue-ma-16020",
+          "purdue-ma-16100",
+          "purdue-ma-16500",
+          "purdue-phil-20700",
+          "purdue-phil-20800",
+          "purdue-phil-30100",
+          "purdue-phil-30200",
+          "purdue-phil-30300",
+          "purdue-phil-30400",
+          "purdue-phil-30600",
+          "purdue-phil-31000",
+          "purdue-phil-22100",
+          "purdue-phil-32200",
+          "purdue-phil-35000",
+          "purdue-phil-42100",
+          "purdue-phil-55300",
+          "purdue-ad-22000",
+          "purdue-ad-26700",
+          "purdue-ad-32600",
+          "purdue-anth-21000",
+          "purdue-com-25100",
+          "purdue-com-41500",
+          "purdue-engl-22300",
+          "purdue-engl-32001",
+          "purdue-engl-42100",
+          "purdue-engl-42400",
+          "purdue-hist-28400",
+          "purdue-hist-30701",
+          "purdue-hist-30705",
+          "purdue-hist-38506",
+          "purdue-pol-22800",
+          "purdue-pol-25801",
+          "purdue-soc-34400",
+          "purdue-soc-38100"
+        ],
         "unresolved": []
       },
       "discrepancies": [
         {
-          "issue": "Legacy subject classifications followed program or requirement roles rather than specific course content.",
-          "correction": "Unsupported labels reset toother; individually supported classifications and mixed/unknown reviews retained with precise evidence limits.",
-          "status": "corrected; remainingcontentreviewexplicit",
+          "issue": "Older department overview was the only mapped curriculum: five CS records including CS101 and eight unnamed philosophy courses/24 credits. Current catalog differs materially.",
+          "correction": "Use exact 2026–2027 Areas A–E: eleven fixed identities and thirty-five options, current titles/credits, six fixed PHIL plus three selected PHIL courses, and three calculus routes. Preserve older overview conflict as historical context.",
+          "status": "corrected",
           "evidence_urls": [
-            "https://admissions.purdue.edu/majors/artificial-intelligence/",
-            "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html"
+            "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726"
+          ]
+        },
+        {
+          "issue": "Charts omitted philosophical/ethical requirements and calculus options; CS182 classification used an older mixed outline.",
+          "correction": "Source-review all46 current descriptions; show human-context fixed6 and mathematics fixed1 plus calculus options. Preserve PHIL323/350 mixed rather than assigning unsupported AI categories.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726"
           ]
         }
       ],
       "blockers": [
         {
+          "url": "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35410",
+          "issue": "Linked social-diversity approved menu not yet extracted for this BA."
+        },
+        {
+          "url": "https://www.purdue.edu/senate/committees/standing-committees/educational/curr/index.php",
+          "issue": "Approved university outcome pools are not extracted for this BA; no BS inventory is inherited."
+        },
+        {
           "url": "https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726",
-          "issue": "Current BA plan returned403; no retry/bypass. Eight philosophy identities/choice logic and current CLA/university degree rules remain inaccessible."
-        },
-        {
-          "url": "https://www.cla.purdue.edu/academic/philosophy/students/undergraduate/majors/artificial-intelligence/index.html",
-          "issue": "CS176/243 departmental titles differ from newer BS/term-directory wording. No cross-program title/version substitution or individual-credit inference."
-        },
-        {
-          "url": "https://www.cs.purdue.edu/academic-programs/courses/index.html",
-          "issue": "CS17600/24300 current term rows provide titles but link full details to the known robots-disallowed selfservice host. No canonical entry or independently verified current full description was found in this bounded public-source check. Older BA titles are not silently equated to current title revisions."
+          "issue": "Acceptable world languages and program-specific proficiency equivalences require advising. Current prerequisites point to authenticated myPurdue; no authenticated access attempted."
         }
       ],
-      "correction_status": "Dated content review retained for three of five represented courses; current full descriptions for CS17600/24300 remain unavailable at the known restricted detail endpoint. BA is blocked by specific source gaps rather than an asserted accessible reading backlog.",
+      "correction_status": "Current catalog correction implemented; whole-degree inventory partial.",
       "second_pass_status": "pending",
-      "accessible_work_remaining": "No known unread publicly linked description branch remains for the five represented BA courses after this bounded check. Three full dated canonical outlines were reviewed. CS17600/24300 have no entries in that directory; the current public term directory supplies titles only and links details to the previously robots-disallowed selfservice host. Their full current descriptions remain unavailable, not inferred absent. The eight philosophy identities remain inaccessible behind the denied plan."
+      "accessible_work_remaining": "Linked social-diversity and university approved menus and separate independent acceptance remain outstanding; current prerequisite access is authenticated."
     },
     {
       "program_id": "wpi-ai-bs",

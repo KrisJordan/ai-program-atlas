@@ -79,9 +79,11 @@ def test_corrected_degree_subjects_do_not_follow_required_or_option_role():
     p = program('purdue-ai-bs')
     assert all(c['category'] == 'other' for c in p['courses'] if '-pool-' in c['id'])
     ba = {c['code']: c for c in program('purdue-ai-ba')['courses']}
-    assert ba['CS 10100']['category_review']['status'] == 'mixed'
-    assert ba['CS 18200']['category_review']['status'] == 'mixed'
-    assert all(c['credits'] is None for c in ba.values())
+    assert 'CS 10100' not in ba  # superseded older department overview
+    assert ba['CS 18200']['category'] == 'mathematics'
+    assert ba['PHIL 32300']['category_review']['status'] == 'mixed'
+    assert ba['CS 18000']['credits'] == 4
+    assert ba['PHIL 41500']['credits'] is None  # variable course, fixed research load
 
 
 def test_source_observations_drop_stale_reviews_and_changed_titles():

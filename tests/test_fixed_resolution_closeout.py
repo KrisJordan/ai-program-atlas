@@ -32,7 +32,7 @@ def test_latest_scoped_proposals_applied_without_whole_degree_promotion():
         if proposal.get('superseded_by'):
             assert (ROOT / proposal['superseded_by']).exists()
             assert accepted['reviewed_at'] > proposal['reviewed_at']
-            assert accepted['expected_profile']['required']['count'] == 7
+            assert accepted['expected_profile']['required']['count'] == (11 if pid == 'purdue-ai-ba' else 7)
             assert accepted['full_degree_verified'] is False
         else:
             assert accepted == proposal

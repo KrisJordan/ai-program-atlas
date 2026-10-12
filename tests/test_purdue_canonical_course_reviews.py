@@ -37,13 +37,17 @@ def test_curated_sources_keep_credit_and_version_boundaries():
     for pid in ['purdue-ai-ba','purdue-ai-bs']:
         p=json.loads(Path('data/programs',pid+'.json').read_text());validate_program(p)
         c={c['code']:c for c in p['courses']}
-        assert c['CS 18000']['credits']==(None if pid.endswith('-ba') else 4)
-        assert 'Dated canonical' in c['CS 18200']['prerequisites']
-        assert c['CS 18200']['category_review']['status']=='mixed'
+        assert c['CS 18000']['credits']==4
         if pid.endswith('-ba'):
-            assert c['CS 17600']['name']=='Introduction to Python'
-            assert c['CS 24300']['description'] is None
+            assert c['CS 18200']['prerequisites'] is None
+            assert c['CS 18200']['category']=='mathematics'
+            assert c['CS 17600']['name']=='Data Engineering In Python'
+            assert c['CS 24300']['description']
+            assert p['catalog_year']=='2026–2027'
+            assert 'CS 10100' not in c
         else:
+            assert 'Dated canonical' in c['CS 18200']['prerequisites']
+            assert c['CS 18200']['category_review']['status']=='mixed'
             assert c['CS 34800']['category']=='systems'
             assert m.SPEC['CS 48300']['canonical_status']=='proposed'
             assert len(c['CS 48300']['category_review']['source_ids'])==2

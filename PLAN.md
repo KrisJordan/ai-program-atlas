@@ -2,6 +2,12 @@
 
 Updated 2026-10-11. A published research project; **the full target cohort and catalog inventory remain incomplete**.
 
+## Local Purdue BA catalog correction — 2026-10-12 (unpublished)
+
+The explicitly authorized laptop Chrome read the supplied 2026–2027 official BA catalog. Local correction replaces the older incomplete five-CS/eight-unnamed-PHIL representation with **46 major course identities / 30 nodes**, **11 fixed /35 options**. Degree120 credits; major51–53; host Philosophy within CLA. Calculus is MA16010+16020 OR MA16100 OR MA16500, not four fixed courses. Current fixed CS36100 replaces older CS10100; six fixed PHIL plus three selected PHIL courses differ from the still-visible older department overview. All46 current descriptions/outcomes and five program learning outcomes were read. Manual chart counts and source/version conflict are in [Purdue current-catalog audit](research/degree-audit/purdue-ba-current-catalog.md).
+
+Whole-degree inventory stays partial for linked CLA/UCC menus, advisor language eligibility and authenticated prerequisites. Separate independent acceptance is pending and prior bounded findings are explicitly superseded. Full required-browser suite: **3,900 passed /1,026 optional-cache or historical skips**, including all110 Chromium cases. Focused Purdue suite110 passed/16 optional skips. Only Purdue BA changed; repeat ingest0; fresh/maintained168 program hashes agree; integrity/build pass;1,054 static files reproduce byte-for-byte. Actual1440px/390px screenshots, API, disclosure keyboard and history checks pass. No merge or deployment is authorized or claimed. Other program records and existing requirement-disclosure/profile placement UX remain unchanged.
+
 ## Current priorities — university evidence and additional majors
 
 The user prioritizes better evidence for remaining National University core inventories and independent correctness review of all five additional majors. Of the 15 remaining partial/unverified degree cores, 14 belong to National Universities; Furman is in the National Liberal Arts Colleges cohort and is deferred. University work covers eight Buffalo degrees, Purdue BA, Delaware, Stevens, UC Merced, USF and William & Mary. Search new permitted authoritative plans and source-version evidence; preserve existing restrictions and unresolved limits.

@@ -137,7 +137,7 @@ def test_curated_seed_references_and_unknowns():
         course_ids = {c["id"] for c in data["courses"]}
         requirement_ids = {r["id"] for r in data["requirements"]}
         assert data["first_offered"] is None
-        assert data["verification_status"] == "partial"
+        assert data["verification_status"] == ("confirmed" if slug == "purdue-ai-ba" else "partial")
         assert len(course_ids) == len(data["courses"])
         for row in data["courses"] + data["requirements"] + data["outcomes"]:
             assert row["source_id"] in source_ids
@@ -306,6 +306,8 @@ def test_purdue_reviewed_college_policies_and_partial_limits():
     assert len(bs["courses"]) >= 96
     assert bs["curriculum_status"] == "partial"
     ba = json.loads((ROOT / "data/programs/purdue-ai-ba.json").read_text())
-    assert ba["requirements"][0]["count"] == 8
-    assert len(ba["courses"]) == 5  # no fabricated philosophy pool
+    reqs = {r["id"]: r for r in ba["requirements"]}
+    assert reqs["purdue-ai-ba-area-c"]["credits"] == 9
+    assert reqs["purdue-ai-ba-calculus"]["count"] == 1
+    assert len(ba["courses"]) == 46  # current catalog, not the older overview
     assert ba["outcomes"][1]["statement_type"] == "career_pathway"

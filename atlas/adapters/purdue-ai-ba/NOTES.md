@@ -1,4 +1,18 @@
-# Purdue AI BA pilot
+# Purdue AI BA — current coverage
+
+## Current catalog correction — 2026-10-12
+
+The [2026–2027 BA catalog](https://catalog.purdue.edu/preview_program.php?catoid=19&poid=35726) is now readable in the explicitly authorized laptop Chrome. It establishes a 120-credit BA through Philosophy in CLA, with a 51–53-credit major. Current coverage is **46 major course identities / 30 requirement nodes**: **11 fixed and 35 options**, including six fixed PHIL, five fixed CS, three calculus routes (one two-course bundle), three philosophy selection pools, 18 breadth options and the research practicum. CS 10100 is not a current major requirement; CS 36100 is. All 46 expanded descriptions and available course outcomes were read; five program learning outcomes are distinct from admissions aims/career possibilities.
+
+The older department overview was reread and still reports eight PHIL/24 credits and five CS/15 credits. It conflicts with the linked current catalog; those older facts are retained only as historical context. The four math candidates are alternatives, never four fixed requirements. PHIL 41500's course range1–3 remains separate from the research requirement3. The full policy, classification and manual chart arithmetic are in [current-catalog audit](../../../research/degree-audit/purdue-ba-current-catalog.md).
+
+`purdue_ba_catalog.py` observes real catalog headings, course identities, credits and choice structure; guards changed policies, outcomes and menus; and validates optional expanded content before publishing concise original summaries. Registered `SOURCE_PARSERS` includes this catalog alongside older scoped observations. Scrapers do not replay review timestamps, audits or manual classifications. Normal unexpanded and browser-expanded captures have identical requirement membership/credit observations. The supported web fetch still returned403; no bypass or authenticated prerequisite access occurred. Browser Save Page captures stay ignored under `.cache/research/purdue-ba/`.
+
+Final checks:3,900 tests passed, including all110 required Chromium cases;1,026 optional-cache/historical skips. Focused Purdue110 passed/16 optional skips; actual browser-capture parser and repeat candidate checks pass. SQLite changes only this BA, repeat ingest is0, fresh168 program hashes match, and1,054 repeated build files are byte-identical. Desktop/mobile screenshots, profile bars, API and disclosure/history checks passed.
+
+Whole-degree coverage remains partial: linked approved social/UCC menus, advisor-specific language equivalences and current authenticated prerequisites remain explicit limits. Separate independent acceptance is pending; no full degree certification, merge or deployment is claimed. Historical notes below describe earlier evidence states and are superseded where the current catalog is explicit.
+
+## Historical pilot and follow-ups
 
 Verified 2026-10-10 using [official admissions](https://admissions.purdue.edu/majors/artificial-intelligence/). Its h1 is **Artificial Intelligence (Liberal Arts)** and Quick Facts explicitly identifies **Bachelor of Arts**, West Lafayette, College of Liberal Arts. Retain that source title and separate BA award; do not merge this program with Purdue's technical AI BS. University ID is `purdue-university`.
 

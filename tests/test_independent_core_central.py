@@ -132,16 +132,16 @@ def test_purdue_content_checks_have_explicit_dated_and_unreviewed_boundaries():
     assert e['dimensions']['classification']['status'] == 'partial'
 
 
-def test_purdue_ba_unknown_philosophy_menu_is_not_a_verified_empty_pool():
-    p = load('purdue-ai-ba');e = ENTRIES[p['id']]
+def test_purdue_ba_current_catalog_supersedes_older_unnamed_group():
+    p = load('purdue-ai-ba'); e = ENTRIES[p['id']]
     requirements = {r['id']: r for r in p['requirements']}
-    philosophy = requirements['purdue-ai-ba-philosophy']
-    assert philosophy['count'] == 8 and philosophy['credits'] == 24
-    assert not philosophy['course_ids']
+    assert 'purdue-ai-ba-philosophy' not in requirements
+    assert requirements['purdue-ai-ba-area-a']['credits'] == 16
+    assert requirements['purdue-ai-ba-area-c']['credits'] == 9
     assert e['dimensions']['choice_rules']['status'] == 'partial'
-    assert set(requirements['purdue-ai-ba-cs']['course_ids']) == set(e['expected_course_ids']['required'])
-    assert requirements['purdue-ai-ba-cs']['credits'] == 15
-    assert all(c['credits'] is None for c in p['courses'])
+    assert len(e['expected_course_ids']['required']) == 11
+    assert requirements['purdue-ai-ba-cs']['credits'] == 16
+    assert 'independent acceptance' in e['dimensions']['choice_rules']['limitations'][0].lower()
 
 
 def test_furman_zero_graph_is_not_zero_verified_curriculum():

@@ -23,7 +23,7 @@ def test_complete_rows_pin_resolved_facts_and_preserve_prior_bounded_sets(pid):
     validate_core_review(row, pid)
     if row.get('superseded_by'):
         assert (ROOT / row['superseded_by']).exists()
-        assert program['catalog_year'] == '2026-2027'
+        assert program['catalog_year'] == ('2026–2027' if pid == 'purdue-ai-ba' else '2026-2027')
         assert row['expected_course_ids'] == prior['expected_course_ids']
         return  # retain prior evidence; current correction has separate graph tests
     assert core_review_fingerprint(program) == row['reviewed_content_hash']
