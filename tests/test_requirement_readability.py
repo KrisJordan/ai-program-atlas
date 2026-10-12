@@ -40,7 +40,7 @@ def test_choice_preview_is_bounded_but_empty_course_choices_stay_visible(site_da
     p['requirements']=[dict(rule('choice','choose_courses',courses=[f'c{i}' for i in range(6)]),count=1),dict(rule('unextracted','choose_credits'),credits=6)]
     soup=BeautifulSoup(requirement_tree(p),'html.parser')
     assert len(soup.select('#requirement-choice .requirement-course-row'))==6
-    assert soup.select_one('#requirement-choice .requirement-rule').get_text()=='Choose 1 course'
+    assert soup.select_one('#requirement-choice .requirement-rule').get_text()=='Choose 1 course · 6 listed courses'
     assert not soup.select('.requirement-preview')
     assert soup.select_one('.requirements > #requirement-unextracted')
     assert not soup.select_one('#requirements-group-other-top')

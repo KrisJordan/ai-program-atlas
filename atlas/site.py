@@ -645,6 +645,52 @@ def requirement_tree(p, base="", matcher=None):
     def optional(r):
         return bool(re.match(r'^\s*optional\b', r.get('title') or '', re.I))
 
+    def optional_concentration(r):
+        return optional(r) and bool(re.search(r'\bconcentration\b', r.get('title') or '', re.IGNORECASE)) and has_courses(r) and bool(children_by_id.get(r.get('id')))
+
+    def beneath_optional_concentration(r):
+        ancestors = set()
+        parent = requirement_by_id.get(r.get('parent_id'))
+        while parent and parent.get('id') not in ancestors:
+            ancestors.add(parent.get('id'))
+            if optional_concentration(parent):
+                return True
+            parent = requirement_by_id.get(parent.get('parent_id'))
+        return False
+
+    requirement_by_id = {r.get('id'): r for r in requirements}
+    course_order = {}
+
+    def course_key(c):
+        # A reading aid, not a prerequisite parser or a recommended study plan.
+        if c['id'] not in course_order:
+            title = c.get('name') or ''
+            early = bool(re.search(r'\b(?:introduct(?:ion|ory)|foundations?|fundamentals|elementary)\b', title, re.IGNORECASE))
+            late = bool(re.search(r'\b(?:advanced|capstone|senior project)\b', title, re.IGNORECASE))
+            text = (c.get('prerequisites') or '').strip()
+            explicit_none = bool(re.fullmatch(r'(?:none|no prerequisites?)[.!]?', text, re.IGNORECASE))
+            references = referenced_courses(text, matcher)
+            # Missing/unmatched prose is neutral, never evidence of zero prerequisites.
+            burden = 0 if explicit_none else 2 if len(references) >= 2 else 1
+            course_order[c['id']] = (0 if early else 2 if late else 1, burden)
+        return course_order[c['id']]
+
+    def ordered_nodes(nodes):
+        # Preserve named route/sequence order rather than reorder an explicit progression.
+        if any(re.search(r'\b(?:first|second|third|fourth|alternative) course route\b', r.get('title') or '', re.IGNORECASE) for r in nodes):
+            return nodes
+
+        def key(r):
+            title = r.get('title') or ''
+            late = bool(re.search(r'\b(?:electives?|capstone|advanced|senior project)\b', title, re.IGNORECASE))
+            core = bool(re.search(r'\b(?:core|foundations?|fundamentals|introduct(?:ion|ory)|required)\b', title, re.IGNORECASE))
+            role = 3 if late else 0 if core else 1 if r.get('kind') == 'all' else 2
+            courses = [course_map[cid] for cid in r.get('course_ids') or [] if cid in course_map]
+            burden = max((course_key(c) for c in courses), default=(1, 1))
+            return general_education(r), r.get('kind') == 'note', role, burden
+
+        return sorted(nodes, key=key)  # Stable ties retain the recorded source order.
+
     def general_education(r):
         # Only explicit source/title labels establish institution-wide scope.
         title = (r.get('title') or '').strip()
@@ -677,7 +723,7 @@ def requirement_tree(p, base="", matcher=None):
 
     def course_rows(courses, required_credits='', scope_id='', evidence=''):
         rows = []
-        for c in courses:
+        for c in sorted(courses, key=course_key):
             amount = c.get('credits')
             if isinstance(amount, (float, int)) and amount == int(amount):
                 amount = int(amount)
@@ -692,8 +738,9 @@ def requirement_tree(p, base="", matcher=None):
     def bundle(title, members, seen, depth, key):
         if not members:
             return ''
-        content = ''.join(render(r, seen, depth) for r in members)
-        return '<li class="requirement-bundle" id="requirements-group-' + esc(key) + '"><details class="requirement-bundle-disclosure"><summary><h3>' + esc(title) + '</h3><span class="requirement-rule">' + str(len(members)) + ' recorded ' + ('branch' if len(members) == 1 else 'branches') + ' · expand to inspect</span></summary><ul>' + content + '</ul></details></li>'
+        content = ''.join(render(r, seen, depth) for r in ordered_nodes(members))
+        opened = any(optional_concentration(r) for r in members)
+        return '<li class="requirement-bundle" id="requirements-group-' + esc(key) + '"><details class="requirement-bundle-disclosure" ' + ('open' if opened else '') + '><summary><h3>' + esc(title) + '</h3><span class="requirement-rule">' + str(len(members)) + ' recorded ' + ('branch' if len(members) == 1 else 'branches') + '</span></summary><ul>' + content + '</ul></details></li>'
 
     def render_level(nodes, seen, depth, root=False, parent='top', scope=None):
         main, notes, other, options, general = [], [], [], [], []
@@ -710,7 +757,7 @@ def requirement_tree(p, base="", matcher=None):
                 notes.append(r)
             else:
                 main.append(r)
-        main.sort(key=lambda r: (general_education(r), r.get('kind') == 'note'))
+        main = ordered_nodes(main)
         return ''.join(render(r, seen, depth, scope) for r in main) + bundle('General education requirements', general, seen, depth, 'general-' + parent) + bundle('Optional concentrations & fields', options, seen, depth, 'optional-' + parent) + bundle('Requirement notes', notes, seen, depth, 'notes-' + parent) + bundle('Other requirements', other, seen, depth, 'other-' + parent)
 
     def related_markup(r, depth):
@@ -724,7 +771,7 @@ def requirement_tree(p, base="", matcher=None):
                 courses = [course_map[cid] for cid in dict.fromkeys(child.get('course_ids') or []) if cid in course_map]
                 conjunction = '<span class="related-route-rule">All ' + str(len(courses)) + ' courses in this option (AND)</span>' if len(courses) > 1 else ''
                 rows.append('<li class="related-option-route">' + conjunction + course_rows(courses, scope_id='reading-' + r['id'] + '-' + child['id']) + '</li>')
-            panels.append('<details ' + ('open' if depth + 1 < 2 else '') + ' id="requirement-reading-' + esc(r['id']) + '-' + esc(group['id']) + '" class="related-course-group" data-related-requirement="' + esc(group['id']) + '"><summary><h4>' + esc(re.sub(r'\s+designation overlay$', '', group.get('title') or 'Course grouping')) + '</h4><span>' + str(len(rows)) + ' option routes</span><span class="related-group-rule">' + esc(group.get('summary') or 'Group rule has not been extracted; consult the recorded context.') + '</span></summary><ul class="related-option-routes">' + ''.join(rows) + '</ul><a class="related-group-context" href="#requirement-' + esc(group['id']) + '">Full recorded context →</a></details>')
+            panels.append('<details ' + ('open' if depth + 1 < 2 and len(rows) <= 5 else '') + ' id="requirement-reading-' + esc(r['id']) + '-' + esc(group['id']) + '" class="related-course-group" data-related-requirement="' + esc(group['id']) + '"><summary><h4>' + esc(re.sub(r'\s+designation overlay$', '', group.get('title') or 'Course grouping')) + '</h4><span>' + str(len(rows)) + ' option routes</span><span class="related-group-rule">' + esc(group.get('summary') or 'Group rule has not been extracted; consult the recorded context.') + '</span></summary><ul class="related-option-routes">' + ''.join(rows) + '</ul><a class="related-group-context" href="#requirement-' + esc(group['id']) + '">Full recorded context →</a></details>')
         return '<section class="related-course-groups" data-related-pool="' + esc(r['id']) + '"><h4>Area / course groupings</h4><p>These same-source groups share complete option routes with this pool. Membership can overlap; this reading view adds no required slots. Follow each recorded group rule.</p>' + ''.join(panels) + '</section>'
 
     def render(r, seen, depth=0, scope=None):
@@ -786,6 +833,13 @@ def requirement_tree(p, base="", matcher=None):
                 summary_text = ''
         if credits and kind != 'choose_credits':
             rule += ' · ' + credits
+        listed_courses = len(set(r.get('course_ids') or []))
+        choices = len(child_nodes) if child_nodes else listed_courses
+        large_pool = kind in {'choose_courses', 'choose_credits', 'alternative'} and max(choices, listed_courses) > 5
+        if large_pool:
+            rule += ' · ' + str(listed_courses or choices) + (' listed courses' if listed_courses else ' listed routes')
+            if listed_courses and child_nodes:
+                rule += ' · ' + str(len(child_nodes)) + (' recorded branch' if len(child_nodes) == 1 else ' recorded branches')
         identities = {str(c.get(k) or '').strip().casefold() for c in courses for k in ('code', 'name')}
         single_identity = (kind == 'all' and len(courses) == 1 and complete_courses and not child_nodes
                            and (title.casefold() in identities or bool(re.fullmatch(r'(?:first|second|alternative) course route', title, re.IGNORECASE))) and count in (None, 1)
@@ -815,7 +869,9 @@ def requirement_tree(p, base="", matcher=None):
         elif len(courses) == 1 and title.casefold() in identities and not single_identity:
             title = 'Course requirement'
         opened = (depth < 2 and has_courses(r) and not optional(r) and not general_education(r)
-                  and (kind != 'note' or depth > 0) and rid not in indexed_group_ids)
+                  and (kind != 'note' or depth > 0) and rid not in indexed_group_ids
+                  and not beneath_optional_concentration(r) and (not large_pool or bool(related)))
+        opened = opened or optional_concentration(r)
         return '<li class="requirement" id="requirement-' + esc(rid) + '" data-requirement-depth="' + str(depth) + '"><details class="requirement-disclosure" ' + ('open' if opened else '') + '><summary><span class="requirement-header-links">' + evidence + '</span><h3 class="requirement-title">' + esc(title) + '</h3><span class="requirement-rule">' + esc(rule) + '</span></summary><div class="requirement-body">' + content + '</div></details></li>'
 
     roots = [r for r in requirements if not r.get("parent_id") or r.get("parent_id") not in ids]
