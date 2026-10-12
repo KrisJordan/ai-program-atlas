@@ -64708,22 +64708,49 @@
         "elective_pools": "Six credits of Applied AI attribute courses OR advisor-approved other disciplines; no finite pool or mandatory two-course count stated.",
         "prerequisites": "Fall 2026 section-specific restrictions preserved verbatim. DATA201 lists CSCI140/141, equivalent-test score 1, DATA141/101 or AAI101 with D− minimum and undergraduate-level restrictions. Source comma/OR wording is not silently repaired. DATA305 requires DATA201 at D− or better. DATA202 has only level restriction in the inspected panel; no absence-of-prerequisite inference beyond that observation.",
         "credits_and_units": "Catalog30 major/120 degree minima; catalog credit hours use independently established semester calendar. PHIL150=4 versus DATA202=3 yields 31 versus30 route arithmetic; source total preserved.",
-        "classification": "Prior PATH classifications retained for DATA201/202/305; seven new catalog-only records stay unclassified pending descriptions.",
+        "classification": "Prior PATH classifications retained for DATA201/202/305; seven new catalog-only records stay unclassified pending descriptions. Primary expected-profile categories count represented labels (including explicitly unclassified Other), not verified actual subject absence. Independent core category totals remain unchecked/null.",
         "family_composition": "Standalone BA major; its stated ability to pair with another major does not establish a family or remove university-degree scope.",
         "degree_wide_requirements": "Public COLL, Registrar, Reves and advising sources now map the accessible degree-policy queue: 120 academic credits; 2.0 overall and major GPA; at least 60 W&M credits; COLL/proficiency distributions and transfer pathways; pass/fail exclusions; transfer and repeat rules; declarations, graduation application, exceptions, full-time continuance table, warning/probation, suspension, FlexTrack and active-duty conditions. Public general glossary distinguishes matriculation catalog for general education and declaration catalog for major requirements. Semester calendar is explicit. A ten-row continuance table is not inferred to establish a ten-semester deadline. Full major/capstone inventory, complete BA residency/time-limit details and credit-unit definition require unavailable current catalog evidence; source-specific language and probation differences remain unresolved."
       },
       "expected_profile": {
         "required": {
           "count": 7,
-          "categories": null
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 1,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 6
+          }
         },
         "options": {
           "count": 2,
-          "categories": null
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 0,
+            "systems": 0,
+            "human_context": 1,
+            "applications": 0,
+            "electives": 0,
+            "other": 1
+          }
         },
         "unresolved": {
           "count": 1,
-          "categories": null
+          "categories": {
+            "foundations": 0,
+            "mathematics": 0,
+            "ai_ml": 1,
+            "systems": 0,
+            "human_context": 0,
+            "applications": 0,
+            "electives": 0,
+            "other": 0
+          }
         }
       },
       "expected_course_ids": {
