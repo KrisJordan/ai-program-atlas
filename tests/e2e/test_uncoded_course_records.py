@@ -41,7 +41,8 @@ def test_uncoded_named_course_direct_compare_history_mobile(browser, uncoded_sit
         row = page.locator('#course-course-0')
         expect(row).to_contain_text('Unknown')
         expect(row).to_contain_text('Introduction to Algorithmic Economics')
-        expect(page.locator('a[href="#course-course-0"]').first).to_contain_text('Code unknown')
+        expect(page.locator('.requirement-course-name')).to_contain_text('Code unknown · Introduction to Algorithmic Economics')
+        expect(page.locator('.requirement-course-details a[href="#course-course-0"]')).to_have_text('Full course record')
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         assert page.goto(uncoded_site+'?compare=test-ai-0,test-ai-1').status == 200
         expect(page.locator('.compare-table thead th')).to_have_count(3)

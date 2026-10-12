@@ -9,6 +9,10 @@
     }
     const own = target.querySelector(':scope > details.requirement-disclosure, :scope > details.requirement-bundle-disclosure');
     if (own) own.open = true;
+    if (target.classList.contains('requirement-single-course')) {
+      const course = target.querySelector('.requirement-course-details');
+      if (course) course.open = true;
+    }
     requestAnimationFrame(() => target.scrollIntoView({block:'start'}));
   };
   window.addEventListener('hashchange', reveal);

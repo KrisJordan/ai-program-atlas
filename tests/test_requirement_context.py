@@ -11,8 +11,11 @@ def test_real_mit_five_groups_use_current_source_routes_without_reparenting():
     groups=related_option_groups(p['requirements'])['mit-ai-v2025-centers']
     assert [g['title'].split()[0] for g in groups]==['Data-centric','Model-centric','Decision-centric','Computation-centric','Human-centric']
     soup=BeautifulSoup(requirement_tree(p),'html.parser');section=soup.select_one('[data-related-pool=mit-ai-v2025-centers]')
-    assert [len(x.select('ul > li')) for x in section.select('.related-course-group')]==[4,5,3,4,7]
-    assert not soup.select_one('#requirement-mit-ai-v2025-centers .requirement-option-pool').has_attr('open')
+    assert [len(x.select(':scope > .related-option-routes > li')) for x in section.select('.related-course-group')]==[4,5,3,4,7]
+    assert section.parent.get('class') == ['requirement-body']
+    assert len(section.select('.related-course-group')) == 5
+    assert not any(n.has_attr('open') for n in section.select('.related-course-group'))
+    assert soup.select_one('#requirement-mit-ai-v2025-centers-1 .requirement-course-name')
     assert len(soup.select('.requirement'))==len(p['requirements'])
     assert p==before
 

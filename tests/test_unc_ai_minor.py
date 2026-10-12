@@ -127,7 +127,7 @@ def test_curated_data117_review_survives_ingestion_and_changed_scrape(tmp_path):
     assert c['category']=='applications' and c['category_review']['status']=='reviewed'
     assert c['category_review']['source_ids']==['unc-ai-minor-courses']
     assert requirement_profile(before[0])['required']['categories']['ai_ml']==0
-    assert requirement_profile(before[0])['required']['categories']['applications']==1
+    assert requirement_profile(before[0])['required']['categories']['applications']==2
     class Fetch:
         def fetch(self,url,force=False):
             return FetchResult(url,course_fixture(),'changed-source-hash','2026-10-11',200,False)
@@ -137,3 +137,21 @@ def test_curated_data117_review_survives_ingestion_and_changed_scrape(tmp_path):
     assert db.export_data(conn)['programs']==before
     assert not conn.execute('PRAGMA foreign_key_check').fetchall()
     conn.close()
+
+
+
+def test_data110_application_proposals_are_identity_and_description_bound(monkeypatch):
+    description = 'Synthetic broad data-science domain survey.'
+    monkeypatch.setattr(a, 'DATA110_APPLICATIONS_DESCRIPTION_HASH', hashlib.sha256(description.encode()).hexdigest())
+    fixture = course_fixture().replace('Example topic 0', a.DATA110_TITLE).replace('Synthetic description 0.', description)
+    def course(html):
+        return next(c for c in a.parse_courses(html)['courses'] if c['code'] == 'DATA 110')
+    assert course(fixture)['category'] == 'applications'
+    assert 'category_review' not in course(fixture)
+    assert course(fixture.replace(description, 'Different programming aims.'))['category'] == 'other'
+    assert course(fixture.replace(a.DATA110_TITLE, 'Changed identity'))['category'] == 'other'
+    seed = json.loads((ROOT / 'data/programs/unc-ai-minor.json').read_text())
+    curated = next(c for c in seed['courses'] if c['id'] == 'unc-data-110')
+    assert curated['category'] == 'applications'
+    assert curated['category_review']['status'] == 'reviewed'
+    assert curated['category_review']['source_ids'] == ['unc-ai-minor-courses']

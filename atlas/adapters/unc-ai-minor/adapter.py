@@ -16,9 +16,11 @@ REGISTRATION = 'https://catalog.unc.edu/policies-procedures/registration-enrollm
 GRADES = 'https://catalog.unc.edu/policies-procedures/attendance-grading-examination/'
 SOURCES = (CATALOG, COURSES, DEGREE, TRANSFER, REGISTRATION, GRADES)
 CODES = ('DATA 110','DATA 117','DATA 120','DATA 317','DATA 320','DATA 420I','DATA 520')
+DATA110_TITLE = 'Introduction to Data Science'
+DATA110_APPLICATIONS_DESCRIPTION_HASH = '79701badb351894e2d18f785020c0cdc1c27bac802443e356f379fadc1658bee'
 DATA117_TITLE = 'AI Unlocked for Curious Minds'
 DATA117_APPLICATIONS_DESCRIPTION_HASH = '38077a91a33fe0a381dca19e91db40b11ad499a445e1b4d68b029cb4ac1237c2'
-CATEGORIES = ('foundations','applications','human_context','applications','human_context','human_context','human_context')
+CATEGORIES = ('applications','applications','human_context','applications','human_context','human_context','human_context')
 
 def text(node):
     return re.sub(r'\s+', ' ', node.get_text(' ', strip=True)).strip() if node else ''
@@ -66,6 +68,7 @@ def parse(html):
             for sup in namecell.select('sup'):sup.decompose()
             name=text(namecell);hours=text(cells[-1]); credit=float(hours) if re.fullmatch(r'\d+(?:\.\d+)?',hours) else None
             category=dict(zip(CODES,CATEGORIES)).get(code,'other')
+            if code=='DATA 110' and name!=DATA110_TITLE:category='other'
             if code=='DATA 117' and name!=DATA117_TITLE:category='other'
             courses.append(dict(id=cid(code),code=code,name=name,description=None,prerequisites=None,credits=credit,credit_unit='semester_hours' if credit is not None else 'unknown',category=category,source_id=PROGRAM_ID+'-catalog',url=CATALOG,public_site=None,syllabus=None))
             (electives if pool else core).append(cid(code))
@@ -100,6 +103,7 @@ def parse_courses(html):
         prereq=text(block.select_one('.detail-requisites'))
         category=dict(zip(CODES,CATEGORIES))[code]
         # This is a candidate proposal, bound to the actually reviewed evidence.
+        if code=='DATA 110' and (title!=DATA110_TITLE or digest!=DATA110_APPLICATIONS_DESCRIPTION_HASH):category='other'
         if code=='DATA 117' and (title!=DATA117_TITLE or digest!=DATA117_APPLICATIONS_DESCRIPTION_HASH):category='other'
         out.append(dict(id=cid(code),code=code,name=title,description=DESCRIPTION_PARAPHRASES.get(digest),prerequisites=prereq.removeprefix('Requisites: ').strip() or None,credits=float(credit[1]),credit_unit='semester_hours',category=category,source_id=PROGRAM_ID+'-courses',url=COURSES,public_site=None,syllabus=None))
     if {c['code'] for c in out} != set(CODES):raise ValueError('Listed minor course block missing')

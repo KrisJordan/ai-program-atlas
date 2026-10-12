@@ -16,9 +16,10 @@ def test_detail_section_order_and_requirement_disclosure(site_data):
     assert soup.select_one('#evidence-context .degree-audit-program')
     for n in range(4):
         node=soup.select_one(f'#requirement-r-{n} > details')
-        assert node.has_attr('open') == (n<2)
+        assert node.has_attr('open') == (n < 2)
         assert node.select_one('summary .requirement-title').get_text().startswith(f'Group {n}')
-    assert 'Group 3' in soup.select_one('#requirement-r-2 > details > summary .requirement-preview').get_text()
+    assert soup.select_one('#requirement-r-3 .requirement-course-name').get_text().startswith(p['courses'][0]['code'])
+    assert not soup.select('.requirement-preview')
 
 
 def test_counts_match_fixed_profile_without_elective_pool_inflation(site_data):
@@ -34,7 +35,7 @@ def test_table_grouped_headers_and_award_prefix(site_data,tmp_path):
     soup=BeautifulSoup((tmp_path/'index.html').read_text(),'html.parser')
     table=soup.select_one('#cohort-nu-majors .directory-table')
     assert table.select_one('thead th[colspan="7"]').get_text()=='Required Curriculum'
-    assert [node.get_text() for node in table.select('thead tr:nth-child(2) th')]==['Computing','Math','AIML','Systems','Human Context','Applications','Other']
+    assert [node.get_text() for node in table.select('thead tr:nth-child(2) th')]==['Computing','Mathematics and Statistics','AIML','Systems','Human Context','Applications','Other']
     row=table.select_one('tbody tr')
     assert row.select_one('td:first-child [data-row-compare]')
     assert '(BS)' in row.select_one('.directory-program-link').get_text()

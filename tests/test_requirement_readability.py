@@ -18,8 +18,9 @@ def test_all_course_titles_and_note_grouping_preserve_graph(site_data):
     assert p==original
     header=soup.select_one('#requirement-list > details > summary')
     assert not header.select('.requirement-preview')
-    assert all(f'CS {100+i} · Course title {i}' in header.select_one('h3').get_text() for i in range(6))
-    assert header.select_one('.requirement-rule').get_text()=='Complete all courses in this group'
+    assert header.select_one('h3').get_text() == 'list'
+    assert [n.get_text() for n in soup.select('#requirement-list .requirement-course-name')] == [f'CS {100+i} · Course title {i}' for i in range(6)]
+    assert header.select_one('.requirement-rule').get_text()=='All 6 courses required'
     assert soup.select_one('.requirements > li')['id']=='requirement-main'
     for key in ['other-top','optional-top','notes-main']:
         assert not soup.select_one('#requirements-group-'+key+' > details').has_attr('open')
@@ -38,8 +39,9 @@ def test_choice_preview_is_bounded_but_empty_course_choices_stay_visible(site_da
     p=site_data['programs'][0];p['courses']=[dict(id=f'c{i}',code=f'CS {i}',name=f'Topic {i}') for i in range(6)]
     p['requirements']=[dict(rule('choice','choose_courses',courses=[f'c{i}' for i in range(6)]),count=1),dict(rule('unextracted','choose_credits'),credits=6)]
     soup=BeautifulSoup(requirement_tree(p),'html.parser')
-    assert len(soup.select('#requirement-choice .requirement-preview-item'))==4
-    assert '+2 more' in soup.select_one('#requirement-choice .requirement-preview').get_text()
+    assert len(soup.select('#requirement-choice .requirement-course-row'))==6
+    assert soup.select_one('#requirement-choice .requirement-rule').get_text()=='Choose 1 course'
+    assert not soup.select('.requirement-preview')
     assert soup.select_one('.requirements > #requirement-unextracted')
     assert not soup.select_one('#requirements-group-other-top')
 
@@ -81,9 +83,9 @@ def test_real_mit_course_contexts_and_general_education_preserve_source_graph():
     assert soup.select_one('.requirements > .requirement')['id']=='requirement-mit-ai-version-required'
     for focus in ['data-centric','model-centric','decision-centric','computation-centric','human-centric']:
         node=soup.select_one('#requirement-mit-ai-v2025-overlay-'+focus)
-        assert node.select_one(':scope > details').has_attr('open')
+        assert not node.select_one(':scope > details').has_attr('open')
         assert not node.find_parent(class_='requirement-bundle')
-        assert 'Course grouping / context' in node.select_one(':scope > details > summary').get_text()
+        assert 'At least 1 completed option' in node.select_one(':scope > details > summary').get_text()
     general=soup.select_one('#requirements-group-general-top')
     assert not general.select_one(':scope > details').has_attr('open')
     assert len(general.select('.requirement'))==6
@@ -131,16 +133,36 @@ def test_course_leaf_headers_credits_and_incomplete_references(site_data):
     p['requirements']=[dict(rule('single',courses=['one'],title='CS 100'),credits=3.0,credit_unit='semester_hours'),rule('unknown',courses=['one'],title='CS 100'),dict(rule('bundle',courses=['one','two'],title='CS 100 + CS 200'),credits=12,credit_unit='units'),dict(rule('unknown-unit',courses=['two'],title='CS 200'),credits=4,credit_unit='unknown'),rule('partial',courses=['one','missing']),dict(rule('choice',kind='choose_courses',courses=['one']),count=1)]
     before=deepcopy(p);soup=BeautifulSoup(requirement_tree(p),'html.parser')
     assert p==before
-    header=soup.select_one('#requirement-single > details > summary')
-    assert header.h3.get_text()=='CS 100 · Programming'
-    assert header.select_one('.requirement-rule').get_text()=='3 Semester hours'
+    header=soup.select_one('#requirement-single .requirement-course-details > summary')
+    assert header.select_one('.requirement-course-name').get_text()=='CS 100 · Programming'
+    assert header.select_one('.requirement-course-credits').get_text()=='99 Quarter hours'
+    assert soup.select_one('#requirement-single > details > summary .requirement-rule').get_text() == 'Required course · 3 Semester hours'
+    assert soup.select_one('#requirement-single > details > summary h3').get_text() == 'Course requirement'
     assert 'Complete all' not in header.get_text()
-    assert not header.select('.requirement-preview')
-    assert not soup.select_one('#requirement-unknown > details > summary .requirement-rule')
-    assert '99' not in soup.select_one('#requirement-unknown > details > summary').get_text()
     bundle=soup.select_one('#requirement-bundle > details > summary')
-    assert bundle.h3.get_text()=='CS 100 · Programming + CS 200 · Methods'
-    assert bundle.select_one('.requirement-rule').get_text()=='Complete all courses in this group · 12 Units'
-    assert soup.select_one('#requirement-unknown-unit > details > summary .requirement-rule').get_text()=='4 credit unit unknown'
-    assert not soup.select_one('#requirement-partial').get('class')==['requirement','requirement-course-group']
-    assert 'Choose courses' in soup.select_one('#requirement-choice > details > summary').get_text()
+    assert bundle.select_one('.requirement-rule').get_text()=='All 2 courses required · 12 Units'
+    assert len(soup.select('#requirement-bundle .requirement-course-row'))==2
+    assert '4 credit unit unknown' in soup.select_one('#requirement-unknown-unit > details > summary').get_text()
+    assert 'Course records not available: missing' in soup.select_one('#requirement-partial').get_text()
+    assert 'Choose 1 course' in soup.select_one('#requirement-choice > details > summary').get_text()
+
+
+def test_course_disclosures_annotate_prerequisites_without_changing_source_logic(site_data, tmp_path):
+    p, provider, outsider = site_data['programs'][:3]
+    provider['institution'] = deepcopy(p['institution'])
+    provider['courses'] = [{'id': 'outside-math', 'code': 'MATH 100', 'name': 'Calculus'}]
+    outsider['courses'] = [{'id': 'wrong-institution', 'code': 'MATH 100', 'name': 'Wrong title'}]
+    p['courses'] = [{'id': 'target', 'code': 'CS 300', 'name': 'Methods', 'prerequisites': 'MATH100 or (CS301 and permission); MATH1000 is different.'}, {'id': 'local', 'code': 'CS 301', 'name': 'Algorithms'}]
+    p['requirements'] = [rule('methods', courses=['target'], title='CS 300')]
+    before = deepcopy(p)
+    build(site_data, tmp_path, '/nested/atlas/')
+    soup = BeautifulSoup((tmp_path / 'programs/test-ai-0/index.html').read_text(), 'html.parser')
+    info = soup.select_one('#requirement-methods .requirement-course-info')
+    assert info.select_one('.prerequisite-text').get_text() == p['courses'][0]['prerequisites']
+    assert [a.get_text() for a in info.select('.prerequisite-titles a')] == ['MATH 100 · Calculus', 'CS 301 · Algorithms']
+    assert info.select_one('.prerequisite-titles a')['href'] == '/nested/atlas/programs/test-ai-1/#course-outside-math'
+    assert 'Wrong title' not in info.get_text()
+    assert p == before
+    provider['courses'].append({'id': 'conflict', 'code': 'MATH100', 'name': 'Conflicting title'})
+    html = program_page(p, '/nested/atlas/', institution_programs=[provider])
+    assert 'Calculus' not in BeautifulSoup(html, 'html.parser').select_one('#requirement-methods .prerequisite-titles').get_text()

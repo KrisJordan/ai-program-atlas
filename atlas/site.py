@@ -17,7 +17,7 @@ from atlas.rankings import institution_rank_context
 from atlas.research_context import FIELDS as RESEARCH_FIELDS, institution_context, aggregate_rank_map
 
 CATEGORIES = {
-    "foundations": "Computing foundations", "mathematics": "Mathematics",
+    "foundations": "Computing foundations", "mathematics": "Mathematics and Statistics",
     "ai_ml": "AI & machine learning", "systems": "Systems",
     "human_context": "Human context", "applications": "Domain studies & applications",
     "electives": "Electives", "other": "Other / unclassified",
@@ -47,7 +47,7 @@ def safe_url(value):
 
 def external(url, label):
     url = safe_url(url)
-    return f'<a href="{esc(url)}" rel="noopener noreferrer">{esc(label)} <span aria-hidden="true">↗</span></a>' if url else esc(label)
+    return f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(label)} <span aria-hidden="true">↗</span></a>' if url else esc(label)
 
 
 def unique_courses(program):
@@ -116,10 +116,11 @@ def directory_payload(data, base):
         # The comparison links to full nested evidence rather than embedding summaries twice.
         p['curriculum_profile']['choices'] = [fields(c, 'id title kind count credits credit_unit source_id parent_id origin context has_children') for c in p['curriculum_profile']['choices']]
         requirements = original.get('requirements', [])
+        view_content = json.dumps([requirements, original.get('courses', []), original.get('sources', [])], sort_keys=True, ensure_ascii=False)
+        p['requirement_view_key'] = sha256(view_content.encode()).hexdigest()[:12]
         parents = {r.get('parent_id') for r in requirements if r.get('parent_id')}
-        # Comparison renders root selection facts and family-local evidence, not
-        # a navigable graph. Keep graph IDs and unused root summaries in the full
-        # export/detail pages instead of repeating them in every family variant.
+        # Lightweight family context stays in the directory. The comparison loads
+        # its navigable requirement tree from the generated detail page on demand.
         p['requirements'] = []
         for requirement in requirements:
             is_root = not requirement.get('parent_id')
@@ -167,21 +168,21 @@ def asset_url(base, filename):
 def shell(title, body, base, current="", payload=None):
     current_attr = 'aria-current="page"'
     nav = "".join(f'<a {current_attr if current == key else ""} href="{base}{path}">{label}</a>' for key, path, label in [
-        ("atlas", "", "Explore programs"), ("coverage", "coverage/", "Coverage"), ("methodology", "methodology/", "Methodology")])
+        ("atlas", "", "Explore programs")])
     script = ""
     if payload is not None:
         serialized = json.dumps(payload, ensure_ascii=False, separators=(',', ':')).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
         script = f'<script id="atlas-data" type="application/json">{serialized}</script><script src="{asset_url(base, "atlas.js")}" defer></script>'
-    if 'class="requirement-disclosure"' in body:
+    if payload is not None or 'class="requirement-disclosure"' in body:
         script += f'<script src="{asset_url(base, "requirements.js")}" defer></script>'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)} · AI Program Atlas</title><meta name="description" content="A source-backed field guide to undergraduate artificial intelligence programs, curricula, and research context.">
 <link rel="stylesheet" href="{asset_url(base, "atlas.css")}"></head><body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="masthead"><a class="brand" href="{base}" aria-label="AI Program Atlas home"><span class="brand-mark" aria-hidden="true">A<span>i</span></span><span>AI Program Atlas<small>UNDERGRADUATE PROGRAM RESEARCH</small></span></a><nav aria-label="Main navigation">{nav}</nav></header>
+<header class="masthead"><a class="brand" href="{base}" aria-label="AI Program Atlas home"><span class="brand-mark" aria-hidden="true">A<span>I</span></span><span>AI Program Atlas<small>UNDERGRADUATE PROGRAM RESEARCH</small></span></a><nav aria-label="Main navigation">{nav}</nav></header>
 <main id="main" tabindex="-1">{body}</main>
-<footer><a href="{base}api/">JSON API</a><span>AI Program Atlas <span class="muted">/ An open research index</span></span><a href="{base}methodology/">Evidence before inference <span aria-hidden="true">↗</span></a><p>Programs change. Confirm requirements with the institution’s current official catalog.</p></footer>{script}</body></html>'''
+<footer><section class="method-callout footer-methods" aria-label="Sources and methods"><span class="eyebrow">SOURCES &amp; METHODS</span><h2>Check the evidence behind each record.</h2><p>Each program links to its sources and shows when it was checked. University statements about program aims and outcomes are kept separate from Atlas interpretations.</p><nav aria-label="Sources and methods links"><a {'aria-current="page"' if current == 'coverage' else ''} href="{base}coverage/">Coverage →</a><a {'aria-current="page"' if current == 'methodology' else ''} href="{base}methodology/">Methodology →</a><a {'aria-current="page"' if current == 'api' else ''} href="{base}api/">JSON API</a></nav></section><span>AI Program Atlas <span class="muted">/ An open research index</span></span><p>Programs change. Confirm requirements with the institution’s current official catalog.</p></footer>{script}</body></html>'''
 
 
 def badge(text, kind=""):
@@ -311,7 +312,7 @@ def program_card(p, base):
 <div class="card-bottom"><a href="{base}programs/{esc(p['id'])}/">View program <span aria-hidden="true">→</span></a><label class="compare-choice js-only"><input type="checkbox" data-compare="{esc(p['id'])}"> Compare<span class="sr-only"> {esc(p.get('title'))} at {esc(institution.get('name'))}</span></label></div></article>'''
 
 
-REQUIRED_COLUMNS = [('foundations', 'Computing'), ('mathematics', 'Math'), ('ai_ml', 'AIML'), ('systems', 'Systems'), ('human_context', 'Human Context'), ('applications', 'Applications'), ('other', 'Other')]
+REQUIRED_COLUMNS = [('foundations', 'Computing'), ('mathematics', 'Mathematics and Statistics'), ('ai_ml', 'AIML'), ('systems', 'Systems'), ('human_context', 'Human Context'), ('applications', 'Applications'), ('other', 'Other')]
 
 
 def directory_award_label(p):
@@ -391,7 +392,7 @@ def program_table(programs, base):
         group_attr = ' data-joint-member="' + grouping[0] + '"' if grouping else ''
         rows.append(f'''<tr data-row-id="{esc(p['id'])}"{group_attr} {directory_sort_attributes(p)}><td><label class="compare-choice js-only"><input type="checkbox" data-row-compare="{esc(p['id'])}"><span class="sr-only">Compare {esc(p.get('title'))} at {esc(p.get('institution', {}).get('name'))}</span></label></td><th scope="row">{esc(p.get('institution', {}).get('name'))}</th><td><a class="directory-program-link" href="{base}programs/{esc(p['id'])}/">{award_prefix}{esc(directory_program_title(p))}</a>{directory_parent_line(p)}</td><td>{esc('#' + str(rank) if rank is not None else '—')}</td><td>{external(context.get('source_url'), '#' + str(news_rank)) if news_rank is not None else '—'}</td>{count_cells}</tr>''')
     headers = '<th rowspan="2" scope="col"><span class="sr-only">Compare</span></th>' + ''.join('<th rowspan="2" scope="col">' + label + '</th>' for label in ['University', 'Program', '<a href="' + base + 'methodology/#research" title="CSRankings aggregate U.S. publication rank">AI Ranking</a>', 'US News Ranking']) + '<th colspan="7" scope="colgroup" class="required-heading">Required Curriculum</th>'
-    return '<p class="directory-scroll-hint">Scroll the table to see rankings and required curriculum.</p><div class="directory-table-wrap table-scroll" role="region" aria-label="Program directory table" tabindex="0"><table class="directory-table"><colgroup><col style="width:50px"><col style="width:180px"><col style="width:320px"><col style="width:68px"><col style="width:82px"><col style="width:90px"><col style="width:60px"><col style="width:60px"><col style="width:76px"><col style="width:90px"><col style="width:94px"><col style="width:60px"></colgroup><caption class="sr-only">Required curriculum counts fixed courses plus countable mandatory selections, not credit loads or the whole degree. Joint-program ranges are not totals.</caption><thead><tr>' + headers + '</tr><tr>' + ''.join('<th scope="col">' + label + '</th>' for _, label in REQUIRED_COLUMNS) + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
+    return '<p class="directory-scroll-hint">Scroll the table to see rankings and required curriculum.</p><div class="directory-table-wrap table-scroll" role="region" aria-label="Program directory table" tabindex="0"><table class="directory-table"><colgroup><col style="width:50px"><col style="width:180px"><col style="width:320px"><col style="width:68px"><col style="width:82px"><col style="width:90px"><col style="width:90px"><col style="width:60px"><col style="width:76px"><col style="width:90px"><col style="width:94px"><col style="width:60px"></colgroup><caption class="sr-only">Required curriculum counts fixed courses plus countable mandatory selections, not credit loads or the whole degree. Joint-program ranges are not totals.</caption><thead><tr>' + headers + '</tr><tr>' + ''.join('<th scope="col">' + label + '</th>' for _, label in REQUIRED_COLUMNS) + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
 
 
 def family_group(family, members, base):
@@ -473,7 +474,7 @@ def cohort_directory(programs, institutions, families, base, edition=None, csran
             tabs.append(f'<button type="button" role="tab" id="tab-{key}-{path}" data-path="{path}" aria-controls="cohort-{key}-{path}" aria-selected="{"true" if path == "majors" else "false"}" tabindex="{0 if path == "majors" else -1}">{label} <span class="path-count">{len(entries)}</span></button>')
             panels.append(f'<div role="tabpanel" id="cohort-{key}-{path}" data-path="{path}" aria-labelledby="tab-{key}-{path}" tabindex="0"><h4 class="no-js-path-title">{label}</h4>{program_table(entries, base)}<div class="directory-cards"><div class="program-grid">{grouped_programs(entries, families, base)}</div></div><p class="cohort-empty" {"hidden" if entries else ""}>No {label.lower()} match the current filters in this institution category. This is not evidence that none exist.</p></div>')
         explanation = 'Category has not been resolved from recorded ranking evidence; institution names and program awards are not used to guess it.' if key == 'unclassified' else 'Grouped by recorded U.S. News institution category. Majors includes degrees and separately labeled additional majors.'
-        blocks.append(f'<section class="cohort-directory" data-cohort-group="{key}" aria-labelledby="cohort-title-{key}"><div class="cohort-heading"><h3 id="cohort-title-{key}">{name}</h3><p class="cohort-result-count" role="status"></p></div><p class="cohort-explanation">{explanation}</p><div class="program-path-tabs js-only" role="tablist" aria-label="{name} program types">{"".join(tabs)}</div>{"".join(panels)}</section>')
+        blocks.append(f'<section class="cohort-directory" data-cohort-group="{key}" aria-labelledby="cohort-title-{key}"><div class="cohort-heading"><h3 id="cohort-title-{key}">{name}</h3><p class="cohort-result-count sr-only" role="status"></p></div><p class="cohort-explanation">{explanation}</p><div class="program-path-tabs js-only" role="tablist" aria-label="{name} program types">{"".join(tabs)}</div>{"".join(panels)}</section>')
     return '<div id="program-grid">' + ''.join(blocks) + '</div>'
 
 
@@ -503,16 +504,16 @@ def root_page(data, base):
             continue
         award_values = [('', 'All awards'), ('BS', 'BS'), ('BSE', 'BSE'), ('BA', 'BA'), ('second_major', 'Second majors'), ('other', 'Other / unspecified')]
         controls += '<label for="major-award-' + group + '">' + name + ' major award<select id="major-award-' + group + '" data-major-award data-award-group="' + group + '">' + options(award_values) + '</select></label>'
-    body = f'''<section class="hero directory-hero"><div><div class="eyebrow"><span class="status-dot"></span> UNDERGRADUATE AI PROGRAMS</div><h1>Undergraduate AI programs</h1><p class="lede">Explore majors and compare documented curricula. Official sources and verification details accompany every program.</p></div></section>
+    body = f'''<h1 class="sr-only">Program directory</h1>
 <section class="explorer directory-explorer" aria-labelledby="explore-title"><h2 id="explore-title" class="sr-only">Find a program</h2>
-<div class="directory-toolbar js-only"><button type="button" id="open-filters" aria-haspopup="dialog" aria-controls="filter-panel">Search &amp; filters</button><span id="active-filter-summary" role="status" aria-live="polite">No search filters active</span><label for="directory-view" class="view-control">View<select id="directory-view"><option value="table">Table</option><option value="cards">Cards</option></select></label></div>
+<div class="directory-toolbar js-only"><button type="button" id="open-filters" aria-haspopup="dialog" aria-controls="filter-panel">Search &amp; filters</button><span id="active-filter-summary" role="status" aria-live="polite">No search filters active</span><label class="sort-control" for="sort-order"><span class="sr-only">Sort programs</span><select id="sort-order" name="sort"><option value="csrankings">AI Ranking</option><option value="rank">U.S. News rank · ascending</option><option value="name">Institution name · A–Z</option></select></label></div>
 <dialog id="filter-panel" class="filter-dialog" aria-labelledby="filter-title"><div class="dialog-heading"><h2 id="filter-title">Search &amp; filters</h2><button type="button" id="close-filters" aria-label="Close search and filters">Close</button></div><form id="filters" class="filters" role="search"><label class="search-label" for="search">Search programs<input type="search" id="search" name="q" placeholder="Institution, program, or course…" autocomplete="off"></label><div class="filter-row">{controls}</div><div class="filter-footer"><p class="filter-help">Course categories include elective options. Discipline filters use reviewed family membership. Exact awards and second-major eligibility are source verified; multiple offered awards count as one program.</p><button type="button" id="reset-filters" class="text-button">Reset filters</button></div><button type="button" id="apply-filters">Show results</button></form></dialog>
 <noscript><p class="notice">All documented programs are listed below. Enable JavaScript to filter and compare programs.</p></noscript>
-<div class="results-heading"><p id="result-count" role="status" aria-live="polite">{len(programs)} programs</p><label class="sort-control js-only" for="sort-order">Sort programs<select id="sort-order" name="sort"><option value="csrankings">AI Ranking</option><option value="rank">U.S. News rank · ascending</option><option value="name">Institution name · A–Z</option></select></label></div>
+<p id="result-count" class="sr-only" role="status" aria-live="polite">{len(programs)} programs</p>
 {cohort_directory(programs, institutions, families, base, cohort.get('edition') if isinstance(cohort, dict) else None, data.get('csrankings'))}<p class="directory-method-note">Required Curriculum counts fixed courses plus mandatory choose-N selections with a clear category and no unresolved overlap. A choose-one block counts as one course, not its option-pool size. Credit-only, nested, mixed-category and overlapping choices remain separate; incomplete inventories can omit courses, and 0 means none mapped. Other includes unclassified and generic elective categories. Joint-program ranges reflect matching variants, not a combined curriculum. Missing inventories and ranks use —. AI Ranking is the CSRankings five-field aggregate U.S. publication rank. <a href="{base}methodology/#research">Ranking methodology</a> · <a href="{base}coverage/">Coverage and limitations</a></p>
 <div id="empty-state" class="empty-state" hidden><span class="eyebrow">NO MATCHES</span><h3>No programs match your filters.</h3><p>No documented program matches these filters. This does not establish that such a program does not exist.</p><button type="button" id="empty-reset">Clear filters</button></div></section>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-count">0 of 4 selected</span><a href="#comparison">Compare programs ↓</a></div><section id="comparison" class="comparison js-only" aria-labelledby="compare-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM COMPARISON</span><h2 id="compare-title">Compare programs</h2></div><button type="button" id="clear-comparison" class="text-button">Clear selection</button></div><p class="comparison-intro">Choose up to four programs. Credit units and incomplete curricula stay visible; course counts are not measures of program quality.</p><label class="comparison-profile-control" for="compare-profile">Curriculum profile<select id="compare-profile"><option value="required">Required curriculum</option><option value="options">Elective options</option></select></label><div id="compare-status" role="status" aria-live="polite"></div><div id="comparison-content"><p class="comparison-placeholder">Select “Compare” on a program to begin.</p></div></section>
-<section class="method-callout"><span class="eyebrow">SOURCES & METHODS</span><h2>Check the evidence behind each record.</h2><p>Official sources, verification dates, requirement structure, and unknowns travel with the data. Source statements about program aims and outcomes are kept separate from editorial classifications.</p><a href="{base}methodology/">How to read this atlas →</a></section>'''
+'''
     return shell("Explore undergraduate AI programs", body, base, "atlas", directory_payload(data, base))
 
 
@@ -619,7 +620,8 @@ def category_chart(p):
         uncertainty += f' {profile["overlap_count"]} {uncertainty_noun} appear in multiple groups and are counted once.'
     return '<div class="curriculum-profile"><p class="profile-denominator">Required counts include fixed mapped course identities plus countable mandatory selections. Option counts show distinct candidate identities. These are not credit totals or shares of the degree. Categories describe mapped records, including Other / unclassified. “0 mapped” means no mapped records classified in that category in this view—not evidence that the curriculum lacks that subject. Partial requirement or taxonomy evidence can omit relevant courses.</p><fieldset class="profile-switch"><legend>Curriculum view</legend><input class="sr-only" type="radio" name="curriculum-view" id="profile-required" value="required" checked><label for="profile-required">Required curriculum</label><input class="sr-only" type="radio" name="curriculum-view" id="profile-options" value="options"><label for="profile-options">Elective options</label><div class="profile-panels">' + ''.join(panels) + '</div></fieldset><p class="profile-uncertainty">' + esc(uncertainty) + '</p>' + course_identity_evidence(p) + profile_choices(p, profile) + '</div>'
 
-def requirement_tree(p):
+def requirement_tree(p, base="", matcher=None):
+    matcher = matcher if matcher is not None else reference_matcher(dict(p, id=p.get("id", "program")))
     requirements = p.get("requirements", [])
     course_map = {c["id"]: c for c in unique_courses(p)}
     ids = {r.get("id") for r in requirements}
@@ -630,6 +632,7 @@ def requirement_tree(p):
     rendered = set()
     course_branches = {}
     related_groups = related_option_groups(requirements)
+    indexed_group_ids = {g['id'] for groups in related_groups.values() for g in groups}
 
     def has_courses(r, seen=frozenset()):
         rid = r.get('id')
@@ -655,13 +658,44 @@ def requirement_tree(p):
     def course_title(c):
         return (c.get('name') or 'Course name not verified') + (' (' + c['code'] + ')' if c.get('code') else '')
 
+    def redundant_wrapper(r, parent):
+        """Only source-equivalent all-of labels with no additional policy flatten."""
+        title = (r.get('title') or '').strip()
+        generic = bool(re.match(r'^all (?:of )?(?:the )?following\b', title, re.IGNORECASE))
+        numbered = re.fullmatch(r'\((\d+) courses?\)', title, re.IGNORECASE)
+        generic = generic or bool(numbered and int(numbered[1]) == len(set(r.get('course_ids') or [])) and not children_by_id.get(r.get('id')))
+        duplicate = title.casefold() == (parent.get('title') or '').strip().casefold()
+        return (parent.get('kind') == r.get('kind') == 'all'
+                and r.get('source_id') in sources and bool(r.get('source_id'))
+                and r.get('source_id') == parent.get('source_id')
+                and all(cid in course_map for cid in r.get('course_ids') or [])
+                and (generic or duplicate) and r.get('count') is None
+                and r.get('credits') is None and not r.get('source_text')
+                and not r.get('origin') and not r.get('component')
+                and (not r.get('summary') or r['summary'].strip() == title)
+                and not optional(r) and not general_education(r))
+
+    def course_rows(courses, required_credits='', scope_id='', evidence=''):
+        rows = []
+        for c in courses:
+            amount = c.get('credits')
+            if isinstance(amount, (float, int)) and amount == int(amount):
+                amount = int(amount)
+            unit = human(c.get('credit_unit')) if c.get('credit_unit') not in (None, 'unknown') else 'credit unit unknown'
+            credits = f'{amount} {unit}' if amount is not None else ''
+            title = (c.get('code') or 'Code unknown') + ' · ' + (c.get('name') or 'Course name not verified')
+            course_evidence = external(c.get('url'), 'Course source') if c.get('url') else 'Course source not recorded.'
+            prerequisites = prerequisite_markup(c, matcher, p.get('id', 'program'), base) if c.get('prerequisites') else '<p>Not recorded; this does not mean there are no prerequisites.</p>'
+            rows.append('<li class="requirement-course-row" id="requirement-course-' + esc(scope_id) + '-' + esc(c['id']) + '"><details class="requirement-course-details" data-course-id="' + esc(c['id']) + '"><summary><span class="requirement-course-name">' + esc(title) + '</span><span class="requirement-course-credits">' + esc(credits) + '</span>' + ('<span class="requirement-course-source">' + evidence + '</span>' if evidence else '') + '</summary><div class="requirement-course-info"><p>' + esc(c.get('description') or 'Description not recorded.') + '</p><div class="requirement-prerequisites"><strong>Prerequisites: </strong>' + prerequisites + '</div>' + ('<p>Requirement credit amount: ' + esc(required_credits) + '</p>' if required_credits else '') + '<p><a href="#course-' + esc(c['id']) + '">Full course record</a> · ' + course_evidence + '</p></div></details></li>')
+        return '<ul class="requirement-course-rows">' + ''.join(rows) + '</ul>' if rows else ''
+
     def bundle(title, members, seen, depth, key):
         if not members:
             return ''
         content = ''.join(render(r, seen, depth) for r in members)
         return '<li class="requirement-bundle" id="requirements-group-' + esc(key) + '"><details class="requirement-bundle-disclosure"><summary><h3>' + esc(title) + '</h3><span class="requirement-rule">' + str(len(members)) + ' recorded ' + ('branch' if len(members) == 1 else 'branches') + ' · expand to inspect</span></summary><ul>' + content + '</ul></details></li>'
 
-    def render_level(nodes, seen, depth, root=False, parent='top'):
+    def render_level(nodes, seen, depth, root=False, parent='top', scope=None):
         main, notes, other, options, general = [], [], [], [], []
         for r in nodes:
             if r.get('id') in seen or r.get('id') in rendered:
@@ -677,9 +711,9 @@ def requirement_tree(p):
             else:
                 main.append(r)
         main.sort(key=lambda r: (general_education(r), r.get('kind') == 'note'))
-        return ''.join(render(r, seen, depth) for r in main) + bundle('General education requirements', general, seen, depth, 'general-' + parent) + bundle('Optional concentrations & fields', options, seen, depth, 'optional-' + parent) + bundle('Requirement notes', notes, seen, depth, 'notes-' + parent) + bundle('Other requirements', other, seen, depth, 'other-' + parent)
+        return ''.join(render(r, seen, depth, scope) for r in main) + bundle('General education requirements', general, seen, depth, 'general-' + parent) + bundle('Optional concentrations & fields', options, seen, depth, 'optional-' + parent) + bundle('Requirement notes', notes, seen, depth, 'notes-' + parent) + bundle('Other requirements', other, seen, depth, 'other-' + parent)
 
-    def related_markup(r):
+    def related_markup(r, depth):
         groups = related_groups.get(r['id'], [])
         if not groups:
             return ''
@@ -687,91 +721,102 @@ def requirement_tree(p):
         for group in groups:
             rows = []
             for child in children_by_id.get(group['id'], []):
-                links = [f'<a href="#course-{esc(cid)}">{esc(course_title(course_map[cid]))}</a>' for cid in child.get('course_ids', []) if cid in course_map]
-                rows.append('<li>' + ' + '.join(links) + '</li>')
-            panels.append('<details class="related-course-group" data-related-requirement="' + esc(group['id']) + '"><summary><h4>' + esc(re.sub(r'\s+designation overlay$', '', group.get('title') or 'Course grouping')) + '</h4><span>' + str(len(rows)) + ' option routes</span></summary><p>' + esc(group.get('summary') or 'Group rule has not been extracted; consult the recorded context.') + '</p><ul>' + ''.join(rows) + '</ul><a class="related-group-context" href="#requirement-' + esc(group['id']) + '">Full recorded context →</a></details>')
+                courses = [course_map[cid] for cid in dict.fromkeys(child.get('course_ids') or []) if cid in course_map]
+                conjunction = '<span class="related-route-rule">All ' + str(len(courses)) + ' courses in this option (AND)</span>' if len(courses) > 1 else ''
+                rows.append('<li class="related-option-route">' + conjunction + course_rows(courses, scope_id='reading-' + r['id'] + '-' + child['id']) + '</li>')
+            panels.append('<details ' + ('open' if depth + 1 < 2 else '') + ' class="related-course-group" data-related-requirement="' + esc(group['id']) + '"><summary><h4>' + esc(re.sub(r'\s+designation overlay$', '', group.get('title') or 'Course grouping')) + '</h4><span>' + str(len(rows)) + ' option routes</span><span class="related-group-rule">' + esc(group.get('summary') or 'Group rule has not been extracted; consult the recorded context.') + '</span></summary><ul class="related-option-routes">' + ''.join(rows) + '</ul><a class="related-group-context" href="#requirement-' + esc(group['id']) + '">Full recorded context →</a></details>')
         return '<section class="related-course-groups" data-related-pool="' + esc(r['id']) + '"><h4>Area / course groupings</h4><p>These same-source groups share complete option routes with this pool. Membership can overlap; this reading view adds no required slots. Follow each recorded group rule.</p>' + ''.join(panels) + '</section>'
 
-    def render(r, seen, depth=0):
-        rid = r.get("id")
+    def render(r, seen, depth=0, scope=None):
+        rid = r.get('id')
         if rid in seen or rid in rendered:
-            return ""
+            return ''
         seen = seen | {rid}
         rendered.add(rid)
-        requirement_courses = [course_map[cid] for cid in dict.fromkeys(r.get("course_ids") or []) if cid in course_map]
-        courses = "".join(f'<li><a href="#course-{esc(c["id"])}">{esc(c.get("code") or "Code unknown")} · {esc(c.get("name") or "Course name not verified")}</a></li>' for c in requirement_courses)
+        courses = [course_map[cid] for cid in dict.fromkeys(r.get('course_ids') or []) if cid in course_map]
         child_nodes = children_by_id.get(rid, [])
-        children = render_level(child_nodes, seen, depth + 1, parent=rid)
-        related = related_markup(r)
+        flatten = bool(scope and redundant_wrapper(r, scope))
+        children = render_level(child_nodes, seen, depth if flatten else depth + 1, parent=rid, scope=r)
         child_markup = '<ul>' + children + '</ul>' if children else ''
+        complete_courses = len(courses) == len(set(r.get('course_ids') or []))
+        # Canonical anchor survives even when a display-only wrapper disappears.
+        if flatten:
+            return '<li class="requirement requirement-flattened" id="requirement-' + esc(rid) + '" data-requirement-depth="' + str(depth) + '">' + course_rows(courses, scope_id=rid) + child_markup + '</li>'
+        source = sources.get(r.get('source_id'), {})
+        inherited_source = scope and scope.get('source_id') == r.get('source_id') and bool(source)
+        evidence = '' if inherited_source else '<span class="requirement-evidence">' + (external(source.get('url'), 'Requirement source') if source else 'Requirement source not recorded.') + '</span>'
+        credits = ''
+        if r.get('credits') is not None:
+            amount = r['credits']
+            if isinstance(amount, (float, int)) and amount == int(amount):
+                amount = int(amount)
+            credits = str(amount) + ' ' + (human(r.get('credit_unit')) if r.get('credit_unit') not in (None, 'unknown') else 'credit unit unknown')
+        kind = r.get('kind')
+        title = (r.get('title') or 'Untitled group').strip()
+        summary_text = (r.get('summary') or '').strip()
+        if summary_text.casefold().rstrip('.') == title.casefold().rstrip('.'):
+            summary_text = ''
+        count = r.get('count')
+        if kind == 'all':
+            flat_courses = list(courses)
+            flat_children = list(child_nodes)
+            while len(flat_children) == 1 and redundant_wrapper(flat_children[0], r):
+                child = flat_children[0]
+                flat_courses.extend(course_map[cid] for cid in dict.fromkeys(child.get('course_ids') or []) if cid in course_map)
+                flat_children = children_by_id.get(child['id'], [])
+            if flat_courses and not flat_children and complete_courses:
+                n = len({c['id'] for c in flat_courses})
+                rule = 'All ' + str(n) + ' courses required' if n > 1 else 'Required course'
+                if scope and scope.get('kind') in ('alternative', 'choose_courses') and n > 1:
+                    rule += ' (AND)'
+            else:
+                rule = 'All groups required (AND)' if child_nodes else 'Complete all listed courses' if courses else 'Complete all recorded items'
+            if count is not None:
+                rule += ' · ' + str(count) + ' recorded courses'
+        elif kind == 'alternative':
+            rule = ('Complete one route (OR)' if count in (None, 1) else 'Choose ' + str(count) + ' routes (OR)')
+        elif kind == 'choose_courses':
+            noun = 'option' if child_nodes else 'course'
+            rule = 'Choose ' + str(count) + ' ' + noun + ('' if count == 1 else 's') if count is not None else 'Choose ' + noun + 's · count not recorded'
+        elif kind == 'choose_credits':
+            rule = 'Choose courses totaling ' + credits if credits else 'Choose by credit amount · amount not recorded'
+        else:
+            rule = summary_text or ('Course grouping / context' if has_courses(r) else 'Requirement note')
+            if kind == 'note' and has_courses(r):
+                summary_text = ''
+        if credits and kind != 'choose_credits':
+            rule += ' · ' + credits
+        identities = {str(c.get(k) or '').strip().casefold() for c in courses for k in ('code', 'name')}
+        single_identity = (kind == 'all' and len(courses) == 1 and complete_courses and not child_nodes
+                           and (title.casefold() in identities or bool(re.fullmatch(r'(?:first|second|alternative) course route', title, re.IGNORECASE))) and count in (None, 1)
+                           and not r.get('origin') and not r.get('component')
+                           and (r.get('credits') is None or (r.get('credits') == courses[0].get('credits')
+                                and r.get('credit_unit') == courses[0].get('credit_unit'))))
+        if single_identity and summary_text.casefold().rstrip('.') in {x.rstrip('.') for x in identities}:
+            summary_text = ''
+        origin = {'family': 'Shared family requirement', 'variant': 'Local variant requirement', 'replacement': 'Variant replacement'}.get(r.get('origin'))
+        tags = badge(origin) if origin else ''
+        if r.get('component') in ('ai_core', 'domain', 'integration'):
+            tags += badge({'ai_core': 'AI core', 'domain': 'Discipline', 'integration': 'Integration'}[r['component']])
+        notes = '<details class="requirement-support"><summary>Requirement notes</summary><p>' + esc(summary_text) + '</p></details>' if summary_text else ''
+        wording = '<details class="source-wording"><summary>Source wording</summary><blockquote>' + esc(r['source_text']) + '</blockquote></details>' if r.get('source_text') else ''
+        unknown_ids = [cid for cid in r.get('course_ids') or [] if cid not in course_map]
+        missing = '<p class="notice">Course records not available: ' + esc(', '.join(unknown_ids)) + '</p>' if unknown_ids else ''
+        related = related_markup(r, depth)
         if related and child_markup:
             child_markup = '<details class="requirement-option-pool"><summary>All published option routes (' + str(len(child_nodes)) + ')</summary>' + child_markup + '</details>'
-        selection = []
-        if r.get("count") is not None:
-            noun = 'alternative' if r.get('kind') == 'alternative' else 'selection' if child_nodes else 'course'
-            selection.append(f'{r["count"]} {noun}' + ('' if r['count'] == 1 else 's'))
-        if r.get("credits") is not None:
-            selection.append(f'{r["credits"]} {human(r.get("credit_unit"))}')
-        course_list = '<p class="course-list-label">Listed courses / options — follow the group rule</p><ul class="requirement-courses">' + courses + '</ul>' if courses else ''
-        structural_context = r.get('kind') == 'note' and has_courses(r)
-        operator = {'all': 'Complete all items in this group', 'choose_courses': 'Choose courses', 'choose_credits': 'Choose by credit amount', 'alternative': 'Choose an alternative', 'note': 'Requirement note'}.get(r.get('kind'), human(r.get('kind')))
-        if structural_context:
-            operator = 'Course grouping / context'
-        source = sources.get(r.get('source_id'), {})
-        evidence = '<p class="requirement-evidence">' + external(source.get('url'), 'Requirement source') + '</p>' if source else '<p class="requirement-evidence">Requirement source not recorded.</p>'
-        origin = {'family': 'Shared family requirement', 'variant': 'Local variant requirement', 'replacement': 'Variant replacement'}.get(r.get('origin'))
-        provenance_badges = badge(origin) if origin else ''
-        if r.get('component') in ('ai_core', 'domain', 'integration'):
-            provenance_badges += badge({'ai_core': 'AI core', 'domain': 'Discipline', 'integration': 'Integration'}[r['component']])
-        source_wording = '<details class="source-wording"><summary>Source wording</summary><blockquote>' + esc(r['source_text']) + '</blockquote></details>' if r.get('source_text') else ''
-        preview_titles = [course_title(c) for c in requirement_courses]
-        for child in child_nodes:
-            if not has_courses(child) or optional(child):
-                continue
-            title = child.get('title') or 'Untitled group'
-            cc = [course_map[cid] for cid in child.get('course_ids', []) if cid in course_map]
-            if child.get('kind') == 'all' and len(cc) == 1 and title.strip().casefold() == (cc[0].get('code') or '').strip().casefold():
-                title = course_title(cc[0])
-            preview_titles.append(title)
-        # All-of lists retain every immediate title; choice pools are examples only.
-        shown = preview_titles if r.get('kind') == 'all' else preview_titles[:4]
-        preview = ''
-        if shown:
-            preview_label = 'Courses in this group' if r.get('kind') == 'all' else 'Options / branches include' if r.get('kind') != 'note' else 'Referenced courses / branches'
-            preview = '<span class="requirement-preview"><span class="requirement-preview-label">' + preview_label + '</span><span class="requirement-preview-list" role="list">' + ''.join('<span class="requirement-preview-item" role="listitem">' + esc(title) + '</span>' for title in shown) + '</span>' + ('<span class="requirement-preview-more">+' + str(len(preview_titles) - len(shown)) + ' more · expand for the full list</span>' if len(preview_titles) > len(shown) else '') + '</span>'
-        rule = esc(operator + (' · ' + ' · '.join(selection) if selection else ''))
-        title = esc(r.get('title'))
-        header_class = ''
-        # Only complete, direct all-of leaves are course cards. Choice pools and
-        # structural headings retain their rules, previews and original context.
-        direct_courses = r.get('course_ids') or []
-        course_card = (r.get('kind') == 'all' and not child_nodes and requirement_courses
-                       and len(requirement_courses) == len(set(direct_courses))
-                       and r.get('count') in (None, len(requirement_courses)))
-        if course_card:
-            labels = [(c.get('code') + ' · ' if c.get('code') else '') +
-                      (c.get('name') or 'Course name not verified') for c in requirement_courses]
-            original_title = (r.get('title') or '').strip()
-            identifiers = {str(c.get(k) or '').strip().casefold() for c in requirement_courses for k in ('code', 'name')}
-            code_bundle = ' + '.join(c.get('code') or '' for c in requirement_courses)
-            prefix = '' if original_title.casefold() in identifiers or original_title == code_bundle else original_title + ': ' if original_title else ''
-            title = esc(prefix + ' + '.join(labels))
-            preview = ''
-            credits = ''
-            if r.get('credits') is not None:
-                amount = r['credits']
-                amount = int(amount) if isinstance(amount, (int, float)) and amount == int(amount) else amount
-                unit = human(r.get('credit_unit')) if r.get('credit_unit') not in (None, 'unknown') else 'credit unit unknown'
-                credits = f'{amount} {unit}'
-            if len(requirement_courses) == 1:
-                header_class = ' requirement-single-course'
-                rule = esc(credits)
-            else:
-                header_class = ' requirement-course-group'
-                rule = esc('Complete all courses in this group' + (' · ' + credits if credits else ''))
-        opened = depth < 2 and has_courses(r) and not optional(r) and not general_education(r) and (r.get('kind') != 'note' or depth > 0)
-        rule_markup = '<span class="requirement-rule">' + rule + '</span>' if rule else ''
-        return f'''<li class="requirement{header_class}" id="requirement-{esc(rid)}" data-requirement-depth="{depth}"><details class="requirement-disclosure" {"open" if opened else ""}><summary><h3 class="requirement-title">{title}</h3>{rule_markup}{preview}</summary><div class="requirement-body">{'<div class="requirement-tags">' + provenance_badges + '</div>' if provenance_badges else ''}<p>{esc(r.get('summary') or 'Requirement detail has not been extracted.')}</p>{source_wording}{related}{course_list}{child_markup}{evidence}</div></details></li>'''
+        content = ('<div class="requirement-tags">' + tags + '</div>' if tags else '') + notes + wording + related + course_rows(courses, credits if single_identity else '', rid, evidence if single_identity else '') + missing + child_markup
+        if single_identity:
+            route_label = '<h4 class="requirement-route-label">' + esc(title) + '</h4>' if title.casefold() not in identities else ''
+            return '<li class="requirement requirement-single-course" id="requirement-' + esc(rid) + '" data-requirement-depth="' + str(depth) + '">' + route_label + content + '</li>'
+        code_bundle = ' + '.join(c.get('code') or '' for c in courses)
+        if len(courses) > 1 and title == code_bundle:
+            title = 'Course bundle'
+        elif len(courses) == 1 and title.casefold() in identities and not single_identity:
+            title = 'Course requirement'
+        opened = (depth < 2 and has_courses(r) and not optional(r) and not general_education(r)
+                  and (kind != 'note' or depth > 0) and rid not in indexed_group_ids)
+        return '<li class="requirement" id="requirement-' + esc(rid) + '" data-requirement-depth="' + str(depth) + '"><details class="requirement-disclosure" ' + ('open' if opened else '') + '><summary><span class="requirement-header-links">' + evidence + '</span><h3 class="requirement-title">' + esc(title) + '</h3><span class="requirement-rule">' + esc(rule) + '</span></summary><div class="requirement-body">' + content + '</div></details></li>'
 
     roots = [r for r in requirements if not r.get("parent_id") or r.get("parent_id") not in ids]
     if not requirements:
@@ -870,15 +915,15 @@ def program_page(p, base, family=None, research=None, institution_programs=()):
         ranking_context += '<p>Ranking provenance is not recorded for this institution.</p>'
     ranking_context += '</section>'
     body = f'''<div class="breadcrumb"><a href="{base}">Program index</a><span>/</span>{esc(institution.get('name'))}</div><section class="detail-hero"><div class="eyebrow">{esc(institution.get('name'))} / {esc(p.get('hosting_unit') or 'Hosting unit unknown')}</div><h1>{esc(p.get('title'))}</h1><p class="lede">{esc(p.get('overview') or 'Overview not yet recorded.')}</p><div class="detail-badges">{'' if p.get('program_kind') in {'minor', 'concentration'} else badge('No separate award' if (p.get('major_relationship') or {}).get('kind') == 'second_major_only' else p.get('award_level'))}{badge(human(p.get('program_kind')))}{badge(human(p.get('status')))}</div>{award_options_markup(p)}{major_relationship_markup(p)}{parent_context_markup(p)}<div class="official-links">{links}</div></section>
-<dl class="fact-grid"><div><dt>Calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Catalog year</dt><dd>{esc(p.get('catalog_year'))}</dd></div><div><dt>Last verified</dt><dd>{esc(date_value(p))}</dd></div><div><dt>Requirement inventory</dt><dd>{esc(evidence_label(p))}</dd></div></dl>
+
 
 <nav class="section-nav" aria-label="Program sections"><a href="#outcomes">Program aims &amp; outcomes</a><a href="#requirements">Requirements</a><a href="#curriculum">Curriculum</a><a href="#courses">Course records</a><a href="#sources">Sources</a><a href="#evidence-context">Evidence &amp; review</a></nav>
 <section id="outcomes" class="detail-section"><span class="eyebrow">01 / PROGRAM AIMS &amp; OUTCOMES</span><h2>Program aims &amp; outcomes</h2><div class="outcome-grid"><div><h3>Source statements</h3>{outcomes(p, 'source_stated')}</div><div><h3>Inferred taxonomy</h3>{outcomes(p, 'inferred_taxonomy')}</div></div></section>
-<section id="requirements" class="detail-section"><span class="eyebrow">02 / PROGRAM STRUCTURE</span><h2>Requirements & choices</h2>{requirement_tree(p)}</section>
+<section id="requirements" class="detail-section"><span class="eyebrow">02 / PROGRAM STRUCTURE</span><h2>Requirements & choices</h2>{requirement_tree(p, base, matcher)}</section>
 <section id="curriculum" class="detail-section"><span class="eyebrow">03 / CURRICULUM PROFILE</span><h2>Required curriculum &amp; elective options</h2>{category_chart(p)}</section>
 
 {family_context(p, family, base)}
-<section id="courses" class="detail-section"><span class="eyebrow">04 / COURSE RECORDS</span><h2>Inspect the building blocks</h2>{metadata_availability(p)}<p class="section-note">Credits retain their original units. “Not recorded” means the atlas lacks evidence; it does not mean a course has no prerequisites.</p><div class="table-scroll" role="region" aria-label="Course records" tabindex="0"><table class="course-table"><thead><tr><th scope="col">Course</th><th scope="col">Category</th><th scope="col">Credits</th><th scope="col">Prerequisites</th><th scope="col">Evidence</th></tr></thead><tbody>{rows}</tbody></table></div>{'<p class="notice">No course records extracted yet.</p>' if not courses else ''}</section>
+<section id="courses" class="detail-section"><span class="eyebrow">04 / COURSE RECORDS</span><h2>Inspect the building blocks</h2><dl class="fact-grid"><div><dt>Calendar</dt><dd>{esc(human(institution.get('calendar')))}</dd></div><div><dt>Catalog year</dt><dd>{esc(p.get('catalog_year'))}</dd></div><div><dt>Last verified</dt><dd>{esc(date_value(p))}</dd></div><div><dt>Requirement inventory</dt><dd>{esc(evidence_label(p))}</dd></div></dl>{metadata_availability(p)}<p class="section-note">Credits retain their original units. “Not recorded” means the atlas lacks evidence; it does not mean a course has no prerequisites.</p><div class="table-scroll" role="region" aria-label="Course records" tabindex="0"><table class="course-table"><thead><tr><th scope="col">Course</th><th scope="col">Category</th><th scope="col">Credits</th><th scope="col">Prerequisites</th><th scope="col">Evidence</th></tr></thead><tbody>{rows}</tbody></table></div>{'<p class="notice">No course records extracted yet.</p>' if not courses else ''}</section>
 {ranking_context}{research_program_markup(research, base)}
 <section id="sources" class="detail-section"><span class="eyebrow">05 / THE PAPER TRAIL</span><h2>Sources & provenance</h2><ol class="sources">{sources}</ol></section>
 <section id="evidence-context" class="detail-section"><h2>Evidence &amp; review status</h2><div class="notice evidence-notice"><strong>Read the evidence in context.</strong><p>Verification: {esc(human(p.get('verification_status')))}. {missing_credits} of {len(courses)} course records have unknown credits. Unknown values are not zero. Recorded course credits must not be added to estimate degree requirements.</p><p class="curriculum-scope">{esc(curriculum_scope(p))}</p><p>First offered: {first_text}</p>{'<ul>' + notes + '</ul>' if notes else ''}</div>{degree_audit_program(p)}</section>'''
@@ -977,12 +1022,13 @@ def research_method_markup(cs):
         text=method if isinstance(method,str) else 'CSRankings is a publication-based view of computer science research activity.'
         return badge('CSRankings · not imported')+'<p>'+esc(text)+'</p><p>No research values are available in this snapshot. Missing values do not mean zero publications or no AI research.</p><p>'+external('https://csrankings.org/','Visit CSRankings')+' · '+external('https://csrankings.org/faq','Read the CSRankings FAQ')+'</p>'
     available=method.get('status')=='available'
-    fields=', '.join(RESEARCH_FIELDS.get(field,field)+' ('+field+')' for field in method.get('fields',[])) or 'Not configured'
+    fields=', '.join(RESEARCH_FIELDS.get(field,field) for field in method.get('fields',[])) or 'Not configured'
     missingness=sorted({o.get('missingness') for o in cs.get('observations',[]) if o.get('missingness')})
-    settings=[('Publication window',str(method.get('year_start','Unknown'))+'–'+str(method.get('year_end','Unknown'))),('Geographic filter',method.get('geographic_filter') or 'Not configured'),('Research fields',fields),('Pinned source snapshot',method.get('source_snapshot') or 'Not recorded'),('Import status',method.get('status') or 'not_imported'),('Recorded missingness',', '.join(missingness) or 'No observation status recorded')]
+    settings=[('Publication years',str(method.get('year_start','Unknown'))+'–'+str(method.get('year_end','Unknown'))),('Country','United States' if method.get('geographic_filter') == 'us' else method.get('geographic_filter') or 'Not recorded'),('Research fields',fields)]
     config='<dl class="research-config">'+''.join('<div><dt>'+esc(label)+'</dt><dd>'+esc(value)+'</dd></div>' for label,value in settings)+'</dl>'
     if not available:
-        return badge('CSRankings · not imported')+'<p>'+esc(method.get('method') or 'Configured publication-research context; no imported values.')+'</p>'+config+'<p>No research score is attached to a program. Permission-required observations remain unknown, never zero or last place.</p><p>'+external(method.get('source_url') or 'https://csrankings.org/faq','Configured methodology source')+'</p>'
+        source_details = '<details class="research-provenance"><summary>Saved source details</summary><p>Source version: ' + esc(method.get('source_snapshot') or 'Not recorded') + '</p><p>' + esc(method.get('method') or 'Calculation note not recorded') + '</p><p>Recorded data-status labels: ' + esc(', '.join(missingness) or 'Not recorded') + '</p></details>'
+        return badge('CSRankings · not imported')+'<p>No research scores are available in this saved view. Missing figures do not mean zero publications or a last-place rank. Data that still require permission remain unavailable.</p>'+config+'<p>'+external(method.get('source_url') or 'https://csrankings.org/faq','Research source')+'</p>'+source_details
     snapshot=str(method.get('source_snapshot') or '')
     copying='https://github.com/emeryberger/CSrankings/blob/'+snapshot+'/COPYING' if re.fullmatch('[0-9a-f]{40}',snapshot) else 'https://github.com/emeryberger/CSrankings/blob/gh-pages/COPYING'
     population=cs.get('population') or {}
@@ -995,8 +1041,8 @@ def research_method_markup(cs):
     permission=method.get('permission') or {}
     venue_rows=''.join('<div><dt>'+esc(RESEARCH_FIELDS.get(field,field))+'</dt><dd>'+esc(', '.join(venues))+'</dd></div>' for field,venues in (method.get('field_membership') or {}).items())
     sources=''.join('<li>'+external(source.get('url'),source.get('filename') or 'Source file')+('<br><code>SHA-256: '+esc(source['sha256'])+'</code>' if source.get('sha256') else '')+'</li>' for source in method.get('sources',[]) if isinstance(source,dict))
-    details='<details class="research-provenance"><summary>Source configuration &amp; permission record</summary>'
-    if venue_rows:details+='<h3>Selected venue groups</h3><dl class="research-config">'+venue_rows+'</dl><p>KDD is a separate next-tier option, excluded from this configuration; robotics is outside these five fields.</p>'
+    details='<details class="research-provenance"><summary>Sources, publication venues and reuse permission</summary><h3>Saved source version</h3><p>' + esc(snapshot or 'Not recorded') + '</p>' + ('<p>Original calculation note: ' + esc(method.get('method')) + '</p>' if method.get('method') else '') + ('<p>Recorded data-status labels: ' + esc(', '.join(missingness)) + '</p>' if missingness else '')
+    if venue_rows:details+='<h3>Selected venue groups</h3><dl class="research-config">'+venue_rows+'</dl><p>The separate KDD conference option is not included. Robotics is outside the five selected fields.</p>'
     if permission:details+='<h3>Project permission record</h3><p>'+esc(permission.get('statement') or 'Educational-project permission confirmed by the project owner.')+'</p><p>Confirmed: '+esc(permission.get('confirmed_date'))+' · Scope: '+esc(permission.get('scope'))+'. No broader permission is inferred.</p>'
     if method.get('retrieved_date'):details+='<p>Source retrieved: '+esc(method['retrieved_date'])+'.</p>'
     if sources:details+='<h3>Snapshot sources</h3><ul>'+sources+'</ul>'
@@ -1006,18 +1052,22 @@ def research_method_markup(cs):
     snapshot_link=external('https://github.com/emeryberger/CSrankings/tree/'+snapshot,'Pinned source snapshot') if re.fullmatch('[0-9a-f]{40}',snapshot) else ''
     attribution_note='<p>'+esc(attribution['publication_data'])+'</p>' if attribution.get('publication_data') else ''
     notes=''.join('<p>'+esc(method[key])+'</p>' for key in ('license_explanation','license_notes','missingness_explanation') if method.get(key))
-    return badge('CSRankings · research context available')+'<p>'+esc(method.get('method') or 'Publication-based research context using five individually reported fields and an explicit geometric aggregate.')+'</p>'+config+'<p>The Atlas uses the configured completed-year publication window shown above. The upstream live default includes the current year; this project configuration is separate. Field scores are adjusted publication counts + 1. The five-field aggregate is the geometric mean of those scores, without subtracting one. Displayed scores are rounded to one decimal before competition ranking; tied scores share ranks. Each selection is ranked across its full eligible U.S. positive-output population before matching institutions to the Atlas roster. These are U.S. research ranks, not ranks within this cohort, and ordinal ranks are never averaged.</p><p>Adjusted publications reflect fractional author credit. The selected snapshot’s faculty affiliations and venue configuration govern attribution; this is not a faculty-size-normalized or historical-enrollment measure. Publication activity does not measure undergraduate teaching, curriculum depth, admissions outcomes, or program quality.</p><p>Source statuses distinguish observed values, no selected output, institutions not listed, institutions outside the eligible population, unresolved institution matches, and unavailable source observations. An absent value stays null; it is not a zero score or last-place rank. Different programs at one institution share the same research context.</p><p>Project owner Kris Jordan confirmed educational-project permission on October 11, 2026. This records permission for this Atlas project; it does not claim broader reuse rights or replace the upstream license notices.</p><p>Attribution: '+external('https://csrankings.org/',attribution_text)+' · '+external('https://csrankings.org/faq','CSRankings FAQ')+' · '+external(copying,'Upstream COPYING and license notices')+' · '+external(method.get('source_url'),'Source website / methodology')+(' · '+snapshot_link if snapshot_link else '')+'</p>'+attribution_note+notes+details
+    details = details.replace('</details>', '<h3>Source notices</h3>' + attribution_note + notes + '</details>')
+    return badge('CSRankings · research context available')+'<p>The homepage’s AI Ranking describes university research publications in five areas of computer science. It comes from CSRankings. It does not measure undergraduate teaching, curriculum depth, admissions outcomes or the quality of an individual program.</p>'+config+'<h3>How the scores and ranks are calculated</h3><p>Publications are counted using the authors, university affiliations and conferences recorded in the saved CSRankings source. A paper can give a fraction of its credit to an author. The counts are not divided by faculty size, and they do not reconstruct past faculty affiliations or student enrollment.</p><p>Each field’s score is its credited publication count plus one. The overall five-field score is the geometric mean: multiply the five field scores, then take the fifth root. We do not subtract one afterward. This combines scores, not an average of ranks.</p><p>Scores are rounded to one decimal before ranks are assigned. Equal rounded scores share a rank, and the next rank skips the places occupied by the tie. Ranks use the full eligible U.S. group with publications in the selected field or fields, before matching universities to this Atlas. They are not rankings of just the institutions shown here.</p><p>The publication years above are completed calendar years. The live CSRankings website also includes the current year by default, so its default results can differ from this project’s saved view. Every program at the same university shares that university’s research figures.</p><h3>When research information is missing</h3><p>A missing number does not mean zero publications, no AI research or a last-place rank. We distinguish universities with no publications in the selected venues from universities that CSRankings does not list, universities outside the eligible U.S. group, names that have not been matched, and unavailable source data.</p><h3>Sources and permission</h3><p>Project owner Kris Jordan confirmed permission for this educational project on October 11, 2026. This does not claim broader reuse rights or replace the source’s license notices.</p><p>'+external('https://csrankings.org/',attribution_text)+' · '+external('https://csrankings.org/faq','How CSRankings works')+' · '+external(copying,'COPYING and license notices')+' · '+external(method.get('source_url'),'Source website')+(' · '+snapshot_link if snapshot_link else '')+'</p>'+details
+
 
 
 def methodology_page(data, base):
     meta = data.get('meta', {})
     research_markup = research_method_markup(data.get('csrankings') or {})
-    body = f'''<section class="page-hero"><span class="eyebrow">HOW TO READ THE ATLAS</span><h1>Sources &amp; methodology</h1><p class="lede">An inspectable research index. Curriculum evidence and publication-based research context are separate; neither is a program-quality score.</p></section>
-<div class="method-layout"><nav class="method-nav" aria-label="Methodology sections"><a href="#scope">01 · Scope</a><a href="#evidence">02 · Evidence</a><a href="#curriculum-method">03 · Curriculum</a><a href="#research">04 · Research context</a><a href="#unknowns">05 · Limitations</a></nav><div class="prose"><section id="scope"><h2>01 / A precise inclusion rule</h2><p>Programs qualify when their official undergraduate title includes AI or Artificial Intelligence. This includes explicit AI compounds such as GenAI and GeoAI when the official source identifies their artificial-intelligence meaning; incidental letters in unrelated words do not qualify. Degrees, additional majors, minors, and concentrations remain separate program types. A general computer science program with AI electives does not qualify on that basis alone.</p><p>The intended institution scope comprises two independent U.S. News top-100 cohorts, inclusive of ties: National Universities and National Liberal Arts Colleges. Until complete membership is source-verified and recorded, the atlas is a pilot inventory. Consult the coverage ledger for what has actually been inspected.</p></section>
-<section id="evidence"><h2>02 / Follow the source</h2><p>Official university catalogs, program pages, and announcements support program records. Sources retain their URLs, retrieval dates, catalog years, locators, and confidence. The last verification date describes the research record, not a guarantee that the source has remained unchanged.</p><p>Launch dates are recorded only when evidence supports the date and its precision. The oldest search result is not treated as a program’s first offering. Source statements about program aims, learning outcomes and career pathways appear separately from inferred editorial themes. Statement types are shown only when explicitly recorded.</p></section>
-{degree_audit_summary(meta)}<section id="curriculum-method"><h2>03 / Compare structure with care</h2><p>Requirements preserve all-of groups, course-count choices, credit-count choices, and nested alternatives. A course can belong to multiple requirements. The required profile counts fixed courses established by all-of rules plus mandatory choose-N course selections with a clear category and no unresolved overlap. Each choose-N block contributes N, not its option-pool size. The options profile shows documented elective and required-choice candidates, excluding fixed required courses. Each view deduplicates stable course IDs; note-only and unbound records stay unresolved rather than becoming compulsory. Categories use course-level classifications, including Other / unclassified. A zero category count means no mapped classified records in the selected view, not proven absence from the actual curriculum. Taxonomy coverage is independent of requirement-inventory completeness; a complete inventory can contain unclassified courses.</p><p>Subject categories follow the primary learning activity evidenced by the course description, outcomes or syllabus. AI/ML means technical methods such as model construction, learning algorithms, search or inference; AI in a title is insufficient. Cross-disciplinary AI literacy and practical tool use belong in Domain studies &amp; applications when those are the primary aims. Ethics or societal analysis as the primary aim belongs in Human context. Balanced or insufficient evidence remains mixed or unclassified. These judgments do not measure instructional depth or teaching quality. Reviewed classifications cite evidence and a rationale; legacy labels remain explicitly unreviewed.</p><p>“Complete” describes the requirement inventory for the represented award at its recorded catalog year. A complete minor or concentration inventory does not cover the whole parent degree. Course descriptions, prerequisite statements, credit amounts, and known credit units have separate availability counts; a complete requirement inventory may still have missing course metadata.</p><p>Program families are grouped only when an explicit, sourced relationship has been recorded; titles are not used to infer membership. A family groups related programs but is not an additional award. Each named variant retains its stable program page and is compared as a concrete program. Shared, local variant and replacement requirement labels identify the recorded relationship; a local requirement is not necessarily unique to that variant. Missing labels mean the relationship has not been classified. Discipline filters use only recorded family membership.</p><p>The default required profile counts documented course obligations, not the entire degree. Credit-only, nested, mixed-category and overlapping choices remain separate with their published rules. No pathway is selected or averaged. Nested selection amounts are not added together, and course counts never share a denominator with credits. Family profiles use resolved variant requirements after exclusions and replacements. These counts do not measure depth, quality or student experience.</p><p>Quarter hours, semester hours, course units, and other units retain their original labels. No conversion or normalized total is inferred. Unknown credits are null, never zero. Missing prerequisites, descriptions, course sites, or syllabi remain explicitly unrecorded.</p></section>
-<section id="research"><h2>04 / Research is context</h2>{research_markup}</section>
-<section id="unknowns"><h2>05 / What remains unknown</h2><p>Coverage is incomplete. A missing institution or program does not establish absence. A “no qualifying program found” conclusion requires a documented search of official sources. Inaccessible pages remain inaccessible; pending institutions remain pending.</p><ul>{limitations(meta)}</ul><p>Use this atlas to frame questions, then confirm current admission and graduation requirements with the institution.</p><a href="{base}coverage/">Inspect the coverage ledger →</a></section></div></div>'''
+    body = f'''<section class="page-hero"><span class="eyebrow">HOW TO READ THE ATLAS</span><h1>Sources &amp; methodology</h1><p class="lede">What we include, where the information comes from, and how to read the comparisons. Course counts and research rankings describe different things; neither is a score for program quality.</p></section>
+<div class="method-layout"><nav class="method-nav" aria-label="Methodology sections"><a href="#scope">01 · What we include</a><a href="#evidence">02 · Our sources</a><a href="#curriculum-method">03 · Course comparisons</a><a href="#research">04 · Research rankings</a><a href="#unknowns">05 · Limits</a></nav><div class="prose">
+<section id="scope"><h2>01 / What we include</h2><p>A program is included when its official undergraduate title contains AI or Artificial Intelligence. Terms such as GenAI and GeoAI count when the university explicitly identifies them as artificial intelligence. Unrelated words containing those letters do not count. A general computer science degree is not included simply because it offers AI electives.</p><p>Degrees, additional majors (including second majors), minors, and concentrations are listed separately. A minor or concentration describes that particular course of study, not an entire bachelor’s degree.</p><p>The project aims to cover two separate U.S. News groups: National Universities and National Liberal Arts Colleges ranked 100 or better, including ties. The full institution list has not yet been verified. The <a href="{base}coverage/">coverage page</a> shows which institutions and programs have been checked and what remains unfinished. U.S. News ranks provide institution context; ranks from these two groups should not be compared directly.</p></section>
+<section id="evidence"><h2>02 / Where the information comes from</h2><p>Program information comes from official university catalogs, program pages and announcements. Source links let you inspect the original evidence. We record the catalog year when available, the date a source was consulted, the section used and our confidence in that source.</p><p>A verification date tells you when the Atlas record was checked. The university may change its information afterward. We record a program’s start date only when a source supports it; the oldest search result is not evidence of the first year a program was offered.</p><p>Statements about learning outcomes, program aims and career pathways are distinguished when the source provides that information. They are separate from inferred themes: interpretations made by the Atlas rather than claims made by the university.</p><p>Reviews can cover different things. Checking a list of required courses does not necessarily establish every elective rule, graduation policy or course classification. Read the scope and remaining limitations beside each review.</p></section>
+{degree_audit_summary(meta)}
+<section id="curriculum-method"><h2>03 / How to read the course comparisons</h2><h3>Required courses and options are different counts</h3><p>Required curriculum counts individually required courses plus simple required selections that can be counted safely. For example, “choose two of six courses” contributes two required courses, not six. A selection is included only when its full list is represented, its courses have the same known subject category, and they do not overlap another counted requirement.</p><p>Selections based on credits, choices within choices, mixed subjects and unresolved overlaps are kept with their individual rules. We do not choose a sample pathway, add overlapping choices together or assume that every listed course must be taken. These counts do not describe the whole degree.</p><p>Elective options counts the different courses a student might choose, including options that satisfy required choices. Courses already counted as individually required are excluded from this view. A large option list does not mean a student must take more electives.</p><p>Each view counts a course identity once. Cross-listed courses are combined only when official evidence confirms that they are the same course. Similar names or ordinary substitutions are not enough. Courses recorded only as background or with an unclear place in the requirements are not treated as compulsory.</p><h3>What the subject labels mean</h3><p>We use course descriptions, stated aims or syllabi to identify the main subject. AI in a title is insufficient: AI &amp; machine learning requires evidence that students learn AI methods, such as how models are built or trained, or how search and reasoning methods work. Learning to use AI tools in a discipline belongs in Domain studies &amp; applications when that is the main aim. Courses mainly about ethics or society belong in Human context.</p><p>Mathematics and Statistics currently share one category. A finer split has not been reviewed. Computing foundations covers programming and basic computer-science methods; Systems covers computing infrastructure. Other / unclassified includes mixed subjects and courses without enough evidence for a clear category. Electives is an older label; newly reviewed courses are classified by subject.</p><p>Reviewed classifications have a source and an explanation. Legacy or unreviewed labels have not passed that course-review standard. These labels do not measure teaching quality or how deeply a topic is taught. “0 mapped” means no courses have been assigned to that subject in the selected view. It does not establish that the actual curriculum lacks the subject.</p><h3>What “complete” and the credit figures mean</h3><p>Complete means that the requirements for the stated program and catalog year have been reviewed. It does not guarantee that every course description or prerequisite is available. A complete minor or concentration does not certify the requirements of its parent degree. Course-subject reviews and requirement completeness are separate judgments.</p><p>Credits retain the university’s units: semester hours, quarter hours, course units or other units. We do not convert them or add recorded course credits to estimate a degree total. An unknown amount is missing information, not zero. A missing prerequisite statement does not mean that a course has no prerequisites.</p><h3>Related programs still have separate requirements</h3><p>Related degrees are grouped only when a sourced relationship has been recorded; a similar title is not enough. Each degree keeps its own page, award and requirements. Labels show which requirements are shared, local to a variant or replacements. “Local” does not mean a requirement is necessarily unique to that program.</p><p>A collapsed university row can show a range of course counts across its matching programs. That range is not a combined curriculum. Comparisons use each program’s requirements after its stated exclusions and replacements. The discipline filter uses only recorded relationships.</p></section>
+<section id="research"><h2>04 / What the research ranking tells you</h2>{research_markup}</section>
+<section id="unknowns"><h2>05 / What remains uncertain</h2><p>Coverage is incomplete. A missing program or institution does not establish that it does not exist. “No qualifying program found” means a documented search of official sources found none within its stated scope; it is not a claim about every possible program or future offering.</p><p>Some sources cannot be accessed, and some research has not yet been completed. Those limits remain visible. The following notes describe the current boundaries of the project:</p><ul>{limitations(meta)}</ul><p>Use the Atlas to compare documented information and frame questions. Confirm current admission and graduation requirements with the university.</p><a href="{base}coverage/">See coverage and remaining work →</a></section></div></div>'''
     return shell('Methodology', body, base, 'methodology')
 
 

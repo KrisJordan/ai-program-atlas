@@ -21,7 +21,7 @@
   const controls = Object.fromEntries(keys.map(k => [k, form.elements.namedItem(k)]));
   const byId = new Map(programs.map(p => [p.id, p]));
   const cards = [...document.querySelectorAll('[data-program-id], [data-row-id]')];
-  const viewControl = document.getElementById('directory-view');
+  let directoryView = 'table';
   let selected = [];
   const tableGroups = {
     'northeastern-joint-ai': {param: 'joint', expanded: false},
@@ -38,32 +38,15 @@
   const relationshipLabel = p => ({ai_plus_x: 'AI + another discipline', x_plus_ai: 'Another discipline + AI', integrated: 'Integrated program'}[p.family?.relationship] || 'Not recorded');
   const e = x => String(x ?? 'Unknown').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const urlSafe = u => /^https?:\/\//.test(u || '');
-  const link = (url, label) => urlSafe(url) ? `<a href="${e(url)}" rel="noopener noreferrer">${e(label)} ↗</a>` : e(label);
+  const link = (url, label) => urlSafe(url) ? `<a href="${e(url)}" target="_blank" rel="noopener noreferrer">${e(label)} ↗</a>` : e(label);
   const rankLabel = r => r.rank != null ? `#${r.rank}` : r.rank_upper_bound != null ? `Top ${r.rank_upper_bound} · exact rank unverified` : 'Exact rank unverified';
-  const requirementCount = (r, p) => { const noun = r.kind === 'alternative' ? 'alternative' : r.has_children ? 'selection' : 'course'; return `${r.count} ${noun}${r.count === 1 ? '' : 's'}`; };
   const announce = text => { document.getElementById('compare-status').textContent = text; };
   const requirementScope = p => {
     const scope = {concentration: 'Concentration requirements only; not the whole parent degree.', minor: 'Minor requirements only; not the whole degree.', additional_major: 'Additional-major requirements only; not the primary degree.', degree: 'Represented degree program at its recorded catalog year.'}[p.program_kind] || 'Represented program only.';
     const status = p.curriculum_status === 'complete' ? 'Complete requirement inventory. ' : p.curriculum_status === 'partial' ? 'Partial requirement inventory. ' : 'Requirement inventory not yet extracted. ';
     return e(status + scope) + '<small>Course metadata completeness is separate. Listed electives and alternatives are not all required.</small>';
   };
-  const metadataCounts = p => {
-    const profile = p.course_profile;
-    return '<dl class="mini-counts">' + [['description', 'Descriptions'], ['prerequisites', 'Prerequisite statements'], ['credits', 'Credit amounts'], ['credit_unit', 'Known credit units']].map(([key, label]) => {
-      const count = profile.metadata[key];
-      return `<dt>${label}</dt><dd>${count} of ${profile.count}</dd>`;
-    }).join('') + '</dl><small>Populated fields with recorded source URLs. Missing prerequisites do not mean none.</small>';
-  };
 
-  const selectionLabel = choice => {
-    const parts = [];
-    if (choice.count != null) {
-      const noun = choice.kind === 'alternative' ? 'alternative' : choice.has_children ? 'selection' : 'course';
-      parts.push(`Choose ${choice.count} ${noun}${choice.count === 1 ? '' : 's'}`);
-    } else if (choice.kind === 'alternative') parts.push('Choose an alternative');
-    if (choice.credits != null) parts.push(`${choice.credits} ${pretty(choice.credit_unit)} recorded`);
-    return parts.join(' · ') || 'Selection amount not recorded';
-  };
   const profileCell = p => {
     if (!p.course_profile.count) return '<div class="compare-profile-cell">Not yet extracted</div>';
     const profile = p.curriculum_profile;
@@ -79,21 +62,10 @@
     const empty = profileMode === 'required' ? 'A fixed required course set is not established; this does not mean there are no requirements.' : 'No option set is established by the structured rules.';
     return `<div class="compare-profile-cell"><p class="profile-total">${profileMode === 'required' ? plotted.count + ' required course obligations' : group.count + ' distinct ' + label + ' ' + countNoun}</p><p class="profile-denominator">${note}</p>${identityNote}<p class="profile-taxonomy">Taxonomy review: ${classification.reviewed} reviewed · ${classification.mixed} mixed · ${classification.unclassified} unclassified · ${classification.unreviewed} unreviewed, of ${group.count} mapped identities. Missing review is not verified classification. Requirement inventory completeness is separate.</p>${plotted.count ? '<dl class="mini-counts">' + Object.entries(categories).map(([key,name]) => `<dt>${e(name)}</dt><dd>${plotted.categories[key] || '0 mapped'}</dd>`).join('') + '</dl>' : '<p class="profile-unavailable">' + empty + '</p>'}<small>Distinct mapped course identities; not credit totals or degree shares. “0 mapped” means no mapped records classified here, not evidence that the curriculum lacks the subject. Partial requirement or taxonomy evidence can omit relevant courses.</small><p class="profile-uncertainty">${profile.unresolved.count} ${outsideNoun} ${profile.unresolved.count === 1 ? 'is' : 'are'} outside the fixed/option count profiles; see individual requirement rules for their context.${profile.overlap_count ? ' ' + profile.overlap_count + ' ' + roleNoun + ' appear in multiple groups and are counted once.' : ''}</p></div>`;
   };
-  const profileChoices = p => {
-    const choices = p.curriculum_profile.choices;
-    if (!choices.length) return 'No structured selection rules recorded. Full requirements may contain unresolved notes.';
-    const sources = new Map((p.sources || []).map(source => [source.id,source]));
-    const counted = new Map(p.curriculum_profile.required_obligations.counted_choices.map(c => [c.id,c]));
-    const excluded = new Map(p.curriculum_profile.required_obligations.excluded_choices.map(c => [c.id,c.reason]));
-    const accounting = choice => counted.has(choice.id) ? `Counts as ${counted.get(choice.id).count} required ${categories[counted.get(choice.id).category]} selection(s).` : `Not added to counts: ${excluded.get(choice.id) || 'context unresolved'}.`;
-    const contexts = {required:'Required selection',conditional:'Conditional selection',unresolved:'Selection context unresolved'};
-    const origins = {family:'Shared family requirement',variant:'Local variant requirement',replacement:'Variant replacement'};
-    return `<details class="profile-choices"><summary>${choices.length} documented selection rules</summary><ul>${choices.map(choice => `<li><small>${e(accounting(choice))}</small><strong>${e(choice.title)}</strong><div class="profile-choice-rule">${e(selectionLabel(choice))}</div><small>${e(contexts[choice.context] || contexts.unresolved)}${origins[choice.origin] ? ' · ' + e(origins[choice.origin]) : ''}</small><small>${link(sources.get(choice.source_id)?.url,'Source')} · <a href="${base}programs/${e(p.id)}/#requirement-${e(choice.id)}">Full requirement</a></small></li>`).join('')}</ul></details><small>Nested quantities are not summed. Course counts and credit units remain distinct; no pathway is selected.</small>`;
-  };
 
   function readState() {
     const params = new URLSearchParams(location.search);
-    viewControl.value = params.get('view') === 'cards' ? 'cards' : 'table';
+    directoryView = params.get('view') === 'cards' ? 'cards' : 'table';
     sortControl.value = ['rank', 'name', 'csrankings'].includes(params.get('sort')) ? params.get('sort') : 'csrankings';
     keys.forEach(key => {
       const value = params.get(key) || '';
@@ -123,7 +95,7 @@
 
   function writeState() {
     const params = new URLSearchParams();
-    if (viewControl.value === 'cards') params.set('view', 'cards');
+    if (directoryView === 'cards') params.set('view', 'cards');
     if (sortControl.value !== 'csrankings') params.set('sort', sortControl.value);
     keys.forEach(key => { if (controls[key].value) params.set(key, controls[key].value); });
     if (selected.length) params.set('compare', selected.join(','));
@@ -157,7 +129,7 @@
     const items = (p.outcomes || []).filter(o => o.kind === kind);
     const sources = new Map((p.sources || []).map(s => [s.id, s]));
     const statementTypes = {learning_outcome: 'Learning outcome', program_aim: 'Program aim', career_pathway: 'Career pathway'};
-    return items.length ? '<ul>' + items.map(o => {
+    return items.length ? '<ul class="comparison-outcomes">' + items.map(o => {
       const labels = statementTypes[o.statement_type] ? [statementTypes[o.statement_type]] : [];
       if (kind === 'inferred_taxonomy') labels.push('Documented inference');
       else if (!labels.length) labels.push('Source statement');
@@ -178,8 +150,62 @@
     return `<section class="research-comparison" aria-labelledby="research-comparison-title"><h3 id="research-comparison-title">Institution publication research context</h3><p class="section-note">CSRankings · ${e(context.year_start)}–${e(context.year_end)} · United States. These are institution-level publication measures, not undergraduate teaching or program quality. Programs at the same institution repeat the same context. U.S. ranks were computed before joining this Atlas cohort.</p><div class="table-scroll" role="region" aria-label="Institution research comparison" tabindex="0"><table class="research-table"><caption>Displayed research scores, U.S. ranks and adjusted publication counts</caption><thead><tr><th scope="col">Research selection</th>${items.map(p => `<th scope="col">${e(p.institution?.name)}<small>${e(p.title)}</small></th>`).join('')}</tr></thead><tbody>${fields.map(row => `<tr data-research-field="${e(row.field)}"><th scope="row">${e(row.label)}</th>${items.map(p => '<td>' + cell(p, row.field) + '</td>').join('')}</tr>`).join('')}</tbody></table></div><p class="section-note">Each field score is adjusted publications + 1. The five-field aggregate is their geometric mean, not an average rank. Scores use one decimal; adjusted counts here use three decimals. Missing observations stay unavailable and receive no zero score or last-place rank. <a href="${base}methodology/#research">Methodology, source snapshot &amp; reuse scope →</a></p></section>`;
   }
 
+  const requirementViews = new Map();
+  const comparisonDisclosures = new Map();
+  const requirementVersion = new URL(document.querySelector('script[src*="atlas.js"]').src).search;
+  function revealComparisonFragment() {
+    if (location.hash.startsWith('#compare-requirement-')) window.dispatchEvent(new Event('hashchange'));
+  }
+  function comparisonRequirements(p) {
+    if (!requirementViews.has(p.id)) {
+      const detailUrl = `${base}programs/${encodeURIComponent(p.id)}/`;
+      const version = new URLSearchParams(requirementVersion); version.set('record', p.requirement_view_key);
+      requirementViews.set(p.id, fetch(detailUrl + '?' + version.toString()).then(response => {
+        if (!response.ok) throw new Error('Requirement view unavailable');
+        return response.text();
+      }).then(html => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const section = doc.getElementById('requirements');
+        if (!section) throw new Error('Requirement view missing');
+        const tree = section.querySelector('.requirements') || section.querySelector('.notice');
+        if (!tree) throw new Error('Requirement structure missing');
+        const ids = new Map();
+        tree.querySelectorAll('[id]').forEach(node => { const old = node.id; node.id = `compare-requirement-${p.id}-${old}`; ids.set(old, node.id); });
+        tree.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          const original = anchor.getAttribute('href').slice(1);
+          anchor.setAttribute('href', ids.has(original) ? '#' + ids.get(original) : detailUrl + '#' + original);
+        });
+        return tree.outerHTML;
+      }).catch(() => { requirementViews.delete(p.id); return null; }));
+    }
+    return requirementViews.get(p.id);
+  }
+  function loadComparisonRequirements(items, target) {
+    items.forEach(p => {
+      const cell = target.querySelector(`[data-comparison-requirements="${p.id}"]`);
+      comparisonRequirements(p).then(html => {
+        if (!cell?.isConnected) return;
+        if (!html) {
+          cell.removeAttribute('aria-busy');
+          cell.innerHTML = `<p class="notice">Requirement view could not be loaded. <a href="${base}programs/${e(p.id)}/#requirements">Open the program’s recorded requirements.</a></p>`;
+          return;
+        }
+        cell.innerHTML = html;
+        cell.removeAttribute('aria-busy');
+        cell.querySelectorAll('details.requirement-disclosure, details.requirement-bundle-disclosure, details.requirement-course-details').forEach(details => {
+          const id = details.parentElement.id;
+          if (comparisonDisclosures.has(id)) details.open = comparisonDisclosures.get(id);
+          details.addEventListener('toggle', () => { if (details.isConnected) comparisonDisclosures.set(id, details.open); });
+        });
+        revealComparisonFragment();
+      });
+    });
+  }
+
   function renderComparison() {
     const target = document.getElementById('comparison-content');
+    // Native toggle events can be queued; snapshot the DOM before replacing it.
+    target.querySelectorAll('.comparison-requirement-tree details.requirement-disclosure, .comparison-requirement-tree details.requirement-bundle-disclosure, details.requirement-course-details').forEach(details => comparisonDisclosures.set(details.parentElement.id, details.open));
     document.getElementById('compare-tray').hidden = selected.length === 0;
     document.getElementById('tray-count').textContent = `${selected.length} of 4 selected`;
     document.getElementById('clear-comparison').hidden = selected.length === 0;
@@ -215,20 +241,14 @@
       ['U.S. News cohort context', p => { const ranks = institutionMap.get(p.institution?.id)?.rankings || p.institution?.rankings || []; return ranks.length ? ranks.map(r => link(r.source_url, `${r.publisher || 'U.S. News'} ${r.edition || 'Edition unknown'} · ${r.category || 'Category unknown'} · ${rankLabel(r)}`) + '<small>Membership evidence: ' + e(pretty(r.verification_status)) + '</small>').join('<br>') + '<small>Institution context, not teaching quality. Different categories are not comparable.</small>' : 'Ranking provenance not recorded'; }],
       ['Calendar', p => e(pretty(p.institution?.calendar))],
       ['Catalog year', p => e(p.catalog_year)],
-      ['Last verified', p => e(p.last_verified || 'Not recorded')],
       ['Evidence status', p => e(pretty(p.verification_status)) + '<small>Curriculum: ' + e(pretty(p.curriculum_status)) + '</small>'],
       ['Requirement coverage', requirementScope],
-      ['Course metadata availability', metadataCounts],
-      ['Course records', p => `${p.course_profile.count} unique records<small>${p.course_profile.unknown_credits} with unknown credits; not a degree total</small>`],
-      ['Credit units', p => { const units = p.course_profile.credit_units.map(pretty); return e(units.join(', ') || 'Unknown') + '<small>No cross-calendar conversion</small>'; }],
-      ['Requirement structure', p => { const roots = (p.requirements || []).filter(r => r.is_root); return roots.length ? '<ul>' + roots.map(r => `<li>${e(r.title)}<small>${e(pretty(r.kind))}${r.count != null ? ' · ' + e(requirementCount(r, p)) : ''}${r.credits != null ? ' · ' + e(r.credits) + ' ' + e(pretty(r.credit_unit)) : ''}</small></li>`).join('') + '</ul><small>Nested choices and full evidence on program page.</small>' : 'Not yet extracted'; }],
 
       ['Program aims &amp; outcomes', p => outcomeList(p, 'source_stated')],
       ['Inferred taxonomy', p => outcomeList(p, 'inferred_taxonomy') + '<small>Editorial interpretation</small>'],
-      ['Official evidence', p => (p.links || []).map(l => link(l.url, l.label || pretty(l.kind))).join('<br>') || 'Not recorded'],
     ];
     if (!items.some(p => p.family)) rows.splice(0, 4);
-    rows.unshift(['Curriculum profile', profileCell], ['Documented selection rules', profileChoices]);
+    rows.unshift(['Official curriculum', p => (p.links || []).map(l => link(l.url, l.label || pretty(l.kind))).join('<br>') || 'Not recorded'], ['Curriculum profile', profileCell], ['Requirement structure', p => `<div class="comparison-requirement-tree" data-comparison-requirements="${e(p.id)}" aria-busy="true"><p class="muted">Loading recorded requirements…</p></div>`]);
     const themes = [...new Set(items.flatMap(p => (p.outcomes || []).filter(o => o.kind === 'inferred_taxonomy').map(o => o.text)))].sort((a, b) => a.localeCompare(b));
     const themeCell = (p, theme) => {
       const matches = (p.outcomes || []).filter(o => o.kind === 'inferred_taxonomy' && o.text === theme);
@@ -236,8 +256,9 @@
       const sources = new Map((p.sources || []).map(s => [s.id, s]));
       return '<span class="badge">Documented inference</span>' + matches.map(o => '<small>' + link(sources.get(o.source_id)?.url, 'Supporting source') + '</small>').join('');
     };
-    const themeMatrix = `<section class="theme-comparison" aria-labelledby="theme-title"><h3 id="theme-title">Recorded inferred themes</h3><p class="section-note">These are the exact inferred taxonomy labels stored in the records, shown as editorial interpretations with supporting sources. “Not recorded” is missing evidence, not proof that a program lacks a theme. Source statements about program aims and outcomes remain separate below.</p>${themes.length ? `<div class="table-scroll" role="region" aria-label="Recorded inferred theme matrix" tabindex="0"><table class="theme-table"><caption class="sr-only">Recorded inferred themes by program</caption><thead><tr><th scope="col">Theme</th>${items.map(p => `<th scope="col">${e(p.institution?.name)}<small>${e(p.title)}</small></th>`).join('')}</tr></thead><tbody>${themes.map(theme => `<tr><th scope="row">${e(theme)}</th>${items.map(p => '<td>' + themeCell(p, theme) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>` : '<p class="notice">No inferred themes have been recorded for the selected programs.</p>'}</section>`;
+    const themeMatrix = `<section class="theme-comparison" aria-labelledby="theme-title"><h3 id="theme-title">Recorded inferred themes</h3><p class="section-note">Recorded editorial themes with supporting sources. “Not recorded” means missing evidence, not an absent theme.</p>${themes.length ? `<div class="table-scroll" role="region" aria-label="Recorded inferred theme matrix" tabindex="0"><table class="theme-table"><caption class="sr-only">Recorded inferred themes by program</caption><thead><tr><th scope="col">Theme</th>${items.map(p => `<th scope="col">${e(p.institution?.name)}<small>${e(p.title)}</small></th>`).join('')}</tr></thead><tbody>${themes.map(theme => `<tr><th scope="row">${e(theme)}</th>${items.map(p => '<td>' + themeCell(p, theme) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>` : '<p class="notice">No inferred themes have been recorded for the selected programs.</p>'}</section>`;
     target.innerHTML = `<div class="table-scroll" role="region" aria-label="Program comparison" tabindex="0"><table class="compare-table"><caption class="sr-only">Comparison of ${items.length} selected programs. Credit units remain distinct and unknown values are not zero.</caption><thead><tr><th scope="col">Program context</th>${items.map(p => `<th scope="col"><small>${e(p.institution?.name)}</small><a href="${base}programs/${e(p.id)}/">${e(p.title)}</a><button type="button" class="text-button remove" data-remove="${e(p.id)}" aria-label="Remove ${e(p.title)} at ${e(p.institution?.name)}">Remove</button></th>`).join('')}</tr></thead><tbody>${rows.map(([title, content]) => `<tr><th scope="row">${title}</th>${items.map(p => '<td>' + content(p) + '</td>').join('')}</tr>`).join('')}</tbody></table></div>` + researchComparison(items) + themeMatrix;
+    loadComparisonRequirements(items, target);
     target.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
       selected = selected.filter(id => id !== button.dataset.remove);
       writeState();
@@ -245,6 +266,44 @@
       document.getElementById('compare-title').setAttribute('tabindex', '-1');
       document.getElementById('compare-title').focus({preventScroll: true});
     }));
+  }
+
+  const stickyHeaders = [];
+  let headerFrame = null;
+  function syncDirectoryHeaders() {
+    stickyHeaders.forEach(({wrap, head, overlay, viewport, table}) => {
+      const rect = wrap.getBoundingClientRect();
+      const height = head.getBoundingClientRect().height;
+      const visible = directoryView === 'table' && rect.width > 0 && rect.top < 0 && rect.bottom > height;
+      viewport.hidden = !visible;
+      if (!visible) return;
+      table.style.width = wrap.querySelector('.directory-table').getBoundingClientRect().width + 'px';
+      table.style.transform = `translateX(${-wrap.scrollLeft}px)`;
+    });
+  }
+  function scheduleDirectoryHeaders() {
+    if (headerFrame !== null) return;
+    headerFrame = requestAnimationFrame(() => { headerFrame = null; syncDirectoryHeaders(); });
+  }
+  function setupDirectoryHeaders() {
+    document.querySelectorAll('.directory-table-wrap').forEach(wrap => {
+      const original = wrap.querySelector('.directory-table');
+      const head = original.tHead;
+      const frame = document.createElement('div'); frame.className = 'directory-table-frame';
+      wrap.before(frame); frame.append(wrap);
+      const overlay = document.createElement('div'); overlay.className = 'directory-sticky-header';
+      overlay.setAttribute('aria-hidden', 'true'); overlay.inert = true;
+      const viewport = document.createElement('div'); viewport.className = 'directory-sticky-viewport'; viewport.hidden = true;
+      const table = document.createElement('table'); table.className = 'directory-sticky-table';
+      table.append(original.querySelector('colgroup').cloneNode(true), head.cloneNode(true));
+      table.querySelectorAll('a').forEach(link => { const text = document.createElement('span'); text.className = 'sticky-ranking-label'; text.textContent = link.textContent; link.replaceWith(text); });
+      viewport.append(table); overlay.append(viewport); frame.prepend(overlay);
+      stickyHeaders.push({wrap, head, overlay, viewport, table});
+      wrap.addEventListener('scroll', scheduleDirectoryHeaders, {passive: true});
+      new ResizeObserver(scheduleDirectoryHeaders).observe(original);
+    });
+    window.addEventListener('scroll', scheduleDirectoryHeaders, {passive: true});
+    window.addEventListener('resize', scheduleDirectoryHeaders);
   }
 
   function sortDirectory() {
@@ -283,8 +342,9 @@
     const filterSummary = document.getElementById('active-filter-summary');
     filterSummary.textContent = activeFilters.length ? `${activeFilters.length} active ${activeFilters.length === 1 ? 'filter' : 'filters'} · ${activeFilters.slice(0,2).map(text => text.length > 64 ? text.slice(0,61) + '…' : text).join(' · ')}${activeFilters.length > 2 ? ` · +${activeFilters.length - 2} more` : ''}` : 'No search filters active';
     filterSummary.title = activeFilters.join(' · ');
+    filterSummary.hidden = activeFilters.length === 0;
     sortDirectory();
-    document.documentElement.dataset.directoryView = viewControl.value;
+    document.documentElement.dataset.directoryView = directoryView;
     const visibleIds = new Set();
     cards.forEach(card => {
       const program = byId.get(card.dataset.programId || card.dataset.rowId);
@@ -343,6 +403,7 @@
     document.getElementById('empty-state').hidden = count > 0;
     document.querySelectorAll('[data-compare], [data-row-compare]').forEach(input => { input.checked = selected.includes(input.dataset.compare || input.dataset.rowCompare); });
     renderComparison();
+    scheduleDirectoryHeaders();
   }
 
   cohortSections.forEach(section => {
@@ -370,7 +431,6 @@
     writeState();
   }));
   document.querySelectorAll('[data-table-expand]').forEach(button => button.addEventListener('click', () => { const group = tableGroups[button.closest('[data-table-group]').dataset.tableGroup]; group.expanded = !group.expanded; clearTimeout(timer); writeState(); }));
-  viewControl.addEventListener('change', () => { clearTimeout(timer); writeState(); });
   const openFilters = () => { if (!filterPanel.open) filterPanel.showModal(); controls.q.focus(); };
   const closeFilters = () => { clearTimeout(timer); writeState(); filterPanel.close(); };
   document.getElementById('open-filters').addEventListener('click', openFilters);
@@ -405,6 +465,7 @@
     announce(`${selected.length} of 4 programs selected. Comparison updated below.`);
   }));
   window.addEventListener('popstate', () => { clearTimeout(timer); readState(); render(); announce(selected.length ? `${selected.length} of 4 programs selected.` : ''); });
+  setupDirectoryHeaders();
   readState();
   render();
 })();

@@ -73,7 +73,7 @@ def test_identity_counts_and_research_configuration(tmp_path, site_data):
     assert '2 records are identity-only' in coverage
     assert 'Counts include all documented records' in coverage
     methodology = (tmp_path / 'methodology/index.html').read_text()
-    for text in ['2016–2025', 'Artificial intelligence (ai)', 'Computer vision (vision)', 'pinned-test-snapshot', 'permission_required', 'A configured method with no computed values.', 'additional majors']:
+    for text in ['2016–2025', 'Artificial intelligence', 'Computer vision', 'pinned-test-snapshot', 'permission_required', 'A configured method with no computed values.', 'additional majors']:
         assert text in methodology
     assert 'https://csrankings.org/faq.html' not in methodology
     index = (tmp_path / 'index.html').read_text()
