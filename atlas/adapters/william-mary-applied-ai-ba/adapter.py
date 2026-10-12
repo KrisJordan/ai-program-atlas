@@ -35,3 +35,7 @@ SOURCES = tuple(SOURCE_PARSERS)
 from atlas.adapters.william_mary_standing_review import register as register_standing_policies
 register_standing_policies(SOURCE_PARSERS)
 SOURCES = tuple(SOURCE_PARSERS)
+
+from atlas.adapters.william_mary_applied_catalog import CATALOG, parse as parse_catalog
+SOURCE_PARSERS[CATALOG] = parse_catalog
+SOURCES = tuple(SOURCE_PARSERS)

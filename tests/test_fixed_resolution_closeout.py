@@ -29,7 +29,13 @@ def test_latest_scoped_proposals_applied_without_whole_degree_promotion():
     lookup = {row['program_id']: row for row in ledger['programs']}
     for pid, proposal in proposals.items():
         accepted = {k: v for k, v in lookup[pid]['core_review'].items() if k != 'ledger'}
-        assert accepted == proposal
+        if proposal.get('superseded_by'):
+            assert (ROOT / proposal['superseded_by']).exists()
+            assert accepted['reviewed_at'] > proposal['reviewed_at']
+            assert accepted['expected_profile']['required']['count'] == 7
+            assert accepted['full_degree_verified'] is False
+        else:
+            assert accepted == proposal
         assert lookup[pid]['status'] == 'blocked'
     assert sum(row['status'] == 'audited' for row in ledger['programs']) == 2
     assert sum(row['status'] == 'blocked' for row in ledger['programs']) == 61

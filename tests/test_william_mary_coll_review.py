@@ -40,7 +40,7 @@ def test_actual_coll_source_cache_when_available(key):
 
 def test_integrated_coll_does_not_invent_named_courses_or_complete_degree():
     p=json.loads(Path('data/programs',m.PID+'.json').read_text());db.validate_program(p)
-    assert p['curriculum_status']=='partial' and len(p['courses'])==3
+    assert p['curriculum_status']=='partial' and len(p['courses'])==10
     rules={r['id']:r for r in p['requirements']}
     pathway=rules[m.PID+'-coll-transfer-pathways']['summary']
     assert 'Passport retains all three' in pathway

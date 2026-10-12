@@ -40,10 +40,10 @@ def test_current_public_source_cache_when_available(key):
 
 def test_integrated_policies_preserve_unresolved_identity_and_partial_scope():
     p=json.loads(Path('data/programs',m.PID+'.json').read_text());db.validate_program(p)
-    assert p['curriculum_status']=='partial' and len(p['courses'])==3
-    assert all(c['credit_unit']=='unknown' for c in p['courses'])
+    assert p['curriculum_status']=='partial' and len(p['courses'])==10
+    assert next(c for c in p['courses'] if c['code']=='DATA 305')['credit_unit']=='unknown'
     profile=requirement_profile(p)
-    assert profile['required']['count']==3 and profile['options']['count']==0
+    assert profile['required']['count']==7 and profile['options']['count']==2
     rules={r['id']:r for r in p['requirements']}
     assert 'CDSP' in rules[m.PID+'-public-passfail-eligibility']['summary']
     assert 'major/minor' in rules[m.PID+'-public-passfail-exclusions']['summary'].lower()
@@ -51,6 +51,6 @@ def test_integrated_policies_preserve_unresolved_identity_and_partial_scope():
     ledger=json.loads(Path('research/degree-audit/national-degree-batch.json').read_text())
     entry=next(r for r in ledger['programs'] if r['program_id']==m.PID)
     assert entry['status']=='blocked'
-    assert entry['expected_profile']['required']['count']==3
+    assert entry['expected_profile']['required']['count']==7
     assert any(s['url']=='https://catalog.wm.edu/' and s['access_status']=='inaccessible' for s in entry['sources'])
     assert any('DATA' in b['issue'] or 'identity' in b['issue'] for b in entry['blockers'])

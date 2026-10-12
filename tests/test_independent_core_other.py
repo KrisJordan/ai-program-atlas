@@ -47,7 +47,9 @@ def test_unavailable_sources_are_not_certified_as_zero():
     assert len(stevens['expected_course_ids']['required']) == 24
     assert not stevens['full_degree_verified']
     # GE and other broad pools were deliberately not source-reviewed here.
-    assert all(e['expected_course_ids']['unresolved'] is None for e in by.values())
+    assert all(e['expected_course_ids']['unresolved'] is None for pid, e in by.items()
+               if pid != 'william-mary-applied-ai-ba')
+    assert by['william-mary-applied-ai-ba']['expected_course_ids']['unresolved'] == ['wm-applied-ai-data-305']
     assert all(e['expected_profile']['options'] is None or
                e['expected_profile']['options']['categories'] is None for e in by.values())
 

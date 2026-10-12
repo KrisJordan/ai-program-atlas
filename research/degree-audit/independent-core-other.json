@@ -2106,98 +2106,81 @@
     },
     {
       "program_id": "william-mary-applied-ai-ba",
-      "reviewed_at": "2026-10-11",
-      "reviewer": "university-core-followup-plan-conflicts / university_plan_conflicts",
-      "reviewed_content_hash": "e9ee129a34f1088b027047fce7a80ca6fa7010f8638f935a4024776a70fcf865",
+      "reviewed_at": "2026-10-12",
+      "reviewer": "catalog-primary-correction; independent re-review pending",
+      "reviewed_content_hash": "98da5aea57b26c1ad1165d01ce5b2c9ca472b68487fe27e1de36d7d23fe7e084",
       "dimensions": {
         "fixed_requirements": {
           "status": "partial",
-          "summary": "Prior bounded finding retained: Available-source limit: the current department FAQ explicitly calls DATA201/202/305 core requirements normally taken at W&M, supporting the exact three mapped fixed identities. Its linked Example Pathway instead labels Designing AI Agents AAI301 and offers DATA202 or PHIL150 as an ethics choice. No source hierarchy, equivalence or complete approved major table resolves either conflict. The FAQ subset remains partial.",
+          "summary": "Primary catalog reread supersedes the prior three-course FAQ fixed subset. Seven explicit catalog core/capstone identities are mapped; DATA305 is contextual. Independent second pass of this revision remains pending.",
           "evidence": [
             {
-              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
-              "locator": "Curriculum / main degree requirements / explicitly named FAQ core"
-            },
-            {
-              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
-              "locator": "Entire Example Pathway: AAI301 Designing AI Agents and AI Ethics Course Options DATA202/PHIL150"
+              "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html",
+              "locator": "2026–2027 REQUIREMENTS tab; complete course table read in ordinary Chrome on 2026-10-12"
             }
           ],
           "limitations": [
-            "Example Pathway AAI301 versus FAQ DATA305 is unresolved; no rename/cross-list is inferred. Example ethics choice DATA202/PHIL150 versus FAQ core DATA202 is unresolved. Known catalog robots HTTP202 was not retried. The complete 30-credit major, capstone identity and additional fixed courses remain unverified.",
-            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+            "This is a new primary correction, not an independent re-certification. Other degree rules and new descriptions remain outside the reviewed table scope."
           ]
         },
         "choice_rules": {
           "status": "partial",
-          "summary": "Prior bounded finding retained: Reread the current FAQ substitution, independent-research and study-abroad approval rules and visually inspected the entire linked Example Pathway. The image gives two electives and examples of ethics/methods courses, without proving a closed approved pool or governing curriculum edition; those examples cannot add fixed courses or certify full option membership.",
+          "summary": "Primary catalog reread maps one DATA202/PHIL150 ethics choice and six elective credits with Applied AI attribute or advisor approval. The PHIL150 path differs by one credit from published total30. No fixed two-course elective load or closed pool is inferred.",
           "evidence": [
             {
-              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
-              "locator": "Actual requirement tables, alternative rows, branch footnotes and uncoded choice slots"
-            },
-            {
-              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png",
-              "locator": "Entire Example Pathway: ethics/methods alternatives and 2x Electives with Example Course Options"
+              "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html",
+              "locator": "2026–2027 REQUIREMENTS tab; complete course table read in ordinary Chrome on 2026-10-12"
             }
           ],
           "limitations": [
-            "DATA202/PHIL150 ethics choice and DATA305/AAI301 identity conflict have no published version hierarchy. Methods and elective examples are not exhaustive approved pools; no additional image-only course was promoted. Broad degree-wide policy/GE rules are outside this pass.",
-            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+            "This is a new primary correction, not an independent re-certification. Other degree rules and new descriptions remain outside the reviewed table scope."
           ]
         },
         "classification": {
           "status": "partial",
-          "summary": "Prior bounded finding retained: All three Fall 2026 registration descriptions were reread. DATA201 explicitly teaches AI modeling approaches, DATA305 RAG/prompt pipelines/agentic workflows, and DATA202 ethical/social interpretation. Their subject distribution is two AI/ML and one human context.",
+          "summary": "Existing PATH descriptions retain reviews for DATA201/202/305. Seven newly represented catalog records lack descriptions and remain unclassified; the previously reviewed three-course subject totals no longer describe the fixed set.",
           "evidence": [
             {
-              "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
-              "locator": "Current actual course descriptions; fixed-category total where independently checked"
-            },
-            {
-              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12601",
-              "locator": "DATA 201 Fall 2026 Catalog Description and Registration Restrictions"
-            },
-            {
-              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12361",
-              "locator": "DATA 202 Fall 2026 Catalog Description and Registration Restrictions"
-            },
-            {
-              "url": "https://registration.wm.edu/?details&srcdb=202710&crn=13505",
-              "locator": "DATA 305 Fall 2026 Catalog Description and Registration Restrictions"
+              "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html",
+              "locator": "2026–2027 REQUIREMENTS tab; complete course table read in ordinary Chrome on 2026-10-12"
             }
           ],
           "limitations": [
-            "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass.",
-            "This follow-up checks new public planning/governance alternatives; earlier identity/category conclusions remain attributed to the prior review and are not newly certified by these alternatives."
+            "This is a new primary correction, not an independent re-certification. Other degree rules and new descriptions remain outside the reviewed table scope."
           ]
         }
       },
       "expected_course_ids": {
         "required": [
+          "wm-applied-ai-aai-101",
+          "wm-applied-ai-aai-301",
           "wm-applied-ai-data-201",
-          "wm-applied-ai-data-202",
-          "wm-applied-ai-data-305"
+          "wm-applied-ai-data-210",
+          "wm-applied-ai-data-303",
+          "wm-applied-ai-data-405",
+          "wm-applied-ai-aai-302"
         ],
-        "options": null,
-        "unresolved": null
+        "options": [
+          "wm-applied-ai-data-202",
+          "wm-applied-ai-phil-150"
+        ],
+        "unresolved": [
+          "wm-applied-ai-data-305"
+        ]
       },
       "expected_profile": {
         "required": {
-          "count": 3,
-          "categories": {
-            "foundations": 0,
-            "mathematics": 0,
-            "ai_ml": 2,
-            "systems": 0,
-            "human_context": 1,
-            "applications": 0,
-            "electives": 0,
-            "other": 0
-          }
+          "count": 7,
+          "categories": null
         },
-        "options": null,
-        "unresolved": null
+        "options": {
+          "count": 2,
+          "categories": null
+        },
+        "unresolved": {
+          "count": 1,
+          "categories": null
+        }
       },
       "source_captures": [
         {
@@ -2231,11 +2214,11 @@
           "electives": 0,
           "other": 0
         },
-        "role_membership_verified": "FAQ subset only; full major unresolved"
+        "role_membership_verified": "Prior PATH subjects retained; DATA201 fixed, DATA202 option, DATA305 context under new catalog graph."
       },
       "prior_review_file": "research/degree-audit/independent-resolution-usf-wm.json",
       "prior_identity_and_category_review_retained": true,
-      "resolution_outcome": "unresolved_after_new_permitted_public_links",
+      "resolution_outcome": "governing_2026_27_major_table_read_primary_correction_pending_independent_review",
       "followup_sources": [
         {
           "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
@@ -2317,11 +2300,11 @@
         }
       ],
       "hierarchy_and_version": {
-        "established": "Published bylaws assign school requirements to voting faculty, subject to university policy/approval; Undergraduate Studies committee has delegated catalog/routine requirement-change authority. Bylaws revised by faculty2026-03-02 and approved by Board2026-04-24.",
-        "not_established": "No adopted Applied AI table, change decision or effective cohort resolves DATA305 versus AAI301 or fixed DATA202 versus DATA202/PHIL150. Generic worksheet Rev8/2025 is not the major version.",
-        "governing_inventory_verified": false
+        "established": "Readable 2026–2027 catalog major table now establishes this version’s fixed and choice membership.",
+        "not_established": "No DATA305/AAI301 equivalence, earlier cohort applicability or PHIL150 credit adjustment is stated.",
+        "governing_inventory_verified": true
       },
-      "next_evidence_needed": "A permitted published approved major table or dated course-change decision with entry-cohort applicability resolving both code/ethics conflicts and complete capstone/methods/elective rules."
+      "next_evidence_needed": "Independent review of corrected graph; other BA policy and individual descriptions; version/equivalence and PHIL150 credit-total qualification."
     }
   ],
   "audit_date": "2026-10-11",

@@ -45,7 +45,7 @@ def test_integrated_policy_preserves_conflicts_and_conditional_scope():
     p = json.loads(Path('data/programs',m.PID+'.json').read_text());db.validate_program(p)
     assert p['curriculum_status'] == 'partial'
     assert p['institution']['calendar'] == 'semester'
-    assert all(c['credit_unit']=='unknown' for c in p['courses'])
+    assert next(c for c in p['courses'] if c['code']=='DATA 305')['credit_unit']=='unknown'
     rules = {r['id']: r for r in p['requirements']}
     assert '2.0 overall' in rules[m.PID+'-standing-continuance-degree']['summary']
     assert 'Only admitted or approved FlexTrack' in rules[m.PID+'-standing-flex-route']['summary']
@@ -53,5 +53,5 @@ def test_integrated_policy_preserves_conflicts_and_conditional_scope():
     assert 'applicability remains unresolved' in rules[m.PID+'-standing-probation-qualification']['summary']
     ledger=json.loads(Path('research/degree-audit/national-degree-batch.json').read_text())
     e=next(x for x in ledger['programs'] if x['program_id']==m.PID)
-    assert e['status']=='blocked' and e['expected_profile']['required']['count']==3
-    assert 'no accessible description backlog' in e['correction_status']
+    assert e['status']=='blocked' and e['expected_profile']['required']['count']==7
+    assert 'full-degree and independent second pass remain incomplete' in e['correction_status']

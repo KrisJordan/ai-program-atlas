@@ -21,6 +21,11 @@ def test_complete_rows_pin_resolved_facts_and_preserve_prior_bounded_sets(pid):
     prior = next(p for p in json.loads((ROOT / row['prior_review_file']).read_text())['programs']
                  if p['program_id'] == pid)
     validate_core_review(row, pid)
+    if row.get('superseded_by'):
+        assert (ROOT / row['superseded_by']).exists()
+        assert program['catalog_year'] == '2026-2027'
+        assert row['expected_course_ids'] == prior['expected_course_ids']
+        return  # retain prior evidence; current correction has separate graph tests
     assert core_review_fingerprint(program) == row['reviewed_content_hash']
     actual = requirement_profile(program, include_course_ids=True)
     check_expectations(row['expected_profile'], actual, pid, 'Plan-conflict proposal')

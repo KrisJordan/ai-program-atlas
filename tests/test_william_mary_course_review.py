@@ -40,14 +40,15 @@ def test_actual_rendered_panels_when_available():
 def test_reviewed_three_course_scope_does_not_resolve_degree_identity():
     p=json.loads(Path('data/programs',m.PID+'.json').read_text());db.validate_program(p)
     c={c['code']:c for c in p['courses']}
-    assert len(c)==3 and p['curriculum_status']=='partial'
-    assert {k:v['category'] for k,v in c.items()}=={'DATA 201':'ai_ml','DATA 202':'human_context','DATA 305':'ai_ml'}
-    assert all(v['credits']==3 and v['credit_unit']=='unknown' for v in c.values())
-    assert all(v['category_review']['status']=='reviewed' for v in c.values())
+    assert len(c)==10 and p['curriculum_status']=='partial'
+    assert {k:c[k]['category'] for k in ['DATA 201','DATA 202','DATA 305']}=={'DATA 201':'ai_ml','DATA 202':'human_context','DATA 305':'ai_ml'}
+    assert all(c[k]['credits']==3 for k in ['DATA 201','DATA 202','DATA 305'])
+    assert c['DATA 305']['credit_unit']=='unknown'
+    assert all(c[k]['category_review']['status']=='reviewed' for k in ['DATA 201','DATA 202','DATA 305'])
     assert 'minimum grade of D-' in c['DATA 305']['prerequisites']
     assert 'Prerequisite' not in c['DATA 202']['prerequisites']
     assert p['first_offered'] is None
     assert any('AAI 301' in x for x in p['curriculum_audit']['unresolved_requirements'])
     profile=requirement_profile(p)
-    assert profile['required']['categories']['ai_ml']==2
-    assert profile['required']['categories']['human_context']==1
+    assert profile['required']['categories']['ai_ml']==1
+    assert profile['options']['categories']['human_context']==1

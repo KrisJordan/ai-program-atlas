@@ -13,12 +13,17 @@
   "hosting_unit": null,
   "status": "unknown",
   "first_offered": null,
-  "overview": "A 30-credit Applied Artificial Intelligence major awarding a BA in Interdisciplinary Studies. The department emphasizes responsible AI workflows and professional project work. Major and full-degree requirements remain partially mapped.",
-  "catalog_year": null,
+  "overview": "A BA in Interdisciplinary Studies with a 30-credit Applied Artificial Intelligence major. The 2026–2027 catalog lists seven fixed core/capstone courses, one ethics alternative and six credits of Applied AI or advisor-approved electives; the full BA requires at least 120 credits.",
+  "catalog_year": "2026-2027",
   "verification_status": "confirmed",
-  "last_verified": "2026-10-11",
+  "last_verified": "2026-10-12",
   "curriculum_status": "partial",
   "links": [
+    {
+      "kind": "catalog",
+      "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html#requirementstext",
+      "label": "Official 2026–2027 major requirements"
+    },
     {
       "kind": "overview",
       "url": "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
@@ -305,6 +310,16 @@
       "catalog_year": null,
       "locator": "Current public undergraduate How to Declare Your Major; full applicable policy text reviewed",
       "confidence": "high"
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html",
+      "title": "Applied Artificial Intelligence (BA in Interdisciplinary Studies)",
+      "fetched_at": "2026-10-12",
+      "source_date": null,
+      "catalog_year": "2026-2027",
+      "locator": "Ordinary Chrome rendered REQUIREMENTS tab; complete Core Courses table including inline ethics OR, Capstone, Electives and Total Hours; edition header",
+      "confidence": "high"
     }
   ],
   "outcomes": [
@@ -317,16 +332,66 @@
   ],
   "courses": [
     {
+      "id": "wm-applied-ai-aai-101",
+      "code": "AAI 101",
+      "name": "Reasoning with GenAI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "url": "https://catalog.wm.edu/search/?P=AAI%20101",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-12",
+        "source_ids": [
+          "william-mary-applied-ai-ba-catalog-2026-27"
+        ],
+        "locator": "2026–2027 major course table: AAI 101",
+        "rationale": "The requirements table supplies title and credits, not a description sufficient to determine primary learning activity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "wm-applied-ai-aai-301",
+      "code": "AAI 301",
+      "name": "Designing AI Agents",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "url": "https://catalog.wm.edu/search/?P=AAI%20301",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-12",
+        "source_ids": [
+          "william-mary-applied-ai-ba-catalog-2026-27"
+        ],
+        "locator": "2026–2027 major course table: AAI 301",
+        "rationale": "The requirements table supplies title and credits, not a description sufficient to determine primary learning activity.",
+        "candidate_categories": []
+      }
+    },
+    {
       "id": "wm-applied-ai-data-201",
       "code": "DATA 201",
       "name": "Data in the Age of AI",
       "description": "Fall 2026 public course listing: Introduces major AI approaches and evaluates which questions they can answer, emphasizing data quality, generative-tool risks, transparent analysis and complementary model behavior.",
       "prerequisites": "Prerequisites: CSCI 140, 141, minimum score of 1 in 'CSCI 141 Equivalent', DATA 141, 101 or AAI 101. A minimum grade of D- is required in CSCI 140, CSCI 141, DATA 141, DATA 101 and AAI 101. Enrollment is limited to International Honours, Undergraduate or VCCS/RB Co-Enroll Articulation level students.",
       "credits": 3,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "ai_ml",
-      "source_id": "william-mary-applied-ai-ba-path-data-201",
-      "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12601",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "url": "https://catalog.wm.edu/search/?P=DATA%20201",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -339,7 +404,10 @@
         "locator": "Fall2026 public PATH course-detail panel; exact code/section/description/registration restrictions",
         "rationale": "The actual description centers on AI approaches, modeling frameworks, appropriate strategy selection and failure modes, rather than generic programming or an inferred subject from the DATA prefix.",
         "candidate_categories": []
-      }
+      },
+      "notes": [
+        "Description and registration restrictions retain separately reviewed Fall 2026 PATH section evidence; catalog supplies current course title, major membership and credit hours. Section-specific restrictions do not add degree obligations."
+      ]
     },
     {
       "id": "wm-applied-ai-data-202",
@@ -348,10 +416,10 @@
       "description": "Fall 2026 public course listing: Examines ethical, legal, historical and social issues in data and AI, including privacy, discrimination, transparency, responsibility, research practice and system deployment.",
       "prerequisites": "Enrollment is limited to International Honours, Undergraduate or VCCS/RB Co-Enroll Articulation level students.",
       "credits": 3,
-      "credit_unit": "unknown",
+      "credit_unit": "semester_hours",
       "category": "human_context",
-      "source_id": "william-mary-applied-ai-ba-path-data-202",
-      "url": "https://registration.wm.edu/?details&srcdb=202710&crn=12361",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "url": "https://catalog.wm.edu/search/?P=DATA%20202",
       "public_site": null,
       "syllabus": null,
       "category_review": {
@@ -363,6 +431,134 @@
         ],
         "locator": "Fall2026 public PATH course-detail panel; exact code/section/description/registration restrictions",
         "rationale": "The full course description centers ethical and social analysis of AI/data systems; it does not become technical AI merely because AI is its object.",
+        "candidate_categories": []
+      },
+      "notes": [
+        "Description and registration restrictions retain separately reviewed Fall 2026 PATH section evidence; catalog supplies current course title, major membership and credit hours. Section-specific restrictions do not add degree obligations."
+      ]
+    },
+    {
+      "id": "wm-applied-ai-phil-150",
+      "code": "PHIL 150",
+      "name": "Philosophy of Technology",
+      "description": null,
+      "prerequisites": null,
+      "credits": 4,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "url": "https://catalog.wm.edu/search/?P=PHIL%20150",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-12",
+        "source_ids": [
+          "william-mary-applied-ai-ba-catalog-2026-27"
+        ],
+        "locator": "2026–2027 major course table: PHIL 150",
+        "rationale": "The requirements table supplies title and credits, not a description sufficient to determine primary learning activity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "wm-applied-ai-data-210",
+      "code": "DATA 210",
+      "name": "Research Design and Statistics",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "url": "https://catalog.wm.edu/search/?P=DATA%20210",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-12",
+        "source_ids": [
+          "william-mary-applied-ai-ba-catalog-2026-27"
+        ],
+        "locator": "2026–2027 major course table: DATA 210",
+        "rationale": "The requirements table supplies title and credits, not a description sufficient to determine primary learning activity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "wm-applied-ai-data-303",
+      "code": "DATA 303",
+      "name": "Data Visualization",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "url": "https://catalog.wm.edu/search/?P=DATA%20303",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-12",
+        "source_ids": [
+          "william-mary-applied-ai-ba-catalog-2026-27"
+        ],
+        "locator": "2026–2027 major course table: DATA 303",
+        "rationale": "The requirements table supplies title and credits, not a description sufficient to determine primary learning activity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "wm-applied-ai-data-405",
+      "code": "DATA 405",
+      "name": "Trustworthy AI",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "url": "https://catalog.wm.edu/search/?P=DATA%20405",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-12",
+        "source_ids": [
+          "william-mary-applied-ai-ba-catalog-2026-27"
+        ],
+        "locator": "2026–2027 major course table: DATA 405",
+        "rationale": "The requirements table supplies title and credits, not a description sufficient to determine primary learning activity.",
+        "candidate_categories": []
+      }
+    },
+    {
+      "id": "wm-applied-ai-aai-302",
+      "code": "AAI 302",
+      "name": "Agentic Coordination",
+      "description": null,
+      "prerequisites": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "url": "https://catalog.wm.edu/search/?P=AAI%20302",
+      "public_site": null,
+      "syllabus": null,
+      "category_review": {
+        "status": "unclassified",
+        "taxonomy_version": "1",
+        "reviewed_at": "2026-10-12",
+        "source_ids": [
+          "william-mary-applied-ai-ba-catalog-2026-27"
+        ],
+        "locator": "2026–2027 major course table: AAI 302",
+        "rationale": "The requirements table supplies title and credits, not a description sufficient to determine primary learning activity.",
         "candidate_categories": []
       }
     },
@@ -389,10 +585,184 @@
         "locator": "Fall2026 public PATH course-detail panel; exact code/section/description/registration restrictions",
         "rationale": "The actual description explicitly teaches construction and evaluation of generative-AI agent workflows and tools. Its technical AI subject is now supported by content, not the short title alone.",
         "candidate_categories": []
-      }
+      },
+      "notes": [
+        "Not a fixed course in the 2026–2027 major table. The undated department residency FAQ and Fall 2026 registration listing name DATA 305; catalog requires AAI 301 instead. No cross-code equivalence or substitution is established."
+      ]
     }
   ],
   "requirements": [
+    {
+      "id": "william-mary-applied-ai-ba-catalog-major",
+      "parent_id": null,
+      "title": "Applied AI major (2026–2027)",
+      "kind": "all",
+      "count": null,
+      "credits": 30,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Published major total; core, capstone and elective rules below are parts of this total.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-degree-total",
+      "parent_id": null,
+      "title": "Minimum credits for the BA degree",
+      "kind": "note",
+      "count": null,
+      "credits": 120,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Degree minimum, including the major and other degree requirements. Not an additional major credit requirement.",
+      "course_ids": []
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-aai-101",
+      "parent_id": "william-mary-applied-ai-ba-catalog-major",
+      "title": "Reasoning with GenAI",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Reasoning with GenAI",
+      "course_ids": [
+        "wm-applied-ai-aai-101"
+      ]
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-aai-301",
+      "parent_id": "william-mary-applied-ai-ba-catalog-major",
+      "title": "Designing AI Agents",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Designing AI Agents",
+      "course_ids": [
+        "wm-applied-ai-aai-301"
+      ]
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-data-201",
+      "parent_id": "william-mary-applied-ai-ba-catalog-major",
+      "title": "Data in the Age of AI",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Data in the Age of AI",
+      "course_ids": [
+        "wm-applied-ai-data-201"
+      ]
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-data-202",
+      "parent_id": "william-mary-applied-ai-ba-catalog-major",
+      "title": "Ethics course alternatives",
+      "kind": "choose_courses",
+      "count": 1,
+      "credits": null,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Choose one of the listed courses; their credit amounts differ.",
+      "course_ids": [
+        "wm-applied-ai-data-202",
+        "wm-applied-ai-phil-150"
+      ]
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-data-210",
+      "parent_id": "william-mary-applied-ai-ba-catalog-major",
+      "title": "Research Design and Statistics",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Research Design and Statistics",
+      "course_ids": [
+        "wm-applied-ai-data-210"
+      ]
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-data-303",
+      "parent_id": "william-mary-applied-ai-ba-catalog-major",
+      "title": "Data Visualization",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Data Visualization",
+      "course_ids": [
+        "wm-applied-ai-data-303"
+      ]
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-data-405",
+      "parent_id": "william-mary-applied-ai-ba-catalog-major",
+      "title": "Trustworthy AI",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Trustworthy AI",
+      "course_ids": [
+        "wm-applied-ai-data-405"
+      ]
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-aai-302",
+      "parent_id": "william-mary-applied-ai-ba-catalog-major",
+      "title": "Capstone: Agentic Coordination",
+      "kind": "all",
+      "count": null,
+      "credits": 3,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Capstone: Agentic Coordination",
+      "course_ids": [
+        "wm-applied-ai-aai-302"
+      ]
+    },
+    {
+      "id": "william-mary-applied-ai-ba-catalog-electives",
+      "parent_id": "william-mary-applied-ai-ba-catalog-major",
+      "title": "Applied AI or advisor-approved electives",
+      "kind": "choose_credits",
+      "count": null,
+      "credits": 6,
+      "credit_unit": "semester_hours",
+      "category": "other",
+      "source_id": "william-mary-applied-ai-ba-catalog-2026-27",
+      "source_text": null,
+      "summary": "Students will select six credits from courses that carry the Applied AI attribute, or approved courses in other disciplines identified in consultation with the students advisor.",
+      "course_ids": []
+    },
     {
       "id": "william-mary-applied-ai-ba-major-credits",
       "parent_id": null,
@@ -404,21 +774,21 @@
       "category": "other",
       "source_id": "william-mary-applied-ai-ba-identity",
       "source_text": null,
-      "summary": "The department describes a 30-credit undergraduate major. This is the major total, not the complete BA degree total.",
+      "summary": "Undated department corroborates a 30-credit major; the separately mapped catalog major total governs this source version. Do not add the two totals.",
       "course_ids": []
     },
     {
       "id": "william-mary-applied-ai-ba-observed-core",
       "parent_id": null,
-      "title": "Core courses named in residency policy",
-      "kind": "all",
+      "title": "Department FAQ residency context (conflicts with catalog)",
+      "kind": "note",
       "count": null,
       "credits": null,
       "credit_unit": "unknown",
       "category": "other",
       "source_id": "william-mary-applied-ai-ba-identity",
       "source_text": null,
-      "summary": "The FAQ explicitly names these core courses. This is an incomplete inventory; DATA 305 conflicts with AAI 301 in the linked example pathway.",
+      "summary": "Undated FAQ names DATA 201/202/305 for residence. The 2026–2027 catalog fixes AAI 301 rather than DATA 305 and allows DATA 202 or PHIL 150. This context is not an additional fixed requirement.",
       "course_ids": [
         "wm-applied-ai-data-201",
         "wm-applied-ai-data-202",
@@ -1057,11 +1427,12 @@
     }
   ],
   "notes": [
-    "Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding.",
+    "2026-10-12 catalog correction: DATA 305 is contextual, AAI 301 is required, and DATA 202/PHIL 150 are alternatives. The catalog publishes Total Hours 30; seven 3-credit fixed courses plus DATA 202 (3) and six elective credits total 30, while the PHIL 150 (4) route totals 31. Preserve the published 30 and individual credits without inventing a waiver. No concentration is specified on this major requirements page.",
+    "Historical 2026-10-11 observation, superseded for current catalog major membership: Curriculum evidence reviewed on 2026-10-10. The official catalog returned a JavaScript/robot challenge; no access restriction was bypassed. Department sources support the observations below, but a full catalog audit remains outstanding.",
     "Published credits remain in source units (unknown normalized unit). Actual Fall 2026 credits, descriptions and restrictions are separately sourced, and the public normal-progress policy explicitly establishes a semester calendar. Syllabi and normalized credit unit remain unknown.",
-    "The linked example pathway names AAI 101, AAI 301, AAI 302, DATA 201, DATA 405 and DATA 303, plus ethics and methods alternatives and two elective slots. These have not been promoted into a complete required-course inventory because the pathway is illustrative and conflicts with the FAQ on Designing AI Agents.",
-    "The example pathway lists DATA 202 or PHIL 150 for ethics; its methods and elective options are explicitly examples, so they are not treated as exhaustive approved pools.",
-    "Public policy review 2026-10-11: Registrar declaration PDFs are also linked from current advising pages and departmental resources. Printed month-only revisions are retained in source locators; no day or effective catalog year is invented. The known catalog challenge was not retried. PDF text is manually reviewed evidence, not supported by the ordinary text-only HTTP scrape path.",
+    "Historical 2026-10-11 observation, superseded for current catalog major membership: The linked example pathway names AAI 101, AAI 301, AAI 302, DATA 201, DATA 405 and DATA 303, plus ethics and methods alternatives and two elective slots. These have not been promoted into a complete required-course inventory because the pathway is illustrative and conflicts with the FAQ on Designing AI Agents.",
+    "Historical 2026-10-11 observation, superseded for current catalog major membership: The example pathway lists DATA 202 or PHIL 150 for ethics; its methods and elective options are explicitly examples, so they are not treated as exhaustive approved pools.",
+    "Historical 2026-10-11 observation, superseded for current catalog major membership: Public policy review 2026-10-11: Registrar declaration PDFs are also linked from current advising pages and departmental resources. Printed month-only revisions are retained in source locators; no day or effective catalog year is invented. The known catalog challenge was not retried. PDF text is manually reviewed evidence, not supported by the ordinary text-only HTTP scrape path.",
     "Current public registrar pass/fail policy explicitly includes CDSP and excludes required major/proficiency/COLL courses unless intrinsically pass/fail. Fall 2025 repeat examples qualify the generic repeat-count sentence. Public policy observations do not resolve the department DATA305/AAI301 conflict or certify full BA requirements.",
     "Public COLL guide applies across undergraduate schools. Eleven new open-criteria/conditional notes preserve distributions, proficiency alternatives, allowed/disallowed overlaps and distinct transfer pathways. Published credit amounts are preserved in prose while normalized unit remains unknown. No named course inventory or satisfied student exemption is invented.",
     "DATA 201 FAQ label: Intro to Data Science; Fall2026 public section label: Data in the Age of AI. Exact code retained with term-qualified metadata; no cross-code equivalence or historical title-change date inferred.",
@@ -1070,7 +1441,7 @@
   ],
   "curriculum_audit": {
     "scope": "degree",
-    "reviewed_at": "2026-10-11",
+    "reviewed_at": "2026-10-12",
     "source_ids": [
       "william-mary-applied-ai-ba-identity",
       "william-mary-applied-ai-ba-declaration",
@@ -1098,7 +1469,8 @@
       "william-mary-applied-ai-ba-standing-flex",
       "william-mary-applied-ai-ba-standing-active-duty",
       "william-mary-applied-ai-ba-standing-glossary",
-      "william-mary-applied-ai-ba-standing-majordeclare"
+      "william-mary-applied-ai-ba-standing-majordeclare",
+      "william-mary-applied-ai-ba-catalog-2026-27"
     ],
     "sections": [
       "30-credit major total and BA award",
@@ -1111,17 +1483,18 @@
       "Current public registrar pass/fail, post-matriculation transfer, Fall 2025 repeat, graduation application; university-wide academic exceptions; study-abroad academic credit/grade/approval policies. CDSP explicitly included by current full pass/fail policy.",
       "COLL universal undergraduate scope, full public planning guide, other requirements and incoming-transfer pathway tables; six individual COLL pages independently corroborated scope/designation, not a finite course pool.",
       "Three actual Fall2026 publicly rendered PATH course panels read; explicit description, three-credit amount, grade mode and registration restrictions for DATA201/202/305. These observations do not resolve DATA305/AAI301 degree-plan applicability.",
-      "Public graduation 120-credit and 2.0 overall/major GPA minima; complete full-time continuance table; GPA calculation; probation/suspension discrepancies; four-year pacing and semester calendar; conditional FlexTrack and active-duty rules; glossary catalog-version distinction and major declaration threshold."
+      "Public graduation 120-credit and 2.0 overall/major GPA minima; complete full-time continuance table; GPA calculation; probation/suspension discrepancies; four-year pacing and semester calendar; conditional FlexTrack and active-duty rules; glossary catalog-version distinction and major declaration threshold.",
+      "Complete rendered 2026–2027 major table: seven fixed courses, DATA202 OR PHIL150, AAI302 capstone, six-credit open approval rule, 30 major/120 degree credit statements."
     ],
     "unresolved_requirements": [
-      "Resolve DATA 305 (FAQ and actual Fall 2026 section) versus AAI 301 (example pathway) for Designing AI Agents; no source-stated version relationship.",
-      "Map complete major including methods, ethics and elective alternatives and capstone eligibility; department graphic is explicitly illustrative, not an exhaustive approved inventory.",
-      "Current Registrar explicitly links the 2026–27 catalog, whose robots endpoint returned HTTP 202 before content retrieval. The complete applicable BA requirements, detailed residency/time limits and normalized credit-unit definition remain unverified. No alternate catalog/PDF route was attempted.",
+      "Catalog AAI 301 and department/PATH DATA 305 share a title but no published equivalence or effective rename is established; only AAI 301 belongs to this catalog fixed set.",
+      "Catalog states 30 major hours, while its PHIL 150 four-credit alternative yields a 31-credit route. No waiver or substitution credit adjustment is stated.",
+      "Other degree requirements, residency/time limits and student-specific matriculation/declaration catalog applicability still require full governing BA policy review.",
       "Public transfer table says three or four high-school language years while general planning guide specifies four. Exact exemption/cohort applicability is unresolved.",
       "Public continuance page permits an approved underload, ASPIRE or THRIVE and two compliant probation semesters; separate probation page specifies at least 12 credits, ASPIRE and a possible discretionary second semester. Exact applicability/precedence is not published in the inspected sources."
     ],
     "metadata_gaps": [
-      "All three represented FAQ courses now have actual Fall 2026 descriptions and section restrictions plus published 3-credit amounts. Normalized credit unit, public syllabi and instructional sites remain unknown. No full major option inventory or program outcomes/date inferred from these three sections."
+      "Seven new catalog course records lack reviewed descriptions/prerequisites; the three existing PATH descriptions retain their term-specific provenance. The Applied AI attribute pool is not enumerated here; advisor-approved other-discipline electives are an open choice. Public instructional sites and syllabi remain unverified."
     ]
   }
 }

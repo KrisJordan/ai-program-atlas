@@ -14796,43 +14796,56 @@
           "locator": "Actual linked reinstatement URL returned HTTP 404; public suspension page independently supplies return conditions",
           "checked_at": "2026-10-11",
           "access_status": "inaccessible"
+        },
+        {
+          "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html",
+          "catalog_year": "2026-2027",
+          "locator": "Complete rendered REQUIREMENTS tab course table and edition header",
+          "checked_at": "2026-10-12",
+          "access_status": "readable_ordinary_chrome"
         }
       ],
       "checks": {
         "degree_identity": "Explicit BA in Interdisciplinary Studies with Applied Artificial Intelligence major. 30 credits describe the major only, not the whole BA.",
-        "required_and_choices": "FAQ names DATA201/202/305 as core taken at W&M. Linked example pathway labels Designing AI Agents AAI301 instead of DATA305 and offers DATA202/PHIL150 ethics alternatives. No equivalence, supersession or effective year is stated; preserve conflict rather than silently reconciling.",
-        "elective_pools": "The linked graphic explicitly labels methods/elective examples and two elective slots. It is not an exhaustive approved list; named illustrative courses are not promoted into certified degree inventory.",
+        "required_and_choices": "2026–2027 catalog now maps seven fixed identities, ethics DATA202 OR PHIL150 and six elective credits; undated FAQ DATA305 is contextual. Prior three-course fixed inventory is superseded.",
+        "elective_pools": "Six credits of Applied AI attribute courses OR advisor-approved other disciplines; no finite pool or mandatory two-course count stated.",
         "prerequisites": "Fall 2026 section-specific restrictions preserved verbatim. DATA201 lists CSCI140/141, equivalent-test score 1, DATA141/101 or AAI101 with D− minimum and undergraduate-level restrictions. Source comma/OR wording is not silently repaired. DATA305 requires DATA201 at D− or better. DATA202 has only level restriction in the inspected panel; no absence-of-prerequisite inference beyond that observation.",
-        "credits_and_units": "All three actual Fall 2026 section panels explicitly show 3 Credit Hours; normalized unit remains unknown. Their printed update timestamp is not a program launch or first-offering date. The independently reviewed public COLL page supplies 120-credit graduation overview; no totals computed from option breadth. Central continuance policy independently confirms 120 academic credits for graduation and normal-progress page explicitly establishes fall/spring semesters. This calendar does not normalize the unknown credit unit.",
-        "classification": "All three observed FAQ-code courses now have actual Fall 2026 PATH descriptions: DATA201 major AI approaches/model evaluation and DATA305 generative agent workflows are ai_ml; DATA202 ethics/social/historical analysis is human_context. Not a subject assignment from short titles or program association. Current section labels retained with historical FAQ labels noted; no AAI301 equivalence inferred.",
+        "credits_and_units": "Catalog30 major/120 degree minima; catalog credit hours use independently established semester calendar. PHIL150=4 versus DATA202=3 yields 31 versus30 route arithmetic; source total preserved.",
+        "classification": "Prior PATH classifications retained for DATA201/202/305; seven new catalog-only records stay unclassified pending descriptions.",
         "family_composition": "Standalone BA major; its stated ability to pair with another major does not establish a family or remove university-degree scope.",
         "degree_wide_requirements": "Public COLL, Registrar, Reves and advising sources now map the accessible degree-policy queue: 120 academic credits; 2.0 overall and major GPA; at least 60 W&M credits; COLL/proficiency distributions and transfer pathways; pass/fail exclusions; transfer and repeat rules; declarations, graduation application, exceptions, full-time continuance table, warning/probation, suspension, FlexTrack and active-duty conditions. Public general glossary distinguishes matriculation catalog for general education and declaration catalog for major requirements. Semester calendar is explicit. A ten-row continuance table is not inferred to establish a ten-semester deadline. Full major/capstone inventory, complete BA residency/time-limit details and credit-unit definition require unavailable current catalog evidence; source-specific language and probation differences remain unresolved."
       },
       "expected_profile": {
         "required": {
-          "count": 3,
-          "categories": {
-            "ai_ml": 2,
-            "human_context": 1
-          }
+          "count": 7,
+          "categories": null
         },
         "options": {
-          "count": 0,
-          "categories": {}
+          "count": 2,
+          "categories": null
         },
         "unresolved": {
-          "count": 0,
-          "categories": {}
+          "count": 1,
+          "categories": null
         }
       },
       "expected_course_ids": {
         "required": [
+          "wm-applied-ai-aai-101",
+          "wm-applied-ai-aai-301",
           "wm-applied-ai-data-201",
-          "wm-applied-ai-data-202",
-          "wm-applied-ai-data-305"
+          "wm-applied-ai-data-210",
+          "wm-applied-ai-data-303",
+          "wm-applied-ai-data-405",
+          "wm-applied-ai-aai-302"
         ],
-        "options": [],
-        "unresolved": []
+        "options": [
+          "wm-applied-ai-data-202",
+          "wm-applied-ai-phil-150"
+        ],
+        "unresolved": [
+          "wm-applied-ai-data-305"
+        ]
       },
       "discrepancies": [
         {
@@ -14862,43 +14875,39 @@
             "https://www.wm.edu/offices/advising/forstudents/academicpolicies/contfulltime/index.php",
             "https://www.wm.edu/offices/advising/forstudents/academicpolicies/probation/index.php"
           ]
+        },
+        {
+          "issue": "FAQ residence subset displayed as fixed major; AAI301 missing and DATA202 alternative lost.",
+          "correction": "Source-version catalog tree and separate department context, 7 fixed/2 options/1 contextual records.",
+          "status": "corrected",
+          "evidence_urls": [
+            "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html"
+          ]
         }
       ],
       "blockers": [
         {
-          "issue": "Authoritative department sources disagree on the agent-design course identity and do not specify which requirement version applies.",
-          "urls": [
-            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
-            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png"
-          ]
+          "issue": "Catalog AAI 301 and department/PATH DATA 305 share a title but no published equivalence or effective rename is established; only AAI 301 belongs to this catalog fixed set.",
+          "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html"
         },
         {
-          "issue": "Department source explicitly provides an example pathway, not the full major and university BA requirement inventory.",
-          "urls": [
-            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/",
-            "https://cdsp.wm.edu/data-science/degrees/ba_appliedai/ba_ai_coursework.png"
-          ]
+          "issue": "Catalog states 30 major hours, while its PHIL 150 four-credit alternative yields a 31-credit route. No waiver or substitution credit adjustment is stated.",
+          "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html"
         },
         {
-          "issue": "Current registrar explicitly links the 2026–2027 catalog; robots HTTP 202 prevents ordinary content retrieval. No course/PDF subroute attempted.",
-          "url": "https://catalog.wm.edu/"
+          "issue": "Other degree requirements, residency/time limits and student-specific matriculation/declaration catalog applicability still require full governing BA policy review.",
+          "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html"
         },
         {
-          "issue": "Public general planning guide specifies four high-school years in one language; incoming-transfer table abbreviates three or four. Exact exemption scope is unverified under the inaccessible current catalog.",
-          "urls": [
-            "https://www.wm.edu/as/undergraduate/coll/coll-planning-guide/index.php",
-            "https://www.wm.edu/as/undergraduate/coll/bor-transfer-students/index.php"
-          ]
+          "issue": "Public transfer table says three or four high-school language years while general planning guide specifies four. Exact exemption/cohort applicability is unresolved.",
+          "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html"
         },
         {
-          "issue": "Current continuance and separate probation pages differ on underload, intervention program and second-semester wording.",
-          "urls": [
-            "https://www.wm.edu/offices/advising/forstudents/academicpolicies/contfulltime/index.php",
-            "https://www.wm.edu/offices/advising/forstudents/academicpolicies/probation/index.php"
-          ]
+          "issue": "Public continuance page permits an approved underload, ASPIRE or THRIVE and two compliant probation semesters; separate probation page specifies at least 12 credits, ASPIRE and a possible discretionary second semester. Exact applicability/precedence is not published in the inspected sources.",
+          "url": "https://catalog.wm.edu/programs/applied-artificial-intelligence-ba-interdisciplinary-studies-cdsp/index.html"
         }
       ],
-      "correction_status": "Accessible identified policy queue is source-reviewed and mapped: 36 public conditional/open-criteria notes across 19 policy sources, plus prior declaration evidence; all three represented FAQ-course descriptions are reviewed. Primary audit blocked only by current catalog robots HTTP202, incomplete authoritative major inventory and source conflicts in course identity/language/probation applicability. Detailed BA residency/time limits and normalized credit units remain unavailable at that catalog boundary. Full independent second pass pending; no accessible description backlog for the three mapped records.",
+      "correction_status": "2026–2027 major graph corrected; full-degree and independent second pass remain incomplete",
       "second_pass_status": "pending"
     },
     {

@@ -18,6 +18,10 @@ ROWS = json.loads((ROOT / 'research/degree-audit/independent-resolution-usf-wm.j
 def test_complete_proposed_core_rows_match_resolved_facts(row):
     p = resolve_program(json.loads((ROOT / 'data/programs' / (row['program_id'] + '.json')).read_text()))
     validate_core_review(row, p['id'])
+    if row.get('superseded_by'):
+        assert (ROOT / row['superseded_by']).exists()
+        assert p['catalog_year'] == '2026-2027'
+        return  # historical source judgment intentionally no longer pins current facts
     assert core_review_fingerprint(p) == row['reviewed_content_hash']
     actual = requirement_profile(p, include_course_ids=True)
     check_expectations(row['expected_profile'], actual, p['id'], 'Proposed bounded core')
