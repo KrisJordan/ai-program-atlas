@@ -181,7 +181,7 @@ def shell(title, body, base, current="", payload=None):
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead"><a class="brand" href="{base}" aria-label="AI Program Atlas home"><span class="brand-mark" aria-hidden="true">A<span>i</span></span><span>AI Program Atlas<small>UNDERGRADUATE PROGRAM RESEARCH</small></span></a><nav aria-label="Main navigation">{nav}</nav></header>
 <main id="main">{body}</main>
-<footer><span>AI Program Atlas <span class="muted">/ An open research index</span></span><a href="{base}methodology/">Evidence before inference <span aria-hidden="true">↗</span></a><p>Programs change. Confirm requirements with the institution’s current official catalog.</p></footer>{script}</body></html>'''
+<footer><a href="{base}api/">JSON API</a><span>AI Program Atlas <span class="muted">/ An open research index</span></span><a href="{base}methodology/">Evidence before inference <span aria-hidden="true">↗</span></a><p>Programs change. Confirm requirements with the institution’s current official catalog.</p></footer>{script}</body></html>'''
 
 
 def badge(text, kind=""):
@@ -1034,7 +1034,9 @@ def build(data: dict, output: Path, base_path: str = '/ai-program-atlas/') -> No
     (output / 'assets').mkdir(parents=True, exist_ok=True)
     for asset in ('atlas.css', 'atlas.js', 'requirements.js'):
         shutil.copyfile(Path(__file__).parent / 'web' / asset, output / 'assets' / asset)
-    pages = {'index.html': root_page(data, base), 'coverage/index.html': coverage_page(data, base), 'methodology/index.html': methodology_page(data, base)}
+    from .static_api import build_api, documentation_body
+    build_api(data, output, base)
+    pages = {'api/index.html': shell('JSON API', documentation_body(data, base), base, 'api'), 'index.html': root_page(data, base), 'coverage/index.html': coverage_page(data, base), 'methodology/index.html': methodology_page(data, base)}
     family_map = {f['id']: dict(f) for f in data.get('families', [])}
     for family in family_map.values():
         family['_variant_labels'] = [(p['id'], (p.get('family') or {}).get('variant_label') or p.get('title')) for p in programs if p['id'] in family.get('variant_ids', [])]
