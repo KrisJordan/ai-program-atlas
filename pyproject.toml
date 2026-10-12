@@ -15,7 +15,12 @@ dependencies = [
 atlas = "atlas.cli:main"
 
 [dependency-groups]
-dev = ["pytest>=8,<10", "playwright>=1.50,<2", "ruff>=0.11,<1"]
+dev = [
+    "pytest>=8,<10",
+    "playwright>=1.50,<2",
+    "ruff>=0.11,<1",
+    "jsonschema>=4.23,<5",
+]
 
 [build-system]
 requires = ["hatchling"]
