@@ -180,7 +180,7 @@ def shell(title, body, base, current="", payload=None):
 <link rel="stylesheet" href="{asset_url(base, "atlas.css")}"></head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead"><a class="brand" href="{base}" aria-label="AI Program Atlas home"><span class="brand-mark" aria-hidden="true">A<span>i</span></span><span>AI Program Atlas<small>UNDERGRADUATE PROGRAM RESEARCH</small></span></a><nav aria-label="Main navigation">{nav}</nav></header>
-<main id="main">{body}</main>
+<main id="main" tabindex="-1">{body}</main>
 <footer><a href="{base}api/">JSON API</a><span>AI Program Atlas <span class="muted">/ An open research index</span></span><a href="{base}methodology/">Evidence before inference <span aria-hidden="true">↗</span></a><p>Programs change. Confirm requirements with the institution’s current official catalog.</p></footer>{script}</body></html>'''
 
 

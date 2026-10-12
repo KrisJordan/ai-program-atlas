@@ -70,3 +70,32 @@ GitHub Actions validates a fresh database reconstruction, runs unit/integration 
 CSRankings research context is imported for the five AI fields and aggregate, using the pinned September 28, 2026 snapshot and the project's 2016–2025 U.S. window. All eligible U.S. institutions are ranked before joining this roster. The original upstream JavaScript independently reproduced all 961 observed scores and ranks. Owner-confirmed educational permission, attribution, source hashes, field membership and distinct missingness states are recorded. Publication measures and U.S. News ranks are not undergraduate teaching-quality scores. See [methodology and permission](research/csrankings.md) and [reproducible importer](research/csrankings-integration.md).
 
 Robots matching, pacing and conservative access boundaries are documented in [HTTP policy](docs/HTTP_POLICY.md).
+
+## Static JSON API
+
+The footer links to `/ai-program-atlas/api/`. Every normal `atlas build` also generates
+`api/v1/dataset.json` (the complete public SQLite export), indexes, concrete detail files,
+program-scoped course/requirement arrays and conservative curriculum profiles. The existing
+`data.json` remains a byte-identical compatibility copy. No API server is required.
+
+Start with `api/v1/index.json` for downloads, counts, the API version and the SHA-256 digest
+of the canonical dataset. `api/v1/openapi.json` is an OpenAPI 3.1 contract with reusable
+schemas and real example paths; `api/v1/schema.json` validates the complete dataset.
+The checked-in `atlas/api_schema.json` describes public fields, including optional reviews,
+family provenance, uncertainty and ranking artifacts; builds never infer schemas from data.
+Preserve source units, nulls, program-local IDs and incomplete review labels when consuming it.
+Query strings do not filter these files. Missing paths return the static host's HTML 404.
+
+Rerun validation and preview with:
+
+```sh
+uv sync --frozen
+uv run pytest -q tests/test_static_api.py
+ATLAS_REQUIRE_BROWSER=1 uv run pytest -q tests/e2e/test_api_documentation.py
+uv run atlas build --base-path /ai-program-atlas/ --output var/site/ai-program-atlas
+uv run python -m http.server 8000 --directory var/site
+```
+
+If an environment's editable install does not resolve `atlas`, prefix commands with
+`PYTHONPATH=.`. Identical public data and base paths reproduce the API byte-for-byte;
+the manifest identifies content, while `v1` identifies a contract and is not an immutable archive.

@@ -388,7 +388,7 @@
               }
             },
             "dimensions": {
-              "$ref": "#/$defs/Record2"
+              "$ref": "#/$defs/CoreAuditDimensions"
             },
             "discrepancies": {
               "type": "array",
@@ -1203,7 +1203,7 @@
                   }
                 },
                 "dimensions": {
-                  "$ref": "#/$defs/Record2"
+                  "$ref": "#/$defs/CoreAuditDimensions"
                 },
                 "expected_course_ids": {
                   "type": "object",
@@ -2590,16 +2590,16 @@
                   "additionalProperties": true
                 },
                 "options": {
-                  "$ref": "#/$defs/Record1"
+                  "$ref": "#/$defs/CourseSetProfile"
                 },
                 "overlap_count": {
                   "type": "integer"
                 },
                 "required": {
-                  "$ref": "#/$defs/Record1"
+                  "$ref": "#/$defs/CourseSetProfile"
                 },
                 "unresolved": {
-                  "$ref": "#/$defs/Record1"
+                  "$ref": "#/$defs/CourseSetProfile"
                 },
                 "unresolved_group_count": {
                   "type": "integer"
@@ -3771,7 +3771,7 @@
                     }
                   },
                   "dimensions": {
-                    "$ref": "#/$defs/Record2"
+                    "$ref": "#/$defs/CoreAuditDimensions"
                   },
                   "discrepancies": {
                     "type": "array",
@@ -4722,7 +4722,7 @@
                         }
                       },
                       "dimensions": {
-                        "$ref": "#/$defs/Record2"
+                        "$ref": "#/$defs/CoreAuditDimensions"
                       },
                       "expected_course_ids": {
                         "type": "object",
@@ -6109,16 +6109,16 @@
                         "additionalProperties": true
                       },
                       "options": {
-                        "$ref": "#/$defs/Record1"
+                        "$ref": "#/$defs/CourseSetProfile"
                       },
                       "overlap_count": {
                         "type": "integer"
                       },
                       "required": {
-                        "$ref": "#/$defs/Record1"
+                        "$ref": "#/$defs/CourseSetProfile"
                       },
                       "unresolved": {
-                        "$ref": "#/$defs/Record1"
+                        "$ref": "#/$defs/CourseSetProfile"
                       },
                       "unresolved_group_count": {
                         "type": "integer"
@@ -7060,13 +7060,13 @@
           "additionalProperties": true
         },
         "options": {
-          "$ref": "#/$defs/Record1"
+          "$ref": "#/$defs/CourseSetProfile"
         },
         "overlap_count": {
           "type": "integer"
         },
         "required": {
-          "$ref": "#/$defs/Record1"
+          "$ref": "#/$defs/CourseSetProfile"
         },
         "required_obligations": {
           "type": "object",
@@ -7153,7 +7153,7 @@
           "additionalProperties": true
         },
         "unresolved": {
-          "$ref": "#/$defs/Record1"
+          "$ref": "#/$defs/CourseSetProfile"
         },
         "unresolved_group_count": {
           "type": "integer"
@@ -7224,7 +7224,7 @@
       },
       "additionalProperties": false
     },
-    "Record1": {
+    "CourseSetProfile": {
       "type": "object",
       "properties": {
         "categories": {
@@ -7284,7 +7284,7 @@
       },
       "additionalProperties": true
     },
-    "Record2": {
+    "CoreAuditDimensions": {
       "type": "object",
       "properties": {
         "choice_rules": {
