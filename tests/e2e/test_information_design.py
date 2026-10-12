@@ -139,6 +139,17 @@ def test_real_mit_domain_context_order_and_compact_outcomes(page,site,tmp_path,w
     assert page.locator('.outcomes .statement-text').first.evaluate('n=>getComputedStyle(n).display')=='inline'
     assert page.locator('#requirement-mit-ai-version-required > details > summary .requirement-rule').evaluate('n=>getComputedStyle(n).display')=='block'
     expect(page.locator('#requirement-mit-ai-version-required > details > .requirement-body > .requirement-tags')).to_have_count(0)
+    page.goto(site+'?compare=mit-ai-decision-making-bs#comparison')
+    comparison=page.locator('[data-comparison-requirements=mit-ai-decision-making-bs]')
+    centers=comparison.locator('[data-related-pool=mit-ai-v2025-centers]')
+    expect(centers.locator('.related-course-group h4')).to_have_text(['Data-centric','Model-centric','Decision-centric','Computation-centric','Human-centric'])
+    data_group=centers.locator('[data-related-requirement=mit-ai-v2025-overlay-data-centric]')
+    data_group.locator(':scope > summary').focus();page.keyboard.press('Enter')
+    course=data_group.locator('.requirement-course-details').first
+    course.locator(':scope > summary').focus();page.keyboard.press('Enter')
+    page.locator('#compare-profile').select_option('options')
+    expect(data_group).to_have_attribute('open','')
+    expect(course).to_have_attribute('open','')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
 
 

@@ -724,7 +724,7 @@ def requirement_tree(p, base="", matcher=None):
                 courses = [course_map[cid] for cid in dict.fromkeys(child.get('course_ids') or []) if cid in course_map]
                 conjunction = '<span class="related-route-rule">All ' + str(len(courses)) + ' courses in this option (AND)</span>' if len(courses) > 1 else ''
                 rows.append('<li class="related-option-route">' + conjunction + course_rows(courses, scope_id='reading-' + r['id'] + '-' + child['id']) + '</li>')
-            panels.append('<details ' + ('open' if depth + 1 < 2 else '') + ' class="related-course-group" data-related-requirement="' + esc(group['id']) + '"><summary><h4>' + esc(re.sub(r'\s+designation overlay$', '', group.get('title') or 'Course grouping')) + '</h4><span>' + str(len(rows)) + ' option routes</span><span class="related-group-rule">' + esc(group.get('summary') or 'Group rule has not been extracted; consult the recorded context.') + '</span></summary><ul class="related-option-routes">' + ''.join(rows) + '</ul><a class="related-group-context" href="#requirement-' + esc(group['id']) + '">Full recorded context →</a></details>')
+            panels.append('<details ' + ('open' if depth + 1 < 2 else '') + ' id="requirement-reading-' + esc(r['id']) + '-' + esc(group['id']) + '" class="related-course-group" data-related-requirement="' + esc(group['id']) + '"><summary><h4>' + esc(re.sub(r'\s+designation overlay$', '', group.get('title') or 'Course grouping')) + '</h4><span>' + str(len(rows)) + ' option routes</span><span class="related-group-rule">' + esc(group.get('summary') or 'Group rule has not been extracted; consult the recorded context.') + '</span></summary><ul class="related-option-routes">' + ''.join(rows) + '</ul><a class="related-group-context" href="#requirement-' + esc(group['id']) + '">Full recorded context →</a></details>')
         return '<section class="related-course-groups" data-related-pool="' + esc(r['id']) + '"><h4>Area / course groupings</h4><p>These same-source groups share complete option routes with this pool. Membership can overlap; this reading view adds no required slots. Follow each recorded group rule.</p>' + ''.join(panels) + '</section>'
 
     def render(r, seen, depth=0, scope=None):
@@ -804,7 +804,7 @@ def requirement_tree(p, base="", matcher=None):
         missing = '<p class="notice">Course records not available: ' + esc(', '.join(unknown_ids)) + '</p>' if unknown_ids else ''
         related = related_markup(r, depth)
         if related and child_markup:
-            child_markup = '<details class="requirement-option-pool"><summary>All published option routes (' + str(len(child_nodes)) + ')</summary>' + child_markup + '</details>'
+            child_markup = '<details id="requirement-pool-' + esc(rid) + '" class="requirement-option-pool"><summary>All published option routes (' + str(len(child_nodes)) + ')</summary>' + child_markup + '</details>'
         content = ('<div class="requirement-tags">' + tags + '</div>' if tags else '') + notes + wording + related + course_rows(courses, credits if single_identity else '', rid, evidence if single_identity else '') + missing + child_markup
         if single_identity:
             route_label = '<h4 class="requirement-route-label">' + esc(title) + '</h4>' if title.casefold() not in identities else ''

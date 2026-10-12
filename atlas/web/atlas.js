@@ -192,8 +192,8 @@
         }
         cell.innerHTML = html;
         cell.removeAttribute('aria-busy');
-        cell.querySelectorAll('details.requirement-disclosure, details.requirement-bundle-disclosure, details.requirement-course-details').forEach(details => {
-          const id = details.parentElement.id;
+        cell.querySelectorAll('details.requirement-disclosure, details.requirement-bundle-disclosure, details.requirement-course-details, details.related-course-group, details.requirement-option-pool').forEach(details => {
+          const id = details.id || details.parentElement.id;
           if (comparisonDisclosures.has(id)) details.open = comparisonDisclosures.get(id);
           details.addEventListener('toggle', () => { if (details.isConnected) comparisonDisclosures.set(id, details.open); });
         });
@@ -205,7 +205,7 @@
   function renderComparison() {
     const target = document.getElementById('comparison-content');
     // Native toggle events can be queued; snapshot the DOM before replacing it.
-    target.querySelectorAll('.comparison-requirement-tree details.requirement-disclosure, .comparison-requirement-tree details.requirement-bundle-disclosure, details.requirement-course-details').forEach(details => comparisonDisclosures.set(details.parentElement.id, details.open));
+    target.querySelectorAll('details.requirement-disclosure, details.requirement-bundle-disclosure, details.requirement-course-details, details.related-course-group, details.requirement-option-pool').forEach(details => comparisonDisclosures.set(details.id || details.parentElement.id, details.open));
     document.getElementById('compare-tray').hidden = selected.length === 0;
     document.getElementById('tray-count').textContent = `${selected.length} of 4 selected`;
     document.getElementById('clear-comparison').hidden = selected.length === 0;
