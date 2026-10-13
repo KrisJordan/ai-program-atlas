@@ -417,7 +417,9 @@ def test_ne_health_fresh_export_and_render_match_manual_profile(conn, tmp_path):
     for role in ['required', 'options']:
         panel = soup.select_one(f'.profile-panel[data-profile="{role}"]')
         assert panel.select_one('.profile-denominator' if role == 'required' else '.profile-total').get_text().startswith('26 distinct')
-        for category, count in expected[role]['categories'].items():
+        displayed = dict(expected[role]['categories'])
+        displayed['computing_systems'] = displayed.pop('foundations', 0) + displayed.pop('systems', 0)
+        for category, count in displayed.items():
             label = panel.select_one(f'.category-row[data-category="{category}"] strong').get_text()
             assert int(label.split()[0]) == count
     assert '/ai-program-atlas/assets/' in html

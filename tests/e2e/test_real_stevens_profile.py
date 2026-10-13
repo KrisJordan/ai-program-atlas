@@ -46,7 +46,7 @@ def test_stevens_fixed_options_and_context_survive_comparison_history(browser,st
         page.goto(stevens_inventory+'programs/'+PID+'/')
         required = page.locator('[data-profile=required]')
         expect(required.locator('.profile-denominator')).to_contain_text('24 distinct')
-        expect(required.locator('[data-category=foundations] strong')).to_have_text('6')
+        expect(required.locator('[data-category=computing_systems] strong')).to_have_text('7')
         expect(page.locator('.profile-uncertainty')).to_contain_text('25 course records are outside the fixed/option count profiles')
         page.locator('label[for=profile-options]').click()
         options = page.locator('[data-profile=options]')

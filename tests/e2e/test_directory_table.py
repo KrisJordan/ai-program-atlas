@@ -15,7 +15,7 @@ def test_default_table_first_program_above_fold_and_modal(page, site, width, hei
     page.goto(site)
     expect(page.locator('.directory-cards:visible')).to_have_count(0)
     expect(page.locator('#cohort-nu-majors .directory-table thead tr').first.locator('th')).to_have_text([
-        'Compare', 'University', 'Program', 'AI Ranking', 'US News Ranking', 'Required Curriculum'])
+        'Compare', 'University', 'Program', 'AI Ranking', 'US News Ranking', 'Required Curriculum (Electives Counted Separately)'])
     first = page.locator('#cohort-nu-majors [data-row-id]').first
     expect(first).to_be_visible()
     assert first.bounding_box()['y'] + first.bounding_box()['height'] <= height

@@ -19,3 +19,7 @@ SOURCES=tuple(dict.fromkeys(SOURCES+tuple(SOURCE_PARSERS)))
 from atlas.adapters.maryland_policy_closure import register as register_closure_policies
 SOURCE_PARSERS = register_closure_policies(SOURCE_PARSERS, PROGRAM_ID)
 SOURCES=tuple(dict.fromkeys(SOURCES+tuple(SOURCE_PARSERS)))
+
+# Limited exact-title candidates remain separate from full-description reviews.
+from atlas.adapters.maryland_catalog_subjects import observe as observe_catalog_subjects
+parse = observe_catalog_subjects(parse)

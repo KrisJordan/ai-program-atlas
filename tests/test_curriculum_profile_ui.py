@@ -71,7 +71,7 @@ def test_zero_category_is_mapping_absence_and_complete_inventory_is_not_taxonomy
     page=BeautifulSoup((tmp_path/'programs/test-ai-0/index.html').read_text(),'html.parser')
     profile=page.find(class_='curriculum-profile')
     required=profile.find(attrs={'data-profile':'required'})
-    assert required.find(attrs={'data-category':'foundations'}).find('strong').get_text()=='0 mapped'
+    assert required.find(attrs={'data-category':'computing_systems'}).find('strong').get_text()=='0 mapped'
     assert 'not evidence that the curriculum lacks that subject' in profile.get_text()
     assert '2 unreviewed, of 2 mapped identities' in required.find(class_='profile-taxonomy').get_text()
     assert 'Requirement inventory completeness is separate' in profile.get_text()

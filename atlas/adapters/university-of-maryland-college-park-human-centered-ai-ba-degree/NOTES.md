@@ -1,5 +1,10 @@
 # Maryland Human-Centered Artificial Intelligence BA
 
+## October 13 subject follow-up
+
+[Current subject review](../../../research/degree-audit/maryland-subject-followup.md) supersedes the blanket unknown treatment for eleven specific exact-title/context cases and the mixed classification of two full-description programming-project courses. Six BA HCAI fixed subjects now map to three Computing foundations, two AI/ML and one Human Context; full descriptions remain unavailable and every limited review states moderate confidence. BSAI receives five limited-title corrections plus CMSC425/427 full-description foundations corrections. Underlying requirement graphs and fixed/option/context identity sets remain unchanged; broader source gaps and separate independent acceptance remain explicit. Historical counts and dispositions below describe the earlier checkpoint.
+
+
 Reviewed 2026-10-11. **Primary audit blocked at the specific source gaps below.** All available represented exact course blocks, catalog tables and applicable public university/college rules have been read. Full independent second pass remains pending. Inventory `partial` and degree-audit status are separate.
 
 Catalog: https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/

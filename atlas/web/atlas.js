@@ -3,7 +3,7 @@
   'use strict';
   const node = document.getElementById('atlas-data');
   if (!node) return;
-  const {programs, institutions, families = [], base_path: base, categories} = JSON.parse(node.textContent);
+  const {programs, institutions, families = [], base_path: base, categories, profile_categories: profileCategories = categories} = JSON.parse(node.textContent);
   document.documentElement.classList.add('js');
   const keys = ['q', 'type', 'award', 'evidence', 'calendar', 'institution', 'cohort', 'category', 'discipline'];
   const familyMap = new Map(families.map(f => [f.id, f]));
@@ -47,6 +47,7 @@
     return e(status + scope) + '<small>Course metadata completeness is separate. Listed electives and alternatives are not all required.</small>';
   };
 
+  const displayCount = (counts, key) => key === 'computing_systems' ? (counts.foundations || 0) + (counts.systems || 0) : (counts[key] || 0);
   const profileCell = p => {
     if (!p.course_profile.count) return '<div class="compare-profile-cell">Not yet extracted</div>';
     const profile = p.curriculum_profile;
@@ -60,7 +61,7 @@
     const roleNoun = identityNote ? 'course identities' : 'course records';
     const outsideNoun = profile.unresolved.count === 1 ? (identityNote ? 'course identity' : 'course record') : roleNoun;
     const empty = profileMode === 'required' ? 'A fixed required course set is not established; this does not mean there are no requirements.' : 'No option set is established by the structured rules.';
-    return `<div class="compare-profile-cell"><p class="profile-total">${profileMode === 'required' ? plotted.count + ' required course obligations' : group.count + ' distinct ' + label + ' ' + countNoun}</p><p class="profile-denominator">${note}</p>${identityNote}<p class="profile-taxonomy">Taxonomy review: ${classification.reviewed} reviewed · ${classification.mixed} mixed · ${classification.unclassified} unclassified · ${classification.unreviewed} unreviewed, of ${group.count} mapped identities. Missing review is not verified classification. Requirement inventory completeness is separate.</p>${plotted.count ? '<dl class="mini-counts">' + Object.entries(categories).map(([key,name]) => `<dt>${e(name)}</dt><dd>${plotted.categories[key] || '0 mapped'}</dd>`).join('') + '</dl>' : '<p class="profile-unavailable">' + empty + '</p>'}<small>Distinct mapped course identities; not credit totals or degree shares. “0 mapped” means no mapped records classified here, not evidence that the curriculum lacks the subject. Partial requirement or taxonomy evidence can omit relevant courses.</small><p class="profile-uncertainty">${profile.unresolved.count} ${outsideNoun} ${profile.unresolved.count === 1 ? 'is' : 'are'} outside the fixed/option count profiles; see individual requirement rules for their context.${profile.overlap_count ? ' ' + profile.overlap_count + ' ' + roleNoun + ' appear in multiple groups and are counted once.' : ''}</p></div>`;
+    return `<div class="compare-profile-cell"><p class="profile-total">${profileMode === 'required' ? plotted.count + ' required course obligations' : group.count + ' distinct ' + label + ' ' + countNoun}</p><p class="profile-denominator">${note}</p>${identityNote}<p class="profile-taxonomy">Taxonomy review: ${classification.reviewed} reviewed · ${classification.mixed} mixed · ${classification.unclassified} unclassified · ${classification.unreviewed} unreviewed, of ${group.count} mapped identities. Missing review is not verified classification. Requirement inventory completeness is separate.</p>${plotted.count ? '<dl class="mini-counts">' + Object.entries(profileCategories).map(([key,name]) => `<dt>${e(name)}</dt><dd>${displayCount(plotted.categories, key) || '0 mapped'}</dd>`).join('') + '</dl>' : '<p class="profile-unavailable">' + empty + '</p>'}<small>Distinct mapped course identities; not credit totals or degree shares. “0 mapped” means no mapped records classified here, not evidence that the curriculum lacks the subject. Partial requirement or taxonomy evidence can omit relevant courses.</small><p class="profile-uncertainty">${profile.unresolved.count} ${outsideNoun} ${profile.unresolved.count === 1 ? 'is' : 'are'} outside the fixed/option count profiles; see individual requirement rules for their context.${profile.overlap_count ? ' ' + profile.overlap_count + ' ' + roleNoun + ' appear in multiple groups and are counted once.' : ''}</p></div>`;
   };
 
   function readState() {

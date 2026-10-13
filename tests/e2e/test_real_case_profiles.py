@@ -50,7 +50,7 @@ def test_case_role_identity_and_context_counts_in_real_views(browser,case_invent
             page.goto(case_inventory+'programs/'+pid+'/')
             required = page.locator('[data-profile=required]')
             expect(required.locator('.profile-total')).to_contain_text(f'{fixed} required course obligations')
-            expect(required.locator('[data-category=foundations] strong')).to_have_text('2')
+            expect(required.locator('[data-category=computing_systems] strong')).to_have_text('2')
             expect(page.locator('.profile-uncertainty')).to_contain_text('97 course identities are outside the fixed/option count profiles')
             expect(page.locator('.profile-uncertainty')).not_to_contain_text('unresolved requirement roles')
             page.locator('label[for=profile-options]').click()

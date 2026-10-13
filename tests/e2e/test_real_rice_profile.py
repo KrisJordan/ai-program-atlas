@@ -19,8 +19,7 @@ def test_rice_required_foundations_and_systems_remain_visible(browser,parent_inv
         page.goto(base+'programs/'+pid+'/')
         required = page.locator('[data-profile=required]')
         expect(required).to_be_visible()
-        expect(required.locator('[data-category=foundations] strong')).to_have_text('3')
-        expect(required.locator('[data-category=systems] strong')).to_have_text('2')
+        expect(required.locator('[data-category=computing_systems] strong')).to_have_text('5')
         expect(required.locator('.profile-denominator')).to_contain_text('13 distinct')
         expect(required.locator('.profile-taxonomy')).to_contain_text('13 reviewed')
         page.locator('label[for=profile-options]').click()
@@ -32,7 +31,7 @@ def test_rice_required_foundations_and_systems_remain_visible(browser,parent_inv
         page.goto(base+'?compare='+pid)
         cell = page.locator('.compare-profile-cell')
         expect(cell.locator('.profile-denominator')).to_contain_text('13 distinct')
-        for label,count in [('Computing foundations','3'),('Systems','2')]:
+        for label,count in [('Computing + Systems','5')]:
             term = cell.locator('dt').filter(has_text=label)
             expect(term.locator('xpath=following-sibling::dd[1]')).to_have_text(count)
         page.reload()

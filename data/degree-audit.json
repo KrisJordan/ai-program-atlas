@@ -55977,7 +55977,7 @@
         "elective_pools": "Five finite specialization pools and core alternatives fully reviewed. AI Algorithms still prints 12 total despite four required three-credit courses plus two electives and the major 18-credit rule. General Education uses published term-designation, distribution and overlap criteria; no invented permanent pool.",
         "prerequisites": "All available exact current description blocks and their prerequisite/corequisite, permission, restriction, recommended preparation, exclusion and repeat clauses were reviewed. Conditional access is preserved without importing prerequisites into fixed requirements or granting exceptions. General registration and college repeat/external-study policies are mapped.",
         "credits_and_units": "Degree minimum 120 semester hours is source-established. Fixed course amounts, variable ranges, grouped quantities and selection counts stay distinct; unknown quantities are not inferred. University residence, upper-major credit, transfer caps/levels, repeat and overlap limits are mapped. CMNS uses its stricter 17-credit ordinary fall/spring load; university and college exceptions remain conditional. AI Algorithms arithmetic conflict remains unresolved.",
-        "classification": "All available exact current blocks reviewed: 60 dispositions, with 25 absent exact entries or topic versions unclassified. Subject decisions distinguish programming/algorithms, mathematical theory, social analysis, domain practice and mixed content.",
+        "classification": "October13 follow-up: six BA fixed HCAI subjects now have moderate-confidence exact-title/context dispositions (3foundations,1human,2AI), with descriptions still null. BSAI missing named programming/AI-algorithm/reinforcement/system subjects receive limited judgments; CMSC425/427 full current descriptions establish software-construction foundations. Genuine ambiguous and topic-version entries remain unknown or mixed. Prior memberships are unchanged.",
         "family_composition": "Concrete standalone award; specializations are local conditional routes. No cross-list groups asserted: shared credit exclusions and one-sided joint-offering language do not establish reciprocal undergraduate identity, and topic versions remain distinct.",
         "degree_wide_requirements": "Reviewed current degree, General Education, transfer, academic-record, registration and progression rules, plus applicable college advising/declaration, exceptions, graduation and academic policies. Covered GPA/grades, residence, minimum/upper-level hours, final-major membership, general-education alternatives/overlap, transfer acceptance versus applicability, repeats, standing/clemency, approved plans, conditional external/graduate credit and exceptions. Current LEP list does not name these AI programs; no Computer Science gateway is inherited. CMNS program-specific declaration groups omit the new AI name; generic college rules are preserved without inventing an internal-change procedure or overload threshold."
       },
@@ -55988,18 +55988,19 @@
             "foundations": 1,
             "human_context": 2,
             "mathematics": 1,
-            "other": 2
+            "other": 1,
+            "systems": 1
           }
         },
         "options": {
           "count": 79,
           "categories": {
-            "ai_ml": 7,
+            "ai_ml": 9,
             "applications": 15,
-            "foundations": 5,
+            "foundations": 9,
             "human_context": 11,
             "mathematics": 11,
-            "other": 29,
+            "other": 23,
             "systems": 1
           }
         },
@@ -56118,6 +56119,15 @@
           "evidence_urls": [
             "https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/"
           ]
+        },
+        {
+          "issue": "Missing full course bodies were treated as a blanket prohibition on even unequivocal catalog-title subject judgments; CMSC425/427 mixed decisions omitted their explicit primary programming projects.",
+          "correction": "Apply tightly scoped exact-code/title/context judgments and full-description project-focus corrections. Preserve all metadata gaps, fixed/options membership and independent acceptance limits.",
+          "status": "corrected; bounded classifications",
+          "evidence_urls": [
+            "https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/",
+            "https://academiccatalog.umd.edu/undergraduate/approved-courses/cmsc/"
+          ]
         }
       ],
       "blockers": [
@@ -56147,7 +56157,7 @@
         "program_id": "university-of-maryland-college-park-artificial-intelligence-computational-structures-for-ai-systems-bsai-degree",
         "reviewed_at": "2026-10-11",
         "reviewer": "independent-core-other",
-        "reviewed_content_hash": "2cc62a063cd1cc72ad0ab0d166e03b607678eb6d25aff629903b690489b61db2",
+        "reviewed_content_hash": "f0fd4ceff9f328aaa843c889c1d727dbaeadbd42cff4e3423a0664ca10d86225",
         "dimensions": {
           "fixed_requirements": {
             "status": "verified",
@@ -56178,7 +56188,7 @@
           },
           "classification": {
             "status": "partial",
-            "summary": "The available four substantive fixed descriptions support CMSC351 foundations, MATH141 mathematics and PHIL211/INST204 human context. CSAI101 and CSAI216 lack actual exact descriptions and remain unclassified; titles do not certify their subjects.",
+            "summary": "The prior named fixed/option memberships are unchanged. October13 primary follow-up uses exact catalog-title/context judgments for clearly named subjects and full current CMSC425/427 project-focused descriptions. Full exact missing bodies, ambiguous topics and independent acceptance remain qualified.",
             "evidence": [
               {
                 "url": "https://academiccatalog.umd.edu/undergraduate/colleges-schools/computer-mathematical-natural-sciences/computer-science/artificial-intelligence-computational-structures-ai-systems-major/",
@@ -56198,8 +56208,9 @@
               }
             ],
             "limitations": [
-              "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass.",
-              "Exact missing course bodies remain unknown rather than classified from requirement titles."
+              "Moderate-confidence title/context classifications do not certify full course descriptions, depth, pedagogy or prerequisites.",
+              "Separate independent acceptance of these new classifications is pending; prior verified membership scope is retained.",
+              "Option/context category totals not independently checked in the prior bounded review remain null."
             ]
           }
         },
@@ -56302,11 +56313,11 @@
               "foundations": 1,
               "mathematics": 1,
               "ai_ml": 0,
-              "systems": 0,
+              "systems": 1,
               "human_context": 2,
               "applications": 0,
               "electives": 0,
-              "other": 2
+              "other": 1
             }
           },
           "options": {
@@ -56322,6 +56333,10 @@
           }
         ],
         "full_degree_verified": false,
+        "classification_followup": {
+          "reviewed_at": "2026-10-13",
+          "scope": "Primary catalog-title/context and two full-description corrections; prior independent membership judgments retained; new classifications await separate independent acceptance."
+        },
         "ledger": "research/degree-audit/independent-core-other.json"
       }
     },
@@ -56687,7 +56702,7 @@
         "elective_pools": "Seven finite catalog specialization pools, capstone internship replacement, dated placement-dependent language paths and current Global Engagement alternatives were reviewed. The public plan permits proposing a custom specialization for case-by-case approval without publishing another finite pool. General Education is controlled by current official designations and overlap criteria, not a fabricated permanent list.",
         "prerequisites": "All available exact current description blocks and their prerequisite/corequisite, permission, restriction, recommended preparation, exclusion and repeat clauses were reviewed. Conditional access is preserved without importing prerequisites into fixed requirements or granting exceptions. General registration and college repeat/external-study policies are mapped. The linked public plan additionally establishes MATH115-or-higher preparation for HCAI121/HCAI200; full HCAI entries remain absent.",
         "credits_and_units": "Degree minimum 120 semester hours is source-established. Fixed course amounts, variable ranges, grouped quantities and selection counts stay distinct; unknown quantities are not inferred. University residence, upper-major credit, transfer caps/levels, repeat and overlap limits are mapped. ARHU 39 upper-level credits applies to fall-2024 college entrants; the older 45-credit webpage statement retains its historical cohort.",
-        "classification": "All available exact current blocks reviewed: 93 dispositions, with 28 absent exact entries or topic versions unclassified. Subject decisions distinguish programming/algorithms, mathematical theory, social analysis, domain practice and mixed content. Three Latin classifications explicitly use precise official titles because their complete blocks lack descriptions.",
+        "classification": "October13 follow-up: six BA fixed HCAI subjects now have moderate-confidence exact-title/context dispositions (3foundations,1human,2AI), with descriptions still null. BSAI missing named programming/AI-algorithm/reinforcement/system subjects receive limited judgments; CMSC425/427 full current descriptions establish software-construction foundations. Genuine ambiguous and topic-version entries remain unknown or mixed. Prior memberships are unchanged.",
         "family_composition": "Concrete standalone award; specializations are local conditional routes. No cross-list groups asserted: shared credit exclusions and one-sided joint-offering language do not establish reciprocal undergraduate identity, and topic versions remain distinct.",
         "degree_wide_requirements": "Reviewed current degree, General Education, transfer, academic-record, registration and progression rules, plus applicable college advising/declaration, exceptions, graduation and academic policies. Covered GPA/grades, residence, minimum/upper-level hours, final-major membership, general-education alternatives/overlap, transfer acceptance versus applicability, repeats, standing/clemency, approved plans, conditional external/graduate credit and exceptions. Current LEP list does not name these AI programs; no Computer Science gateway is inherited. Read both rendered pages of the public HCAI plan: benchmarks, college mathematics, conditional ARHU158 and custom proposal. Dated language grading/sequence applicability remains the precise college source gap."
       },
@@ -56695,9 +56710,11 @@
         "required": {
           "count": 10,
           "categories": {
-            "human_context": 3,
+            "human_context": 4,
             "mathematics": 1,
-            "other": 6
+            "other": 0,
+            "foundations": 3,
+            "ai_ml": 2
           }
         },
         "options": {
@@ -56863,6 +56880,15 @@
             "https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/",
             "https://drive.google.com/file/d/11hH4qitJRsXvN2YkuQ3TnXOmlGF_RCrS/view"
           ]
+        },
+        {
+          "issue": "Missing full course bodies were treated as a blanket prohibition on even unequivocal catalog-title subject judgments; CMSC425/427 mixed decisions omitted their explicit primary programming projects.",
+          "correction": "Apply tightly scoped exact-code/title/context judgments and full-description project-focus corrections. Preserve all metadata gaps, fixed/options membership and independent acceptance limits.",
+          "status": "corrected; bounded classifications",
+          "evidence_urls": [
+            "https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/",
+            "https://academiccatalog.umd.edu/undergraduate/approved-courses/cmsc/"
+          ]
         }
       ],
       "blockers": [
@@ -56892,7 +56918,7 @@
         "program_id": "university-of-maryland-college-park-human-centered-ai-ba-degree",
         "reviewed_at": "2026-10-11",
         "reviewer": "independent-core-other",
-        "reviewed_content_hash": "0fe6ff3554e8fffdf32fd9c47e24054d71c8f4fdd0fd8d4473f60b00c28ebbfa",
+        "reviewed_content_hash": "428ce7c6a9db5a6bf249298c47aba2a9f31b440da4dec0aa8b948607272ea10d",
         "dimensions": {
           "fixed_requirements": {
             "status": "verified",
@@ -56920,7 +56946,7 @@
           },
           "classification": {
             "status": "partial",
-            "summary": "The available fixed descriptions support WGSS115/INST204/PHIL211 human context and MATH115 mathematics. Six HCAI core codes lack exact course bodies and remain unclassified, including coding/AI-sounding titles.",
+            "summary": "The prior named fixed/option memberships are unchanged. October13 primary follow-up uses exact catalog-title/context judgments for clearly named subjects and full current CMSC425/427 project-focused descriptions. Full exact missing bodies, ambiguous topics and independent acceptance remain qualified.",
             "evidence": [
               {
                 "url": "https://academiccatalog.umd.edu/undergraduate/colleges-schools/arts-humanities/philosophy/human-centered-artificial-intelligence-major/",
@@ -56940,8 +56966,9 @@
               }
             ],
             "limitations": [
-              "Category totals are verified only for the explicitly enumerated fixed subset; option and contextual classifications are not independently totaled in this pass.",
-              "Exact missing course bodies remain unknown rather than classified from requirement titles."
+              "Moderate-confidence title/context classifications do not certify full course descriptions, depth, pedagogy or prerequisites.",
+              "Separate independent acceptance of these new classifications is pending; prior verified membership scope is retained.",
+              "Option/context category totals not independently checked in the prior bounded review remain null."
             ]
           }
         },
@@ -57025,14 +57052,14 @@
           "required": {
             "count": 10,
             "categories": {
-              "foundations": 0,
+              "foundations": 3,
               "mathematics": 1,
-              "ai_ml": 0,
+              "ai_ml": 2,
               "systems": 0,
-              "human_context": 3,
+              "human_context": 4,
               "applications": 0,
               "electives": 0,
-              "other": 6
+              "other": 0
             }
           },
           "options": {
@@ -57048,6 +57075,10 @@
           }
         ],
         "full_degree_verified": false,
+        "classification_followup": {
+          "reviewed_at": "2026-10-13",
+          "scope": "Primary catalog-title/context and two full-description corrections; prior independent membership judgments retained; new classifications await separate independent acceptance."
+        },
         "ledger": "research/degree-audit/independent-core-other.json"
       }
     },

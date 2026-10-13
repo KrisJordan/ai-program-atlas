@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import pytest
 from atlas.adapters import maryland_full_course_reviews as m
+from atlas.adapters import maryland_catalog_subjects as title_subjects
 
 
 def test_changed_missing_duplicate_and_wrong_chapter_fail_without_certification(monkeypatch):
@@ -32,11 +33,16 @@ def test_exact_topics_and_missing_blocks_never_inherit_generic_content():
             if c['id']=='umd-'+c['code'].lower() and c['code'] in mapped:
                 assert c['category_review']['status'] in {'reviewed','mixed'}
                 assert c['description']==m.SPEC[c['code']]['description']
+            elif c['code'] in title_subjects.SPEC and c['name']==title_subjects.SPEC[c['code']]['name']:
+                assert c['category']==title_subjects.SPEC[c['code']]['category']
+                assert c['category_review']['status']=='reviewed'
+                assert c['description'] is None
+                assert 'Moderate-confidence' in c['category_review']['rationale']
             else:
                 assert c['category']=='other'
                 assert c['category_review']['status']=='unclassified'
         counts.append(sum(c['category_review']['status']!='unclassified' for c in p['courses']))
-    assert sorted(counts)==[60,93]
+    assert sorted(counts)==[65,99]
     assert all('no description paragraph' in m.SPEC[c]['description'] for c in ['LATN101','LATN102','LATN201'])
 
 

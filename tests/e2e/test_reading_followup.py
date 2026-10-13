@@ -80,7 +80,7 @@ def test_sticky_two_row_headers_align_with_horizontal_scroll(page, site, tmp_pat
     expect(overlay).to_be_visible()
     assert abs(overlay.bounding_box()['y']) < 2
     expect(overlay.locator('thead tr')).to_have_count(2)
-    expect(overlay).to_contain_text('Mathematics and Statistics')
+    expect(overlay).to_contain_text('Math + Statistics')
     assert overlay.locator('..').get_attribute('aria-hidden') == 'true'
     expect(overlay.locator('a, button, input')).to_have_count(0)
     if width == 1440:

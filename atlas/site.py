@@ -23,6 +23,21 @@ CATEGORIES = {
     "electives": "Electives", "other": "Other / unclassified",
 }
 
+# Aggregate display labels are separate from the canonical taxonomy used in
+# course records, filters and API profiles.
+PROFILE_CATEGORIES = {
+    'mathematics': 'Math + Statistics', 'computing_systems': 'Computing + Systems',
+    'ai_ml': 'AI + ML', 'human_context': 'Human context',
+    'applications': 'Domain studies & applications', 'electives': 'Electives',
+    'other': 'Other / unclassified',
+}
+
+
+def curriculum_display_counts(categories):
+    return {key: categories.get('foundations', 0) + categories.get('systems', 0)
+            if key == 'computing_systems' else categories.get(key, 0)
+            for key in PROFILE_CATEGORIES}
+
 
 def esc(value):
     return escape(str(value if value is not None else "Unknown"), quote=True)
@@ -157,7 +172,7 @@ def directory_payload(data, base):
         ids = {r.get('source_id') for r in family['shared_requirements']}
         family['sources'] = [fields(s, 'id url') for s in original.get('sources', []) if s.get('id') in ids]
         families.append(family)
-    return {'programs': programs, 'institutions': institutions, 'families': families, 'base_path': base, 'categories': CATEGORIES}
+    return {'programs': programs, 'institutions': institutions, 'families': families, 'base_path': base, 'categories': CATEGORIES, 'profile_categories': PROFILE_CATEGORIES}
 
 
 def asset_url(base, filename):
@@ -312,7 +327,9 @@ def program_card(p, base):
 <div class="card-bottom"><a href="{base}programs/{esc(p['id'])}/">View program <span aria-hidden="true">→</span></a><label class="compare-choice js-only"><input type="checkbox" data-compare="{esc(p['id'])}"> Compare<span class="sr-only"> {esc(p.get('title'))} at {esc(institution.get('name'))}</span></label></div></article>'''
 
 
-REQUIRED_COLUMNS = [('foundations', 'Computing'), ('mathematics', 'Mathematics and Statistics'), ('ai_ml', 'AIML'), ('systems', 'Systems'), ('human_context', 'Human Context'), ('applications', 'Applications'), ('other', 'Other')]
+# Display projection only: canonical course categories and profile/API data stay
+# separate. Sum each program before computing a joint-program range.
+REQUIRED_COLUMNS = [('mathematics', 'Math + Statistics'), ('computing_systems', 'Computing + Systems'), ('ai_ml', 'AI + ML'), ('human_context', 'Human Context'), ('applications', 'Applications'), ('other', 'Other')]
 
 
 def directory_award_label(p):
@@ -347,7 +364,9 @@ def required_directory_counts(p):
     if not unique_courses(p):
         return None
     categories = requirement_profile(p)['required_obligations']['categories']
-    return {key: categories[key] + (categories.get('electives', 0) if key == 'other' else 0) for key, _ in REQUIRED_COLUMNS}
+    displayed = curriculum_display_counts(categories)
+    return {key: displayed[key] + (displayed['electives'] if key == 'other' else 0)
+            for key, _ in REQUIRED_COLUMNS}
 
 
 def northeastern_joint(p):
@@ -391,8 +410,8 @@ def program_table(programs, base):
         award_prefix = '' if p.get('program_kind') in {'concentration', 'minor'} else '<span class="directory-award">(' + esc(directory_award_label(p)) + ')</span> '
         group_attr = ' data-joint-member="' + grouping[0] + '"' if grouping else ''
         rows.append(f'''<tr data-row-id="{esc(p['id'])}"{group_attr} {directory_sort_attributes(p)}><td><label class="compare-choice js-only"><input type="checkbox" data-row-compare="{esc(p['id'])}"><span class="sr-only">Compare {esc(p.get('title'))} at {esc(p.get('institution', {}).get('name'))}</span></label></td><th scope="row">{esc(p.get('institution', {}).get('name'))}</th><td><a class="directory-program-link" href="{base}programs/{esc(p['id'])}/">{award_prefix}{esc(directory_program_title(p))}</a>{directory_parent_line(p)}</td><td>{esc('#' + str(rank) if rank is not None else '—')}</td><td>{external(context.get('source_url'), '#' + str(news_rank)) if news_rank is not None else '—'}</td>{count_cells}</tr>''')
-    headers = '<th rowspan="2" scope="col"><span class="sr-only">Compare</span></th>' + ''.join('<th rowspan="2" scope="col">' + label + '</th>' for label in ['University', 'Program', '<a href="' + base + 'methodology/#research" title="CSRankings aggregate U.S. publication rank">AI Ranking</a>', 'US News Ranking']) + '<th colspan="7" scope="colgroup" class="required-heading">Required Curriculum</th>'
-    return '<p class="directory-scroll-hint">Scroll the table to see rankings and required curriculum.</p><div class="directory-table-wrap table-scroll" role="region" aria-label="Program directory table" tabindex="0"><table class="directory-table"><colgroup><col style="width:50px"><col style="width:180px"><col style="width:320px"><col style="width:68px"><col style="width:82px"><col style="width:90px"><col style="width:90px"><col style="width:60px"><col style="width:76px"><col style="width:90px"><col style="width:94px"><col style="width:60px"></colgroup><caption class="sr-only">Required curriculum counts fixed courses plus countable mandatory selections, not credit loads or the whole degree. Joint-program ranges are not totals.</caption><thead><tr>' + headers + '</tr><tr>' + ''.join('<th scope="col">' + label + '</th>' for _, label in REQUIRED_COLUMNS) + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
+    headers = '<th rowspan="2" scope="col"><span class="sr-only">Compare</span></th>' + ''.join('<th rowspan="2" scope="col">' + label + '</th>' for label in ['University', 'Program', '<a href="' + base + 'methodology/#research" title="CSRankings aggregate U.S. publication rank">AI Ranking</a>', 'US News Ranking']) + '<th colspan="6" scope="colgroup" class="required-heading">Required Curriculum (Electives Counted Separately)</th>'
+    return '<p class="directory-scroll-hint">Scroll the table to see rankings and required curriculum.</p><div class="directory-table-wrap table-scroll" role="region" aria-label="Program directory table" tabindex="0"><table class="directory-table"><colgroup><col style="width:50px"><col style="width:180px"><col style="width:320px"><col style="width:68px"><col style="width:82px"><col style="width:90px"><col style="width:112px"><col style="width:70px"><col style="width:90px"><col style="width:94px"><col style="width:60px"></colgroup><caption class="sr-only">Required curriculum counts fixed courses plus countable mandatory selections, not credit loads or the whole degree. Joint-program ranges are not totals.</caption><thead><tr>' + headers + '</tr><tr>' + ''.join('<th scope="col">' + label + '</th>' for _, label in REQUIRED_COLUMNS) + '</tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
 
 
 def family_group(family, members, base):
@@ -510,7 +529,7 @@ def root_page(data, base):
 <dialog id="filter-panel" class="filter-dialog" aria-labelledby="filter-title"><div class="dialog-heading"><h2 id="filter-title">Search &amp; filters</h2><button type="button" id="close-filters" aria-label="Close search and filters">Close</button></div><form id="filters" class="filters" role="search"><label class="search-label" for="search">Search programs<input type="search" id="search" name="q" placeholder="Institution, program, or course…" autocomplete="off"></label><div class="filter-row">{controls}</div><div class="filter-footer"><p class="filter-help">Course categories include elective options. Discipline filters use reviewed family membership. Exact awards and second-major eligibility are source verified; multiple offered awards count as one program.</p><button type="button" id="reset-filters" class="text-button">Reset filters</button></div><button type="button" id="apply-filters">Show results</button></form></dialog>
 <noscript><p class="notice">All documented programs are listed below. Enable JavaScript to filter and compare programs.</p></noscript>
 <p id="result-count" class="sr-only" role="status" aria-live="polite">{len(programs)} programs</p>
-{cohort_directory(programs, institutions, families, base, cohort.get('edition') if isinstance(cohort, dict) else None, data.get('csrankings'))}<p class="directory-method-note">Required Curriculum counts fixed courses plus mandatory choose-N selections with a clear category and no unresolved overlap. A choose-one block counts as one course, not its option-pool size. Credit-only, nested, mixed-category and overlapping choices remain separate; incomplete inventories can omit courses, and 0 means none mapped. Other includes unclassified and generic elective categories. Joint-program ranges reflect matching variants, not a combined curriculum. Missing inventories and ranks use —. AI Ranking is the CSRankings five-field aggregate U.S. publication rank. <a href="{base}methodology/#research">Ranking methodology</a> · <a href="{base}coverage/">Coverage and limitations</a></p>
+{cohort_directory(programs, institutions, families, base, cohort.get('edition') if isinstance(cohort, dict) else None, data.get('csrankings'))}<p class="directory-method-note">Required Curriculum counts fixed courses plus mandatory choose-N selections with a clear category and no unresolved overlap. Computing + Systems sums the distinct Computing foundations and Systems counts for each program; elective options remain separate. A choose-one block counts as one course, not its option-pool size. Credit-only, nested, mixed-category and overlapping choices remain separate; incomplete inventories can omit courses, and 0 means none mapped. Other includes unclassified and generic elective categories. Joint-program ranges reflect matching variants, not a combined curriculum. Missing inventories and ranks use —. AI Ranking is the CSRankings five-field aggregate U.S. publication rank. <a href="{base}methodology/#research">Ranking methodology</a> · <a href="{base}coverage/">Coverage and limitations</a></p>
 <div id="empty-state" class="empty-state" hidden><span class="eyebrow">NO MATCHES</span><h3>No programs match your filters.</h3><p>No documented program matches these filters. This does not establish that such a program does not exist.</p><button type="button" id="empty-reset">Clear filters</button></div></section>
 <div id="compare-tray" class="compare-tray" hidden><span id="tray-count">0 of 4 selected</span><a href="#comparison">Compare programs ↓</a></div><section id="comparison" class="comparison js-only" aria-labelledby="compare-title"><div class="section-heading"><div><span class="eyebrow">PROGRAM COMPARISON</span><h2 id="compare-title">Compare programs</h2></div><button type="button" id="clear-comparison" class="text-button">Clear selection</button></div><p class="comparison-intro">Choose up to four programs. Credit units and incomplete curricula stay visible; course counts are not measures of program quality.</p><label class="comparison-profile-control" for="compare-profile">Curriculum profile<select id="compare-profile"><option value="required">Required curriculum</option><option value="options">Elective options</option></select></label><div id="compare-status" role="status" aria-live="polite"></div><div id="comparison-content"><p class="comparison-placeholder">Select “Compare” on a program to begin.</p></div></section>
 '''
@@ -605,8 +624,9 @@ def category_chart(p):
         description = f"{group['count']} distinct fixed required course {count_noun} + {profile['required_obligations']['choice_count']} mandatory course selections. Countable choose-N blocks contribute N, not pool size. Credit-only, nested, mixed-category and overlapping rules remain separate below; source conditions still apply." if mode == 'required' else 'Available elective and required-choice options, not courses every student must take. Fixed required courses are excluded from this option count.'
         chart = ''
         if total:
-            maximum = max(plotted['categories'].values()) or 1
-            chart = '<div class="category-chart">' + ''.join(f'<div class="category-row" data-category="{key}"><span>{name}</span><div class="bar-track" aria-hidden="true"><span class="bar" style="width:{plotted["categories"].get(key, 0) / maximum * 100:.2f}%"></span></div><strong>{category_count_label(plotted["categories"].get(key, 0))}</strong></div>' for key, name in CATEGORIES.items()) + '</div>'
+            displayed = curriculum_display_counts(plotted['categories'])
+            maximum = max(displayed.values()) or 1
+            chart = '<div class="category-chart">' + ''.join(f'<div class="category-row" data-category="{key}"><span>{name}</span><div class="bar-track" aria-hidden="true"><span class="bar" style="width:{displayed[key] / maximum * 100:.2f}%"></span></div><strong>{category_count_label(displayed[key])}</strong></div>' for key, name in PROFILE_CATEGORIES.items()) + '</div>'
         else:
             chart = '<p class="profile-unavailable">' + ('A fixed required course set is not established by the recorded rules. This does not mean there are no requirements.' if mode == 'required' else 'No elective option set is established by the recorded structured rules.') + '</p>'
         panels.append(f'<div class="profile-panel" data-profile="{mode}"><p class="profile-total">{str(total) + " required course obligations" if mode == "required" else str(total) + " distinct elective option " + count_noun}</p><p class="profile-denominator">{description}</p>{identity_markup}<p class="profile-taxonomy">{esc(taxonomy_coverage_note(group))}</p>{chart}</div>')
@@ -618,7 +638,7 @@ def category_chart(p):
         uncertainty += f' {profile["unresolved_group_count"]} groups need their full recorded context.'
     if profile['overlap_count']:
         uncertainty += f' {profile["overlap_count"]} {uncertainty_noun} appear in multiple groups and are counted once.'
-    return '<div class="curriculum-profile"><p class="profile-denominator">Required counts include fixed mapped course identities plus countable mandatory selections. Option counts show distinct candidate identities. These are not credit totals or shares of the degree. Categories describe mapped records, including Other / unclassified. “0 mapped” means no mapped records classified in that category in this view—not evidence that the curriculum lacks that subject. Partial requirement or taxonomy evidence can omit relevant courses.</p><fieldset class="profile-switch"><legend>Curriculum view</legend><input class="sr-only" type="radio" name="curriculum-view" id="profile-required" value="required" checked><label for="profile-required">Required curriculum</label><input class="sr-only" type="radio" name="curriculum-view" id="profile-options" value="options"><label for="profile-options">Elective options</label><div class="profile-panels">' + ''.join(panels) + '</div></fieldset><p class="profile-uncertainty">' + esc(uncertainty) + '</p>' + course_identity_evidence(p) + profile_choices(p, profile) + '</div>'
+    return '<div class="curriculum-profile"><p class="profile-denominator">Required counts include fixed mapped course identities plus countable mandatory selections. Option counts show distinct candidate identities. Computing + Systems sums the two canonical subject categories for display; course records and APIs retain their separate classifications. These are not credit totals or shares of the degree. Categories describe mapped records, including Other / unclassified. “0 mapped” means no mapped records classified in that category in this view—not evidence that the curriculum lacks that subject. Partial requirement or taxonomy evidence can omit relevant courses.</p><fieldset class="profile-switch"><legend>Curriculum view</legend><input class="sr-only" type="radio" name="curriculum-view" id="profile-required" value="required" checked><label for="profile-required">Required curriculum</label><input class="sr-only" type="radio" name="curriculum-view" id="profile-options" value="options"><label for="profile-options">Elective options</label><div class="profile-panels">' + ''.join(panels) + '</div></fieldset><p class="profile-uncertainty">' + esc(uncertainty) + '</p>' + course_identity_evidence(p) + profile_choices(p, profile) + '</div>'
 
 def requirement_tree(p, base="", matcher=None):
     matcher = matcher if matcher is not None else reference_matcher(dict(p, id=p.get("id", "program")))
