@@ -196,10 +196,15 @@ def test_real_cmu_outline_flattens_only_redundant_wrappers_and_keeps_course_deta
     page.reload()
     expect(group.locator('.requirement-course-name').first).to_be_visible()
     page.goto(site + 'programs/cmu-additional-ai/')
+    assert page.locator('.requirements > .requirement').first.get_attribute('id') == 'requirement-cmu-additional-ai-mathematics'
     additional = page.locator('#requirement-cmu-additional-ai-computer-science-core')
     expect(additional.locator('h3')).to_have_count(1)
     expect(additional.locator('.requirement-rule')).to_have_text('All 5 courses required')
     expect(additional.locator('.requirement-course-row')).to_have_count(5)
+    assert additional.locator('.requirement-course-details').evaluate_all('(nodes)=>nodes.map(n=>n.dataset.courseId)') == ['cmu-15-122','cmu-15-150','cmu-15-210','cmu-15-213','cmu-15-251']
+    additional.scroll_into_view_if_needed()
+    page.reload()
+    assert additional.locator('.requirement-course-details').first.get_attribute('data-course-id') == 'cmu-15-122'
     expect(page.locator('.requirements')).to_contain_text('All 2 courses required (AND) · 18 Units')
     expect(page.locator('.requirements')).to_contain_text('Complete one route (OR)')
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
@@ -234,3 +239,28 @@ def test_two_visible_levels_ignore_flattened_wrappers_reset_on_navigation_and_re
     page.reload()
     expect(deep.locator('.requirement-course-name')).to_be_visible()
     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+
+
+@pytest.mark.parametrize('width', [1440,390])
+def test_subject_group_order_nested_lexical_pool_and_mixed_fallback(page,site,tmp_path,site_data,width):
+    from copy import deepcopy
+    p=site_data['programs'][0]
+    template=deepcopy(p['courses'][0])
+    p['courses']=[dict(template,id=cid,code=code,name=name,category=category,prerequisites=None) for cid,code,name,category in [('math','MATH 1','Mathematics','mathematics'),('cs2','CS 2','Introduction','foundations'),('cs10','CS 10','Advanced','systems'),('ai','AI 1','AI methods','ai_ml'),('unknown','Z 1','Unknown','other')]]
+    def group(rid,title,courses=(),parent='major',kind='all'):
+        return dict(id=rid,title=title,summary=title,parent_id=parent,kind=kind,course_ids=list(courses),count=1 if kind=='choose_courses' else None)
+    p['requirements']=[group('major','Major requirements',parent=None),group('unknown','Unknown group',['unknown']),group('mixed','Mixed group',['math','ai']),group('ai','AI methods',['ai']),group('compute','Computer Science Core'),group('pool','Required methods',['cs2','cs10'],parent='compute',kind='choose_courses'),group('math','Math core',['math'])]
+    build(site_data,tmp_path/'ai-program-atlas')
+    page.set_viewport_size({'width':width,'height':950});errors=[];page.on('pageerror',lambda error:errors.append(str(error)))
+    page.goto(site+'programs/test-ai-0/')
+    expect(page.locator('#requirement-major > details')).to_have_attribute('open','')
+    children=page.locator('#requirement-major > details > .requirement-body > ul > .requirement')
+    assert children.evaluate_all('(nodes)=>nodes.map(n=>n.id)')==['requirement-math','requirement-compute','requirement-ai','requirement-unknown','requirement-mixed']
+    pool=page.locator('#requirement-pool > details');expect(pool).not_to_have_attribute('open','')
+    pool.locator(':scope > summary').focus();page.keyboard.press('Enter')
+    expect(pool.locator('.requirement-course-name')).to_have_text(['CS 10 · Advanced','CS 2 · Introduction'])
+    expect(pool.locator(':scope > summary .requirement-rule')).to_have_text('Choose 1 course')
+    expect(page.locator('#requirement-mixed .requirement-rule')).to_have_text('All 2 courses required')
+    page.reload();expect(pool).not_to_have_attribute('open','')
+    page.goto(site+'programs/test-ai-0/#requirement-pool');expect(pool).to_have_attribute('open','')
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth');assert not errors

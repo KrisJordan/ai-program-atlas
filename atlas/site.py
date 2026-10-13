@@ -681,8 +681,9 @@ def requirement_tree(p, base="", matcher=None):
     requirement_by_id = {r.get('id'): r for r in requirements}
     course_order = {}
 
-    def course_key(c):
-        # A reading aid, not a prerequisite parser or a recommended study plan.
+    def group_course_key(c):
+        # Retain the existing group-level reading heuristic. Course lists below
+        # use lexical codes independently of titles and prerequisites.
         if c['id'] not in course_order:
             title = c.get('name') or ''
             early = bool(re.search(r'\b(?:introduct(?:ion|ory)|foundations?|fundamentals|elementary)\b', title, re.IGNORECASE))
@@ -695,10 +696,70 @@ def requirement_tree(p, base="", matcher=None):
             course_order[c['id']] = (0 if early else 2 if late else 1, burden)
         return course_order[c['id']]
 
+    group_subjects = {}
+    display_subject = {'mathematics': 0, 'foundations': 1, 'systems': 1,
+                       'ai_ml': 2, 'human_context': 3, 'applications': 4}
+
+    def group_subject_key(r):
+        # A reading projection only. Deduplicate complete represented identities;
+        # mixed subjects, unknown categories/identities and cycles fall back to
+        # Other. Do not split bundles or assign a new category to the source.
+        rid = r.get('id')
+        if rid not in group_subjects:
+            course_ids = set()
+            pending = [r]
+            visited = set()
+            cyclic = False
+            while pending:
+                node = pending.pop()
+                if node.get('id') in visited:
+                    cyclic = True
+                    continue
+                visited.add(node.get('id'))
+                if node.get('kind') != 'note':
+                    course_ids.update(node.get('course_ids') or [])
+                pending.extend(children_by_id.get(node.get('id'), []))
+            if cyclic:
+                rank = 5
+            elif course_ids:
+                subjects = {display_subject.get(course_map.get(cid, {}).get('category'), 5) for cid in course_ids}
+                rank = next(iter(subjects)) if len(subjects) == 1 else 5
+            else:
+                # Only clear, single-subject headings can order an unenumerated
+                # group. Conflicting labels remain Other; summaries/prose and
+                # generic AI context do not certify a subject.
+                title = r.get('title') or ''
+                patterns = [r'\b(?:math(?:ematics)?|statistics|calculus|linear algebra)\b',
+                            r'\b(?:computing|computer science|programming|systems|software)\b',
+                            r'\b(?:artificial intelligence|machine learning|AI|ML)\b',
+                            r'\b(?:human context|humanities|ethics|ethical|society|social|philosophy)\b',
+                            r'\b(?:applications|business|biology|chemistry|physics|journalism|domain studies)\b']
+                subjects = {i for i, pattern in enumerate(patterns) if re.search(pattern, title, re.I)}
+                rank = next(iter(subjects)) if len(subjects) == 1 else 5
+                if rank == 2 and not re.fullmatch(r'(?:(?:required|core|technical|advanced|introductory)\s+)*(?:artificial intelligence|machine learning|AI(?:\s*\+\s*ML)?|ML)(?:\s+(?:core|methods|requirements|courses|electives|algorithms))*', title.strip(), re.I):
+                    rank = 5
+                if rank == 0 and re.search(r'\bscience\b', title, re.I):
+                    rank = 5
+            group_subjects[rid] = rank
+        return group_subjects[rid]
+
     def ordered_nodes(nodes):
-        # Preserve named route/sequence order rather than reorder an explicit progression.
-        if any(re.search(r'\b(?:first|second|third|fourth|alternative) course route\b', r.get('title') or '', re.IGNORECASE) for r in nodes):
+        # Explicit source progressions are stronger than any display heuristic.
+        parent = requirement_by_id.get(nodes[0].get('parent_id')) if nodes else None
+        if explicit_course_order(parent) or any(re.search(r'\b(?:first|second|third|fourth|alternative) course route\b', r.get('title') or '', re.I) for r in nodes):
             return nodes
+        if parent and parent.get('kind') in {'alternative', 'choose_courses'} and any(re.search(r'\broute\b', r.get('title') or '', re.I) for r in nodes):
+            return nodes
+        # Individual course-entry wrappers form an ordinary list, not subject
+        # groups. Keep lexical ordering even when each row has its own node.
+        def course_entry(r):
+            courses = [course_map[cid] for cid in r.get('course_ids') or [] if cid in course_map]
+            return (r.get('kind') == 'all' and len(courses) == 1
+                    and not children_by_id.get(r.get('id'))
+                    and (r.get('title') or '').strip().casefold()
+                    in {(courses[0].get(k) or '').strip().casefold() for k in ('code', 'name')})
+        if nodes and all(course_entry(r) for r in nodes):
+            return sorted(nodes, key=lambda r: lexical_course_key(course_map[r['course_ids'][0]]))
 
         def key(r):
             title = r.get('title') or ''
@@ -706,8 +767,8 @@ def requirement_tree(p, base="", matcher=None):
             core = bool(re.search(r'\b(?:core|foundations?|fundamentals|introduct(?:ion|ory)|required)\b', title, re.IGNORECASE))
             role = 3 if late else 0 if core else 1 if r.get('kind') == 'all' else 2
             courses = [course_map[cid] for cid in r.get('course_ids') or [] if cid in course_map]
-            burden = max((course_key(c) for c in courses), default=(1, 1))
-            return general_education(r), r.get('kind') == 'note', role, burden
+            burden = max((group_course_key(c) for c in courses), default=(1, 1))
+            return group_subject_key(r), general_education(r), r.get('kind') == 'note', role, burden
 
         return sorted(nodes, key=key)  # Stable ties retain the recorded source order.
 
@@ -741,9 +802,30 @@ def requirement_tree(p, base="", matcher=None):
                 and (not r.get('summary') or r['summary'].strip() == title)
                 and not optional(r) and not general_education(r))
 
-    def course_rows(courses, required_credits='', scope_id='', evidence=''):
+    def explicit_course_order(r):
+        # Named routes and expressly ordered academic sequences retain source
+        # order, including their descendant lists and flattened wrappers.
+        seen = set()
+        while r and r.get('id') not in seen:
+            seen.add(r.get('id'))
+            if re.search(r'\b(?:route|sequence)\b', r.get('title') or '', re.I):
+                return True
+            wording = ' '.join(r.get(k) or '' for k in ('summary', 'source_text'))
+            if re.search(r'\b(?:in (?:this|the (?:listed|recorded|required)) order|followed by|sequentially)\b', wording, re.I):
+                return True
+            r = requirement_by_id.get(r.get('parent_id'))
+        return False
+
+    def lexical_course_key(c):
+        # Literal lexical comparison: keep punctuation, prefixes and cross-list
+        # strings intact. Unknown codes follow known codes; stable ties retain
+        # source order. This neither parses numbers nor merges identities.
+        code = (c.get('code') or '').strip().casefold()
+        return not bool(code), code
+
+    def course_rows(courses, required_credits='', scope_id='', evidence='', preserve_order=False):
         rows = []
-        for c in sorted(courses, key=course_key):
+        for c in courses if preserve_order else sorted(courses, key=lexical_course_key):
             amount = c.get('credits')
             if isinstance(amount, (float, int)) and amount == int(amount):
                 amount = int(amount)
@@ -790,7 +872,7 @@ def requirement_tree(p, base="", matcher=None):
             for child in children_by_id.get(group['id'], []):
                 courses = [course_map[cid] for cid in dict.fromkeys(child.get('course_ids') or []) if cid in course_map]
                 conjunction = '<span class="related-route-rule">All ' + str(len(courses)) + ' courses in this option (AND)</span>' if len(courses) > 1 else ''
-                rows.append('<li class="related-option-route">' + conjunction + course_rows(courses, scope_id='reading-' + r['id'] + '-' + child['id']) + '</li>')
+                rows.append('<li class="related-option-route">' + conjunction + course_rows(courses, scope_id='reading-' + r['id'] + '-' + child['id'], preserve_order=explicit_course_order(child)) + '</li>')
             panels.append('<details ' + ('open' if depth + 1 < 2 and len(rows) <= 5 else '') + ' id="requirement-reading-' + esc(r['id']) + '-' + esc(group['id']) + '" class="related-course-group" data-related-requirement="' + esc(group['id']) + '"><summary><h4>' + esc(re.sub(r'\s+designation overlay$', '', group.get('title') or 'Course grouping')) + '</h4><span>' + str(len(rows)) + ' option routes</span><span class="related-group-rule">' + esc(group.get('summary') or 'Group rule has not been extracted; consult the recorded context.') + '</span></summary><ul class="related-option-routes">' + ''.join(rows) + '</ul><a class="related-group-context" href="#requirement-' + esc(group['id']) + '">Full recorded context →</a></details>')
         return '<section class="related-course-groups" data-related-pool="' + esc(r['id']) + '"><h4>Area / course groupings</h4><p>These same-source groups share complete option routes with this pool. Membership can overlap; this reading view adds no required slots. Follow each recorded group rule.</p>' + ''.join(panels) + '</section>'
 
@@ -808,7 +890,7 @@ def requirement_tree(p, base="", matcher=None):
         complete_courses = len(courses) == len(set(r.get('course_ids') or []))
         # Canonical anchor survives even when a display-only wrapper disappears.
         if flatten:
-            return '<li class="requirement requirement-flattened" id="requirement-' + esc(rid) + '" data-requirement-depth="' + str(depth) + '">' + course_rows(courses, scope_id=rid) + child_markup + '</li>'
+            return '<li class="requirement requirement-flattened" id="requirement-' + esc(rid) + '" data-requirement-depth="' + str(depth) + '">' + course_rows(courses, scope_id=rid, preserve_order=explicit_course_order(r)) + child_markup + '</li>'
         source = sources.get(r.get('source_id'), {})
         inherited_source = scope and scope.get('source_id') == r.get('source_id') and bool(source)
         evidence = '' if inherited_source else '<span class="requirement-evidence">' + (external(source.get('url'), 'Requirement source') if source else 'Requirement source not recorded.') + '</span>'
@@ -879,7 +961,7 @@ def requirement_tree(p, base="", matcher=None):
         related = related_markup(r, depth)
         if related and child_markup:
             child_markup = '<details id="requirement-pool-' + esc(rid) + '" class="requirement-option-pool"><summary>All published option routes (' + str(len(child_nodes)) + ')</summary>' + child_markup + '</details>'
-        content = ('<div class="requirement-tags">' + tags + '</div>' if tags else '') + notes + wording + related + course_rows(courses, credits if single_identity else '', rid, evidence if single_identity else '') + missing + child_markup
+        content = ('<div class="requirement-tags">' + tags + '</div>' if tags else '') + notes + wording + related + course_rows(courses, credits if single_identity else '', rid, evidence if single_identity else '', preserve_order=explicit_course_order(r)) + missing + child_markup
         if single_identity:
             route_label = '<h4 class="requirement-route-label">' + esc(title) + '</h4>' if title.casefold() not in identities else ''
             return '<li class="requirement requirement-single-course" id="requirement-' + esc(rid) + '" data-requirement-depth="' + str(depth) + '">' + route_label + content + '</li>'
